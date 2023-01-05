@@ -48,3 +48,20 @@
 -   Implement similar style for all content pages, but make it fit for said content
 -   Include bottom buttons that go to the previous or next page according to the flex-box layout on homepage
 ***
+## Content Page- Professional Journey
+-   Expand upon introduction of self from the intro on the homepage
+-   Include school accomplishments
+-   Explain how I arrived at programming as a career after going to school for an environmental degree
+-   Include goals for future programming career and development
+***
+## Content Page- Skills
+-   List skills in:
+    -   Programming skills
+    -   Computer competency skills
+    -   Professional skills (i.e. communication, writing)
+    -   Soft skills
+***
+## Content Page- Projects
+-   Include programming projects (both personal and open-source)
+-   Include adjacent projects (i.e. setting up personal server)
+***
