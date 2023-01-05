@@ -15,6 +15,7 @@
     -   Homepage button
     -   Contact Info
     -   Back to top button on the right most of nav-bar
+    -   Include page name?
 -   Background
 -   Intro flex-box
     -   Create svg version of self at top of page, may animate
