@@ -42,3 +42,9 @@
         -   Year of creation
         -   Form submission for contact?
 ***
+## Content Page
+-   Create in the style of the website theme
+-   Include the same nav-bar from homepage
+-   Implement similar style for all content pages, but make it fit for said content
+-   Include bottom buttons that go to the previous or next page according to the flex-box layout on homepage
+***
