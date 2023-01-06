@@ -7,6 +7,7 @@
     -   Tertiary Color?
     -   Style of shapes (i.e circles or triangles)
 -   Integrate javascript
+-   Add favicon
 ***
 ## Homepage
 -   Create in the style of the website theme
