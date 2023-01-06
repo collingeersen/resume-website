@@ -14,6 +14,7 @@
     -   Hamburger button to expand site map
     -   Homepage button
     -   Contact Info
+    -   Link to Resume PDF
     -   Back to top button on the right most of nav-bar
     -   Include page name?
 -   Background
