@@ -67,14 +67,14 @@
 -   Include adjacent projects (i.e. setting up personal server)
 ***
 ## Additional Content Page- 
-
+-   Website updates(set up automate feed generation from github, from RSS?)
 ***
 ## Additional Content Page-
-
+-   Blog?
 ***
 ## Additional Content Page- 
-
+- WIP
 ***
 ## Additional Content Page- 
-
+- WIP
 ***
