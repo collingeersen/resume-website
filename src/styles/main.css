@@ -21,17 +21,22 @@ nav{
     padding-bottom: 1%;
     padding-top: 1%;
     z-index: 101;
-    word-spacing: 5em;
+    
 }
 .nav-bar{
     align-items: center;
     flex-wrap: nowrap;
     display: flex;
-    column-gap: 5em;
-    margin-left: calc(calc(var(--bodyWidth) - var(--mainWidth))/6);  /*Centers first nav div to the background and main*/
+    column-gap: 5%;
+    margin-left: calc(calc(var(--bodyWidth) - var(--mainWidth))/8);  /*Centers first nav div to the background and main*/
+}
+.nav-links{
+    word-spacing: 5em;
+    white-space:nowrap;
 }
 .page-title{
     margin-left: 40%;
+    margin-right:5%;
 }
 /*Main*/
 main{
