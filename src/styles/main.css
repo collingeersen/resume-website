@@ -18,17 +18,20 @@ nav{
     height: 10%;
     background-color: blueviolet;
     padding: 0;
+    padding-bottom: 1%;
+    padding-top: 1%;
     z-index: 101;
     word-spacing: 5em;
 }
 .nav-bar{
     align-items: center;
+    flex-wrap: nowrap;
     display: flex;
     column-gap: 5em;
     margin-left: calc(calc(var(--bodyWidth) - var(--mainWidth))/6);  /*Centers first nav div to the background and main*/
 }
 .page-title{
-    margin-left: 40em;
+    margin-left: 40%;
 }
 /*Main*/
 main{
@@ -36,6 +39,7 @@ main{
     background-color: cornflowerblue;
     margin: auto;
     z-index: 90;
+    padding: 2%;
 
 }
 /*Headings*/
@@ -46,6 +50,11 @@ p{
 }
 
 /*Footer*/
+footer{
+    width: var(--mainWidth);
+    background-color: black;
+    margin: auto;
+}
 
 /*Background*/
 .bg{
