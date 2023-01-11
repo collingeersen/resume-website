@@ -1,17 +1,57 @@
+:root{
+    --bodyWidth: 100%;
+    --mainWidth: 80%;
+}
 /*Body*/
-
+body{
+    background-color: cadetblue;
+    margin: 0;
+    width: var(--bodyWidth);
+    height: 100%;
+    font-family:Arial, Helvetica, sans-serif;
+    position: relative;
+    z-index: 1;
+}
 /*Nav-Bar*/
-
+nav{
+    width: 100%;
+    height: 10%;
+    background-color: blueviolet;
+    padding: 0;
+    position: fixed;
+    z-index: 101;
+    word-spacing: 5em;
+}
+.nav-bar{
+    align-items: center;
+    display: flex;
+    column-gap: 5em;
+    margin-left: calc(calc(var(--bodyWidth) - var(--mainWidth))/6);  /*Centers first nav div to the background and main*/
+}
+.page-title{
+    margin-left: 40em;
+}
 /*Main*/
-
+main{
+    width: var(--mainWidth);
+    background-color: cornflowerblue;
+    margin: auto;
+}
 /*Headings*/
 
 /*Paragraphs*/
+p{
+    font-family: 'Times New Roman', Times, serif;
+}
 
 /*Footer*/
 
 /*Background*/
-
+.bg{
+    background-color:darkblue;
+    width: 100%;
+    height:100%;
+}
 /*Introduction*/
 
 /*Flexbox 1x3*/
