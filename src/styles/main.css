@@ -70,7 +70,22 @@ footer{
 /*Introduction*/
 
 /*Flexbox 1x3*/
-
+.flexbox-1x3{
+    display:flex;
+    flex-wrap:nowrap;
+    border: 100px;
+    border-radius: 100px;
+    border-color:fuchsia;
+    column-gap: 1%;
+    background-color: chocolate;
+    padding: 1%;
+}
+.flexbox-1x3>div{
+    background-color: brown;
+    margin: auto;
+    padding: 2%;
+    border-radius: 10px;
+}
 /*Flexbox 1x4*/
 
 /*Banner*/
