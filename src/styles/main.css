@@ -68,7 +68,15 @@ footer{
     background-image: url(../images/bg.svg);
 }
 /*Introduction*/
-
+.div-intro{
+    margin: auto;
+    width: 90%;
+}
+/*Second Section*/
+.div-second-section{
+    margin:auto;
+    width: 90%;
+}
 /*Flexbox 1x3*/
 .flexbox-1x3{
     display:flex;
@@ -81,7 +89,7 @@ footer{
     padding: 1%;
 }
 .flexbox-1x3>div{
-    background-color: rgb(53, 79, 43);
+    background-color: rgb(86, 76, 91);
     margin: auto;
     padding: 2%;
     border-radius: 10px;
@@ -98,7 +106,7 @@ footer{
     padding: 1%;
 }
 .flexbox-1x4>div{
-    background-color: rgb(53, 79, 43);
+    background-color: rgb(86, 76, 91);
     margin: auto;
     padding: 2%;
     border-radius: 10px;
