@@ -73,6 +73,9 @@ footer{
     margin: auto;
     width: 90%;
 }
+.div-intro>h1{
+    padding-top: 10%;
+}
 /*Second Section*/
 .div-second-section{
     margin:auto;
