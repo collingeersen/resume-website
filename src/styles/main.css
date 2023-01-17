@@ -1,6 +1,10 @@
 :root{
     --bodyWidth: 100%;
     --mainWidth: 80%;
+    --mainColor: rgb(3, 5, 78);
+    --accentColor1: rgb(0,0,0);
+    --accentColor2: rgb(0,0,0);
+    --accentColor3: rgb(0,0,0);
 }
 /*Body*/
 body{
@@ -15,7 +19,7 @@ body{
 nav{
     width: 100%;
     height: 10%;
-    background-color: rgb(3, 5, 78);
+    background-color: var(--mainColor);
     /*background-color: rgb(110, 39, 177);*/
     padding: 0;
     padding-bottom: 1%;
