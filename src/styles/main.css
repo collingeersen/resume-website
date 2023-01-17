@@ -1,25 +1,27 @@
-:root{
+:root {
     --bodyWidth: 100%;
     --mainWidth: 80%;
     --mainColor: rgb(3, 5, 78);
-    --accentColor1: rgb(0,0,0);
-    --accentColor2: rgb(0,0,0);
-    --accentColor3: rgb(0,0,0);
+    --accentColor1: rgb(0, 0, 0);
+    --accentColor2: rgb(0, 0, 0);
+    --accentColor3: rgb(0, 0, 0);
 }
+
 /*Body*/
-body{
-    font-family:Arial, Helvetica, sans-serif;
+body {
+    font-family: Arial, Helvetica, sans-serif;
     height: 100%;
     margin: 0;
     padding: 0;
     width: var(--bodyWidth);
     z-index: 1;
 }
+
 /*Nav-Bar*/
-nav{
+nav {
     background-color: var(--mainColor);
     /*background-color: rgb(110, 39, 177);*/
-    height: 10%;
+    height: clamp(5%, 6%);
     padding: 0;
     padding-bottom: 1%;
     padding-top: 1%;
@@ -27,94 +29,108 @@ nav{
     width: 100%;
     z-index: 101;
 }
-.nav-bar{
+
+.nav-bar {
     align-items: center;
     column-gap: 5%;
     display: flex;
     flex-wrap: nowrap;
-    margin-left: calc(calc(var(--bodyWidth) - var(--mainWidth))/8);  /*Centers first nav div to the background and main*/
+    margin-left: calc(calc(var(--bodyWidth) - var(--mainWidth))/8);
+    /*Centers first nav div to the background and main*/
 }
-.nav-links{
-    white-space:nowrap;
+
+.nav-links {
+    white-space: nowrap;
     word-spacing: 5em;
 }
-.page-title{
+
+.page-title {
     margin-left: 40%;
-    margin-right:5%;
+    margin-right: 5%;
 }
+
 /*Main*/
-main{
-    background-color:rgb(66, 61, 95);
+main {
+    background-color: rgb(66, 61, 95);
     margin: auto;
     padding: 2%;
     width: var(--mainWidth);
     z-index: 90;
 }
+
 /*Headings*/
 
 /*Paragraphs*/
-p{
+p {
     font-family: 'Times New Roman', Times, serif;
 }
 
 /*Footer*/
-footer{
+footer {
     background-color: black;
     margin: auto;
     width: var(--mainWidth);
 }
 
 /*Background*/
-.bg{
+.bg {
     background-image: url(../images/bg.svg);
-    height:100%;
+    height: 100%;
     width: 100%;
 }
+
 /*Introduction*/
-.div-intro{
+.div-intro {
     margin: auto;
     width: 90%;
 }
-.div-intro>h1{
+
+.div-intro>h1 {
     padding-top: 10%;
 }
+
 /*Second Section*/
-.div-second-section{
-    margin:auto;
+.div-second-section {
+    margin: auto;
     width: 90%;
 }
+
 /*Flexbox 1x3*/
-.flexbox-1x3{
-    background-color: rgb(3, 5, 78);
+.flexbox-1x3 {
+    background-color: var(--mainColor);
     border: 100px;
-    border-color:fuchsia;
+    border-color: fuchsia;
     border-radius: 100px;
     column-gap: 1%;
-    display:flex;
-    flex-wrap:nowrap;
+    display: flex;
+    flex-wrap: nowrap;
     padding: 1%;
 }
-.flexbox-1x3>div{
+
+.flexbox-1x3>div {
     background-color: rgb(86, 76, 91);
     border-radius: 10px;
     margin: auto;
     padding: 2%;
 }
+
 /*Flexbox 1x4*/
-.flexbox-1x4{
-    background-color: rgb(3, 5, 78);
+.flexbox-1x4 {
+    background-color: var(--mainColor);
     border: 100px;
-    border-color:fuchsia;
+    border-color: fuchsia;
     border-radius: 100px;
     column-gap: 1%;
-    display:flex;
-    flex-wrap:nowrap;
+    display: flex;
+    flex-wrap: nowrap;
     padding: 1%;
 }
-.flexbox-1x4>div{
+
+.flexbox-1x4>div {
     background-color: rgb(86, 76, 91);
     border-radius: 10px;
     margin: auto;
     padding: 2%;
 }
+
 /*Banner*/
