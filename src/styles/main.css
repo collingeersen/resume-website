@@ -8,36 +8,35 @@
 }
 /*Body*/
 body{
+    font-family:Arial, Helvetica, sans-serif;
+    height: 100%;
     margin: 0;
     padding: 0;
     width: var(--bodyWidth);
-    height: 100%;
-    font-family:Arial, Helvetica, sans-serif;
     z-index: 1;
 }
 /*Nav-Bar*/
 nav{
-    width: 100%;
-    height: 10%;
     background-color: var(--mainColor);
     /*background-color: rgb(110, 39, 177);*/
+    height: 10%;
     padding: 0;
     padding-bottom: 1%;
     padding-top: 1%;
-    z-index: 101;
     position: fixed;
-    
+    width: 100%;
+    z-index: 101;
 }
 .nav-bar{
     align-items: center;
-    flex-wrap: nowrap;
-    display: flex;
     column-gap: 5%;
+    display: flex;
+    flex-wrap: nowrap;
     margin-left: calc(calc(var(--bodyWidth) - var(--mainWidth))/8);  /*Centers first nav div to the background and main*/
 }
 .nav-links{
-    word-spacing: 5em;
     white-space:nowrap;
+    word-spacing: 5em;
 }
 .page-title{
     margin-left: 40%;
@@ -45,12 +44,11 @@ nav{
 }
 /*Main*/
 main{
-    width: var(--mainWidth);
     background-color:rgb(66, 61, 95);
     margin: auto;
-    z-index: 90;
     padding: 2%;
-
+    width: var(--mainWidth);
+    z-index: 90;
 }
 /*Headings*/
 
@@ -61,16 +59,16 @@ p{
 
 /*Footer*/
 footer{
-    width: var(--mainWidth);
     background-color: black;
     margin: auto;
+    width: var(--mainWidth);
 }
 
 /*Background*/
 .bg{
-    width: 100%;
-    height:100%;
     background-image: url(../images/bg.svg);
+    height:100%;
+    width: 100%;
 }
 /*Introduction*/
 .div-intro{
@@ -87,36 +85,36 @@ footer{
 }
 /*Flexbox 1x3*/
 .flexbox-1x3{
+    background-color: rgb(3, 5, 78);
+    border: 100px;
+    border-color:fuchsia;
+    border-radius: 100px;
+    column-gap: 1%;
     display:flex;
     flex-wrap:nowrap;
-    border: 100px;
-    border-radius: 100px;
-    border-color:fuchsia;
-    column-gap: 1%;
-    background-color: rgb(3, 5, 78);
     padding: 1%;
 }
 .flexbox-1x3>div{
     background-color: rgb(86, 76, 91);
+    border-radius: 10px;
     margin: auto;
     padding: 2%;
-    border-radius: 10px;
 }
 /*Flexbox 1x4*/
 .flexbox-1x4{
+    background-color: rgb(3, 5, 78);
+    border: 100px;
+    border-color:fuchsia;
+    border-radius: 100px;
+    column-gap: 1%;
     display:flex;
     flex-wrap:nowrap;
-    border: 100px;
-    border-radius: 100px;
-    border-color:fuchsia;
-    column-gap: 1%;
-    background-color: rgb(3, 5, 78);
     padding: 1%;
 }
 .flexbox-1x4>div{
     background-color: rgb(86, 76, 91);
+    border-radius: 10px;
     margin: auto;
     padding: 2%;
-    border-radius: 10px;
 }
 /*Banner*/
