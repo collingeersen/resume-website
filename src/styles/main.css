@@ -1,10 +1,12 @@
 :root {
     --bodyWidth: 100%;
     --mainWidth: 80%;
-    --mainColor: rgb(3, 5, 78);
-    --accentColor1: rgb(0, 0, 0);
-    --accentColor2: rgb(0, 0, 0);
-    --accentColor3: rgb(0, 0, 0);
+    --backgroundColor: #212436;
+    --mainColor: #2B3E4D;
+    --accentColor1: #0E3D69;
+    --accentColor2: #075C61;
+    --accentColor3: #1C0B3D;
+    --accentColor4: #4C0C5E;
 }
 
 /*Body*/
@@ -50,7 +52,7 @@ nav {
 
 /*Main*/
 main {
-    background-color: rgb(66, 61, 95);
+    background-color: var(--backgroundColor);
     margin: auto;
     padding: 2%;
     width: var(--mainWidth);
@@ -97,8 +99,9 @@ footer {
 /*Flexbox 1x3*/
 .flexbox-1x3 {
     background-color: var(--mainColor);
-    border: 100px;
-    border-color: fuchsia;
+    border: 10px;
+    border-color:var(--accentColor2);
+    border-style: solid;
     border-radius: 100px;
     column-gap: 1%;
     display: flex;
@@ -108,8 +111,10 @@ footer {
 }
 
 .flexbox-1x3>div {
-    background-color: rgb(86, 76, 91);
+    background-color: var(--accentColor2);
     border-radius: 10px;
+    border-style: solid;
+    border-color: var(--backgroundColor);
     margin: auto;
     padding: clamp(1%,2%,3%);
 }
@@ -117,8 +122,9 @@ footer {
 /*Flexbox 1x4*/
 .flexbox-1x4 {
     background-color: var(--mainColor);
-    border: 100px;
-    border-color: fuchsia;
+    border: 10px;
+    border-color: var(--accentColor2);
+    border-style: solid;
     border-radius: 100px;
     column-gap: 1%;
     display: flex;
@@ -127,10 +133,12 @@ footer {
 }
 
 .flexbox-1x4>div {
-    background-color: rgb(86, 76, 91);
+    background-color: var(--accentColor2);
     border-radius: 10px;
+    border-style: solid;
+    border-color: var(--backgroundColor);
     margin: auto;
-    padding: 2%;
+    padding: clamp(1%,2%,3%);
 }
 
 /*Banner*/
