@@ -89,6 +89,10 @@ footer {
 .div-intro>h1 {
     padding-top: 10%;
 }
+.div-intro>div>p {
+    margin-right: clamp(30%,50%,70%);
+    background-color: red;
+}
 
 /*Second Section*/
 .div-second-section {
