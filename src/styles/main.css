@@ -18,7 +18,11 @@ body {
     width: var(--bodyWidth);
     z-index: 1;
 }
-
+/*
+Make nav-bar transparent
+Get rid of background? (the area between body and main)
+Make section background colors different to break up the content
+*/
 /*Nav-Bar*/
 nav {
     background-color: var(--mainColor);
