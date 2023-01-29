@@ -2,6 +2,8 @@
     --bodyWidth: 100%;
     --mainWidth: 80%;
     --backgroundColor: #212436;
+    --fontColor: #e1e0e0;
+    --linkColor: #40DB8D;
     --mainColor: #2B3E4D;
     --accentColor1: #0E3D69;
     --accentColor2: #075C61;
@@ -11,12 +13,30 @@
 
 /*Body*/
 body {
+    background-color: #1C0B3D;
     font-family: Arial, Helvetica, sans-serif;
+    color: var(--fontColor);
     height: 100%;
     margin: 0;
     padding: 0;
     width: var(--bodyWidth);
     z-index: 1;
+}
+
+/*Links*/
+a{      /*Removes the default styling that CSS applies to links*/
+    outline: none;
+    text-decoration: none;
+}
+a:link{     /*Styling for links on page*/
+    color: var(--linkColor);
+}
+/* WIP
+a:visited{      /Styling for visited links/
+    
+}*/
+a:hover{
+    background-color: var(--accentColor3);
 }
 
 /*Nav-Bar*/
@@ -34,20 +54,23 @@ nav {
 
 .nav-bar {
     align-items: center;
-    column-gap: 5%;
+    column-gap: 5em;
     display: flex;
     flex-wrap: nowrap;
-    margin-left: calc(calc(var(--bodyWidth) - var(--mainWidth))/8); /*Centers first nav div to the background and main*/
+    margin-left: 10%;
+}
+.nav-div-button{
+    margin-right: 5%;
 }
 
 .nav-links {
     white-space: nowrap;
     word-spacing: 5em;
+    margin-right: 25%;
 }
 
 .page-title {
-    margin-left: 40%;
-    margin-right: 5%;
+    margin-left: 10%;
 }
 
 /*Main*/
@@ -70,15 +93,16 @@ p {
 footer {
     background-color: black;
     margin: auto;
-    width: var(--mainWidth);
+    width: auto;
 }
 
 /*Background*/
+/*
 .bg {
     background-image: url(../images/bg.svg);
     height: 100%;
     width: 100%;
-}
+} */
 
 /*Introduction*/
 .div-intro {
