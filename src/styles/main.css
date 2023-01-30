@@ -11,7 +11,7 @@
     --accentColor4: #4C0C5E;
 }
 
-/*Body*/
+/*----------------------Body----------------------*/
 body {
     color: var(--fontColor);
     background-color: #1C0B3D;
@@ -23,7 +23,7 @@ body {
     z-index: 1;
 }
 
-/*Links*/
+/*----------------------Links----------------------*/
 a{      /*Removes the default styling that CSS applies to links*/
     border-bottom: 0px solid;
     border-bottom-width: 0px;
@@ -50,7 +50,7 @@ a:active{
     color: var(--accentColor2);
 }
 
-/*Nav-Bar*/
+/*----------------------Nav-Bar----------------------*/
 nav {
     animation-duration: 750ms;
     animation-name: slide;
@@ -95,7 +95,7 @@ nav {
     margin-left: 10%;
 }
 
-/*Main*/
+/*----------------------Main----------------------*/
 main {
     background-color: var(--backgroundColor);
     margin: auto;
@@ -104,21 +104,21 @@ main {
     z-index: 90;
 }
 
-/*Headings*/
+/*----------------------Headings----------------------*/
 
-/*Paragraphs*/
+/*----------------------Paragraphs----------------------*/
 p {
     font-family: 'Times New Roman', Times, serif;
 }
 
-/*Footer*/
+/*----------------------Footer----------------------*/
 footer {
     background-color: black;
     margin: auto;
     width: auto;
 }
 
-/*Background*/
+/*----------------------Background----------------------*/
 /*
 .bg {
     background-image: url(../images/bg.svg);
@@ -126,7 +126,7 @@ footer {
     width: 100%;
 } */
 
-/*Introduction*/
+/*----------------------Introduction----------------------*/
 .div-intro {
     margin: auto;
     width: 90%;
@@ -140,13 +140,13 @@ footer {
     margin-right: clamp(30%,50%,70%);
 }
 
-/*Second Section*/
+/*----------------------Second Section----------------------*/
 .div-second-section {
     margin: auto;
     width: 90%;
 }
 
-/*Flexbox 1x3*/
+/*----------------------Flexbox 1x3----------------------*/
 .flexbox-1x3 {
     background-color: var(--mainColor);
     border: 10px;
@@ -169,7 +169,7 @@ footer {
     padding: clamp(1%,2%,3%);
 }
 
-/*Flexbox 1x4*/
+/*----------------------Flexbox 1x4----------------------*/
 .flexbox-1x4 {
     background-color: var(--mainColor);
     border: 10px;
@@ -191,4 +191,4 @@ footer {
     padding: clamp(1%,2%,3%);
 }
 
-/*Banner*/
+/*----------------------Banner----------------------*/
