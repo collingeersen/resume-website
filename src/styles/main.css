@@ -23,33 +23,6 @@ body {
     z-index: 1;
 }
 
-/*----------------------Links----------------------*/
-a{      /*Removes the default styling that CSS applies to links*/
-    border-bottom: 0px solid;
-    border-bottom-width: 0px;
-    outline: none;
-    text-decoration: none;
-    transition-property: border-bottom-width;
-    transition-duration: 100ms;
-}
-
-a:link{     /*Styling for links on page*/
-    color: var(--linkColor);
-}
-/* WIP
-a:visited{      /Styling for visited links/
-    
-}*/
-a:hover{
-    border-bottom: 1px solid;
-    border-bottom-width: 3px;
-    border-radius: 0%;
-}
-
-a:active{
-    color: var(--accentColor2);
-}
-
 /*----------------------Nav-Bar----------------------*/
 nav {
     animation-duration: 750ms;
@@ -94,7 +67,32 @@ nav {
 .page-title {
     margin-left: 10%;
 }
+/*----------------------Links----------------------*/
+a{      /*Removes the default styling that CSS applies to links*/
+    border-bottom: 0px solid;
+    border-bottom-width: 0px;
+    outline: none;
+    text-decoration: none;
+    transition-property: border-bottom-width;
+    transition-duration: 100ms;
+}
 
+a:link{     /*Styling for links on page*/
+    color: var(--linkColor);
+}
+/* WIP
+a:visited{      /Styling for visited links/
+    
+}*/
+a:hover{
+    border-bottom: 1px solid;
+    border-bottom-width: 3px;
+    border-radius: 0%;
+}
+
+a:active{
+    color: var(--accentColor2);
+}
 /*----------------------Main----------------------*/
 main {
     background-color: var(--backgroundColor);
