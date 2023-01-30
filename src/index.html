@@ -17,6 +17,7 @@
     <!--Canonical link-->
     <!--CSS critical-->
     <!--Load CSS before js-->
+    <link rel="stylesheet" href="../src/styles/main.css">
     <!--Include error pages-->
     <!--W3C tests-->
     <!--Adblock test-->
@@ -26,55 +27,70 @@
 <body>
     <div class="bg">
         <nav>
-            <button class="button-hamburger" type="button">WIP</button>
-            <a class="link-home" href="../src/index.html">Home</a>
-            <a class="link-contact" href="../src/index.html">Contact</a>
-            <a class="link-resume" href="../src/index.html">Resume</a>
-            <header>
-                <h1>Homepage</h1>
-            </header>
+            <div class="nav-bar">
+                <div class="nav-div-button">
+                    <button class="button-hamburger" type="button">WIP</button>
+                </div>
+                <div class="nav-links">
+                    <a class="link-home" href="../src/index.html">Home</a>
+                    <a class="link-contact" href="../src/index.html">Contact</a>
+                    <a class="link-resume" href="../src/index.html">Resume</a>
+                </div>
+                <div class="page-title">
+                    <h1>Homepage</h1>
+                </div>
+            </div>
         </nav>
         <main>
-            <div>
+            <div class="div-intro">
+                <!--Add triangle behind and have collin image on the opposite side-->
                 <h1>Title for head of page</h1>
-                <!--svg collin avatar-->
-                <svg></svg>
+                <img id="img-collin" src="" alt="">
                 <div>
                     <h2>Introduction Title</h2>
-                    <p>Short paragraph introducing myself</p>
+                    <p>Short paragraph introducing myself. Sea eirmod no feugiat quis tation vel lorem clita ullamcorper
+                        gubergren vero dolor. Diam sit sanctus justo volutpat amet rebum nonummy in kasd ullamcorper
+                        clita facilisis. Sea eirmod no feugiat quis tation vel lorem clita ullamcorper
+                        gubergren vero dolor. Diam sit sanctus justo volutpat amet rebum nonummy in kasd ullamcorper
+                        clita facilisis.</p>
                 </div>
                 <div><img class="img-banner-thin" src="" alt=""></div>
             </div>
-            <div class="flexbox-primary">
+            <div class="flexbox-1x3">
                 <div class="flex-primary-column-1">
-
+                    <h3>Professional Journey</h3>
+                    <p>Sea eirmod no feugiat quis tation vel</p>
                 </div>
                 <div class="flex-primary-column-2">
-
+                    <h3>Skills</h3>
+                    <p>Sea eirmod no feugiat quis tation vel</p>
                 </div>
                 <div class="flex-primary-column-3">
-
+                    <h3>Projects</h3>
+                    <p>Sea eirmod no feugiat quis tation vel</p>
                 </div>
             </div>
             <div>
                 <img class="img-banner-thick" src="" alt="">
             </div>
             <div>
-                <div>
+                <div class="div-second-section">
                     <h2>Secondary Content Snippet</h2>
+                    <p>Short lead in to the this content. Sit vel gubergren dolor minim sed clita takimata. Rebum
+                        euismod ea diam sadipscing aliquip molestie labore ipsum dolor luptatum option facilisis.</p>
                 </div>
-                <div class="flexbox-secondary">
+                <div class="flexbox-1x4">
                     <div class="flex-primary-column-1">
-
+                        <p>Diam sit sanctus</p>
                     </div>
                     <div class="flex-primary-column-2">
-
+                        <p>Diam sit sanctus</p>
                     </div>
                     <div class="flex-primary-column-3">
-
+                        <p>Diam sit sanctus</p>
                     </div>
                     <div class="flex-primary-column-4">
-
+                        <p>Diam sit sanctus</p>
                     </div>
                 </div>
             </div>
@@ -83,7 +99,7 @@
     </div>
 </body>
 <footer>
-
+    <div>Collin Geersen</div>
 </footer>
 
 </html>
