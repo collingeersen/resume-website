@@ -54,7 +54,7 @@ nav {
 
 .nav-bar {
     align-items: center;
-
+    font-weight: 750;
     display: flex;
     flex-wrap: nowrap;
     margin-left: 10%;
@@ -70,12 +70,21 @@ nav {
     color: var(--linkColor);
     width: 150%;
     height: 150%;
-    background-color: var(--mainColor);
+    background-color: var(--accentColor2);
+    border-radius: 20%;
     border: 0;
+    box-shadow: #1C0B3D 3px 3px 5px;
+    transition-property: box-shadow,background-color;
+    transition-duration: 200ms;
 }
 .button-hamburger:hover{
     cursor: pointer;
-    background-color: #1C0B3D;
+    background-color: var(--accentColor1);
+    border-radius: 20%;
+}
+.button-hamburger:active{
+    background-color: var(--accentColor4);
+    box-shadow: #1C0B3D 1px 1px 1px;
 }
 
 .nav-links {
@@ -92,7 +101,14 @@ nav {
 }
 
 .page-title {
-    margin-left: 25%;
+    margin-left: auto;
+    margin-right: 20%;
+    background-color: var(--accentColor2);
+    padding: 0.5em;
+    border-radius: 20% 40% 20% 40%;
+    box-shadow: #1C0B3D 3px 3px 5px;
+    text-shadow: #1C0B3D 5px 3px 10px;
+    color: var(--linkColor);
 }
 
 /*----------------------Links----------------------*/
