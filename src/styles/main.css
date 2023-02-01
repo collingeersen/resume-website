@@ -23,11 +23,16 @@ body {
     width: var(--bodyWidth);
     z-index: 1;
 }
-/*
-Make nav-bar transparent
-Get rid of background? (the area between body and main)
-Make section background colors different to break up the content
-*/
+
+/*----------------------Main----------------------*/
+main {
+    background-color: var(--backgroundColor);
+    margin: auto;
+    padding: 2%;
+    width: var(--mainWidth);
+    z-index: 90;
+}
+
 /*----------------------Nav-Bar----------------------*/
 nav {
     animation-duration: 750ms;
@@ -53,6 +58,62 @@ nav {
     }
 }
 
+/*----------------------Footer----------------------*/
+footer {
+    background-color: black;
+    margin: auto;
+    width: auto;
+}
+
+/*----------------------Headings----------------------*/
+
+/*----------------------Paragraphs----------------------*/
+p {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/*----------------------Links----------------------*/
+a {
+    /*Removes the default styling that CSS applies to links*/
+    border-bottom: 0px solid;
+    border-bottom-width: 0px;
+    border-top: 0px solid;
+    border-top-width: 0px;
+    font-size: 1em;
+    outline: none;
+    text-decoration: none;
+    transition-duration: 100ms;
+    transition-property: border-top-width, border-bottom-width, font-size;
+}
+
+a:link {
+    /*Styling for links on page*/
+    color: var(--linkColor);
+}
+
+/* WIP
+a:visited{      /Styling for visited links/
+    
+}*/
+a:hover {
+    border-bottom: 1px solid;
+    border-bottom-width: 3px;
+    border-radius: 0%;
+    border-top: 1px solid;
+    border-top-width: 3px;
+    font-size: 1em;
+}
+
+a:active {
+    color: var(--accentColor2);
+}
+/*
+Make nav-bar transparent
+Get rid of background? (the area between body and main)
+Make section background colors different to break up the content
+*/
+
+/*===============Nav-Bar Classes===============*/
 .nav-bar {
     align-items: center;
     display: flex;
@@ -113,65 +174,6 @@ nav {
     text-shadow: #1C0B3D 5px 3px 10px;
 }
 
-/*----------------------Links----------------------*/
-a {
-    /*Removes the default styling that CSS applies to links*/
-    border-bottom: 0px solid;
-    border-bottom-width: 0px;
-    border-top: 0px solid;
-    border-top-width: 0px;
-    font-size: 1em;
-    outline: none;
-    text-decoration: none;
-    transition-duration: 100ms;
-    transition-property: border-top-width, border-bottom-width, font-size;
-}
-
-a:link {
-    /*Styling for links on page*/
-    color: var(--linkColor);
-}
-
-/* WIP
-a:visited{      /Styling for visited links/
-    
-}*/
-a:hover {
-    border-bottom: 1px solid;
-    border-bottom-width: 3px;
-    border-radius: 0%;
-    border-top: 1px solid;
-    border-top-width: 3px;
-    font-size: 1em;
-}
-
-a:active {
-    color: var(--accentColor2);
-}
-
-/*----------------------Main----------------------*/
-main {
-    background-color: var(--backgroundColor);
-    margin: auto;
-    padding: 2%;
-    width: var(--mainWidth);
-    z-index: 90;
-}
-
-/*----------------------Headings----------------------*/
-
-/*----------------------Paragraphs----------------------*/
-p {
-    font-family: 'Times New Roman', Times, serif;
-}
-
-/*----------------------Footer----------------------*/
-footer {
-    background-color: black;
-    margin: auto;
-    width: auto;
-}
-
 /*----------------------Background----------------------*/
 /*
 .bg {
@@ -180,7 +182,7 @@ footer {
     width: 100%;
 } */
 
-/*----------------------Introduction----------------------*/
+/*===============Introduction Classes===============*/
 .div-intro {
     margin: auto;
     width: 90%;
@@ -195,13 +197,13 @@ footer {
     margin-right: clamp(30%, 50%, 70%);
 }
 
-/*----------------------Second Section----------------------*/
+/*----------------------Second Section Classes----------------------*/
 .div-second-section {
     margin: auto;
     width: 90%;
 }
 
-/*----------------------Flexbox 1x3----------------------*/
+/*----------------------Flexbox 1x3 Classes----------------------*/
 .flexbox-1x3 {
     background-color: var(--mainColor);
     border: 10px;
@@ -224,7 +226,7 @@ footer {
     padding: clamp(1%, 2%, 3%);
 }
 
-/*----------------------Flexbox 1x4----------------------*/
+/*----------------------Flexbox 1x4 Classes----------------------*/
 .flexbox-1x4 {
     background-color: var(--mainColor);
     border: 10px;
@@ -246,4 +248,4 @@ footer {
     padding: clamp(1%, 2%, 3%);
 }
 
-/*----------------------Banner----------------------*/
+/*----------------------Banner Classes----------------------*/
