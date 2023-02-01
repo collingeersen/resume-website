@@ -3,7 +3,8 @@
     --mainWidth: 80%;
     --backgroundColor: #212436;
     --fontColor: #e1e0e0;
-    --linkColor: #40DB8D;
+    --fontColor2: #40DB8D;
+    --linkColor: #3191ff;
     --mainColor: #2B3E4D;
     --accentColor1: #0E3D69;
     --accentColor2: #075C61;
@@ -67,7 +68,7 @@ nav {
 .button-hamburger {
     font-weight:900;
     font-size: 2em;
-    color: var(--linkColor);
+    color: var(--fontColor2);
     width: 150%;
     height: 150%;
     background-color: var(--accentColor2);
@@ -90,7 +91,7 @@ nav {
 .nav-links {
     /*place-self: center end;*/
     align-content: center;
-    margin-right: 25%;
+    margin-right: auto;
     white-space: nowrap;
     /*word-spacing: 5em;*/
 }
@@ -98,6 +99,7 @@ nav {
     position: relative;
     left: 100px;        /*Moves the links over an absolute amount*/
     margin-right: 50%;
+    margin-left: auto;
 }
 
 .page-title {
@@ -108,7 +110,7 @@ nav {
     border-radius: 20% 40% 20% 40%;
     box-shadow: #1C0B3D 3px 3px 5px;
     text-shadow: #1C0B3D 5px 3px 10px;
-    color: var(--linkColor);
+    color: var(--fontColor2);
 }
 
 /*----------------------Links----------------------*/
