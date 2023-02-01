@@ -2,14 +2,14 @@
     --bodyWidth: 100%;
     --mainWidth: 80%;
     --backgroundColor: #212436;
-    --fontColor: #e1e0e0;
-    --fontColor2: #40DB8D;
-    --linkColor: #3191ff;
     --mainColor: #2B3E4D;
     --accentColor1: #0E3D69;
     --accentColor2: #075C61;
     --accentColor3: #1C0B3D;
     --accentColor4: #4C0C5E;
+    --fontColor: #e1e0e0;
+    --fontColor2: #40DB8D;
+    --linkColor: #3191ff;
 }
 
 /*----------------------Body----------------------*/
@@ -55,9 +55,9 @@ nav {
 
 .nav-bar {
     align-items: center;
-    font-weight: 750;
     display: flex;
     flex-wrap: nowrap;
+    font-weight: 750;
     margin-left: 10%;
 }
 
@@ -66,22 +66,22 @@ nav {
 }
 
 .button-hamburger {
-    font-weight:900;
-    font-size: 2em;
-    color: var(--fontColor2);
-    width: 150%;
-    height: 150%;
     background-color: var(--accentColor2);
-    border-radius: 20%;
     border: 0;
+    border-radius: 20%;
     box-shadow: #1C0B3D 3px 3px 5px;
-    transition-property: box-shadow,background-color;
+    color: var(--fontColor2);
+    font-size: 2em;
+    font-weight:900;
+    height: 150%;
     transition-duration: 200ms;
+    transition-property: box-shadow,background-color;
+    width: 150%;
 }
 .button-hamburger:hover{
-    cursor: pointer;
     background-color: var(--accentColor1);
     border-radius: 20%;
+    cursor: pointer;
 }
 .button-hamburger:active{
     background-color: var(--accentColor4);
@@ -96,35 +96,35 @@ nav {
     /*word-spacing: 5em;*/
 }
 .nav-links>a{
-    position: relative;
     left: 100px;        /*Moves the links over an absolute amount*/
-    margin-right: 50%;
     margin-left: auto;
+    margin-right: 50%;
+    position: relative;
 }
 
 .page-title {
-    margin-left: auto;
-    margin-right: 20%;
     background-color: var(--accentColor2);
-    padding: 0.5em;
     border-radius: 20% 40% 20% 40%;
     box-shadow: #1C0B3D 3px 3px 5px;
-    text-shadow: #1C0B3D 5px 3px 10px;
     color: var(--fontColor2);
+    margin-left: auto;
+    margin-right: 20%;
+    padding: 0.5em;
+    text-shadow: #1C0B3D 5px 3px 10px;
 }
 
 /*----------------------Links----------------------*/
 a {
     /*Removes the default styling that CSS applies to links*/
-    border-top: 0px solid;
     border-bottom: 0px solid;
-    border-top-width: 0px;
     border-bottom-width: 0px;
+    border-top: 0px solid;
+    border-top-width: 0px;
+    font-size: 1em;
     outline: none;
     text-decoration: none;
-    transition-property: border-top-width, border-bottom-width, font-size;
     transition-duration: 100ms;
-    font-size: 1em;
+    transition-property: border-top-width, border-bottom-width, font-size;
 }
 
 a:link {
@@ -137,11 +137,11 @@ a:visited{      /Styling for visited links/
     
 }*/
 a:hover {
-    border-top: 1px solid;
-    border-top-width: 3px;
     border-bottom: 1px solid;
     border-bottom-width: 3px;
     border-radius: 0%;
+    border-top: 1px solid;
+    border-top-width: 3px;
     font-size: 1em;
 }
 
