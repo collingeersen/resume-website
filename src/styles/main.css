@@ -54,7 +54,7 @@ nav {
 
 .nav-bar {
     align-items: center;
-    column-gap: 5em;
+
     display: flex;
     flex-wrap: nowrap;
     margin-left: 10%;
@@ -64,27 +64,49 @@ nav {
     margin-right: 5%;
 }
 
-.button-hamburger {}
+.button-hamburger {
+    font-weight:900;
+    font-size: 2em;
+    color: var(--linkColor);
+    width: 150%;
+    height: 150%;
+    background-color: var(--mainColor);
+    border: 0;
+}
+.button-hamburger:hover{
+    cursor: pointer;
+    background-color: #1C0B3D;
+}
 
 .nav-links {
+    /*place-self: center end;*/
+    align-content: center;
     margin-right: 25%;
     white-space: nowrap;
-    word-spacing: 5em;
+    /*word-spacing: 5em;*/
+}
+.nav-links>a{
+    position: relative;
+    left: 100px;        /*Moves the links over an absolute amount*/
+    margin-right: 50%;
 }
 
 .page-title {
-    margin-left: 10%;
+    margin-left: 25%;
 }
 
 /*----------------------Links----------------------*/
 a {
     /*Removes the default styling that CSS applies to links*/
+    border-top: 0px solid;
     border-bottom: 0px solid;
+    border-top-width: 0px;
     border-bottom-width: 0px;
     outline: none;
     text-decoration: none;
-    transition-property: border-bottom-width;
+    transition-property: border-top-width, border-bottom-width, font-size;
     transition-duration: 100ms;
+    font-size: 1em;
 }
 
 a:link {
@@ -97,9 +119,12 @@ a:visited{      /Styling for visited links/
     
 }*/
 a:hover {
+    border-top: 1px solid;
+    border-top-width: 3px;
     border-bottom: 1px solid;
     border-bottom-width: 3px;
     border-radius: 0%;
+    font-size: 1em;
 }
 
 a:active {
