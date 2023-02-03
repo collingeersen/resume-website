@@ -189,31 +189,33 @@ Make section background colors different to break up the content
 
 /*===============Introduction Classes===============*/
 .div-intro {
-    
+    height: 100%;
     margin: auto;
     width: 90%;
+    position: relative;
 }
 
 .div-intro>h1 {
     padding-top: 10%;
-    /*text-shadow: var(--linkColor) 1px 1px 2px;*/
-    animation-duration: 1s;
+}
+.title-head::after{
+    display: grid;
+    background: #e1e0e0;
+    content: "";
+    width: 0;
+    height: 4px;
+    animation-duration: 2s;
     animation-delay: 1000ms;
-    animation-name: introAnim;
-    animation-iteration-count: 1;
+    animation-name: title-head-animation;
     animation-fill-mode: forwards;
 }
 
-@keyframes introAnim {
-    from {
-        border-bottom: 0px solid;
-        text-decoration: none;
-
+@keyframes title-head-animation{
+    from{
+        width: 0;
     }
-
     to {
-        border-bottom: 10px solid;
-        text-decoration: underline dotted;
+        width: 40%;
     }
 }
 
