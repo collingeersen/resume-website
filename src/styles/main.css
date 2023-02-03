@@ -70,7 +70,7 @@ h1{
     color:var(--fontColor2);
 }
 h2{
-    color: var(--accentColor1);
+    color: var(--fontColor2);
 }
 /*----------------------Paragraphs----------------------*/
 p {
@@ -195,7 +195,7 @@ Make section background colors different to break up the content
     position: relative;
 }
 
-.div-intro>h1 {
+.title-head {
     padding-top: 10%;
 }
 
@@ -220,11 +220,31 @@ Make section background colors different to break up the content
     }
 }
 
-.div-intro>div>p {
+.div-intro-flex>div>p {
     background-color: red;
-    margin-right: clamp(30%, 50%, 70%);
+    /*margin-right: clamp(30%, 50%, 70%);*/
 }
-
+.div-intro-flex{
+    display: flex;
+    
+}
+.div-intro-flex-box1{
+    background: #e1e0e0;
+    width: 1000px;
+    height: 100px;
+    padding: 0%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+/*
+.div-intro-content::after{
+    background: #e1e0e0;
+    content: "";
+    height:200px;
+    width: 200px;
+    display:flex;
+    flex-direction: row;
+}*/
 /*----------------------Second Section Classes----------------------*/
 .div-second-section {
     margin: auto;
