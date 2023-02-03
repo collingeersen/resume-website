@@ -198,16 +198,17 @@ Make section background colors different to break up the content
 .div-intro>h1 {
     padding-top: 10%;
 }
+
 .title-head::after{
-    display: grid;
+    animation-delay: 1000ms;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-name: title-head-animation;
     background: #e1e0e0;
     content: "";
-    width: 0;
+    display: grid;
     height: 4px;
-    animation-duration: 2s;
-    animation-delay: 1000ms;
-    animation-name: title-head-animation;
-    animation-fill-mode: forwards;
+    width: 0;
 }
 
 @keyframes title-head-animation{
