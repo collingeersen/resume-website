@@ -66,7 +66,12 @@ footer {
 }
 
 /*----------------------Headings----------------------*/
-
+h1{
+    color:var(--fontColor2);
+}
+h2{
+    color: var(--accentColor1);
+}
 /*----------------------Paragraphs----------------------*/
 p {
     font-family: 'Times New Roman', Times, serif;
@@ -184,12 +189,32 @@ Make section background colors different to break up the content
 
 /*===============Introduction Classes===============*/
 .div-intro {
+    
     margin: auto;
     width: 90%;
 }
 
 .div-intro>h1 {
     padding-top: 10%;
+    /*text-shadow: var(--linkColor) 1px 1px 2px;*/
+    animation-duration: 1s;
+    animation-delay: 1000ms;
+    animation-name: introAnim;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes introAnim {
+    from {
+        border-bottom: 0px solid;
+        text-decoration: none;
+
+    }
+
+    to {
+        border-bottom: 10px solid;
+        text-decoration: underline dotted;
+    }
 }
 
 .div-intro>div>p {
