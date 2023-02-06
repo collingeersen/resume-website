@@ -204,7 +204,8 @@ Make section background colors different to break up the content
     animation-duration: 2s;
     animation-fill-mode: forwards;
     animation-name: title-head-animation;
-    background: #e1e0e0;
+    background: #075C61;
+    border-radius: 50%;
     content: "";
     display: grid;
     height: 4px;
@@ -221,20 +222,42 @@ Make section background colors different to break up the content
 }
 
 .div-intro-flex>div>p {
-    background-color: red;
-    /*margin-right: clamp(30%, 50%, 70%);*/
+    background-color: var(--accentColor2);
+    margin-right: clamp(30%, 50%, 70%);
+    padding: 1%;
+    border-radius: 5%;
 }
 .div-intro-flex{
     display: flex;
-    
+    overflow: visible;
+
 }
 .div-intro-flex-box1{
-    background: #e1e0e0;
-    width: 1000px;
-    height: 100px;
+    background: #075C61;
+    width: 0%;
+    height: 65%;
     padding: 0%;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 65%;
+    margin-right: 0%;
+    margin-top: -8%;
+    position: absolute;
+    box-shadow:#1C0B3D 0px 0px;
+    animation-name: flex-box1-animation;
+    animation-delay: 1000ms;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+}
+@keyframes flex-box1-animation {
+    from{
+        box-shadow:#1C0B3D 0px 0px;
+        height: 65%;
+        width: 0;
+    }
+    to{
+        box-shadow:#40DB8D 10px 10px 0px;
+        height: 65%;
+        width: 25%;
+    }
 }
 /*
 .div-intro-content::after{
