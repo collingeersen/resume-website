@@ -246,6 +246,7 @@ Make section background colors different to break up the content
     animation-delay: 1000ms;
     animation-fill-mode: forwards;
     animation-duration: 2s;
+    border-radius: 3%;
 }
 @keyframes flex-box1-animation {
     from{
@@ -254,10 +255,18 @@ Make section background colors different to break up the content
         width: 0;
     }
     to{
-        box-shadow:#40DB8D 10px 10px 0px;
+        box-shadow:#40DB8D 15px 0px 0px;
         height: 65%;
         width: 25%;
     }
+}
+.div-intro-flex-box1::before{
+    content: "";
+    background: #40DB8D;
+    height: 100%;
+    width: 3%;
+    margin-left: -30%;
+    display: flex;
 }
 /*
 .div-intro-content::after{
