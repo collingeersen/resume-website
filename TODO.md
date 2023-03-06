@@ -8,6 +8,10 @@
     -   Style of shapes (i.e circles or triangles)
 -   Integrate javascript
 -   Add favicon
+-   Add base CSS resets for browser
+-   Integrate a11y principals
+-   Make sure that styles are consistent between browsers, mobile/desktop, and resolutions.
+-   Make non-JS version for those that disable it?
 ***
 ## Homepage
 -   Create in the style of the website theme
@@ -18,6 +22,9 @@
     -   Link to Resume PDF
     -   Back to top button on the right most of nav-bar
     -   Include page name?
+    -   Once scrolled down a certain amount make the nav-bar become a truncated version that
+         expands to default size when hovered over.
+    -   Light mode and dark mode toggle
 -   Background
 -   Intro flex-box
     -   Create svg version of self at top of page, may animate
