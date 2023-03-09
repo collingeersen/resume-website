@@ -11,6 +11,16 @@
     --fontColor2: #40DB8D;
     --linkColor: #3191ff;
 }
+/*----------------------Reset----------------------*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+img {
+    width: auto;
+    height: auto;
+}
 
 /*----------------------Body----------------------*/
 body {
