@@ -11,12 +11,14 @@
     --fontColor2: #40DB8D;
     --linkColor: #3191ff;
 }
+
 /*----------------------Reset----------------------*/
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
+
 img {
     width: auto;
     height: auto;
@@ -76,12 +78,14 @@ footer {
 }
 
 /*----------------------Headings----------------------*/
-h1{
-    color:var(--fontColor2);
-}
-h2{
+h1 {
     color: var(--fontColor2);
 }
+
+h2 {
+    color: var(--fontColor2);
+}
+
 /*----------------------Paragraphs----------------------*/
 p {
     font-family: 'Times New Roman', Times, serif;
@@ -122,6 +126,7 @@ a:hover {
 a:active {
     color: var(--accentColor2);
 }
+
 /*
 Make nav-bar transparent
 Get rid of background? (the area between body and main)
@@ -148,18 +153,20 @@ Make section background colors different to break up the content
     box-shadow: #1C0B3D 3px 3px 5px;
     color: var(--fontColor2);
     font-size: 2em;
-    font-weight:900;
+    font-weight: 900;
     height: 150%;
     transition-duration: 200ms;
-    transition-property: box-shadow,background-color;
+    transition-property: box-shadow, background-color;
     width: 150%;
 }
-.button-hamburger:hover{
+
+.button-hamburger:hover {
     background-color: var(--accentColor1);
     border-radius: 20%;
     cursor: pointer;
 }
-.button-hamburger:active{
+
+.button-hamburger:active {
     background-color: var(--accentColor4);
     box-shadow: #1C0B3D 1px 1px 1px;
 }
@@ -171,8 +178,10 @@ Make section background colors different to break up the content
     white-space: nowrap;
     /*word-spacing: 5em;*/
 }
-.nav-links>a{
-    left: 100px;        /*Moves the links over an absolute amount*/
+
+.nav-links>a {
+    left: 100px;
+    /*Moves the links over an absolute amount*/
     margin-left: auto;
     margin-right: 50%;
     position: relative;
@@ -209,7 +218,7 @@ Make section background colors different to break up the content
     padding-top: 10%;
 }
 
-.title-head::after{
+.title-head::after {
     animation-delay: 1000ms;
     animation-duration: 2s;
     animation-fill-mode: forwards;
@@ -222,10 +231,11 @@ Make section background colors different to break up the content
     width: 0;
 }
 
-@keyframes title-head-animation{
-    from{
+@keyframes title-head-animation {
+    from {
         width: 0;
     }
+
     to {
         width: 40%;
     }
@@ -237,12 +247,14 @@ Make section background colors different to break up the content
     padding: 1%;
     border-radius: 5%;
 }
-.div-intro-flex{
+
+.div-intro-flex {
     display: flex;
     overflow: visible;
 
 }
-.div-intro-flex-box1{
+
+.div-intro-flex-box1 {
     background: #075C61;
     width: 0%;
     height: 65%;
@@ -251,26 +263,29 @@ Make section background colors different to break up the content
     margin-right: 0%;
     margin-top: -8%;
     position: absolute;
-    box-shadow:#1C0B3D 0px 0px;
+    box-shadow: #1C0B3D 0px 0px;
     animation-name: flex-box1-animation;
     animation-delay: 1000ms;
     animation-fill-mode: forwards;
     animation-duration: 2s;
     border-radius: 3%;
 }
+
 @keyframes flex-box1-animation {
-    from{
-        box-shadow:#1C0B3D 0px 0px;
+    from {
+        box-shadow: #1C0B3D 0px 0px;
         height: 65%;
         width: 0;
     }
-    to{
-        box-shadow:#40DB8D 15px 0px 0px;
+
+    to {
+        box-shadow: #40DB8D 15px 0px 0px;
         height: 65%;
         width: 25%;
     }
 }
-.div-intro-flex-box1::before{
+
+.div-intro-flex-box1::before {
     content: "";
     background: #40DB8D;
     height: 100%;
@@ -278,6 +293,7 @@ Make section background colors different to break up the content
     margin-left: -30%;
     display: flex;
 }
+
 /*
 .div-intro-content::after{
     background: #e1e0e0;
