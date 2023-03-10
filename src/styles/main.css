@@ -47,7 +47,7 @@ main {
 
 /*----------------------Nav-Bar----------------------*/
 nav {
-    animation-duration: 750ms;
+    animation-duration: 600ms;
     animation-name: slide;
     background-color: var(--mainColor);
     /*background-color: rgb(110, 39, 177);*/
