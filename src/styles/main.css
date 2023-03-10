@@ -94,37 +94,37 @@ p {
 /*----------------------Links----------------------*/
 a {
     /*Removes the default styling that CSS applies to links*/
-    border-bottom: 0px solid;
-    border-bottom-width: 0px;
-    border-top: 0px solid;
-    border-top-width: 0px;
+    border-bottom: 1px solid;
+    border-bottom-width: 1px;
     font-size: 1em;
     outline: none;
     text-decoration: none;
-    transition-duration: 100ms;
-    transition-property: border-top-width, border-bottom-width, font-size;
+    text-shadow: var(--accentColor3) 1px 1px 2px;
+    transition-duration: 50ms;
+    transition-property:
+        border-bottom-width,
+        color,
+        font-size;
 }
 
-a:link {
-    /*Styling for links on page*/
-    color: var(--linkColor);
+a:link,
+:visited {
+    color: var(--fontColor2);
 }
 
-/* WIP
-a:visited{      /Styling for visited links/
-    
-}*/
 a:hover {
-    border-bottom: 1px solid;
     border-bottom-width: 3px;
-    border-radius: 0%;
-    border-top: 1px solid;
-    border-top-width: 3px;
+    color:var(--linkColor);
     font-size: 1em;
 }
 
 a:active {
     color: var(--accentColor2);
+}
+
+a::after {
+    content: '';
+    font-size: 75%;
 }
 
 /*
