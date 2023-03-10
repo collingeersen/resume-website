@@ -223,8 +223,8 @@ Make section background colors different to break up the content
     animation-duration: 2s;
     animation-fill-mode: forwards;
     animation-name: title-head-animation;
-    background: #075C61;
-    border-radius: 50%;
+    background: var(--accentColor2);
+    border-radius: 0%;
     content: "";
     display: grid;
     height: 4px;
@@ -255,7 +255,7 @@ Make section background colors different to break up the content
 }
 
 .div-intro-flex-box1 {
-    background: #075C61;
+    background: var(--accentColor2);
     width: 0%;
     height: 65%;
     padding: 0%;
@@ -263,7 +263,6 @@ Make section background colors different to break up the content
     margin-right: 0%;
     margin-top: -8%;
     position: absolute;
-    box-shadow: #1C0B3D 0px 0px;
     animation-name: flex-box1-animation;
     animation-delay: 1000ms;
     animation-fill-mode: forwards;
@@ -273,13 +272,13 @@ Make section background colors different to break up the content
 
 @keyframes flex-box1-animation {
     from {
-        box-shadow: #1C0B3D 0px 0px;
+        box-shadow: var(--fontColor2) 20px 20px 10px;
         height: 65%;
         width: 0;
     }
 
     to {
-        box-shadow: #40DB8D 15px 0px 0px;
+        box-shadow: var(--fontColor2) 5px 5px 2px;
         height: 65%;
         width: 25%;
     }
@@ -287,7 +286,7 @@ Make section background colors different to break up the content
 
 .div-intro-flex-box1::before {
     content: "";
-    background: #40DB8D;
+    background: var(--fontColor2);
     height: 100%;
     width: 3%;
     margin-left: -30%;
