@@ -2,7 +2,7 @@
   "name": "collin-website",
   "version": "1.0.0",
   "description": "Node project for website.",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
