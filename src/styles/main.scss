@@ -345,10 +345,10 @@ Make section background colors different to break up the content
 }
 
 .flexbox-1x4>div {
-    background-color: var(--accentColor2);
+    background-color: $accentColor2;
     border-radius: 10px;
     border-style: solid;
-    border-color: var(--backgroundColor);
+    border-color: $backgroundColor2;
     margin: auto;
     padding: clamp(1%, 2%, 3%);
 }
