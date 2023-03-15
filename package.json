@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/collingeersen/collin-website/issues"
   },
-  "homepage": "https://github.com/collingeersen/collin-website#readme"
+  "homepage": "https://github.com/collingeersen/collin-website#readme",
+  "devDependencies": {
+    "parcel": "^2.8.3"
+  }
 }
