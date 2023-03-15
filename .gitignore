@@ -462,3 +462,4 @@ FodyWeavers.xsd
 
 #Parcel
 .parcel-cache/
+dist/
