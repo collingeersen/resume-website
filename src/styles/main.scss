@@ -1,16 +1,17 @@
-:root {
-    --bodyWidth: 100%;
-    --mainWidth: 80%;
-    --backgroundColor: #212436;
-    --mainColor: #2B3E4D;
-    --accentColor1: #0E3D69;
-    --accentColor2: #075C61;
-    --accentColor3: #1C0B3D;
-    --accentColor4: #4C0C5E;
-    --fontColor: #e1e0e0;
-    --fontColor2: #40DB8D;
-    --linkColor: #3191ff;
-}
+$bodyWidth: 100%;
+$bodyWidth: 100%;
+$mainWidth: 80%;
+$backgroundColor1: #1C0B3D;
+$backgroundColor2: #212436;
+$mainColor: #2B3E4D;
+$footerColor: #000000;
+$accentColor1: #0E3D69;
+$accentColor2: #075C61;
+$accentColor3: #1C0B3D;
+$accentColor4: #4C0C5E;
+$fontColor: #e1e0e0;
+$fontColor2: #40DB8D;
+$linkColor: #3191ff;
 
 /*----------------------Reset----------------------*/
 *,
@@ -26,22 +27,22 @@ img {
 
 /*----------------------Body----------------------*/
 body {
-    color: var(--fontColor);
-    background-color: #1C0B3D;
+    color: $fontColor;
+    background-color: $backgroundColor1;
     font-family: Arial, Helvetica, sans-serif;
     height: 100%;
     margin: 0;
     padding: 0;
-    width: var(--bodyWidth);
+    width: $bodyWidth;
     z-index: 1;
 }
 
 /*----------------------Main----------------------*/
 main {
-    background-color: var(--backgroundColor);
+    background-color: $backgroundColor2;
     margin: auto;
     padding: 2%;
-    width: var(--mainWidth);
+    width: $mainWidth;
     z-index: 90;
 }
 
@@ -49,8 +50,7 @@ main {
 nav {
     animation-duration: 600ms;
     animation-name: slide;
-    background-color: var(--mainColor);
-    /*background-color: rgb(110, 39, 177);*/
+    background-color: $mainColor;
     height: clamp(6%, 9%, 10%);
     padding: 0;
     padding-bottom: 1%;
@@ -72,18 +72,18 @@ nav {
 
 /*----------------------Footer----------------------*/
 footer {
-    background-color: black;
+    background-color: $footerColor;
     margin: auto;
     width: auto;
 }
 
 /*----------------------Headings----------------------*/
 h1 {
-    color: var(--fontColor2);
+    color: $fontColor2;
 }
 
 h2 {
-    color: var(--fontColor2);
+    color: $fontColor2;
 }
 
 /*----------------------Paragraphs----------------------*/
@@ -99,7 +99,7 @@ a {
     font-size: 1em;
     outline: none;
     text-decoration: none;
-    text-shadow: var(--accentColor3) 1px 1px 2px;
+    text-shadow: $accentColor3 1px 1px 2px;
     transition-duration: 50ms;
     transition-property:
         border-bottom-width,
@@ -109,17 +109,17 @@ a {
 
 a:link,
 :visited {
-    color: var(--fontColor2);
+    color: $fontColor2;
 }
 
 a:hover {
     border-bottom-width: 3px;
-    color:var(--linkColor);
+    color: $linkColor;
     font-size: 1em;
 }
 
 a:active {
-    color: var(--accentColor2);
+    color: $accentColor2;
 }
 
 a::after {
@@ -147,11 +147,11 @@ Make section background colors different to break up the content
 }
 
 .button-hamburger {
-    background-color: var(--accentColor2);
+    background-color: $accentColor2;
     border: 0;
     border-radius: 20%;
     box-shadow: #1C0B3D 3px 3px 5px;
-    color: var(--fontColor2);
+    color: $fontColor2;
     font-size: 2em;
     font-weight: 900;
     height: 150%;
@@ -161,13 +161,13 @@ Make section background colors different to break up the content
 }
 
 .button-hamburger:hover {
-    background-color: var(--accentColor1);
+    background-color: $accentColor1;
     border-radius: 20%;
     cursor: pointer;
 }
 
 .button-hamburger:active {
-    background-color: var(--accentColor4);
+    background-color: $accentColor4;
     box-shadow: #1C0B3D 1px 1px 1px;
 }
 
@@ -188,14 +188,14 @@ Make section background colors different to break up the content
 }
 
 .page-title {
-    background-color: var(--accentColor2);
+    background-color: $accentColor2;
     border-radius: 20% 40% 20% 40%;
-    box-shadow: #1C0B3D 3px 3px 5px;
-    color: var(--fontColor2);
+    box-shadow: $accentColor3 3px 3px 5px;
+    color: $fontColor2;
     margin-left: auto;
     margin-right: 20%;
     padding: 0.5em;
-    text-shadow: #1C0B3D 5px 3px 10px;
+    text-shadow: $accentColor3 5px 3px 10px;
 }
 
 /*----------------------Background----------------------*/
@@ -223,7 +223,7 @@ Make section background colors different to break up the content
     animation-duration: 2s;
     animation-fill-mode: forwards;
     animation-name: title-head-animation;
-    background: var(--accentColor2);
+    background: $accentColor2;
     border-radius: 0%;
     content: "";
     display: grid;
@@ -242,7 +242,7 @@ Make section background colors different to break up the content
 }
 
 .div-intro-flex>div>p {
-    background-color: var(--accentColor2);
+    background-color: $accentColor2;
     margin-right: clamp(30%, 50%, 70%);
     padding: 1%;
     border-radius: 5%;
@@ -255,7 +255,7 @@ Make section background colors different to break up the content
 }
 
 .div-intro-flex-box1 {
-    background: var(--accentColor2);
+    background: $accentColor2;
     width: 0%;
     height: 65%;
     padding: 0%;
@@ -272,13 +272,13 @@ Make section background colors different to break up the content
 
 @keyframes flex-box1-animation {
     from {
-        box-shadow: var(--fontColor2) 20px 20px 10px;
+        box-shadow: $fontColor2 20px 20px 10px;
         height: 65%;
         width: 0;
     }
 
     to {
-        box-shadow: var(--fontColor2) 5px 5px 2px;
+        box-shadow: $fontColor2 5px 5px 2px;
         height: 65%;
         width: 25%;
     }
@@ -286,7 +286,7 @@ Make section background colors different to break up the content
 
 .div-intro-flex-box1::before {
     content: "";
-    background: var(--fontColor2);
+    background: $fontColor2;
     height: 100%;
     width: 3%;
     margin-left: -30%;
@@ -310,9 +310,9 @@ Make section background colors different to break up the content
 
 /*----------------------Flexbox 1x3 Classes----------------------*/
 .flexbox-1x3 {
-    background-color: var(--mainColor);
+    background-color: $mainColor;
     border: 10px;
-    border-color: var(--accentColor2);
+    border-color: $accentColor2;
     border-style: solid;
     border-radius: 100px;
     column-gap: 1%;
@@ -323,19 +323,19 @@ Make section background colors different to break up the content
 }
 
 .flexbox-1x3>div {
-    background-color: var(--accentColor2);
+    background-color: $accentColor2;
     border-radius: 10px;
     border-style: solid;
-    border-color: var(--backgroundColor);
+    border-color: $backgroundColor2;
     margin: auto;
     padding: clamp(1%, 2%, 3%);
 }
 
 /*----------------------Flexbox 1x4 Classes----------------------*/
 .flexbox-1x4 {
-    background-color: var(--mainColor);
+    background-color: $mainColor;
     border: 10px;
-    border-color: var(--accentColor2);
+    border-color: $accentColor2;
     border-style: solid;
     border-radius: 100px;
     column-gap: 1%;
