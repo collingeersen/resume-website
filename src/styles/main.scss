@@ -57,13 +57,10 @@ main {
 
 /*----------------------Nav-Bar----------------------*/
 nav {
-    animation-duration: 600ms;
-    animation-name: nav-slide;
+    animation: 600ms normal nav-slide;
     background-color: $mainColor;
     height: clamp(6%, 9%, 10%);
-    padding: 0;
-    padding-bottom: 1%;
-    padding-top: 1%;
+    padding: 1% 0 1% 0;
     position: fixed;
     width: 100%;
     z-index: 101;
@@ -195,8 +192,7 @@ Make section background colors different to break up the content
     &>a {
         left: 100px;
         /*Moves the links over an absolute amount*/
-        margin-left: auto;
-        margin-right: 50%;
+        margin: 0 50% 0 auto;
         position: relative;
     }
 }
