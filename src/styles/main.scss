@@ -10,7 +10,7 @@ $accentColor1: #0E3D69;
 $accentColor2: #075C61;
 $accentColor3: #1C0B3D;
 $accentColor4: #4C0C5E;
-$fontColor: #e1e0e0;
+$fontColor1: #e1e0e0;
 $fontColor2: #40DB8D;
 $linkColor: #3191ff;
 //Font
@@ -36,7 +36,7 @@ img {
 
 /*----------------------Body----------------------*/
 body {
-    color: $fontColor;
+    color: $fontColor1;
     background-color: $backgroundColor1;
     font-family: $primaryFont;
     height: 100%;
