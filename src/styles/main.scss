@@ -1,6 +1,8 @@
+//Widths
 $bodyWidth: 100%;
 $bodyWidth: 100%;
 $mainWidth: 80%;
+//Colors
 $backgroundColor1: #1C0B3D;
 $backgroundColor2: #212436;
 $mainColor: #2B3E4D;
@@ -12,12 +14,19 @@ $accentColor4: #4C0C5E;
 $fontColor: #e1e0e0;
 $fontColor2: #40DB8D;
 $linkColor: #3191ff;
+//Font
+$primaryFont:Arial, Helvetica, sans-serif; 
 
 /*----------------------Reset----------------------*/
 *,
 *::before,
 *::after {
     box-sizing: border-box;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
 }
 
 img {
@@ -29,7 +38,7 @@ img {
 body {
     color: $fontColor;
     background-color: $backgroundColor1;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: $primaryFont;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -58,16 +67,17 @@ nav {
     position: fixed;
     width: 100%;
     z-index: 101;
-}
 
-@keyframes slide {
-    from {
-        margin-top: -100%;
+    @keyframes slide {
+        from {
+            margin-top: -100%;
+        }
+
+        to {
+            margin-top: 0%;
+        }
     }
 
-    to {
-        margin-top: 0%;
-    }
 }
 
 /*----------------------Footer----------------------*/
@@ -93,12 +103,9 @@ p {
 
 /*----------------------Links----------------------*/
 a {
-    /*Removes the default styling that CSS applies to links*/
     border-bottom: 1px solid;
     border-bottom-width: 1px;
     font-size: 1em;
-    outline: none;
-    text-decoration: none;
     text-shadow: $accentColor3 1px 1px 2px;
     transition-duration: 50ms;
     transition-property:
@@ -107,24 +114,27 @@ a {
         font-size;
 }
 
-a:link,
-:visited {
-    color: $fontColor2;
-}
+a {
 
-a:hover {
-    border-bottom-width: 3px;
-    color: $linkColor;
-    font-size: 1em;
-}
+    &:link,
+    &:visited {
+        color: $fontColor2;
+    }
 
-a:active {
-    color: $accentColor2;
-}
+    &:hover {
+        border-bottom-width: 3px;
+        color: $linkColor;
+        font-size: 1em;
+    }
 
-a::after {
-    content: '';
-    font-size: 75%;
+    &:active {
+        color: $accentColor2;
+    }
+
+    &::after {
+        content: '';
+        font-size: 75%;
+    }
 }
 
 /*
@@ -158,34 +168,38 @@ Make section background colors different to break up the content
     transition-duration: 200ms;
     transition-property: box-shadow, background-color;
     width: 150%;
+
+    &:hover {
+        background-color: $accentColor1;
+        border-radius: 20%;
+        cursor: pointer;
+    }
+
+    &:active {
+        background-color: $accentColor4;
+        box-shadow: #1C0B3D 1px 1px 1px;
+    }
 }
 
-.button-hamburger:hover {
-    background-color: $accentColor1;
-    border-radius: 20%;
-    cursor: pointer;
-}
 
-.button-hamburger:active {
-    background-color: $accentColor4;
-    box-shadow: #1C0B3D 1px 1px 1px;
-}
 
 .nav-links {
     /*place-self: center end;*/
     align-content: center;
     margin-right: auto;
     white-space: nowrap;
+
     /*word-spacing: 5em;*/
+    &>a {
+        left: 100px;
+        /*Moves the links over an absolute amount*/
+        margin-left: auto;
+        margin-right: 50%;
+        position: relative;
+    }
 }
 
-.nav-links>a {
-    left: 100px;
-    /*Moves the links over an absolute amount*/
-    margin-left: auto;
-    margin-right: 50%;
-    position: relative;
-}
+
 
 .page-title {
     background-color: $accentColor2;
@@ -216,42 +230,41 @@ Make section background colors different to break up the content
 
 .title-head {
     padding-top: 10%;
-}
 
-.title-head::after {
-    animation-delay: 1000ms;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    animation-name: title-head-animation;
-    background: $accentColor2;
-    border-radius: 0%;
-    content: "";
-    display: grid;
-    height: 4px;
-    width: 0;
-}
-
-@keyframes title-head-animation {
-    from {
+    &::after {
+        animation-delay: 1000ms;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        animation-name: title-head-animation;
+        background: $accentColor2;
+        border-radius: 0%;
+        content: "";
+        display: grid;
+        height: 4px;
         width: 0;
     }
 
-    to {
-        width: 40%;
-    }
-}
+    @keyframes title-head-animation {
+        from {
+            width: 0;
+        }
 
-.div-intro-flex>div>p {
-    background-color: $accentColor2;
-    margin-right: clamp(30%, 50%, 70%);
-    padding: 1%;
-    border-radius: 5%;
+        to {
+            width: 40%;
+        }
+    }
 }
 
 .div-intro-flex {
     display: flex;
     overflow: visible;
 
+    >div>p {
+        background-color: $accentColor2;
+        margin-right: clamp(30%, 50%, 70%);
+        padding: 1%;
+        border-radius: 5%;
+    }
 }
 
 .div-intro-flex-box1 {
@@ -268,29 +281,29 @@ Make section background colors different to break up the content
     animation-fill-mode: forwards;
     animation-duration: 2s;
     border-radius: 3%;
-}
 
-@keyframes flex-box1-animation {
-    from {
-        box-shadow: $fontColor2 20px 20px 10px;
-        height: 65%;
-        width: 0;
+    @keyframes flex-box1-animation {
+        from {
+            box-shadow: $fontColor2 20px 20px 10px;
+            height: 65%;
+            width: 0;
+        }
+
+        to {
+            box-shadow: $fontColor2 5px 5px 2px;
+            height: 65%;
+            width: 25%;
+        }
     }
 
-    to {
-        box-shadow: $fontColor2 5px 5px 2px;
-        height: 65%;
-        width: 25%;
+    &::before {
+        content: "";
+        background: $fontColor2;
+        height: 100%;
+        width: 3%;
+        margin-left: -30%;
+        display: flex;
     }
-}
-
-.div-intro-flex-box1::before {
-    content: "";
-    background: $fontColor2;
-    height: 100%;
-    width: 3%;
-    margin-left: -30%;
-    display: flex;
 }
 
 /*
@@ -319,16 +332,16 @@ Make section background colors different to break up the content
     display: flex;
     flex-wrap: nowrap;
     padding: clamp(30px, 1%, 3%);
-    /*font-size: 1vw; Experiment with viewport width/height for font*/
-}
 
-.flexbox-1x3>div {
-    background-color: $accentColor2;
-    border-radius: 10px;
-    border-style: solid;
-    border-color: $backgroundColor2;
-    margin: auto;
-    padding: clamp(1%, 2%, 3%);
+    /*font-size: 1vw; Experiment with viewport width/height for font*/
+    >div {
+        background-color: $accentColor2;
+        border-radius: 10px;
+        border-style: dotted;
+        border-color: $backgroundColor2;
+        margin: auto;
+        padding: clamp(1%, 2%, 3%);
+    }
 }
 
 /*----------------------Flexbox 1x4 Classes----------------------*/
@@ -342,15 +355,15 @@ Make section background colors different to break up the content
     display: flex;
     flex-wrap: nowrap;
     padding: 1%;
-}
 
-.flexbox-1x4>div {
-    background-color: $accentColor2;
-    border-radius: 10px;
-    border-style: solid;
-    border-color: $backgroundColor2;
-    margin: auto;
-    padding: clamp(1%, 2%, 3%);
+    >div {
+        background-color: $accentColor2;
+        border-radius: 10px;
+        border-style: dotted;
+        border-color: $backgroundColor2;
+        margin: auto;
+        padding: clamp(1%, 2%, 3%);
+    }
 }
 
 /*----------------------Banner Classes----------------------*/
