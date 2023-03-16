@@ -15,7 +15,8 @@ $fontColor: #e1e0e0;
 $fontColor2: #40DB8D;
 $linkColor: #3191ff;
 //Font
-$primaryFont:Arial, Helvetica, sans-serif; 
+$primaryFont:'Arial', Helvetica, sans-serif; 
+$secondaryFont: 'Times New Roman', Times, serif;
 
 /*----------------------Reset----------------------*/
 *,
@@ -98,7 +99,7 @@ h2 {
 
 /*----------------------Paragraphs----------------------*/
 p {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: $secondaryFont;
 }
 
 /*----------------------Links----------------------*/
