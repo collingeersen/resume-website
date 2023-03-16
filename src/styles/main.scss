@@ -166,7 +166,9 @@ Make section background colors different to break up the content
     font-weight: 900;
     height: 150%;
     transition-duration: 200ms;
-    transition-property: box-shadow, background-color;
+    transition-property: 
+        background-color,
+        box-shadow;
     width: 150%;
 
     &:hover {
@@ -268,19 +270,19 @@ Make section background colors different to break up the content
 }
 
 .div-intro-flex-box1 {
+    animation-delay: 1000ms;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-name: flex-box1-animation;
     background: $accentColor2;
-    width: 0%;
+    border-radius: 3%;
     height: 65%;
-    padding: 0%;
     margin-left: 65%;
     margin-right: 0%;
     margin-top: -8%;
     position: absolute;
-    animation-name: flex-box1-animation;
-    animation-delay: 1000ms;
-    animation-fill-mode: forwards;
-    animation-duration: 2s;
-    border-radius: 3%;
+    padding: 0%;
+    width: 0%;
 
     @keyframes flex-box1-animation {
         from {
@@ -299,10 +301,10 @@ Make section background colors different to break up the content
     &::before {
         content: "";
         background: $fontColor2;
-        height: 100%;
-        width: 3%;
-        margin-left: -30%;
         display: flex;
+        height: 100%;
+        margin-left: -30%;
+        width: 3%;
     }
 }
 
