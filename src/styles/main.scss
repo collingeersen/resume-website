@@ -58,7 +58,7 @@ main {
 /*----------------------Nav-Bar----------------------*/
 nav {
     animation-duration: 600ms;
-    animation-name: slide;
+    animation-name: nav-slide;
     background-color: $mainColor;
     height: clamp(6%, 9%, 10%);
     padding: 0;
@@ -68,7 +68,7 @@ nav {
     width: 100%;
     z-index: 101;
 
-    @keyframes slide {
+    @keyframes nav-slide {
         from {
             margin-top: -100%;
         }
