@@ -149,11 +149,11 @@ Make section background colors different to break up the content
     margin-left: 10%;
 }
 
-.nav-div-button {
+.nav-bar__btn {
     margin-right: 5%;
 }
 
-.button-hamburger {
+.nav-bar__btn--hamburger {
     background-color: $accentColor2;
     border: 0;
     border-radius: 20%;
@@ -182,7 +182,7 @@ Make section background colors different to break up the content
 
 
 
-.nav-links {
+.nav-bar__link {
     /*place-self: center end;*/
     align-content: center;
     margin-right: auto;
@@ -199,7 +199,7 @@ Make section background colors different to break up the content
 
 
 
-.page-title {
+.nav-bar__page-title {
     background-color: $accentColor2;
     border-radius: 20% 40% 20% 40%;
     box-shadow: $accentColor3 3px 3px 5px;
@@ -219,7 +219,7 @@ Make section background colors different to break up the content
 } */
 
 /*===============Introduction Classes===============*/
-.div-intro {
+.intro {
     height: 100%;
     margin: auto;
     width: 90%;
@@ -253,11 +253,11 @@ Make section background colors different to break up the content
     }
 }
 
-.div-intro-flex {
+.intro__summary {
     display: flex;
     overflow: visible;
 
-    >div>p {
+    >div>p { //use class selection instead WIP
         background-color: $accentColor2;
         margin-right: clamp(30%, 50%, 70%);
         padding: 1%;
@@ -265,7 +265,7 @@ Make section background colors different to break up the content
     }
 }
 
-.div-intro-flex-box1 {
+.intro__summary__frame {
     animation-delay: 1000ms;
     animation-duration: 2s;
     animation-fill-mode: forwards;
@@ -320,7 +320,7 @@ Make section background colors different to break up the content
 }
 
 /*----------------------Flexbox 1x3 Classes----------------------*/
-.flexbox-1x3 {
+.flex-box--1x3 {
     background-color: $mainColor;
     border: 10px;
     border-color: $accentColor2;
@@ -343,7 +343,7 @@ Make section background colors different to break up the content
 }
 
 /*----------------------Flexbox 1x4 Classes----------------------*/
-.flexbox-1x4 {
+.flex-box--1x4 {
     background-color: $mainColor;
     border: 10px;
     border-color: $accentColor2;

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" , dir="ltr">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -17,83 +18,116 @@
 </head>
 
 <body>
-    <div class="bg">
+    <div class="global-container">
+
         <nav>
             <div class="nav-bar">
-                <div class="nav-div-button">
-                    <button class="button-hamburger" type="button">&#9776;</button>
+
+                <div class="nav-bar__btn">
+                    <button class="nav-bar__btn--hamburger" type="button">&#9776;</button>
                 </div>
-                <div class="nav-links">
-                    <a class="link-home" href="../src/index.html">Home</a>
-                    <a class="link-contact" href="../src/index.html">Contact</a>
-                    <a class="link-resume" href="../src/index.html">Resume</a>
+
+                <div class="nav-bar__link">
+                    <a class="nav-bar__link-home" href="../src/index.html">Home</a>
+                    <a class="nav-bar__link-contact" href="../src/index.html">Contact</a>
+                    <a class="nav-bar__link-resume" href="../src/index.html">Resume</a>
                 </div>
-                <div class="page-title">
+
+                <div class="nav-bar__page-title">
                     <h1>Homepage</h1>
                 </div>
+
             </div>
         </nav>
+
         <main>
-            <div class="div-intro">
+
+            <div class="intro">
                 <!--Add triangle behind and have collin image on the opposite side-->
-                <h1 class="title-head">Title for head of page</h1>
-                <img id="img-collin" src="../src/images/blank.svg" alt="">
-                <div class="div-intro-flex">
-                    <div class="div-intro-flex-content">
-                        <h2>Introduction Title</h2>
-                        <p>Short paragraph introducing myself. Sea eirmod no feugiat quis tation vel lorem clita
-                            ullamcorper
+
+                <h1 class="intro__title">Title for head of page</h1>
+                <img id="intro__img" src="../src/images/blank.svg" alt="">
+                <div class="intro__summary">
+
+                    <div class="intro__summary__content">
+                        <h2 class="intro__summary__content__heading">Introduction Title</h2>
+                        <p class="intro__summary__content__text">Short paragraph introducing myself. Sea eirmod no
+                            feugiat quis tation vel lorem clitaullamcorper
                             gubergren vero dolor. Diam sit sanctus justo volutpat amet rebum nonummy in kasd ullamcorper
                             clita facilisis. Sea eirmod no feugiat quis tation vel lorem clita ullamcorper
                             gubergren vero dolor. Diam sit sanctus justo volutpat amet rebum nonummy in kasd ullamcorper
                             clita facilisis.</p>
                     </div>
-                    <div class="div-intro-flex-box1"></div>
+
+                    <div class="intro__summary__frame"></div>
+
                 </div>
-                <div><img class="img-banner-thin" src="../src/images/blank.svg" alt=""></div>
             </div>
-            <div class="flexbox-1x3">
-                <div class="flex-primary-column-1">
+
+            <div class="banner">
+                <img class="banner__img--thin" src="../src/images/blank.svg" alt="">
+            </div>
+            
+            <div class="flex-box--1x3">
+
+                <div class="flex-box--1x3__col-1">
                     <h3>Professional Journey</h3>
                     <p>Sea eirmod no feugiat quis tation vel</p>
                 </div>
-                <div class="flex-primary-column-2">
+
+                <div class="flex-box--1x3__col-2">
                     <h3>Skills</h3>
                     <p>Sea eirmod no feugiat quis tation vel</p>
                 </div>
-                <div class="flex-primary-column-3">
+
+                <div class="flex-box--1x3__col-3">
                     <h3>Projects</h3>
                     <p>Sea eirmod no feugiat quis tation vel</p>
                 </div>
+
             </div>
-            <div>
-                <img class="img-banner-thick" src="../src/images/blank.svg" alt="">
+
+            <div class="banner">
+                <img class="banner__img--thick" src="../src/images/blank.svg" alt="">
             </div>
-            <div>
+
+            <div> <!--Remove div?-->
+
                 <div class="div-second-section">
                     <h2>Secondary Content Snippet</h2>
                     <p>Short lead in to the this content. Sit vel gubergren dolor minim sed clita takimata. Rebum
                         euismod ea diam sadipscing aliquip molestie labore ipsum dolor luptatum option facilisis.</p>
                 </div>
-                <div class="flexbox-1x4">
-                    <div class="flex-primary-column-1">
+
+                <div class="flex-box--1x4">
+
+                    <div class="flex-box--1x4__col-1">
                         <p>Diam sit sanctus</p>
                     </div>
-                    <div class="flex-primary-column-2">
+
+                    <div class="flex-box--1x4__col-2">
                         <p>Diam sit sanctus</p>
                     </div>
-                    <div class="flex-primary-column-3">
+
+                    <div class="flex-box--1x4__col-3">
                         <p>Diam sit sanctus</p>
                     </div>
-                    <div class="flex-primary-column-4">
+
+                    <div class="flex-box--1x4__col-4">
                         <p>Diam sit sanctus</p>
                     </div>
+
                 </div>
+
             </div>
-            <div><img class="img-banner-thin" src="../src/images/blank.svg" alt=""></div>
+
+            <div class="banner">
+                <img class="banner__img--thin" src="../src/images/blank.svg" alt="">
+            </div>
         </main>
     </div>
 </body>
+
 <footer>
     <div>Collin Geersen</div>
 </footer>
