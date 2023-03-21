@@ -55,27 +55,7 @@ main {
     z-index: 90;
 }
 
-/*----------------------Nav-Bar----------------------*/
-nav {
-    animation: 600ms normal nav-slide;
-    background-color: $mainColor;
-    height: clamp(6%, 9%, 10%);
-    padding: 1% 0 1% 0;
-    position: fixed;
-    width: 100%;
-    z-index: 101;
 
-    @keyframes nav-slide {
-        from {
-            margin-top: -100%;
-        }
-
-        to {
-            margin-top: 0%;
-        }
-    }
-
-}
 
 /*----------------------Footer----------------------*/
 footer {
@@ -140,7 +120,28 @@ Get rid of background? (the area between body and main)
 Make section background colors different to break up the content
 */
 
-/*===============Nav-Bar Classes===============*/
+/*----------------------Nav-Bar----------------------*/
+nav {
+    animation: 600ms normal nav-slide;
+    background-color: $mainColor;
+    height: clamp(6%, 9%, 10%);
+    padding: 1% 0 1% 0;
+    position: fixed;
+    width: 100%;
+    z-index: 101;
+
+    @keyframes nav-slide {
+        from {
+            margin-top: -100%;
+        }
+
+        to {
+            margin-top: 0%;
+        }
+    }
+
+}
+
 .nav-bar {
     align-items: center;
     display: flex;
