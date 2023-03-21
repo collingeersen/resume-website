@@ -181,8 +181,6 @@ nav {
     }
 }
 
-
-
 .nav-bar__link {
     /*place-self: center end;*/
     align-content: center;
@@ -197,8 +195,6 @@ nav {
         position: relative;
     }
 }
-
-
 
 .nav-bar__page-title {
     background-color: $accentColor2;
@@ -227,7 +223,7 @@ nav {
     position: relative;
 }
 
-.title-head {
+.intro__title {
     padding-top: 10%;
 
     &::after {
