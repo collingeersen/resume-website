@@ -124,7 +124,7 @@ Make section background colors different to break up the content
 nav {
     animation: 600ms normal nav-slide;
     background-color: $mainColor;
-    height: clamp(6%, 9%, 10%);
+    height: clamp(10%, 14%, 20%);
     padding: 1% 0 1% 0;
     position: fixed;
     width: 100%;
