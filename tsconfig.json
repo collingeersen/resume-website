@@ -1,13 +1,13 @@
 {
-    "compilerOptions": {
-      "allowSyntheticDefaultImports": true,
-      "lib": ["ES2020"],
-      "module": "ES2020",
-      "moduleResolution": "node",
-      "target": "ES2020",
-      "noImplicitAny": true,
-      "removeComments": true
-    },
-    "include": ["src/**/*"],
-    "exclude": ["node_modules", "dist",".eslintrc.js"]
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "lib": ["ES2020"],
+    "module": "ES2020",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "target": "ES2020"
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", ".eslintrc.js"]
 }
