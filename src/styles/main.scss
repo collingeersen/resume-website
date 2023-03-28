@@ -129,6 +129,7 @@ nav {
     position: fixed;
     width: 100%;
     z-index: 101;
+    box-shadow: inset 0px -5px 0px $fontColor2;
 
     @keyframes nav-slide {
         from {
@@ -139,7 +140,6 @@ nav {
             margin-top: 0%;
         }
     }
-
 }
 
 .nav-bar {
