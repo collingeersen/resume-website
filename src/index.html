@@ -12,19 +12,33 @@
     <!--CSS critical-->
     <!--Load CSS before js-->
     <link rel="stylesheet" href="../src/styles/main.scss">
+    <script src="../src/scripts/index.js" defer></script>
     <!--Include error pages-->
     <!--W3C tests-->
     <!--Adblock test-->
 </head>
 
 <body>
+
     <div class="global-container">
 
         <nav>
+
             <div class="nav-bar">
 
+                <div class="nav-bar__drop-down __hidden">
+                    <p>afdsg</p>
+                </div>
+
                 <div class="nav-bar__btn">
-                    <button class="nav-bar__btn--hamburger" type="button">&#9776;</button>
+                    <button class="nav-bar__btn--hamburger" type="button"><p>&#9776;</p></button>
+                </div>
+                <!--<script>document.getElementsByClassName("nav-bar__drop-down")[0].setAttribute('hidden', '')</script>-->
+                <div>
+                    <label class="nav-bar__theme-switch">
+                        <input class="theme-switch__input" type="checkbox">
+                        <span class="theme-switch__slider"></span>
+                    </label>
                 </div>
 
                 <div class="nav-bar__link">
@@ -50,6 +64,7 @@
                 <div class="intro__summary">
 
                     <div class="intro__summary__content">
+                        
                         <h2 class="intro__summary__content__heading">Introduction Title</h2>
                         <p class="intro__summary__content__text">Short paragraph introducing myself. Sea eirmod no
                             feugiat quis tation vel lorem clitaullamcorper
