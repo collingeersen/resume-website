@@ -199,6 +199,22 @@ nav {
     }
 }
 
+.nav-bar__drop-down__sub{
+    display: none;
+    position: relative;
+
+    &:active{
+        display:block;
+    }
+
+    &>p{
+
+    }
+    &>div{
+
+    }
+}
+
 .nav-bar__btn {
     margin-right: 5%;
 }
