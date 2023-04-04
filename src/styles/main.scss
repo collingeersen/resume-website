@@ -200,30 +200,24 @@ nav {
     }
 }
 
-.nav-bar__drop-down__sub{
+.nav-bar__drop-down__sub {
     display: block;
     position: relative;
     user-select: none;
 
     [type="checkbox"] {
-        &:checked ~ .nav-bar__drop-down__sub__content{
+        &:checked~.nav-bar__drop-down__sub__content {
             display: block;
         }
+
         //display: none;
+    }
+    &>div{
+        display: none;
     }
 }
 
-.temp
-{
-
-}
-
-.nav-bar__drop-down__sub__content{
-    display: none;
-}
-
 //remember to remove __block and __none
-
 
 .nav-bar__btn {
     margin-right: 5%;
