@@ -120,6 +120,9 @@ a {
 }
 
 a {
+    &:active {
+        color: $accentColor2;
+    }
 
     &:link,
     &:visited {
@@ -132,10 +135,7 @@ a {
         font-size: 1em;
     }
 
-    &:active {
-        color: $accentColor2;
-    }
-
+    //Not used yet, will implement icons
     &::after {
         content: '';
         font-size: 75%;
@@ -152,14 +152,16 @@ Make section background colors different to break up the content
 //  Nav-Bar
 //=========================================================
 nav {
+    //Will remove the nav animation and change the fixed
+    //position and make a truncated version when scrolling down
     animation: 600ms normal nav-slide;
     background-color: $mainColor;
+    box-shadow: inset 0px -5px 0px $fontColor2; //Used to create a pseudo border
     height: 10rem;
     padding: 1% 0 1% 0;
     position: fixed;
     width: 100%;
     z-index: 101;
-    box-shadow: inset 0px -5px 0px $fontColor2;
 
     @keyframes nav-slide {
         from {
@@ -180,52 +182,51 @@ nav {
 }
 
 .nav-bar__drop-down {
-    position: absolute;
     background: #3191ff;
-    top: 100%;
-    right: 70%;
-    padding: 2%;
-    //transform:translate(0,5em);
-    z-index: 1;
-    width: 30%;
+    position: absolute;
     height: auto;
     margin: auto;
+    padding: 2%;
+    right: 70%;
+    top: 100%; //Used to shift down from top of navbar
+    width: 30%;
+    z-index: 1;
 }
 
 .__visible {
-    visibility: visible;
     animation: 600ms normal visible-slide;
+    visibility: visible;
 
     @keyframes visible-slide {
         from {
+            opacity: 0%;
             right: 100%;
             visibility: hidden;
-            opacity: 0%;
         }
 
         to {
+            opacity: 100%;
             right: 70%;
             visibility: visible;
-            opacity: 100%;
         }
     }
 }
 
 .__hidden {
-    visibility: hidden;
     animation: 600ms normal hidden-slide;
+    visibility: hidden;
 
     @keyframes hidden-slide {
         from {
+            opacity: 100%;
             right: 70%;
             visibility: visible;
-            opacity: 100%;
         }
 
         to {
+            opacity: 0%;
             right: 100%;
             visibility: hidden;
-            opacity: 0%;
         }
     }
 }
@@ -264,25 +265,25 @@ nav {
     color: $fontColor2;
     font-size: 2em;
     font-weight: 900;
+    height: 1.5em;
     //text-align: center;
     transition-duration: 150ms;
     transition-property:
         background-color,
         box-shadow;
     width: 2em;
-    height: 1.5em;
 
     p {
         padding: {
-            top: 0;
-            left: 0;
             bottom: 0;
+            left: 0;
             right: 0;
+            top: 0;
         }
 
-        translate: 0px 0px;
         line-height: 1.5;
         margin: -8%; //Fix needed to make whole button click with effects
+        translate: 0px 0px;
         transition-duration: 150ms;
         transition-property: translate;
 
@@ -314,15 +315,13 @@ nav {
     width: 65px;
 
     input {
-        //Removes the default checkbox style
-        height: 0;
+        height: 0; //Removes the default checkbox style
         opacity: 0;
         width: 0;
     }
 
     span {
-        //This draws the container for the switch
-        background-color: $accentColor2;
+        background-color: $accentColor2; //This draws the container for the switch
         border-radius: 20px;
         bottom: 0;
         cursor: pointer;
@@ -364,8 +363,7 @@ nav {
     /*word-spacing: 5em;*/
     a {
         left: 100px;
-        /*Moves the links over an absolute amount*/
-        margin: 0 50% 0 auto;
+        margin: 0 50% 0 auto; //Moves the links over an absolute amount
         position: relative;
     }
 }
@@ -423,11 +421,10 @@ nav {
     overflow: visible;
 
     >div>p {
-        //use class selection instead WIP
-        background-color: $accentColor2;
+        background-color: $accentColor2; //use class selection instead WIP
+        border-radius: 5%;
         margin-right: clamp(30%, 50%, 70%);
         padding: 1%;
-        border-radius: 5%;
     }
 }
 
@@ -442,8 +439,8 @@ nav {
     margin-left: 65%;
     margin-right: 0%;
     margin-top: -8%;
-    position: absolute;
     padding: 0%;
+    position: absolute;
     width: 0%;
 
     @keyframes flex-box1-animation {
