@@ -1,23 +1,29 @@
+//=========================================================
+//  Variables
+//=========================================================
 //Widths
 $bodyWidth: 100%;
 $mainWidth: 80%;
 //Colors
-$backgroundColor1: #1C0B3D;
-$backgroundColor2: #212436;
-$mainColor: #2B3E4D;
-$footerColor: #000000;
 $accentColor1: #0E3D69;
 $accentColor2: #075C61;
 $accentColor3: #1C0B3D;
 $accentColor4: #4C0C5E;
+$backgroundColor1: #1C0B3D;
+$backgroundColor2: #212436;
+$footerColor: #000000;
 $fontColor1: #e1e0e0;
 $fontColor2: #40DB8D;
 $linkColor: #3191ff;
+$mainColor: #2B3E4D;
 //Font
 $primaryFont: 'Arial', Helvetica, sans-serif;
 $secondaryFont: 'Times New Roman', Times, serif;
 
-/*----------------------Reset----------------------*/
+//=========================================================
+//  Reset
+//=========================================================
+//Basic resets used for better cross browser compatibility
 *,
 *::before,
 *::after {
@@ -30,11 +36,13 @@ a {
 }
 
 img {
-    width: auto;
     height: auto;
+    width: auto;
 }
 
-/*----------------------Body----------------------*/
+//=========================================================
+//  Body
+//=========================================================
 body {
     color: $fontColor1;
     background-color: $backgroundColor1;
@@ -46,7 +54,9 @@ body {
     z-index: 1;
 }
 
-/*----------------------Main----------------------*/
+//=========================================================
+//  Main
+//=========================================================
 main {
     background-color: $backgroundColor2;
     margin: auto;
@@ -57,14 +67,28 @@ main {
 
 
 
-/*----------------------Footer----------------------*/
+//=========================================================
+//  Footer
+//=========================================================
 footer {
     background-color: $footerColor;
     margin: auto;
     width: auto;
 }
 
-/*----------------------Headings----------------------*/
+//=========================================================
+//  Background
+//=========================================================
+/*
+.bg {
+    background-image: url(../images/bg.svg);
+    height: 100%;
+    width: 100%;
+} */
+
+//=========================================================
+//  Headings
+//=========================================================
 h1 {
     color: $fontColor2;
 }
@@ -73,12 +97,16 @@ h2 {
     color: $fontColor2;
 }
 
-/*----------------------Paragraphs----------------------*/
+//=========================================================
+//  Paragraphs
+//=========================================================
 p {
     font-family: $secondaryFont;
 }
 
-/*----------------------Links----------------------*/
+//=========================================================
+//  Links
+//=========================================================
 a {
     border-bottom: 1px solid;
     border-bottom-width: 1px;
@@ -120,7 +148,9 @@ Get rid of background? (the area between body and main)
 Make section background colors different to break up the content
 */
 
-/*----------------------Nav-Bar----------------------*/
+//=========================================================
+//  Nav-Bar
+//=========================================================
 nav {
     animation: 600ms normal nav-slide;
     background-color: $mainColor;
@@ -212,7 +242,8 @@ nav {
 
         //display: none;
     }
-    &>div{
+
+    &>div {
         display: none;
     }
 }
@@ -350,15 +381,9 @@ nav {
     text-shadow: $accentColor3 5px 3px 10px;
 }
 
-/*----------------------Background----------------------*/
-/*
-.bg {
-    background-image: url(../images/bg.svg);
-    height: 100%;
-    width: 100%;
-} */
-
-/*===============Introduction Classes===============*/
+//=========================================================
+//  Introduction
+//=========================================================
 .intro {
     height: 100%;
     margin: auto;
@@ -454,13 +479,17 @@ nav {
     display:flex;
     flex-direction: row;
 }*/
-/*----------------------Second Section Classes----------------------*/
+//=========================================================
+//  Second Section Classes
+//=========================================================
 .div-second-section {
     margin: auto;
     width: 90%;
 }
 
-/*----------------------Flexbox 1x3 Classes----------------------*/
+//=========================================================
+//  Flexbox 1x3 Classes
+//=========================================================
 .flex-box--1x3 {
     background-color: $mainColor;
     border: 10px;
@@ -483,7 +512,9 @@ nav {
     }
 }
 
-/*----------------------Flexbox 1x4 Classes----------------------*/
+//=========================================================
+//  Flexbox 1x4 Classes
+//=========================================================
 .flex-box--1x4 {
     background-color: $mainColor;
     border: 10px;
@@ -505,4 +536,6 @@ nav {
     }
 }
 
-/*----------------------Banner Classes----------------------*/
+//=========================================================
+//  Banner Classes
+//=========================================================
