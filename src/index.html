@@ -19,112 +19,200 @@
 </head>
 
 <body>
-
     <div class="global-container">
-
         <nav>
-
-            <div class="nav-bar">
-
-                <div class="nav-bar__drop-down __hidden">
-                    <div class="nav-bar__drop-down__sub">
-                        <input class="nav-bar__drop-down__checkbox" type="checkbox">
-                        <label>Sub1</label>
-                        <div class="nav-bar__drop-down__sub__content">
-                            <ol class="nav-bar__drop-down__sub__content__list">
-                                <li><a href="index.html">Intro</a></li>
-                                <li><a href="index.html">Cards1</a></li>
-                                <li><a href="index.html">Additional Section</a></li>
-                                <li><a href="index.html">Cards2</a></li>
-                            </ol>
-                        </div>
-                    </div>
-                    <div class="nav-bar__drop-down__sub">
-                        <input class="nav-bar__drop-down__checkbox" type="checkbox">
-                        <label>Sub2</label>
-                        <div class="nav-bar__drop-down__sub__content">
-                            <ol class="nav-bar__drop-down__sub__content__list">
-                                <li><a href="index.html">Intro</a></li>
-                                <li><a href="index.html">Cards1</a></li>
-                                <li><a href="index.html">Additional Section</a></li>
-                                <li><a href="index.html">Cards2</a></li>
-                            </ol>
-                        </div>
-                    </div>
-                    <div class="nav-bar__drop-down__sub">
-                        <input class="nav-bar__drop-down__checkbox" type="checkbox">
-                        <label>Sub3</label>
-                        <div class="nav-bar__drop-down__sub__content">
-                            <ol class="nav-bar__drop-down__sub__content__list">
-                                <li><a href="index.html">Intro</a></li>
-                                <li><a href="index.html">Cards1</a></li>
-                                <li><a href="index.html">Additional Section</a></li>
-                                <li><a href="index.html">Cards2</a></li>
-                            </ol>
-                        </div>
-                    </div>
-                    <div class="nav-bar__drop-down__sub">
-                        <input class="nav-bar__drop-down__checkbox" type="checkbox">
-                        <label>Sub4</label>
-                        <div class="nav-bar__drop-down__sub__content">
-                            <ol class="nav-bar__drop-down__sub__content__list">
-                                <li><a href="index.html">Intro</a></li>
-                                <li><a href="index.html">Cards1</a></li>
-                                <li><a href="index.html">Additional Section</a></li>
-                                <li><a href="index.html">Cards2</a></li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="nav-bar__btn">
+            <div class="nav-bar" role="menubar">
+                
+                <!--Hamburger button used to activate the drop-down-->
+                <div class="nav-bar__btn" role="menuitem">
                     <button class="nav-bar__btn--hamburger" type="button">
                         <p>&#9776;</p>
                     </button>
                 </div>
-                <!--<script>document.getElementsByClassName("nav-bar__drop-down")[0].setAttribute('hidden', '')</script>-->
-                <div>
-                    <label class="nav-bar__theme-switch">
-                        <input class="theme-switch__input" type="checkbox">
+
+                <!--Theme switch from dark to light-->
+                <div role="group">
+                    <label class="nav-bar__theme-switch" role="menuitem">
+                        <input class="theme-switch__input" type="checkbox" role="switch">
                         <span class="theme-switch__slider"></span>
                     </label>
                 </div>
 
-                <div class="nav-bar__link">
-                    <a class="nav-bar__link-home" href="../src/index.html">Home</a>
-                    <a class="nav-bar__link-contact" href="../src/index.html">Contact</a>
-                    <a class="nav-bar__link-resume" href="../src/index.html">Resume</a>
+                <!--Main links for site-->
+                <div class="nav-bar__link" role="group">
+                    <a role="menuitem" class="nav-bar__link-home" href="../src/index.html">
+                        Home
+                    </a>
+                    <a role="menuitem" class="nav-bar__link-contact" href="../src/index.html">
+                        Contact
+                    </a>
+                    <a role="menuitem" class="nav-bar__link-resume" href="../src/index.html">
+                        Resume
+                    </a>
                 </div>
 
-                <div class="nav-bar__page-title">
+                <!--Page Name Card-->
+                <div role="menuitem" class="nav-bar__page-title">
                     <h1>Homepage</h1>
+                </div>
+
+                <!--Drop-down to represent site map-->
+                <div class="nav-bar__drop-down __hidden" role="menu">
+
+                    <!--Drop-down Sub-1-->
+                    <div class="nav-bar__drop-down__sub" role="group">
+                        <input class="nav-bar__drop-down__checkbox" type="checkbox" role="menuitemcheckbox">
+                        <label>Sub1</label>
+
+                        <div class="nav-bar__drop-down__sub__content" role="group">
+                            <ol class="nav-bar__drop-down__sub__content__list" role="menu">
+                                <li role="presentation">
+                                    <a role="menuitem" href="index.html">
+                                        Intro
+                                    </a>
+                                </li>
+                                <li role="presentation">
+                                    <a role="menuitem" href="index.html">
+                                        Cards1
+                                    </a>
+                                </li>
+                                <li role="presentation">
+                                    <a role="menuitem" href="index.html">
+                                        Additional Section
+                                    </a>
+                                </li>
+                                <li role="presentation">
+                                    <a role="menuitem" href="index.html">
+                                        Cards2
+                                    </a>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <!--Drop-down Sub-2-->
+                    <div class="nav-bar__drop-down__sub" role="group">
+                        <input class="nav-bar__drop-down__checkbox" type="checkbox" role="menuitemcheckbox">
+                        <label>Sub2</label>
+
+                        <div class="nav-bar__drop-down__sub__content" role="group">
+                            <ol class="nav-bar__drop-down__sub__content__list" role="menu">
+                                <li role="presentation">
+                                    <a role="menuitem" href="index.html">
+                                        Intro
+                                    </a>
+                                </li>
+                                <li role="presentation">
+                                    <a role="menuitem" href="index.html">
+                                        Cards1
+                                    </a>
+                                </li>
+                                <li role="presentation">
+                                    <a role="menuitem" href="index.html">
+                                        Additional Section
+                                    </a>
+                                </li>
+                                <li role="presentation">
+                                    <a role="menuitem" href="index.html">
+                                        Cards2
+                                    </a>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <!--Drop-down Sub-3-->
+                    <div class="nav-bar__drop-down__sub" role="group">
+                        <input class="nav-bar__drop-down__checkbox" type="checkbox" role="menuitemcheckbox">
+                        <label>Sub3</label>
+
+                        <div class="nav-bar__drop-down__sub__content" role="group">
+                            <ol class="nav-bar__drop-down__sub__content__list" role="menu">
+                                <li role="presentation">
+                                    <a role="menuitem" href="index.html">
+                                        Intro
+                                    </a>
+                                </li>
+                                <li role="presentation">
+                                    <a role="menuitem" href="index.html">
+                                        Cards1
+                                    </a>
+                                </li>
+                                <li role="presentation">
+                                    <a role="menuitem" href="index.html">
+                                        Additional Section
+                                    </a>
+                                </li>
+                                <li role="presentation">
+                                    <a role="menuitem" href="index.html">
+                                        Cards2
+                                    </a>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <!--Drop-down Sub-4-->
+                    <div class="nav-bar__drop-down__sub" role="group">
+                        <input class="nav-bar__drop-down__checkbox" type="checkbox" role="menuitemcheckbox">
+                        <label>Sub4</label>
+
+                        <div class="nav-bar__drop-down__sub__content" role="group">
+                            <ol class="nav-bar__drop-down__sub__content__list" role="menu">
+                                <li role="presentation">
+                                    <a role="menuitem" href="index.html">
+                                        Intro
+                                    </a>
+                                </li>
+                                <li role="presentation">
+                                    <a role="menuitem" href="index.html">
+                                        Cards1
+                                    </a>
+                                </li>
+                                <li role="presentation">
+                                    <a role="menuitem" href="index.html">
+                                        Additional Section
+                                    </a>
+                                </li>
+                                <li role="presentation">
+                                    <a role="menuitem" href="index.html">
+                                        Cards2
+                                    </a>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
                 </div>
 
             </div>
         </nav>
-
         <main>
 
+            <!--Introduction Section-->
             <div class="intro">
                 <!--Add triangle behind and have collin image on the opposite side-->
 
+                <!--Title for page-->
                 <h1 class="intro__title">Title for head of page</h1>
+                <!--SVG for personal avatar here-->
                 <img id="intro__img" src="../src/images/blank.svg" alt="">
+
                 <div class="intro__summary">
 
                     <div class="intro__summary__content">
-
                         <h2 class="intro__summary__content__heading">Introduction Title</h2>
                         <p class="intro__summary__content__text">Short paragraph introducing myself. Sea eirmod no
                             feugiat quis tation vel lorem clitaullamcorper
                             gubergren vero dolor. Diam sit sanctus justo volutpat amet rebum nonummy in kasd ullamcorper
                             clita facilisis. Sea eirmod no feugiat quis tation vel lorem clita ullamcorper
                             gubergren vero dolor. Diam sit sanctus justo volutpat amet rebum nonummy in kasd ullamcorper
-                            clita facilisis.</p>
+                            clita facilisis.
+                        </p>
                     </div>
 
-                    <div class="intro__summary__frame"></div>
+                    <div class="intro__summary__frame">
 
+                    </div>
                 </div>
             </div>
 
@@ -180,7 +268,6 @@
                     <div class="flex-box--1x4__col-4">
                         <p>Diam sit sanctus</p>
                     </div>
-
                 </div>
 
             </div>
@@ -188,11 +275,12 @@
             <div class="banner">
                 <img class="banner__img--thin" src="../src/images/blank.svg" alt="">
             </div>
+
         </main>
     </div>
 </body>
 
-<footer>
+<footer role="contentinfo">
     <div>Collin Geersen</div>
 </footer>
 
