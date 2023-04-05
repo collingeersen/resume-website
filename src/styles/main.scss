@@ -159,11 +159,11 @@ nav {
     box-shadow: inset 0px -5px 0px $fontColor2; //Used to create a pseudo border
     height: 10rem;
     padding: 1% 0 1% 0;
-    position: fixed;
+    position: relative;
     width: 100%;
     z-index: 101;
 
-    @keyframes nav-slide {
+    /*@keyframes nav-slide {
         from {
             margin-top: -100%;
         }
@@ -171,7 +171,7 @@ nav {
         to {
             margin-top: 0%;
         }
-    }
+    }*/
 }
 
 .nav-bar {
@@ -189,23 +189,30 @@ nav {
     padding: 2%;
     right: 70%;
     top: 100%; //Used to shift down from top of navbar
+    transform: translateX(-1000px);
+    transition-duration: 300ms;
+    transition-property: transform;
     width: 30%;
     z-index: 1;
+
+    &:is(.__visible){   //Prevents the initial load to show the drop-down
+        transform: translateX(0px);
+    }
 }
 
 .__visible {
-    animation: 600ms normal visible-slide;
+    animation: 400ms normal visible-slide;
     visibility: visible;
 
     @keyframes visible-slide {
         from {
-            opacity: 0%;
+            //opacity: 0%;
             right: 100%;
             visibility: hidden;
         }
 
         to {
-            opacity: 100%;
+            //opacity: 100%;
             right: 70%;
             visibility: visible;
         }
@@ -213,18 +220,18 @@ nav {
 }
 
 .__hidden {
-    animation: 600ms normal hidden-slide;
+    animation: 400ms normal hidden-slide;
     visibility: hidden;
 
     @keyframes hidden-slide {
         from {
-            opacity: 100%;
+            //opacity: 100%;
             right: 70%;
             visibility: visible;
         }
 
         to {
-            opacity: 0%;
+            //opacity: 0%;
             right: 100%;
             visibility: hidden;
         }
