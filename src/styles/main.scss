@@ -189,30 +189,28 @@ nav {
     padding: 2%;
     right: 70%;
     top: 100%; //Used to shift down from top of navbar
-    transform: translateX(-1000px);
-    transition-duration: 300ms;
-    transition-property: transform;
+    opacity: 0;
+    transition-duration: 400ms;
+    transition-property: opacity;
     width: 30%;
     z-index: 1;
 
     &:is(.__visible){   //Prevents the initial load to show the drop-down
-        transform: translateX(0px);
+        opacity: 100%;
     }
 }
 
 .__visible {
-    animation: 400ms normal visible-slide;
+    animation: 400ms linear visible-slide;
     visibility: visible;
 
     @keyframes visible-slide {
         from {
-            //opacity: 0%;
             right: 100%;
             visibility: hidden;
         }
 
         to {
-            //opacity: 100%;
             right: 70%;
             visibility: visible;
         }
@@ -220,18 +218,16 @@ nav {
 }
 
 .__hidden {
-    animation: 400ms normal hidden-slide;
+    animation: 400ms linear hidden-slide;
     visibility: hidden;
 
     @keyframes hidden-slide {
         from {
-            //opacity: 100%;
             right: 70%;
             visibility: visible;
         }
 
         to {
-            //opacity: 0%;
             right: 100%;
             visibility: hidden;
         }
