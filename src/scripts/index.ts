@@ -16,55 +16,20 @@ function dropDown() {
   }
 }
 
-/*
-const span = document.getElementsByClassName("nav-bar__drop-down__toggle");
+const btn2 = document.getElementsByClassName("nav-bar__dropdown__btn--exit")[0];
 
-for (let i = 0; i < span.length; i++) {
-  span[i].addEventListener("click", dropContent);
-}
+btn2.addEventListener("click", dropDown2);
 
-
-//span.addEventListener("click", dropContent);
-
-const element = document.getElementsByClassName("nav-bar__drop-down__sub__content");
-*/
-/* class dropContents {
-  name:
-  constructor(){
-    this.name = 'df';
-      
-      if (
-        element.classList === undefined ||
-        element.classList === "__none"
-      ) {
-        element.classList.remove("__none");
-        element.classList.add("__block");
-      } else {
-        element.classList.remove("__block");
-        element.classList.add("__none");
-      } 
-  }
-} */
-/*
-function dropContent() {
-  //const element = document.getElementsByClassName("nav-bar__drop-down__sub__content")[0];
-  for (let i = 0; i < element.length; i++){
-    //element[i].classList.add("__none")
-
-  
+function dropDown2() {
+  const element = document.getElementsByClassName("nav-bar__drop-down")[0];
   if (
-    element[i].classList[i] === undefined ||
-    element[i].classList[i] === "__none"
+    element.classList[1] === undefined ||
+    element.classList[1] === "__hidden"
   ) {
-    element[i].classList.remove("__none");
-    element[i].classList.add("__block");
+    element.classList.remove("__hidden");
+    element.classList.add("__visible");
   } else {
-    element[i].classList.remove("__block");
-    element[i].classList.add("__none");
+    element.classList.remove("__visible");
+    element.classList.add("__hidden");
   }
-  
 }
-}
-*/
-
-//const span = document.querySelector(".nav-bar__drop-down__toggle");

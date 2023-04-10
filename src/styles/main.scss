@@ -11,6 +11,7 @@ $accentColor3: #1C0B3D;
 $accentColor4: #4C0C5E;
 $backgroundColor1: #1C0B3D;
 $backgroundColor2: #212436;
+$dropdownColorBG: #3191ff; //temp color
 $footerColor: #000000;
 $fontColor1: #e1e0e0;
 $fontColor2: #40DB8D;
@@ -182,21 +183,44 @@ nav {
 }
 
 .nav-bar__drop-down {
-    background: #3191ff;
-    position: absolute;
+    background: $dropdownColorBG;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     height: auto;
     margin: auto;
     padding: 2%;
+    position: absolute;
+    opacity: 0;
     right: 70%;
     top: 100%; //Used to shift down from top of navbar
-    opacity: 0;
     transition-duration: 400ms;
     transition-property: opacity;
     width: 30%;
     z-index: 1;
-
+    
     &:is(.__visible){   //Prevents the initial load to show the drop-down
         opacity: 100%;
+    }
+}
+
+.nav-bar__dropdown__btn{
+    grid-column: 3; //Using three allows for an empty second column
+}
+
+.nav-bar__dropdown__btn--exit{
+    background-color: $dropdownColorBG;
+    color: $fontColor1;
+    //border: 0;
+    padding: 0;
+    line-height: 0%;
+
+    p{
+        padding: {
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 0;
+        }
     }
 }
 
@@ -256,7 +280,7 @@ nav {
     margin-right: 5%;
 }
 
-.nav-bar__btn--hamburger {
+.nav-bar__btn--hamburger{
     background-color: $accentColor2;
     border: 0;
     border-radius: 20%;
