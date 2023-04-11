@@ -22,7 +22,7 @@ $fontColor1: #e1e0e0;
 $fontColor2: #40DB8D;
 $linkColor: #3191ff;
 $mainColor: #2B3E4D;
-$transparent: rgba(0,0,0,0);
+$transparent: rgba(0, 0, 0, 0);
 //Font
 $primaryFont: 'Arial', Helvetica, sans-serif;
 $secondaryFont: 'Times New Roman', Times, serif;
@@ -141,12 +141,6 @@ a {
         color: $linkColor;
         font-size: 1em;
     }
-
-    //Not used yet, will implement icons
-    &::after {
-        content: '';
-        font-size: 75%;
-    }
 }
 
 /*
@@ -207,17 +201,18 @@ nav {
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 
-    &:is(.__visible){   //Prevents the initial load to show the drop-down
+    &:is(.__visible) {
+        //Prevents the initial load to show the drop-down
         opacity: 100%;
     }
 }
 
-.nav-bar__dropdown__btn{
+.nav-bar__dropdown__btn {
     grid-column: 2;
     margin-left: auto;
 }
 
-.nav-bar__dropdown__btn--exit{
+.nav-bar__dropdown__btn--exit {
     color: $fontColor1;
     border: 0;
     padding: 0;
@@ -227,18 +222,18 @@ nav {
     transition-duration: 150ms;
     transition-property: background-color, box-shadow, translate;
     box-shadow: $accentColor3 0 5px 1px;
-    
-    &:hover{
+
+    &:hover {
         background-color: $accentColor1;
         cursor: pointer;
     }
 
-    &:active{
+    &:active {
         translate: 0px 2.5px;
         box-shadow: $accentColor3 0 0px 1px;
     }
 
-    span{
+    span {
         font-size: 3rem;
         color: $fontColor2;
     }
@@ -301,7 +296,7 @@ nav {
     margin-right: 5%;
 }
 
-.nav-bar__btn--hamburger{
+.nav-bar__btn--hamburger {
     background-color: $accentColor2;
     border: 0;
     border-radius: 20%;
@@ -397,16 +392,26 @@ nav {
 }
 
 .nav-bar__link {
-    /*place-self: center end;*/
-    align-content: center;
     margin-right: auto;
-    white-space: nowrap;
+    user-select: none;
+    white-space: nowrap; //Prevents last item from wrapping
 
-    /*word-spacing: 5em;*/
-    a {
-        left: 100px;
-        margin: 0 50% 0 auto; //Moves the links over an absolute amount
-        position: relative;
+    menu {
+        margin-left: auto;
+        margin-right: auto;
+        align-content: center;
+        li {
+            position: relative;
+            display: inline;
+            padding-left: 8em;
+            list-style: none;
+
+            span{
+                font-size: 1.5em;
+                line-height: -10%;
+                translate: 0px 5px;
+            }
+        }
     }
 }
 
@@ -416,9 +421,11 @@ nav {
     box-shadow: $accentColor3 3px 3px 5px;
     color: $fontColor2;
     margin-left: auto;
-    margin-right: 20%;
+    margin-right: auto;
     padding: 0.5em;
+    position: relative;
     text-shadow: $accentColor3 5px 3px 10px;
+    visibility: hidden;
 }
 
 //=========================================================
