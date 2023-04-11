@@ -1,4 +1,9 @@
 //=========================================================
+//  Imports
+//=========================================================
+
+
+//=========================================================
 //  Variables
 //=========================================================
 //Widths
@@ -17,6 +22,7 @@ $fontColor1: #e1e0e0;
 $fontColor2: #40DB8D;
 $linkColor: #3191ff;
 $mainColor: #2B3E4D;
+$transparent: rgba(0,0,0,0);
 //Font
 $primaryFont: 'Arial', Helvetica, sans-serif;
 $secondaryFont: 'Times New Roman', Times, serif;
@@ -186,6 +192,7 @@ nav {
     background: $dropdownColorBG;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    //grid-gap: 20%;
     height: auto;
     margin: auto;
     padding: 2%;
@@ -204,25 +211,37 @@ nav {
 }
 
 .nav-bar__dropdown__btn{
-    grid-column: 3; //Using three allows for an empty second column
+    grid-column: 2;
+    margin-left: auto;
 }
 
 .nav-bar__dropdown__btn--exit{
-    background-color: $dropdownColorBG;
     color: $fontColor1;
-    //border: 0;
+    border: 0;
     padding: 0;
     line-height: 0%;
+    background-color: $accentColor2;
+    border-radius: 20%;
+    transition-duration: 150ms;
+    transition-property: background-color, box-shadow, translate;
+    box-shadow: $accentColor3 0 5px 1px;
+    
+    &:hover{
+        background-color: $accentColor1;
+        cursor: pointer;
+    }
 
-    p{
-        padding: {
-            bottom: 0;
-            left: 0;
-            right: 0;
-            top: 0;
-        }
+    &:active{
+        translate: 0px 2.5px;
+        box-shadow: $accentColor3 0 0px 1px;
+    }
+
+    span{
+        font-size: 3rem;
+        color: $fontColor2;
     }
 }
+
 
 .__visible {
     animation: 400ms linear visible-slide;
