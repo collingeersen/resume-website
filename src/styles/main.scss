@@ -16,7 +16,7 @@ $accentColor3: #1C0B3D;
 $accentColor4: #4C0C5E;
 $backgroundColor1: #1C0B3D;
 $backgroundColor2: #212436;
-$dropdownColorBG: #3191ff; //temp color
+$dropdownColorBG: #2B3E4D; //temp color
 $footerColor: #000000;
 $fontColor1: #e1e0e0;
 $fontColor2: #40DB8D;
@@ -204,7 +204,9 @@ nav {
     transition-property: opacity;
     width: 30%;
     z-index: 1;
-    
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+
     &:is(.__visible){   //Prevents the initial load to show the drop-down
         opacity: 100%;
     }
