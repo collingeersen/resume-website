@@ -184,9 +184,10 @@ nav {
 
 .nav-bar__drop-down {
     background: $dropdownColorBG;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    //grid-gap: 20%;
     height: auto;
     margin: auto;
     padding: 2%;
@@ -198,8 +199,6 @@ nav {
     transition-property: opacity;
     width: 30%;
     z-index: 1;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
 
     &:is(.__visible) {
         //Prevents the initial load to show the drop-down
@@ -213,15 +212,16 @@ nav {
 }
 
 .nav-bar__dropdown__btn--exit {
-    color: $fontColor1;
-    border: 0;
-    padding: 0;
-    line-height: 0%;
     background-color: $accentColor2;
+    border: 0;
     border-radius: 20%;
+    box-shadow: $accentColor3 0 5px 1px;
+    color: $fontColor1;
+    line-height: 0%;
+    padding: 0;
     transition-duration: 150ms;
     transition-property: background-color, box-shadow, translate;
-    box-shadow: $accentColor3 0 5px 1px;
+
 
     &:hover {
         background-color: $accentColor1;
@@ -229,8 +229,8 @@ nav {
     }
 
     &:active {
-        translate: 0px 2.5px;
         box-shadow: $accentColor3 0 0px 1px;
+        translate: 0px 2.5px;
     }
 
     span {
@@ -283,8 +283,6 @@ nav {
         &:checked~.nav-bar__drop-down__sub__content {
             display: block;
         }
-
-        //display: none;
     }
 
     &>div {
@@ -318,13 +316,13 @@ nav {
             top: 0;
         }
 
-        width: 100%;
+        color: $fontColor2;
+        font-size: 2rem;
         line-height: 1.5;
-        translate: 0px 0px;
         transition-duration: 150ms;
         transition-property: translate;
-        font-size: 2rem;
-        color: $fontColor2;
+        translate: 0px 0px;
+        width: 100%;
 
         &:active {
             translate: 0px 2.5px;
@@ -397,14 +395,15 @@ nav {
     white-space: nowrap; //Prevents last item from wrapping
 
     menu {
+        align-content: center;
         margin-left: auto;
         margin-right: auto;
-        align-content: center;
+
         li {
-            position: relative;
             display: inline;
-            padding-left: 8em;
             list-style: none;
+            padding-left: 8em;
+            position: relative;
 
             span{
                 font-size: 1.5em;
@@ -434,8 +433,8 @@ nav {
 .intro {
     height: 100%;
     margin: auto;
-    width: 90%;
     position: relative;
+    width: 90%;
 }
 
 .intro__title {
