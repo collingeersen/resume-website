@@ -1,5 +1,6 @@
 const btnHamburger = document.getElementsByClassName("nav-bar__btn--hamburger")[0];
 const btnExit = document.getElementsByClassName("nav-bar__dropdown__btn--exit")[0];
+const mainExit = document.getElementsByClassName("main")[0];
 
 btnHamburger.addEventListener("click", dropDown);
 btnExit.addEventListener("click", dropDown);
@@ -17,7 +18,7 @@ function dropDown() {
     main.classList.remove("--blur");
     main.classList.add("--unblur");
   }
-  
+
   if (
     elementDropDown.classList[1] === undefined ||
     elementDropDown.classList[1] === "__hidden"
@@ -27,5 +28,9 @@ function dropDown() {
   } else {
     elementDropDown.classList.remove("__visible");
     elementDropDown.classList.add("__hidden");
+  }
+
+  if (main.classList[1] === "--blur"){
+    mainExit.addEventListener("click", dropDown, {once: true});
   }
 }
