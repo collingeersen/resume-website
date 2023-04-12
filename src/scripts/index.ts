@@ -1,35 +1,31 @@
-const btn = document.getElementsByClassName("nav-bar__btn--hamburger")[0];
+const btnHamburger = document.getElementsByClassName("nav-bar__btn--hamburger")[0];
+const btnExit = document.getElementsByClassName("nav-bar__dropdown__btn--exit")[0];
 
-btn.addEventListener("click", dropDown);
+btnHamburger.addEventListener("click", dropDown);
+btnExit.addEventListener("click", dropDown);
 
 function dropDown() {
-  const element = document.getElementsByClassName("nav-bar__drop-down")[0];
-  if (
-    element.classList[1] === undefined ||
-    element.classList[1] === "__hidden"
+  const elementDropDown = document.getElementsByClassName("nav-bar__drop-down")[0];
+  const main = document.getElementsByClassName("main")[0];
+  if(
+    main.classList[1] === undefined ||
+    main.classList[1] === "--unblur"
   ) {
-    element.classList.remove("__hidden");
-    element.classList.add("__visible");
+    main.classList.remove("--unblur");
+    main.classList.add("--blur");
   } else {
-    element.classList.remove("__visible");
-    element.classList.add("__hidden");
+    main.classList.remove("--blur");
+    main.classList.add("--unblur");
   }
-}
-
-const btn2 = document.getElementsByClassName("nav-bar__dropdown__btn--exit")[0];
-
-btn2.addEventListener("click", dropDown2);
-
-function dropDown2() {
-  const element = document.getElementsByClassName("nav-bar__drop-down")[0];
+  
   if (
-    element.classList[1] === undefined ||
-    element.classList[1] === "__hidden"
+    elementDropDown.classList[1] === undefined ||
+    elementDropDown.classList[1] === "__hidden"
   ) {
-    element.classList.remove("__hidden");
-    element.classList.add("__visible");
+    elementDropDown.classList.remove("__hidden");
+    elementDropDown.classList.add("__visible");
   } else {
-    element.classList.remove("__visible");
-    element.classList.add("__hidden");
+    elementDropDown.classList.remove("__visible");
+    elementDropDown.classList.add("__hidden");
   }
 }
