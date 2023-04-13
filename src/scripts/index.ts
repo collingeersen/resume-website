@@ -21,13 +21,13 @@ function dropDown() {
 
   if (
     elementDropDown.classList[1] === undefined ||
-    elementDropDown.classList[1] === "__hidden"
+    elementDropDown.classList[1] === "--hidden"
   ) {
-    elementDropDown.classList.remove("__hidden");
-    elementDropDown.classList.add("__visible");
+    elementDropDown.classList.remove("--hidden");
+    elementDropDown.classList.add("--visible");
   } else {
     elementDropDown.classList.remove("__visible");
-    elementDropDown.classList.add("__hidden");
+    elementDropDown.classList.add("--hidden");
   }
 
   if (main.classList[1] === "--blur"){
