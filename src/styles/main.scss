@@ -263,15 +263,29 @@ nav {
     position: relative;
     user-select: none;
 
-    [type="checkbox"] {
+    div {   //The subsections initially collapsed
+        //display: none;
+    }
+
+    input {
+        //height: 0; //Removes the default checkbox style
+        //opacity: 0;
+        //width: 0;
+    }
+
+    /*[type="checkbox"] { //This makes the subsections visible when checked
         &:checked~.nav-bar__drop-down__sub__content {
             display: block;
         }
-    }
+    }*/
+}
 
-    &>div {
-        display: none;
-    }
+.--display-none{
+    display: none;
+}
+
+.--display-block{
+    display: block;
 }
 
 .nav-bar__btn {
