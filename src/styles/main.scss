@@ -216,7 +216,6 @@ nav {
     transition-duration: 150ms;
     transition-property: background-color, box-shadow, translate;
 
-
     &:hover {
         background-color: $accentColor1;
         cursor: pointer;
@@ -232,7 +231,6 @@ nav {
         color: $fontColor2;
     }
 }
-
 
 .--visible {
     transition-property: right;
@@ -262,29 +260,13 @@ nav {
     display: block;
     position: relative;
     user-select: none;
-
-    div {   //The subsections initially collapsed
-        //display: none;
-    }
-
-    input {
-        //height: 0; //Removes the default checkbox style
-        //opacity: 0;
-        //width: 0;
-    }
-
-    /*[type="checkbox"] { //This makes the subsections visible when checked
-        &:checked~.nav-bar__drop-down__sub__content {
-            display: block;
-        }
-    }*/
 }
 
-.--display-none{
+[class$="--display-none"]{
     display: none;
 }
 
-.--display-block{
+[class$="--display-block"]{
     display: block;
 }
 
