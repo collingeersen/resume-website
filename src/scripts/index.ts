@@ -22,7 +22,10 @@ function dropDown() {
   if (
     elementDropDown.classList[1] === undefined ||
     elementDropDown.classList[1] === "--hidden"
+    elementDropDown.classList[1] === "--hidden"
   ) {
+    elementDropDown.classList.remove("--hidden");
+    elementDropDown.classList.add("--visible");
     elementDropDown.classList.remove("--hidden");
     elementDropDown.classList.add("--visible");
   } else {
