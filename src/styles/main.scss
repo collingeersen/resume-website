@@ -234,13 +234,13 @@ nav {
 }
 
 
-.__visible {
+.--visible {
     transition-property: right;
     transition-duration: 400ms;
     right: 70%;
 }
 
-.__hidden {
+.--hidden {
     transition-property: right;
     transition-duration: 400ms;
     right: 100%;
