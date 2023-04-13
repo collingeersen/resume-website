@@ -192,18 +192,12 @@ nav {
     margin: auto;
     padding: 2%;
     position: absolute;
-    //opacity: 0;
     right: 70%;
     top: 100%; //Used to shift down from top of navbar
     transition-duration: 400ms;
     transition-property: opacity;
     width: 30%;
     z-index: 1;
-
-    /*&:is(.__visible) {
-        //Prevents the initial load to show the drop-down
-        opacity: 100%;
-    }*/
 }
 
 .nav-bar__dropdown__btn {
@@ -241,61 +235,18 @@ nav {
 
 
 .__visible {
-    /*
-    animation: 400ms linear visible-slide;
-    visibility: visible;
-
-    @keyframes visible-slide {
-        from {
-            right: 100%;
-            visibility: hidden;
-        }
-
-        to {
-            right: 70%;
-            visibility: visible;
-        }
-    }*/
     transition-property: right;
     transition-duration: 400ms;
     right: 70%;
 }
 
 .__hidden {
-    /*
-    animation: 400ms linear hidden-slide;
-    visibility: hidden;
-
-    @keyframes hidden-slide {
-        from {
-            right: 70%;
-            visibility: visible;
-        }
-
-        to {
-            right: 100%;
-            visibility: hidden;
-        }
-    }*/
-
     transition-property: right;
     transition-duration: 400ms;
     right: 100%;
 }
 
 .--unblur{
-    /*animation: 400ms unblur;
-
-    @keyframes unblur {
-        from {
-            filter: blur(0);
-        }
-
-        to {
-            filter: blur(10);
-        }
-    }*/
-
     transition-duration: 400ms;
     transition-property: filter;
     filter: blur(0);  
