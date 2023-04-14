@@ -270,6 +270,25 @@ nav {
     display: block;
 }
 
+.nav-bar__drop-down__footer{
+    
+    div{
+        width: 200%;
+        height: 100px;
+    }
+
+    span{
+        height: 6px;
+        width: 200%;
+        background-color: $dropdownColorBG;
+        box-shadow: 
+        inset 0px 2px 3px 0px rgba(0, 0, 0, 0.5),
+        inset -0px -2px 3px 0px rgba(0, 0, 0, 0.5),
+        black 0px 0px 1px;
+        display: inline-block;
+    }
+}
+
 .nav-bar__btn {
     margin-right: 5%;
 }
