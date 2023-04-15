@@ -48,11 +48,11 @@ Iterates through all elements with the --display-none tag and
 adds a click event specific to each sub content for toggle
 */
 for (let i = 0; i < toggleDisplay.length; i++) {
-  toggleDisplay[i].addEventListener("click", fun);
+  toggleDisplay[i].addEventListener("click", subToggle);
   const sub = document.getElementsByClassName("--" + i + "--display-none")[0];
 
   //Matches in order from 0 to each of the elements using i as the unique identifier
-  function fun() {
+  function subToggle() {
     if (
       sub.classList[1] === undefined ||
       sub.classList[1] === "--" + i + "--display-none"
