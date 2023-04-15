@@ -278,17 +278,11 @@ nav {
 //-------------------------
 //  Nav-Bar: Links         |
 //-------------------------
-.nav-bar__link {
-    margin-right: auto;
-    user-select: none;
-    white-space: nowrap; //Prevents last item from wrapping
-}
-
-//Note: maybe can pull styles from above into here
 .nav-bar__link__menu {
     align-content: center;
     margin-left: auto;
-    margin-right: auto;
+    user-select: none;
+    white-space: nowrap; //Prevents last item from wrapping
 
     li {
         display: inline;
