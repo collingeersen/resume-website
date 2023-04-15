@@ -20,6 +20,7 @@ $dropdownColorBG: #2B3E4D; //temp color
 $footerColor: #000000;
 $fontColor1: #e1e0e0;
 $fontColor2: #40DB8D;
+$insetShadow: rgba(0, 0, 0, 0.6);
 $linkColor: #3191ff;
 $mainColor: #2B3E4D;
 $transparent: rgba(0, 0, 0, 0);
@@ -72,8 +73,6 @@ main {
     z-index: 90;
 }
 
-
-
 //=========================================================
 //  Footer
 //=========================================================
@@ -124,9 +123,7 @@ a {
         border-bottom-width,
         color,
         font-size;
-}
 
-a {
     &:active {
         color: $accentColor2;
     }
@@ -153,7 +150,6 @@ Make section background colors different to break up the content
 //  Nav-Bar
 //=========================================================
 nav {
-    //Will remove the nav animation and change the fixed
     //position and make a truncated version when scrolling down
     animation: 600ms normal nav-slide;
     background-color: $mainColor;
@@ -163,16 +159,6 @@ nav {
     position: relative;
     width: 100%;
     z-index: 101;
-
-    /*@keyframes nav-slide {
-        from {
-            margin-top: -100%;
-        }
-
-        to {
-            margin-top: 0%;
-        }
-    }*/
 }
 
 .nav-bar {
@@ -182,134 +168,9 @@ nav {
     margin-left: 10%;
 }
 
-.nav-bar__drop-down {
-    background: $dropdownColorBG;
-    border-bottom-right-radius: 20px;
-    border-top-right-radius: 20px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    height: auto;
-    margin: auto;
-    padding: 2%;
-    position: absolute;
-    right: 70%;
-    top: 100%; //Used to shift down from top of navbar
-    transition-duration: 400ms;
-    transition-property: opacity;
-    width: 30%;
-    z-index: 1;
-}
-
-.nav-bar__dropdown__btn {
-    grid-column: 2;
-    margin-left: auto;
-}
-
-.nav-bar__dropdown__btn--exit {
-    background-color: $accentColor2;
-    border: 0;
-    border-radius: 20%;
-    box-shadow: $accentColor3 0 5px 1px;
-    line-height: 0%;
-    padding: 0;
-    transition-duration: 150ms;
-    transition-property: background-color, box-shadow, translate;
-
-    &:hover {
-        background-color: $accentColor1;
-        cursor: pointer;
-    }
-
-    &:active {
-        box-shadow: $accentColor3 0 0px 1px;
-        translate: 0px 2.5px;
-    }
-
-    span {
-        font-size: 3rem;
-        color: $fontColor2;
-    }
-}
-
-.--visible {
-    transition-property: right;
-    transition-duration: 400ms;
-    right: 70%;
-}
-
-.--hidden {
-    transition-property: right;
-    transition-duration: 400ms;
-    right: 100%;
-}
-
-.--unblur {
-    transition-duration: 400ms;
-    transition-property: filter;
-    filter: blur(0);
-}
-
-.--blur {
-    transition-duration: 400ms;
-    transition-property: filter;
-    filter: blur(15);
-}
-
-.nav-bar__drop-down__sub {
-    display: block;
-    position: relative;
-    user-select: none;
-    padding-bottom: 10%;
-
-    span {
-        label {
-            cursor: pointer;
-            color: $fontColor2;
-        }
-
-        span{
-            translate: 0 8px;
-            
-        }
-    }
-}
-
-[class$="--display-none"] {
-    display: none;
-}
-
-[class$="--display-block"] {
-    display: block;
-}
-
-.nav-bar__drop-down__footer {
-    //grid-column: 5 / 2;
-
-    div {
-        width: 200%;
-        height: 100px;
-    }
-
-    span {
-        height: 5px;
-        width: 200%;
-        //margin-right: 100%;
-        //margin-left: auto;
-        background-color: $dropdownColorBG;
-        overflow: hidden;
-        box-shadow:
-            inset 0px 2px 2px 0px rgba(0, 0, 0, 0.5),
-            inset -0px -2px 2px 0px rgba(0, 0, 0, 0.5),
-            black 0px 0px 1px;
-        display: inline-block;
-    }
-
-    a {
-        font-size: 0.75em;
-        display: inline;
-    }
-}
-
+//-------------------------
+//  Nav-Bar: Btn-Hamburger |
+//-------------------------
 .nav-bar__btn {
     margin-right: 5%;
 }
@@ -319,15 +180,29 @@ nav {
     border: 0;
     border-radius: 20%;
     box-shadow:
-        inset 2px 0px 4px rgba(0, 0, 0, 0.6),
-        inset -2px -4px 4px rgba(0, 0, 0, 0.6),
-        #1C0B3D 0px 2px 3px;
+        inset 2px 0px 4px $insetShadow,
+        inset -2px -4px 4px $insetShadow,
+        $accentColor3 0px 2px 3px;
     transition-duration: 150ms;
     transition-property:
         background-color,
         box-shadow;
     width: 4rem;
 
+    &:hover {
+        background-color: $accentColor1;
+        border-radius: 20%;
+        cursor: pointer;
+    }
+
+    &:active {
+        box-shadow:
+            inset -1px -1px 4px $insetShadow,
+            inset 1px 0px 4px $insetShadow,
+            #1C0B3D 0px 1px 1px;
+    }
+
+    //Span used by Google Material Icon
     span {
         padding: {
             bottom: 0;
@@ -348,35 +223,27 @@ nav {
             translate: 0px 2.5px;
         }
     }
-
-    &:hover {
-        background-color: $accentColor1;
-        border-radius: 20%;
-        cursor: pointer;
-    }
-
-    &:active {
-        box-shadow:
-            inset -1px -1px 4px rgba(0, 0, 0, 0.6),
-            inset 1px 0px 4px rgba(0, 0, 0, 0.6),
-            #1C0B3D 0px 1px 1px;
-    }
 }
 
+//-------------------------
+//  Nav-Bar: Theme Switch  |
+//-------------------------
 .nav-bar__theme-switch {
     display: inline-block;
     height: 38px;
     position: relative;
     width: 65px;
 
+    //Removes the default checkbox style
     input {
-        height: 0; //Removes the default checkbox style
+        height: 0;
         opacity: 0;
         width: 0;
     }
 
+    //This draws the container for the switch
     span {
-        background-color: $accentColor2; //This draws the container for the switch
+        background-color: $accentColor2;
         border-radius: 20px;
         bottom: 0;
         cursor: pointer;
@@ -406,34 +273,41 @@ nav {
     input:checked+span::before {
         transform: translateX(28px);
     }
-
 }
 
+//-------------------------
+//  Nav-Bar: Links         |
+//-------------------------
 .nav-bar__link {
     margin-right: auto;
     user-select: none;
     white-space: nowrap; //Prevents last item from wrapping
+}
 
-    menu {
-        align-content: center;
-        margin-left: auto;
-        margin-right: auto;
+//Note: maybe can pull styles from above into here
+.nav-bar__link__menu {
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
 
-        li {
-            display: inline;
-            list-style: none;
-            padding-left: 8em;
-            position: relative;
+    li {
+        display: inline;
+        list-style: none;
+        padding-left: 8em;
+        position: relative;
 
-            span {
-                font-size: 1.5em;
-                line-height: -10%;
-                translate: 0px 5px;
-            }
+        //Span used by Google Material Icons
+        span {
+            font-size: 1.5em;
+            line-height: -10%;
+            translate: 0px 5px;
         }
     }
 }
 
+//-------------------------
+//  Nav-Bar: Page Title    |
+//-------------------------
 .nav-bar__page-title {
     background-color: $accentColor2;
     border-radius: 20% 40% 20% 40%;
@@ -444,7 +318,150 @@ nav {
     padding: 0.5em;
     position: relative;
     text-shadow: $accentColor3 5px 3px 10px;
-    visibility: hidden;
+    visibility: hidden; //Hides this. Still thinking about usage.
+}
+
+//-------------------------
+//  Nav-Bar: Dropdown Menu |
+//-------------------------
+.nav-bar__drop-down {
+    background: $dropdownColorBG;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: auto;
+    margin: auto;
+    padding: 2%;
+    position: absolute;
+    right: 70%;
+    top: 100%; //Used to shift down from top of navbar
+    transition-duration: 400ms;
+    transition-property: opacity;
+    width: 30%;
+    z-index: 1;
+}
+
+//  Dropdown Menu: Btn
+//--------------------
+.nav-bar__dropdown__btn {
+    grid-column: 2;
+    margin-left: auto;
+}
+
+//Dropdown Menu: Btn Exit
+.nav-bar__dropdown__btn--exit {
+    background-color: $accentColor2;
+    border: 0;
+    border-radius: 20%;
+    box-shadow: $accentColor3 0 5px 1px;
+    line-height: 0%;
+    padding: 0;
+    transition-duration: 150ms;
+    transition-property: background-color, box-shadow, translate;
+
+    &:hover {
+        background-color: $accentColor1;
+        cursor: pointer;
+    }
+
+    &:active {
+        box-shadow: $accentColor3 0 0px 1px;
+        translate: 0px 2.5px;
+    }
+
+    span {
+        font-size: 3rem;
+        color: $fontColor2;
+    }
+}
+
+//  Dropdown Menu: Sub
+//--------------------
+.nav-bar__drop-down__sub {
+    display: block;
+    padding-bottom: 10%;
+    position: relative;
+    user-select: none;
+}
+
+//Span that holds the subsection title and Material Icons
+.nav-bar__drop-down__sub__span {
+
+    label {
+        color: $fontColor2;
+        cursor: pointer;
+    }
+
+    //Span used by Google Material Icons
+    span {
+        translate: 0 8px; //Centers icon
+    }
+}
+
+.nav-bar__drop-down__footer {
+
+    //Empty div to shift the footer down and retain dynamic resizing 
+    div {
+        height: 100px;
+        width: 200%;
+    }
+
+    //Creates the divider from subsections to footer
+    span {
+        background-color: $dropdownColorBG;
+        box-shadow:
+            inset 0px 2px 2px 0px $insetShadow,
+            inset -0px -2px 2px 0px $insetShadow,
+            black 0px 0px 1px;
+        display: inline-block;
+        height: 5px;
+        overflow: hidden;
+        width: 200%;
+        //margin-right: 100%;
+        //margin-left: auto;
+    }
+
+    //About Section Link
+    a {
+        display: inline;
+        font-size: 0.75em;
+    }
+}
+
+//-------------------------
+//  Nav-Bar: Events        |
+//-------------------------
+.--hidden {
+    transition-property: right;
+    transition-duration: 400ms;
+    right: 100%;
+}
+
+.--visible {
+    transition-property: right;
+    transition-duration: 400ms;
+    right: 70%;
+}
+
+.--unblur {
+    filter: blur(0);
+    transition-duration: 400ms;
+    transition-property: filter;
+}
+
+.--blur {
+    filter: blur(15);
+    transition-duration: 400ms;
+    transition-property: filter;
+}
+
+[class$="--display-none"] {
+    display: none;
+}
+
+[class$="--display-block"] {
+    display: block;
 }
 
 //=========================================================
