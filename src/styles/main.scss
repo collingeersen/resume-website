@@ -210,7 +210,6 @@ nav {
     border: 0;
     border-radius: 20%;
     box-shadow: $accentColor3 0 5px 1px;
-    color: $fontColor1;
     line-height: 0%;
     padding: 0;
     transition-duration: 150ms;
@@ -244,48 +243,70 @@ nav {
     right: 100%;
 }
 
-.--unblur{
+.--unblur {
     transition-duration: 400ms;
     transition-property: filter;
-    filter: blur(0);  
+    filter: blur(0);
 }
 
-.--blur{
+.--blur {
     transition-duration: 400ms;
     transition-property: filter;
-    filter: blur(15); 
+    filter: blur(15);
 }
 
 .nav-bar__drop-down__sub {
     display: block;
     position: relative;
     user-select: none;
+    padding-bottom: 10%;
+
+    span {
+        label {
+            cursor: pointer;
+            color: $fontColor2;
+        }
+
+        span{
+            translate: 0 8px;
+            
+        }
+    }
 }
 
-[class$="--display-none"]{
+[class$="--display-none"] {
     display: none;
 }
 
-[class$="--display-block"]{
+[class$="--display-block"] {
     display: block;
 }
 
-.nav-bar__drop-down__footer{
-    
-    div{
+.nav-bar__drop-down__footer {
+    //grid-column: 5 / 2;
+
+    div {
         width: 200%;
         height: 100px;
     }
 
-    span{
-        height: 6px;
+    span {
+        height: 5px;
         width: 200%;
+        //margin-right: 100%;
+        //margin-left: auto;
         background-color: $dropdownColorBG;
-        box-shadow: 
-        inset 0px 2px 3px 0px rgba(0, 0, 0, 0.5),
-        inset -0px -2px 3px 0px rgba(0, 0, 0, 0.5),
-        black 0px 0px 1px;
+        overflow: hidden;
+        box-shadow:
+            inset 0px 2px 2px 0px rgba(0, 0, 0, 0.5),
+            inset -0px -2px 2px 0px rgba(0, 0, 0, 0.5),
+            black 0px 0px 1px;
         display: inline-block;
+    }
+
+    a {
+        font-size: 0.75em;
+        display: inline;
     }
 }
 
@@ -404,7 +425,7 @@ nav {
             padding-left: 8em;
             position: relative;
 
-            span{
+            span {
                 font-size: 1.5em;
                 line-height: -10%;
                 translate: 0px 5px;
