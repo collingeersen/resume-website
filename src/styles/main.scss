@@ -332,6 +332,7 @@ nav {
     top: 100%; //Used to shift down from top of navbar
     transition-duration: 400ms;
     transition-property: opacity;
+    user-select: none;
     width: 30%;
     z-index: 1;
 }
@@ -376,7 +377,6 @@ nav {
     display: block;
     padding-bottom: 10%;
     position: relative;
-    user-select: none;
 }
 
 //Span that holds the subsection title and Material Icons
@@ -384,7 +384,11 @@ nav {
 
     label {
         color: $fontColor2;
-        cursor: pointer;
+
+        &:hover {
+            text-shadow: #1C0B3D 2px 2px 2px;
+            cursor: pointer;
+        }
     }
 
     //Span used by Google Material Icons
@@ -393,6 +397,8 @@ nav {
     }
 }
 
+//  Dropdown Menu: Footer
+//-----------------------
 .nav-bar__drop-down__footer {
 
     //Empty div to shift the footer down and retain dynamic resizing 
