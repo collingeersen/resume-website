@@ -386,6 +386,7 @@ nav {
 
     label {
         color: $fontColor2;
+        margin-right: auto;
         //text-shadow: black 0 0 0;
         border: 0;
         border: {
@@ -400,7 +401,7 @@ nav {
         &:hover {
             //text-shadow: black 2px 2px 3px;
             cursor: pointer;
-            color: #3191ff;
+            color: $linkColor;
             transition: all;
             transition-duration: 100ms;
             border: {
@@ -409,11 +410,18 @@ nav {
                 bottom-width: 3px;
                 bottom-left-radius: 0%;
             }
+
+            &~span{
+                color: $linkColor;
+                transition: all;
+                transition-duration: 100ms;
+            }
         } 
     }
 
     //Span used by Google Material Icons
     span {
+        color: $fontColor2;
         translate: 0 8px; //Centers icon
     }
 }
@@ -488,7 +496,8 @@ nav {
 [class$="--expand-more"] {
     transition-property: rotate;
     transition-duration: 200ms;
-    rotate: (0deg);  
+    rotate: (0deg);
+
 }
 
 [class$="--expand-less"] {
