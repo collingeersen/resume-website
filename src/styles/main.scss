@@ -375,7 +375,8 @@ nav {
 //--------------------
 .nav-bar__drop-down__sub {
     display: block;
-    padding-bottom: 10%;
+    //margin-bottom: 10%;
+    padding-bottom: 20px;
     position: relative;
 }
 
@@ -462,6 +463,18 @@ nav {
 
 [class$="--display-block"] {
     display: block;
+}
+
+[class$="--expand-more"] {
+    transition-property: rotate;
+    transition-duration: 200ms;
+    rotate: (0deg);  
+}
+
+[class$="--expand-less"] {
+    transition-property: rotate;
+    transition-duration: 200ms;
+    rotate: (180deg);
 }
 
 //=========================================================

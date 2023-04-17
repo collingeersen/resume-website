@@ -67,6 +67,27 @@ for (let i = 0; i < toggleDisplay.length; i++) {
   }
 }
 
+//Iterates through arrow toggle for each subsection with --expand-more tag
+for (let i = 0; i < toggleDisplay.length; i++) {
+  toggleDisplay[i].addEventListener("click", arrowToggle);
+  const sub = document.getElementsByClassName("--" + i + "--expand-more")[0];
+
+  //Matches in order from 0 to each of the elements using i as the unique identifier
+  function arrowToggle() {
+    if (
+      sub.classList[1] === undefined ||
+      sub.classList[1] === "--" + i + "--expand-more"
+    ) {
+      sub.classList.remove("--" + i + "--expand-more");
+      sub.classList.add("--" + i + "--expand-less");
+    } else {
+      sub.classList.remove("--" + i + "--expand-less");
+      sub.classList.add("--" + i + "--expand-more");
+    }
+
+  }
+}
+
 /*
 Array.from(span).forEach(elem => {
   elem.addEventListener("click", function(event) {
