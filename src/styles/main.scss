@@ -118,7 +118,7 @@ a {
     border-bottom-width: 1px;
     font-size: 1em;
     text-shadow: $accentColor3 1px 1px 2px;
-    transition-duration: 50ms;
+    transition-duration: 300ms;
     transition-property:
         border-bottom-width,
         color,
@@ -137,6 +137,8 @@ a {
         border-bottom-width: 3px;
         color: $linkColor;
         font-size: 1em;
+        transition: all;
+        transition-duration: 100ms;
     }
 }
 
@@ -375,7 +377,6 @@ nav {
 //--------------------
 .nav-bar__drop-down__sub {
     display: block;
-    //margin-bottom: 10%;
     padding-bottom: 20px;
     position: relative;
 }
@@ -385,11 +386,30 @@ nav {
 
     label {
         color: $fontColor2;
+        //text-shadow: black 0 0 0;
+        border: 0;
+        border: {
+            style: solid;
+            color: $fontColor2;
+            bottom-width: 1px;
+            bottom-left-radius: 0%;
+        }
+        transition: all;
+        transition-duration: 300ms;
 
         &:hover {
-            text-shadow: #1C0B3D 2px 2px 2px;
+            //text-shadow: black 2px 2px 3px;
             cursor: pointer;
-        }
+            color: #3191ff;
+            transition: all;
+            transition-duration: 100ms;
+            border: {
+                style: solid;
+                color: $linkColor;
+                bottom-width: 3px;
+                bottom-left-radius: 0%;
+            }
+        } 
     }
 
     //Span used by Google Material Icons
