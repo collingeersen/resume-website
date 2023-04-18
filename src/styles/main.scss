@@ -324,8 +324,8 @@ nav {
     background: $dropdownColorBG;
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    //display: grid;
+    //grid-template-columns: 100px / 200px;
     height: auto;
     margin: auto;
     padding: 2%;
@@ -342,7 +342,7 @@ nav {
 //  Dropdown Menu: Btn
 //--------------------
 .nav-bar__dropdown__btn {
-    grid-column: 2;
+    //grid-column: 2;
     margin-left: auto;
 }
 
@@ -352,7 +352,9 @@ nav {
     border: 0;
     border-radius: 20%;
     box-shadow: $accentColor3 0 5px 1px;
+    display: block;
     line-height: 0%;
+    margin-left: auto;
     padding: 0;
     transition-duration: 150ms;
     transition-property: background-color, box-shadow, translate;
@@ -412,6 +414,7 @@ nav {
             }
 
             &~span{
+                //Duration also effects the rotate transition for arrow toggle classes
                 color: $linkColor;
                 transition-property: color, rotate;
                 transition-duration: 100ms;
@@ -436,19 +439,10 @@ nav {
         width: 200%;
     }
 
-    //Creates the divider from subsections to footer
-    span {
-        background-color: $dropdownColorBG;
-        box-shadow:
-            inset 0px 2px 2px 0px $insetShadow,
-            inset -0px -2px 2px 0px $insetShadow,
-            black 0px 0px 1px;
-        display: inline-block;
-        height: 5px;
-        overflow: hidden;
-        width: 200%;
-        //margin-right: 100%;
-        //margin-left: auto;
+    span{
+        font-size: 1.5em;
+        //Move down Material Icon
+        translate: 0 3px;
     }
 
     //About Section Link
@@ -456,6 +450,18 @@ nav {
         display: inline;
         font-size: 0.75em;
     }
+}
+
+.nav-bar__drop-down__footer__break{
+    //Creates the divider from subsections to footer
+    background-color: $dropdownColorBG;
+    box-shadow:
+        inset 0px 2px 2px 0px $insetShadow,
+        inset -0px -2px 2px 0px $insetShadow,
+        black 0px 0px 1px;
+    display: inline-block;
+    height: 5px;
+    width: 100%;
 }
 
 //-------------------------
@@ -493,9 +499,9 @@ nav {
     display: block;
 }
 
+//Duration for both is under the span/label transition
 [class$="--expand-more"] {
     rotate: (0deg);
-
 }
 
 [class$="--expand-less"] {
