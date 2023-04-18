@@ -395,14 +395,14 @@ nav {
             bottom-width: 1px;
             bottom-left-radius: 0%;
         }
-        transition: all;
+        transition-property: border, color;
         transition-duration: 300ms;
 
         &:hover {
             //text-shadow: black 2px 2px 3px;
             cursor: pointer;
             color: $linkColor;
-            transition: all;
+            transition-property: border, color;
             transition-duration: 100ms;
             border: {
                 style: solid;
@@ -413,7 +413,7 @@ nav {
 
             &~span{
                 color: $linkColor;
-                transition: all;
+                transition-property: color, rotate;
                 transition-duration: 100ms;
             }
         } 
@@ -494,15 +494,11 @@ nav {
 }
 
 [class$="--expand-more"] {
-    transition-property: rotate;
-    transition-duration: 200ms;
     rotate: (0deg);
 
 }
 
 [class$="--expand-less"] {
-    transition-property: rotate;
-    transition-duration: 200ms;
     rotate: (180deg);
 }
 
