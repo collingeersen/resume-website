@@ -436,13 +436,14 @@ nav {
     //Empty div to shift the footer down and retain dynamic resizing 
     div {
         height: 100px;
-        width: 200%;
+        width: 100%;
     }
 
     span{
         font-size: 1.5em;
         //Move down Material Icon
         translate: 0 3px;
+        margin-bottom: 10px;
     }
 
     //About Section Link
