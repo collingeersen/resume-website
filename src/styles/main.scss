@@ -339,15 +339,14 @@ nav {
     z-index: 1;
 }
 
-//  Dropdown Menu: Btn
-//--------------------
-.nav-bar__dropdown__btn {
-    //grid-column: 2;
-    margin-left: auto;
+//  Dropdown Menu: Header
+//-----------------------
+.nav-bar__drop-down__header{
+    display: flex;
 }
 
 //Dropdown Menu: Btn Exit
-.nav-bar__dropdown__btn--exit {
+.nav-bar__drop-down__btn--exit {
     background-color: $accentColor2;
     border: 0;
     border-radius: 20%;
@@ -507,6 +506,16 @@ nav {
 
 [class$="--expand-less"] {
     rotate: (180deg);
+}
+.nav-bar__drop-down__header__toggle{
+    color: #3191ff;
+}
+.--active{
+    //filter:grayscale(0);
+}
+
+.--nonactive{
+    //filter:grayscale(100%);
 }
 
 //=========================================================

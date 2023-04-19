@@ -79,9 +79,24 @@
                 <!--Drop-down to represent site map-->
                 <div role="menu" class="nav-bar__drop-down --hidden">
 
-                    <!--Drop-down Exit Button-->
-                    <div role="menuitem" class="nav-bar__dropdown__btn">
-                        <button class="nav-bar__dropdown__btn--exit" type="button">
+                    <div class="nav-bar__drop-down__header">
+                        <span class="nav-bar__drop-down__header__toggle">
+                            <span class="nav-bar__drop-down__header__toggle--expand --active">
+                                <label>Expand All</label>
+                                <span class="material-symbols-rounded">
+                                    expand
+                                </span>
+                            </span>
+                            <span class="nav-bar__drop-down__header__toggle--collapse --nonactive">
+                                <label>Collapse All</label>
+                                <span class="material-symbols-rounded">
+                                    compress
+                                </span>
+                            </span>
+                        </span>
+
+                        <!--Drop-down Exit Button-->
+                        <button class="nav-bar__drop-down__btn--exit" type="button">
                             <!--Material Design by Google for Exit Symbol-->
                             <span class="material-symbols-rounded">
                                 close
@@ -239,8 +254,8 @@
                             <div></div>
                             <span class="nav-bar__drop-down__footer__break"></span>
                             <a href="index.html"><span class="material-symbols-rounded">
-                                info
-                            </span> About / Licenses</a>
+                                    info
+                                </span> About / Licenses</a>
                         </div>
                     </div>
 
