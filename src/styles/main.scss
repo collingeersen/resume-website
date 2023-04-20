@@ -325,8 +325,60 @@ nav {
 
 //  Dropdown Menu: Header
 //-----------------------
-.nav-bar__drop-down__header{
+.nav-bar__drop-down__header {
     display: flex;
+    flex-wrap: nowrap;
+    //padding: 1px;
+    margin-bottom: 50px;
+}
+
+//Dropdown Menu: Expand/Collapse Toggle
+.nav-bar__drop-down__header__toggle {
+    font-size: 0.9em;
+    align-self: center;
+    //display:flex;
+    //display: grid;
+    margin-right: 20px;
+
+    label {
+        translate: 5px -3px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+
+    span {
+        font-size: 0.9em;
+        color: $fontColor2;
+        background-color: $accentColor2;
+        border-radius: 20px;
+        padding: 5px;
+
+        margin-left: 4px;
+        //margin-right: 10px;
+        display: inline-flex;
+        //flex-wrap: wrap;
+
+        transition-duration: 150ms;
+        transition-property: background-color, box-shadow, translate;
+
+        &:hover {
+            background-color: $accentColor1;
+            cursor: pointer;
+        }
+
+
+    }
+
+    [class="material-symbols-rounded"] {
+        font-size: 1.3em;
+        background-color: $transparent;
+        translate: -4px 3px;
+
+
+
+    }
 }
 
 //Dropdown Menu: Btn Exit
@@ -374,13 +426,16 @@ nav {
         margin-right: auto;
         //text-shadow: black 0 0 0;
         border: 0;
+
         border: {
             style: solid;
             color: $fontColor2;
             bottom-width: 1px;
             bottom-left-radius: 0%;
         }
-        transition-property: border, color;
+
+        transition-property: border,
+        color;
         transition-duration: 300ms;
 
         &:hover {
@@ -389,6 +444,7 @@ nav {
             color: $linkColor;
             transition-property: border, color;
             transition-duration: 100ms;
+
             border: {
                 style: solid;
                 color: $linkColor;
@@ -396,13 +452,13 @@ nav {
                 bottom-left-radius: 0%;
             }
 
-            &~span{
+            &~span {
                 //Duration also effects the rotate transition for arrow toggle classes
                 color: $linkColor;
                 transition-property: color, rotate;
                 transition-duration: 100ms;
             }
-        } 
+        }
     }
 
     //Span used by Google Material Icons
@@ -422,7 +478,7 @@ nav {
         width: 100%;
     }
 
-    span{
+    span {
         font-size: 1.5em;
         //Move down Material Icon
         translate: 0 3px;
@@ -436,7 +492,7 @@ nav {
     }
 }
 
-.nav-bar__drop-down__footer__break{
+.nav-bar__drop-down__footer__break {
     //Creates the divider from subsections to footer
     background-color: $dropdownColorBG;
     box-shadow:
@@ -491,14 +547,16 @@ nav {
 [class$="--expand-less"] {
     rotate: (180deg);
 }
-.nav-bar__drop-down__header__toggle{
+
+.nav-bar__drop-down__header__toggle {
     color: #3191ff;
 }
-.--active{
+
+.--active {
     //filter:grayscale(0);
 }
 
-.--nonactive{
+.--nonactive {
     //filter:grayscale(100%);
 }
 
