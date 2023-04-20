@@ -302,22 +302,6 @@ nav {
 }
 
 //-------------------------
-//  Nav-Bar: Page Title    |
-//-------------------------
-.nav-bar__page-title {
-    background-color: $accentColor2;
-    border-radius: 20% 40% 20% 40%;
-    box-shadow: $accentColor3 3px 3px 5px;
-    color: $fontColor2;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0.5em;
-    position: relative;
-    text-shadow: $accentColor3 5px 3px 10px;
-    visibility: hidden; //Hides this. Still thinking about usage.
-}
-
-//-------------------------
 //  Nav-Bar: Dropdown Menu |
 //-------------------------
 .nav-bar__drop-down {
