@@ -155,18 +155,19 @@ nav {
     //position and make a truncated version when scrolling down
     background-color: $mainColor;
     box-shadow: inset 0px -5px 0px $fontColor2; //Used to create a pseudo border
-    height: 10rem;
-    padding: 1% 0 1% 0;
+    height: 100px;
+    //padding: 1% 0 1% 0;
     position: relative;
-    width: 100%;
+    //width: 100%;
     z-index: 101;
 }
 
 .nav-bar {
     align-items: center;
     display: flex;
-    font-weight: 750;
-    margin-left: 10%;
+    //font-weight: 750;
+    font-size: 1.2em;
+    //margin-left: 10%;
 
 }
 
@@ -296,12 +297,25 @@ nav {
         position: relative;
 
         //Span used by Google Material Icons
+
+        //Centers icons
         span {
             font-size: 1.5em;
             line-height: -10%;
-            translate: 0px 5px;
+            translate: 0 3px;
+        }
+
+        //Used to center the contact icon
+        [class="nav-bar__link__item--contact"] {
+            span {
+                translate: 0 7px;
+            }
         }
     }
+}
+
+.nav-bar__link__item--contact {
+    span {}
 }
 
 //-------------------------
@@ -345,6 +359,7 @@ nav {
 
     label {
         translate: 5px -3px;
+
         &:hover {
             cursor: pointer;
         }
