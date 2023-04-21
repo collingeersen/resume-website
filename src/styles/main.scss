@@ -121,8 +121,7 @@ a {
     transition-duration: 300ms;
     transition-property:
         border-bottom-width,
-        color,
-        font-size;
+        color;
 
     &:active {
         color: $accentColor2;
@@ -136,8 +135,9 @@ a {
     &:hover {
         border-bottom-width: 3px;
         color: $linkColor;
-        font-size: 1em;
-        transition: all;
+        transition-property:
+        border-bottom-width,
+        color;
         transition-duration: 100ms;
     }
 }
