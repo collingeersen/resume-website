@@ -176,6 +176,7 @@ nav {
 //-------------------------
 .nav-bar__btn {
     margin-right: 5%;
+    margin-left: 15%;
 }
 
 .nav-bar__btn--hamburger {
@@ -279,13 +280,24 @@ nav {
 }
 
 //-------------------------
+//  Nav-Bar: Divider       |
+//-------------------------
+.nav-bar__divider{
+    display: block;
+    background-color: #3191ff;
+    width: 10px;
+    height: 50px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+//-------------------------
 //  Nav-Bar: Links         |
 //-------------------------
 .nav-bar__link__menu {
     align-content: center;
     display: flex;
     flex-wrap: wrap;
-    margin-left: auto;
     position: relative;
     user-select: none;
     white-space: nowrap; //Prevents last item from wrapping
@@ -293,11 +305,10 @@ nav {
     li {
         display: inline;
         list-style: none;
-        padding-left: 5em;
+        padding-right: 5em;
         position: relative;
 
         //Span used by Google Material Icons
-
         //Centers icons
         span {
             font-size: 1.5em;
@@ -312,10 +323,6 @@ nav {
             }
         }
     }
-}
-
-.nav-bar__link__item--contact {
-    span {}
 }
 
 //-------------------------
