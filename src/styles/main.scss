@@ -153,7 +153,6 @@ Make section background colors different to break up the content
 //=========================================================
 nav {
     //position and make a truncated version when scrolling down
-    animation: 600ms normal nav-slide;
     background-color: $mainColor;
     box-shadow: inset 0px -5px 0px $fontColor2; //Used to create a pseudo border
     height: 10rem;
