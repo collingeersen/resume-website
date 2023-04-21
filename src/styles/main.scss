@@ -467,7 +467,7 @@ nav {
             //text-shadow: black 2px 2px 3px;
             cursor: pointer;
             color: $linkColor;
-            transition-property: border, color;
+            transition-property: border, color, rotate;
             transition-duration: 100ms;
 
             border: {
@@ -480,7 +480,7 @@ nav {
             &~span {
                 //Duration also effects the rotate transition for arrow toggle classes
                 color: $linkColor;
-                transition-property: color, rotate;
+                transition-property: border, color, rotate;
                 transition-duration: 100ms;
             }
         }
