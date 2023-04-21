@@ -168,6 +168,7 @@ nav {
     display: flex;
     font-weight: 750;
     margin-left: 10%;
+
 }
 
 //-------------------------
@@ -282,14 +283,17 @@ nav {
 //-------------------------
 .nav-bar__link__menu {
     align-content: center;
+    display: flex;
+    flex-wrap: wrap;
     margin-left: auto;
+    position: relative;
     user-select: none;
     white-space: nowrap; //Prevents last item from wrapping
 
     li {
         display: inline;
         list-style: none;
-        padding-left: 8em;
+        padding-left: 5em;
         position: relative;
 
         //Span used by Google Material Icons
