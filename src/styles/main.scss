@@ -551,7 +551,7 @@ nav {
     transition-property: filter;
 }
 
-[class$="--display-none"] {
+[class$="--sub-collapse"] {
     height: 0;
     overflow: hidden;
     width: 0%;
@@ -581,7 +581,7 @@ nav {
     }
 }
 
-[class$="--display-block"] {
+[class$="--sub-expand"] {
     height: 100%;
     overflow: hidden;
     width: 100%;

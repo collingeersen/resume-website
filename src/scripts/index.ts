@@ -52,19 +52,19 @@ for (let i = 0; i < toggleDisplay.length; i++) {
   toggleExpandAll.addEventListener("click", subExpandAll);
   toggleCollapseAll.addEventListener("click", subCollapseAll);
 
-  const sub = document.getElementsByClassName("--" + i + "--display-none")[0];
+  const sub = document.getElementsByClassName("--" + i + "--sub-collapse")[0];
   const subArrow = document.getElementsByClassName("--" + i + "--expand-more")[0];
 
   //Matches in order from 0 to each of the elements using i as the unique identifier
   function subToggle() {
     if (
-      sub.classList[1] === "--" + i + "--display-none"
+      sub.classList[1] === "--" + i + "--sub-collapse"
     ) {
-      sub.classList.replace("--" + i + "--display-none",
-        "--" + i + "--display-block");
+      sub.classList.replace("--" + i + "--sub-collapse",
+        "--" + i + "--sub-expand");
     } else {
-      sub.classList.replace("--" + i + "--display-block",
-        "--" + i + "--display-none");
+      sub.classList.replace("--" + i + "--sub-expand",
+        "--" + i + "--sub-collapse");
     }
     if (
       subArrow.classList[1] === undefined ||
@@ -79,9 +79,9 @@ for (let i = 0; i < toggleDisplay.length; i++) {
   }
 
   function subExpandAll() {
-    if (sub.classList[1] === "--display-none" || "--display-block") {
-      sub.classList.replace("--" + i + "--display-none",
-        "--" + i + "--display-block");
+    if (sub.classList[1] === "--sub-collapse" || "--sub-expand") {
+      sub.classList.replace("--" + i + "--sub-collapse",
+        "--" + i + "--sub-expand");
       subArrow.classList.replace("--" + i + "--expand-more",
         "--" + i + "--expand-less");
     }
@@ -92,9 +92,9 @@ for (let i = 0; i < toggleDisplay.length; i++) {
   }
 
   function subCollapseAll() {
-    if (sub.classList[1] === "--display-none" || "--display-block") {
-      sub.classList.replace("--" + i + "--display-block",
-        "--" + i + "--display-none");
+    if (sub.classList[1] === "--sub-collapse" || "--sub-expand") {
+      sub.classList.replace("--" + i + "--sub-expand",
+        "--" + i + "--sub-collapse");
       subArrow.classList.replace("--" + i + "--expand-less",
         "--" + i + "--expand-more");
     }
