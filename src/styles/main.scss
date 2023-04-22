@@ -136,8 +136,8 @@ a {
         border-bottom-width: 3px;
         color: $linkColor;
         transition-property:
-        border-bottom-width,
-        color;
+            border-bottom-width,
+            color;
         transition-duration: 100ms;
     }
 }
@@ -282,7 +282,7 @@ nav {
 //-------------------------
 //  Nav-Bar: Divider       |
 //-------------------------
-.nav-bar__divider{
+.nav-bar__divider {
     display: block;
     background-color: #3191ff;
     width: 10px;
@@ -372,7 +372,6 @@ nav {
         }
     }
 
-
     span {
         font-size: 0.9em;
         color: $fontColor2;
@@ -392,17 +391,12 @@ nav {
             background-color: $accentColor1;
             cursor: pointer;
         }
-
-
     }
 
     [class="material-symbols-rounded"] {
         font-size: 1.3em;
         background-color: $transparent;
         translate: -4px 3px;
-
-
-
     }
 }
 
@@ -441,6 +435,7 @@ nav {
     display: block;
     padding-bottom: 20px;
     position: relative;
+    white-space: nowrap;
 }
 
 //Span that holds the subsection title and Material Icons
@@ -557,11 +552,63 @@ nav {
 }
 
 [class$="--display-none"] {
-    display: none;
+    height: 0;
+    overflow: hidden;
+    width: 0%;
+
+    animation: {
+        duration: 500ms;
+        name: subAnimOut;
+        timing-function: cubic-bezier(1, 0, 0, 1);
+    }
+
+    transition: {
+        duration: 250ms;
+        property: all;
+        timing-function: ease-in-out;
+    }
+
+    @keyframes subAnimOut {
+        from {
+            margin-bottom: 5%;
+            margin-top: 5%;
+        }
+
+        to {
+            margin-bottom: 0%;
+            margin-top: 0%;
+        }
+    }
 }
 
 [class$="--display-block"] {
-    display: block;
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+
+    animation: {
+        name: subAnimIn;
+        duration: 200ms;
+        timing-function: ease-out;
+    }
+
+    transition: {
+        duration: 300ms;
+        property: all;
+        timing-function: ease-in-out;
+    }
+
+    @keyframes subAnimIn {
+        from {
+            margin-bottom: 5%;
+            margin-top: 5%;
+        }
+
+        to {
+            margin-bottom: 0%;
+            margin-top: 0%;
+        }
+    }
 }
 
 //Duration for both is under the span/label transition
