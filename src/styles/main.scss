@@ -640,18 +640,19 @@ nav {
     margin: auto;
     position: relative;
     width: 90%;
+    font-size: 1.5em;
 }
 
 .intro__title {
-    padding-top: 10%;
+    //padding-top: 10%;
 
     &::after {
         animation-delay: 1000ms;
-        animation-duration: 2s;
+        animation-duration: 2000ms;
         animation-fill-mode: forwards;
         animation-name: title-head-animation;
         background: $accentColor2;
-        border-radius: 0%;
+        border-radius: 20px;
         content: "";
         display: grid;
         height: 4px;
@@ -664,7 +665,7 @@ nav {
         }
 
         to {
-            width: 40%;
+            width: 500px;
         }
     }
 }
@@ -672,30 +673,61 @@ nav {
 .intro__summary {
     display: flex;
     overflow: visible;
+    align-items: center;
+    font-size: 0.8em;
+
 
     >div>p {
         background-color: $accentColor2; //use class selection instead WIP
         border-radius: 5%;
-        margin-right: clamp(30%, 50%, 70%);
-        padding: 1%;
+        //margin-right: 250px;
+        padding: 10%;
+        width: 330px;
+        font-size: 1em;
+    }
+}
+
+.intro__summary__divider{
+    background-color: $accentColor2;
+    width: 5px;
+    min-width: 5px;
+    margin-left: 200px;
+    border-radius: 20px;
+    margin-right: 200px;
+    height: 100px;
+    animation-delay: 3000ms;
+    animation-duration: 2000ms;
+    animation-fill-mode:both;
+    animation-name: title-divider-animation;
+
+    @keyframes title-divider-animation {
+        from {
+            height: 0;
+        }
+
+        to {
+            height: 450px;
+        }
     }
 }
 
 .intro__summary__frame {
-    animation-delay: 1000ms;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    animation-name: flex-box1-animation;
+    //animation-delay: 1000ms;
+    //animation-duration: 2s;
+    //animation-fill-mode: forwards;
+    //animation-name: flex-box1-animation;
     background: $accentColor2;
     border-radius: 3%;
     height: 65%;
-    margin-left: 65%;
-    margin-right: 0%;
-    margin-top: -8%;
+    //margin-left: 10%;
+    //margin-right: 10%;
+    //margin-top: -8%;
     padding: 0%;
-    position: absolute;
-    width: 0%;
+    //position: absolute;
+    //width: 30%;
+    //display: block;
 
+    /*
     @keyframes flex-box1-animation {
         from {
             box-shadow: $fontColor2 20px 20px 10px;
@@ -708,16 +740,7 @@ nav {
             height: 65%;
             width: 25%;
         }
-    }
-
-    &::before {
-        content: "";
-        background: $fontColor2;
-        display: flex;
-        height: 100%;
-        margin-left: -30%;
-        width: 3%;
-    }
+    }*/
 }
 
 /*
