@@ -639,8 +639,18 @@ nav {
     height: 100%;
     margin: auto;
     position: relative;
-    width: 90%;
+    //width: 90%;
     font-size: 1.5em;
+    background-color: $accentColor4;
+    padding: 5px;
+    padding-left: 30px;
+    border-bottom: 50px solid $fontColor2;
+
+
+}
+
+.intro__flex{
+    display: flex;
 }
 
 .intro__title {
@@ -670,20 +680,28 @@ nav {
     }
 }
 
+.intro__github-link{
+    background-color: $accentColor2;
+    height: 100px;
+    width: 100px;
+    display: flex;
+}
+
 .intro__summary {
     display: flex;
     overflow: visible;
     align-items: center;
     font-size: 0.8em;
 
-
     >div>p {
         background-color: $accentColor2; //use class selection instead WIP
         border-radius: 5%;
         //margin-right: 250px;
         padding: 10%;
-        width: 330px;
+        width: 400px;
         font-size: 1em;
+        margin-bottom: 100px;
+        //font-kerning: auto;
     }
 }
 
@@ -691,10 +709,10 @@ nav {
     background-color: $accentColor2;
     width: 5px;
     min-width: 5px;
-    margin-left: 200px;
+    margin-left: auto;
     border-radius: 20px;
-    margin-right: 200px;
-    height: 100px;
+    margin-right: auto;
+    height: 50px;
     animation-delay: 3000ms;
     animation-duration: 2000ms;
     animation-fill-mode:both;
@@ -719,28 +737,10 @@ nav {
     background: $accentColor2;
     border-radius: 3%;
     height: 65%;
-    //margin-left: 10%;
-    //margin-right: 10%;
+    //margin-left: auto;
+    margin-right: auto;
     //margin-top: -8%;
     padding: 0%;
-    //position: absolute;
-    //width: 30%;
-    //display: block;
-
-    /*
-    @keyframes flex-box1-animation {
-        from {
-            box-shadow: $fontColor2 20px 20px 10px;
-            height: 65%;
-            width: 0;
-        }
-
-        to {
-            box-shadow: $fontColor2 5px 5px 2px;
-            height: 65%;
-            width: 25%;
-        }
-    }*/
 }
 
 /*
