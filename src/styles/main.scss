@@ -645,25 +645,23 @@ nav {
     padding: 5px;
     padding-left: 30px;
     border-bottom: 50px solid $fontColor2;
-
-
 }
 
-.intro__flex{
+.intro__flex {
     display: flex;
 }
 
 .intro__title {
-    //padding-top: 10%;
-
     &::after {
-        animation-delay: 1000ms;
-        animation-duration: 2000ms;
-        animation-fill-mode: forwards;
-        animation-name: title-head-animation;
+        animation: {
+            delay: 1000ms;
+            duration: 2000ms;
+            fill-mode: forwards;
+            name: title-head-animation;
+        }
+
         background: $accentColor2;
         border-radius: 20px;
-        content: "";
         display: grid;
         height: 4px;
         width: 0;
@@ -680,11 +678,11 @@ nav {
     }
 }
 
-.intro__github-link{
+.intro__github-link {
     background-color: $accentColor2;
+    display: flex;
     height: 100px;
     width: 100px;
-    display: flex;
 }
 
 .intro__summary {
@@ -692,31 +690,34 @@ nav {
     overflow: visible;
     align-items: center;
     font-size: 0.8em;
+}
 
-    >div>p {
-        background-color: $accentColor2; //use class selection instead WIP
+.intro__summary__content {
+    p {
+        background-color: $accentColor2;
         border-radius: 5%;
-        //margin-right: 250px;
-        padding: 10%;
-        width: 400px;
         font-size: 1em;
         margin-bottom: 100px;
-        //font-kerning: auto;
+        padding: 10%;
+        width: 400px;
     }
 }
 
-.intro__summary__divider{
+.intro__summary__divider {
+    animation: {
+        delay: 3000ms;
+        duration: 2000ms;
+        fill-mode: both;
+        name: title-divider-animation;
+    }
+
     background-color: $accentColor2;
-    width: 5px;
-    min-width: 5px;
-    margin-left: auto;
     border-radius: 20px;
-    margin-right: auto;
     height: 50px;
-    animation-delay: 3000ms;
-    animation-duration: 2000ms;
-    animation-fill-mode:both;
-    animation-name: title-divider-animation;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 5px;
+    width: 5px;
 
     @keyframes title-divider-animation {
         from {
@@ -730,28 +731,13 @@ nav {
 }
 
 .intro__summary__frame {
-    //animation-delay: 1000ms;
-    //animation-duration: 2s;
-    //animation-fill-mode: forwards;
-    //animation-name: flex-box1-animation;
     background: $accentColor2;
     border-radius: 3%;
     height: 65%;
-    //margin-left: auto;
     margin-right: auto;
-    //margin-top: -8%;
     padding: 0%;
 }
 
-/*
-.div-intro-content::after{
-    background: #e1e0e0;
-    content: "";
-    height:200px;
-    width: 200px;
-    display:flex;
-    flex-direction: row;
-}*/
 //=========================================================
 //  Second Section Classes
 //=========================================================
