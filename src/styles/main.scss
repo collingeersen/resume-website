@@ -647,11 +647,11 @@ nav {
     border-bottom: 50px solid $fontColor2;
 }
 
-.intro__flex {
+.intro__header {
     display: flex;
 }
 
-.intro__title {
+.intro__header__title {
     &::after {
         animation: {
             delay: 1000ms;
@@ -679,7 +679,7 @@ nav {
     }
 }
 
-.intro__github-link {
+.intro__header__github-link {
     background-color: $accentColor2;
     display: flex;
     height: 100px;
