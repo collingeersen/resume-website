@@ -815,15 +815,6 @@ nav {
     border-top-right-radius: 20px;
     height: 50px;
     width: 100%;
-
-    div {
-        background-color: #40DB8D;
-        border-top-right-radius: 20px;
-        height: 50px;
-        margin-left: auto;
-        translate: 10%;
-        width: 50px;
-    }
 }
 
 .separator__container__side-2 {
@@ -840,17 +831,11 @@ nav {
 
 .separator {
     background-color: $accentColor4;
-
-    border: {
-        color: $fontColor2;
-        radius: 20px;
-        style: solid;
-        top: 0;
-        top-left-radius: 0;
-        top-right-radius: 0;
-        width: 5px;
-    }
-
+    border-radius: 20px;
+    box-shadow: $fontColor2 -12px 8px 0px 8px, $fontColor2 12px 8px 0px 8px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    overflow: hidden;
     height: 70px;
 
     margin: {
@@ -859,7 +844,7 @@ nav {
         top: 50px;
     }
 
-    width: 200px;
+    width: 250px;
 }
 
 //=========================================================
