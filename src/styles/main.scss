@@ -441,6 +441,10 @@ nav {
     white-space: nowrap;
 }
 
+.nav-bar__drop-down__header__toggle {
+    color: #3191ff;
+}
+
 //Span that holds the subsection title and Material Icons
 .nav-bar__drop-down__sub__span {
 
@@ -542,6 +546,8 @@ nav {
     right: 70%;
 }
 
+//  Events: Main Window Blur
+//--------------------------
 .--unblur {
     filter: blur(0);
     transition-duration: 400ms;
@@ -554,6 +560,8 @@ nav {
     transition-property: filter;
 }
 
+//  Events: Expand/Collapse
+//--------------------------
 [class$="--sub-collapse"] {
     height: 0;
     overflow: hidden;
@@ -614,6 +622,8 @@ nav {
     }
 }
 
+//  Events: Arrow Expand
+//--------------------------
 //Duration for both is under the span/label transition
 [class$="--expand-more"] {
     rotate: (0deg);
@@ -623,10 +633,7 @@ nav {
     rotate: (180deg);
 }
 
-.nav-bar__drop-down__header__toggle {
-    color: #3191ff;
-}
-
+//Expand/Collapse Grey-out
 .--active {
     //filter:grayscale(0);
 }
@@ -651,6 +658,9 @@ nav {
     //border-radius: 20px;
 }
 
+//-------------------------
+//  Intro: Header          |
+//-------------------------
 .intro__header {
     display: flex;
 }
@@ -706,6 +716,9 @@ nav {
     margin-left: auto;
 }
 
+//-------------------------
+//  Intro: Summary         |
+//-------------------------
 .intro__summary {
     display: flex;
     overflow: visible;
@@ -805,13 +818,14 @@ nav {
     border-radius: 20px;
     display: grid;
     grid-template:
-        "a b c" 45px 
-        "d . e"100px / 1fr 0fr 1fr;
-    //flex-wrap: nowrap;
+        "a b c" 45px "d . e" 100px / 1fr 0fr 1fr;
     height: 50px;
     overflow: visible;
 }
 
+//-------------------------
+//  Separators: Sides      |
+//-------------------------
 .separator__container__side-1 {
     background-color: $fontColor2;
     border-bottom-left-radius: 20px;
@@ -832,6 +846,9 @@ nav {
     width: 100%;
 }
 
+//-------------------------
+//  Separators: Separator  |
+//-------------------------
 .separator {
     background-color: $accentColor4;
     border-radius: 20px;
@@ -850,57 +867,90 @@ nav {
     width: 130px;
 }
 
+//-------------------------
+//  Separators: Notches    |
+//-------------------------
 .separator__container__notch-1 {
     background-color: $backgroundColor2;
-    width: 100px;
+
+    border: {
+        bottom-left-radius: 0;
+        color: $fontColor2;
+        left-width: 0;
+        radius: 20px;
+        style: solid;
+        top-left-radius: 0;
+        width: 0px;
+    }
+
     height: 90px;
-    margin-top: 5px;
-    margin-left: auto;
-    margin-right: 25px;
-    border-radius: 20px;
-    border-color: #40DB8D;
-    border-style: solid;
-    border-width: 0px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    border-left-width: 0;
+
+    margin: {
+        left: auto;
+        right: 25px;
+        top: 5px;
+    }
+
+    width: 100px;
 }
 
 .separator__container__notch-2 {
     background-color: $backgroundColor2;
-    width: 100px;
+
+    border: {
+        bottom-right-radius: 0;
+        color: $fontColor2;
+        left-width: 5px;
+        radius: 20px;
+        right-width: 0;
+        style: solid;
+        top-right-radius: 0;
+        width: 0px;
+    }
+
     height: 90px;
-    margin-left: auto;
-    margin-right: 1px;
-    margin-top: 5px;
-    border-radius: 20px;
+
+    margin: {
+        left: auto;
+        right: 1px;
+        top: 5px;
+    }
+
     translate: 120px;
-    border-color: #40DB8D;
-    border-style: solid;
-    border-width: 0px;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    border-right-width: 0;
-    border-left-width: 5px;
+    width: 100px;
 }
 
-.separator__notch__spacer{
-    width: 220px;
+.separator__notch__spacer {
+    background-color: $fontColor2;
     height: 90px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #40DB8D;
-    //margin-top: 0px;
+
+    margin: {
+        left: auto;
+        right: auto;
+    }
+
+    width: 220px;
 }
 
-.separator__footer{
-    width: 100%;
+//-------------------------
+//  Separators: Footer     |
+//-------------------------
+.separator__footer {
+    background-color: $fontColor2;
+
+    border: {
+        top-left-radius: 20px;
+        top-right-radius: 20px;
+    }
+
     height: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #40DB8D;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
+
+    margin: {
+        left: auto;
+        right: auto;
+    }
+
+    width: 100%;
 }
 
 //=========================================================
