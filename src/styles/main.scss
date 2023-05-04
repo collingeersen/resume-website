@@ -856,7 +856,7 @@ nav {
     border-top-right-radius: 0;
     border-top-left-radius: 0;
     overflow: hidden;
-    height: 100px;
+    height: 160px;
 
     margin: {
         left: auto;
@@ -965,6 +965,9 @@ nav {
 //  Flexbox 1x3 Classes
 //=========================================================
 .flex-box--1x3 {
+
+}
+.flex-box--1x3__container {
     background-color: $mainColor;
     border: 10px;
     border-color: $accentColor2;
@@ -991,6 +994,9 @@ nav {
 //  Flexbox 1x4 Classes
 //=========================================================
 .flex-box--1x4 {
+
+}
+.flex-box--1x4__container {
     background-color: $mainColor;
     border: 10px;
     border-color: $accentColor2;
