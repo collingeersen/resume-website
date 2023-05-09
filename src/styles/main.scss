@@ -866,16 +866,9 @@ nav {
 //-------------------------
 .separator {
     background-color: $accentColor4;
-
-    border: {
-        radius: 20px;
-        top-right-radius: 0;
-        top-left-radius: 0;
-    }
-
     //Temp disabled
     //box-shadow: $fontColor2 -12px 8px 0px 8px, $fontColor2 12px 8px 0px 8px;
-    height: 130px;
+    height: 110px;
 
     margin: {
         left: auto;
@@ -1004,61 +997,23 @@ nav {
 //  Flexbox 1x3 Classes
 //=========================================================
 .flex-box--1x3 {
+    background-color: $fontColor2;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: -20px;
+    padding-top: 0px;
+}
+
+.flex-box--1x3__inner {
     background-color: #4C0C5E;
-
-    border: {
-        color: $fontColor2;
-        radius: 20px;
-        top-left-radius: 0px;
-        top-right-radius: 0px;
-        style: solid;
-        width: 15px;
-        top-width: 0;
-    }
-
+    border-radius: 20px;
     height: 500px;
     width: auto;
 }
 
 //-------------------------
-//  Flexbox 1x3: Header    |
+//  Flexbox 1x3: Content   |
 //-------------------------
-.flex-box--1x3__header__container{
-    display: flex;
-    height: auto;
-}
-
-//  Flexbox 1x3: Header-Left
-//--------------------------
-.flex-box--1x3__header--left{
-    background-color: $fontColor2;
-    height: auto;
-    margin-right: auto;
-    width: auto;
-}
-
-.flex-box--1x3__header--left__sub{
-    background-color: $accentColor4;
-    border-top-left-radius: 20px;
-    height: 50px;
-    width: 50px;
-}
-
-//  Flexbox 1x3: Header-Right
-//---------------------------
-.flex-box--1x3__header--right{
-    background-color: $fontColor2;
-    height: auto;
-    width: auto;
-}
-
-.flex-box--1x3__header--right__sub{
-    background-color: $accentColor4;
-    border-top-right-radius: 20px;
-    height: 50px;
-    width: 50px;
-}
-
 .flex-box--1x3__title {
     margin-left: 75px;
     display: block;
@@ -1093,6 +1048,7 @@ nav {
         margin: auto;
         padding-left: 50px;
         padding-right: 50px;
+        height: 200px;
 
         h3 {
             color: $fontColor2;
