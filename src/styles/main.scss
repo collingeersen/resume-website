@@ -1012,9 +1012,6 @@ nav {
     width: auto;
 }
 
-//-------------------------
-//  Flexbox 1x3: Content   |
-//-------------------------
 .flex-box--1x3__title {
     display: block;
     margin-left: 75px;
@@ -1029,12 +1026,6 @@ nav {
 
 .flex-box--1x3__container {
     background-color: $mainColor;
-    //border: {
-    //width: 10px;
-    //color: $accentColor2;
-    //radius: 100px;
-    //style: solid;
-    //}
     border-radius: 100px;
     column-gap: 1%;
     display: flex;
@@ -1042,9 +1033,11 @@ nav {
     padding: 50px;
     margin-left: 30px;
     margin-right: 30px;
-    /*font-size: 1vw; Experiment with viewport width/height for font*/
 }
 
+//-------------------------
+//  Flexbox 1x3: Column    |
+//-------------------------
 .flex-box--1x3__col {
     background-color: $accentColor2;
 
@@ -1055,9 +1048,9 @@ nav {
     }
 
     box-shadow: #000000 0px 0px;
-    height: 200px;
+    height: 250px;
     margin: auto;
-    padding-left: 30px;
+    //padding-left: 30px;
     translate: 0;
     transition-duration: 500ms;
     transition-property: translate,
@@ -1085,15 +1078,15 @@ nav {
         span {
             div {
                 animation-duration: 500ms;
-                animation-fill-mode:both;
+                animation-fill-mode: both;
                 animation-name: flex-box--1x3__col__corner-out-anim;
 
                 @keyframes flex-box--1x3__col__corner-out-anim {
                     from {
                         box-shadow: inset black 0px 0px;
                     }
-    
-                    to{
+
+                    to {
                         box-shadow: inset black 0px 100px;
                     }
                 }
@@ -1105,7 +1098,7 @@ nav {
 .flex-box--1x3__col__header {
     display: flex;
     flex-wrap: nowrap;
-    
+
     span {
         display: inline-block;
         height: 50px;
@@ -1128,8 +1121,8 @@ nav {
                     box-shadow: inset black 0px -100px;
                 }
 
-                to{
-                    box-shadow: inset black 0px 0px ;
+                to {
+                    box-shadow: inset black 0px 0px;
                 }
             }
         }
@@ -1138,6 +1131,7 @@ nav {
     h3 {
         color: $fontColor2;
         width: fit-content;
+        padding-left: 30px;
 
         &::after {
             background-color: #40DB8D;
@@ -1149,6 +1143,19 @@ nav {
             transition-timing-function: ease-in-out;
             width: 0%;
         }
+    }
+}
+
+.flex-box--1x3__col__content {
+    padding-left: 30px;
+    padding-right: 30px;
+
+    div {
+        background-color: #212436;
+        height: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 200px;
     }
 }
 
