@@ -998,10 +998,11 @@ nav {
 //=========================================================
 .flex-box--1x3 {
     background-color: $fontColor2;
-    padding-left: 40px;
-    padding-right: 40px;
-    margin-top: -20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 40px;
     padding-top: 0px;
+    margin-top: -20px;
 }
 
 .flex-box--1x3__inner {
@@ -1015,21 +1016,25 @@ nav {
 //  Flexbox 1x3: Content   |
 //-------------------------
 .flex-box--1x3__title {
-    margin-left: 75px;
     display: block;
+    margin-left: 75px;
+    padding-top: 20px;
 }
 
 .flex-box--1x3__description {
-    margin-left: 75px;
     display: block;
+    margin-left: 75px;
     width: 50%;
 }
 
 .flex-box--1x3__container {
     background-color: $mainColor;
-    border: 10px;
-    border-color: $accentColor2;
-    border-style: solid;
+    //border: {
+    //width: 10px;
+    //color: $accentColor2;
+    //radius: 100px;
+    //style: solid;
+    //}
     border-radius: 100px;
     column-gap: 1%;
     display: flex;
@@ -1037,21 +1042,112 @@ nav {
     padding: 50px;
     margin-left: 30px;
     margin-right: 30px;
-    //margin-top: 150px;
-
     /*font-size: 1vw; Experiment with viewport width/height for font*/
-    div {
-        background-color: $accentColor2;
-        border-radius: 10px;
-        border-style: dotted;
-        border-color: $backgroundColor2;
-        margin: auto;
-        padding-left: 50px;
-        padding-right: 50px;
-        height: 200px;
+}
 
-        h3 {
-            color: $fontColor2;
+.flex-box--1x3__col {
+    background-color: $accentColor2;
+
+    border: {
+        color: $backgroundColor2;
+        radius: 10px;
+        style: solid;
+    }
+
+    box-shadow: #000000 0px 0px;
+    height: 200px;
+    margin: auto;
+    padding-left: 30px;
+    translate: 0;
+    transition-duration: 500ms;
+    transition-property: translate,
+    box-shadow;
+
+    &:hover {
+        box-shadow: #000000 0px 20px;
+        cursor: pointer;
+        transition-duration: 500ms;
+        transition-property: translate,
+            box-shadow;
+        translate: 0 -20px;
+
+        h3::after {
+            background-color: #40DB8D;
+            content: '';
+            display: block;
+            height: 3px;
+            transition-duration: 200ms;
+            transition-property: width;
+            transition-timing-function: ease-in-out;
+            width: 100%;
+        }
+
+        span {
+            div {
+                animation-duration: 500ms;
+                animation-fill-mode:both;
+                animation-name: flex-box--1x3__col__corner-out-anim;
+
+                @keyframes flex-box--1x3__col__corner-out-anim {
+                    from {
+                        box-shadow: inset black 0px 0px;
+                    }
+    
+                    to{
+                        box-shadow: inset black 0px 100px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.flex-box--1x3__col__header {
+    display: flex;
+    flex-wrap: nowrap;
+    
+    span {
+        display: inline-block;
+        height: 50px;
+        margin-left: auto;
+        margin-right: 0;
+        overflow: hidden;
+        width: 60px;
+
+        div {
+            animation-duration: 500ms;
+            animation-name: flex-box--1x3__col__corner-in-anim;
+            background-color: #1C0B3D;
+            height: 100px;
+            rotate: -45deg;
+            translate: 30px -40px;
+            width: 20px;
+
+            @keyframes flex-box--1x3__col__corner-in-anim {
+                from {
+                    box-shadow: inset black 0px -100px;
+                }
+
+                to{
+                    box-shadow: inset black 0px 0px ;
+                }
+            }
+        }
+    }
+
+    h3 {
+        color: $fontColor2;
+        width: fit-content;
+
+        &::after {
+            background-color: #40DB8D;
+            content: '';
+            display: block;
+            height: 3px;
+            transition-duration: 200ms;
+            transition-property: width;
+            transition-timing-function: ease-in-out;
+            width: 0%;
         }
     }
 }
