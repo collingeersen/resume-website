@@ -14,6 +14,7 @@ btnExit.addEventListener("click", dropDown);
 function dropDown() {
   const elementDropDown = document.getElementsByClassName("nav-bar__drop-down")[0];
   const main = document.getElementsByClassName("main")[0];
+  const footer =document.getElementsByClassName("footer")[0];
 
   //Blurs the <main> element and everything within
   if (
@@ -22,6 +23,15 @@ function dropDown() {
     main.classList.replace("--unblur", "--blur");
   } else {
     main.classList.replace("--blur", "--unblur");
+  }
+
+  //Allows the footer to also be blurred
+  if (
+    footer.classList[1] === "--unblur"
+  ) {
+    footer.classList.replace("--unblur", "--blur");
+  } else {
+    footer.classList.replace("--blur", "--unblur");
   }
 
   //This makes the dropdown menu either visible or hidden on the btn event

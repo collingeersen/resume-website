@@ -79,7 +79,6 @@ main {
 //  Footer
 //=========================================================
 footer {
-    background-color: $footerColor;
     margin: auto;
     width: auto;
 }
@@ -1188,6 +1187,36 @@ nav {
 //=========================================================
 //  Banner Classes
 //=========================================================
+
+//=========================================================
+//  Footer Classes
+//=========================================================
+.footer{
+    display: flex;
+    flex-wrap: nowrap;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color:#1C0B3D;
+}
+
+.footer__col{
+    display: block;
+    background-color:#4C0C5E;
+    //width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer__divider{
+    display: block;
+    height: 100px;
+    width: 10px;
+    background-color: #3191ff;
+}
+
+
+
+
 
 //=========================================================
 //  Imports
