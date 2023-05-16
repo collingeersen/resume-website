@@ -136,6 +136,7 @@ a {
     &:hover {
         border-bottom-width: 3px;
         color: $linkColor;
+        cursor: pointer;
         transition-property:
             border-bottom-width,
             color;
@@ -1192,31 +1193,65 @@ nav {
 //  Footer Classes
 //=========================================================
 .footer{
-    display: flex;
-    flex-wrap: nowrap;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color:#1C0B3D;
-}
-
-.footer__col{
-    display: block;
-    background-color:#4C0C5E;
-    //width: 100px;
+    background-color: #1c1e1f;
+    //background-color:rgb(28, 26, 26);
     margin-left: auto;
     margin-right: auto;
+    padding-top: 30px;
+    width: 80%;
 }
 
-.footer__divider{
+.footer__flex {
+    display: flex;
+    flex-wrap: nowrap;
+    //background-color: #075C61;
+}
+
+.footer__col {
+    align-self: center;
+    color: #828d91;
     display: block;
-    height: 100px;
-    width: 10px;
-    background-color: #3191ff;
+    //background-color: rgb(28, 26, 26);
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
 }
 
+.--footer-col-1 {
+    //background-color: #40DB8D;
 
+    span {
+        padding-left: 20px;
+    }
+}
 
+.--footer-col-2 {
+    text-align: center;
+}
 
+.--footer-col-3 {
+    text-align: end;
+}
+
+.footer__divider--top{
+    background-color: #828d91;
+    border-radius: 10px;
+    display: block;
+    height: 1px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.footer__divider--side {
+    align-self: center;
+    background-color: #828d91;
+    border-radius: 10px;
+    display: block;
+    height: 150px;
+    width: 0px;
+}
 
 //=========================================================
 //  Imports
