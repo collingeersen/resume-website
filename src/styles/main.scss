@@ -1162,32 +1162,55 @@ nav {
 //=========================================================
 //  Flexbox 1x4 Classes
 //=========================================================
-.flex-box--1x4 {}
+.flex-box--1x4 {
+    background-color: $fontColor2;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    width: 60%;
+}
+
+.flex-box--1x4__inner {
+    background-color: #4C0C5E;
+    border-radius: 20px;
+    display: block;
+    padding: 20px;
+}
 
 .flex-box--1x4__container {
-    background-color: $mainColor;
-    border: 10px;
-    border-color: $accentColor2;
-    border-style: solid;
-    border-radius: 100px;
-    column-gap: 1%;
-    display: flex;
-    flex-wrap: nowrap;
-    padding: 1%;
+    display: grid;
+    grid: auto-flow / 1fr 1fr;
+    row-gap: 20px;
+}
 
-    div {
-        background-color: $accentColor2;
-        border-radius: 10px;
-        border-style: dotted;
-        border-color: $backgroundColor2;
-        margin: auto;
-        padding: clamp(1%, 2%, 3%);
+.flex-box--1x4__col {
+    background-color: #075C61;
+
+    border: {
+        color: #212436;
+        radius: 10px;
+        style: solid;
+        width: 2px;
     }
+
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
 }
 
 //=========================================================
-//  Banner Classes
+//  Divider Classes
 //=========================================================
+.divider--thin {
+    background-color:#40DB8D;
+    height: 1px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 80%;
+}
 
 //=========================================================
 //  Footer Classes
