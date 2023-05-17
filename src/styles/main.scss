@@ -28,6 +28,7 @@ $secondaryFont: 'Times New Roman', Times, serif;
 //Animations
 $animDuration_IntroSummary: 2000ms;
 $animDelay_IntroSummary: 3000ms;
+$animTimeFunc_IntroSummary: cubic-bezier(0.19, 1, 0.22, 1);
 
 //=========================================================
 //  Reset
@@ -178,7 +179,7 @@ nav {
 //-------------------------
 .nav-bar__btn {
     margin-right: 5%;
-    margin-left: 15%;
+    margin-left: 12%;
 }
 
 .nav-bar__btn--hamburger {
@@ -651,15 +652,22 @@ nav {
     //width: 90%;
     font-size: 1.5em;
     background-color: $accentColor4;
-    padding: 5px;
-    padding-left: 30px;
-
+    //padding: 5px;
+    //padding-left: 30px;
     border-top: solid black 30px;
+    //border-top-left-radius: 10px;
+    //border-top-right-radius: 10px;
+}
+
+.breadcrumb {
+    height: 20px;
+    background-color: #0E3D69;
+    //width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    //margin-bottom: 10px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    //border-bottom-width: 0;
-    //border-bottom: 50px solid $fontColor2;
-    //border-radius: 20px;
 }
 
 //-------------------------
@@ -667,6 +675,7 @@ nav {
 //-------------------------
 .intro__header {
     display: flex;
+    padding-left: 30px;
 }
 
 .intro__header__title {
@@ -714,10 +723,15 @@ nav {
 
 .intro__header__github-link {
     background-color: $accentColor2;
-    display: flex;
+    //display: flex;
     height: 100px;
     width: 100px;
+    //position: absolute;
     margin-left: auto;
+    //margin-right: 20px;
+    //rotate: 45deg;
+    //translate: 70px 40px;
+    //overflow: hidden;
 }
 
 //-------------------------
@@ -726,16 +740,22 @@ nav {
 .intro__summary {
     display: flex;
     overflow: visible;
-    align-items: center;
+    //align-items: center;
     font-size: 0.8em;
 }
 
 .intro__summary__content {
+    //margin-right: 190px;
+    margin-left: 30px;
+    //margin-left: auto;
+    //margin-right: auto;
+
     animation: {
         delay: $animDelay_IntroSummary;
         duration: $animDuration_IntroSummary;
         fill-mode: both;
         name: intro__summary__content-load-animation;
+        timing-function:$animTimeFunc_IntroSummary;
     }
 
     @keyframes intro__summary__content-load-animation {
@@ -752,39 +772,20 @@ nav {
 
     p {
         background-color: $accentColor2;
-        border-radius: 5%;
+        border-radius: 20px;
         font-size: 1em;
-        margin-bottom: 100px;
-        padding: 10%;
-        width: 400px;
+        //margin-bottom: 100px;
+        padding: 30px;
+        width: 500px;
     }
 }
 
 .intro__summary__divider {
-    animation: {
-        delay: 5000ms;
-        duration: $animDuration_IntroSummary;
-        fill-mode: both;
-        name: title-divider-animation;
-    }
-
-    background-color: $accentColor2;
-    border-radius: 20px;
-    height: 50px;
+    //background-color: $accentColor2;
+    //border-radius: 20px;
     margin-left: auto;
     margin-right: auto;
-    min-width: 5px;
-    width: 5px;
-
-    @keyframes title-divider-animation {
-        from {
-            height: 0;
-        }
-
-        to {
-            height: 450px;
-        }
-    }
+    //width: 5px;
 }
 
 .intro__summary__frame {
@@ -793,11 +794,15 @@ nav {
         duration: $animDuration_IntroSummary;
         fill-mode: both;
         name: intro__summary__frame-load-animation;
+        timing-function:$animTimeFunc_IntroSummary;
     }
 
     background: $accentColor2;
-    border-radius: 3%;
-    height: 65%;
+    border-radius: 20px;
+    height: 250px;
+    width: 250px;
+    align-self: center;
+    //margin-left: auto;
     margin-right: auto;
     padding: 0%;
 
