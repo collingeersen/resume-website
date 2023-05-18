@@ -723,21 +723,23 @@ nav {
 }
 
 .intro__header__github-link {
+    align-self: center;
     background-color: $accentColor2;
+    box-shadow: #3191ff 0px 0px, #3191ff 0px 0px;
     height: 60px;
-    width: 300px;
     margin-left: auto;
     rotate: 45deg;
+    transition-duration: 250ms;
+    transition-property: box-shadow;
     translate: 100px 10px;
-    align-self: center;
+    width: 300px;
 
     div {
         display: flex;
+        height: 60px;
         margin-left: auto;
         margin-right: auto;
         width: fit-content;
-        height: 60px;
-
     }
 
     img {
@@ -745,14 +747,21 @@ nav {
     }
 
     h3 {
-        font-size: 16px;
-        word-wrap: break-word;
-        width: 60px;
-        margin-right: auto;
-        height: fit-content;
         align-self: center;
+        font-size: 16px;
+        height: fit-content;
+        margin-right: auto;
+        width: 60px;
+        word-wrap: break-word;
     }
 
+    &:hover {
+        box-shadow: #3191ff 3px 3px, #3191ff -3px -3px;
+        cursor: pointer;
+        transition-duration: 250ms;
+        transition-property: box-shadow;
+        user-select: none;
+    }
     
 }
 
