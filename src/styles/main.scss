@@ -11,9 +11,9 @@ $separatorNotchHeight: 70px;
 $accentColor1: #0E3D69;
 $accentColor2: #075C61;
 $accentColor3: #1C0B3D;
-$accentColor4: #4C0C5E;
-$backgroundColor1: #1C0B3D;
-$backgroundColor2: #212436;
+$accentColor4: #1E181F;
+$backgroundColor1: #181D1F;
+$backgroundColor2: #181D1F;
 $dropdownColorBG: #2B3E4D; //temp color
 $footerColor: #000000;
 $fontColor1: #e1e0e0;
@@ -22,6 +22,32 @@ $insetShadow: rgba(0, 0, 0, 0.6);
 $linkColor: #3191ff;
 $mainColor: #2B3E4D;
 $transparent: rgba(0, 0, 0, 0);
+
+$contentBGColor: #161B38;
+//181D1F
+//1F1D1C
+//161B38
+//223138
+//424B85
+//424C85
+//0C0E0F
+//314185
+//53852D
+$contentFrameColor: #1B304F;
+$contentBorderColor: #0C0E0F;
+$githubBGColor: #1B304F;
+$githubBorderColor: #0C0E0F;
+$footerBGColor: #181D1F;
+$headingColor: #6CAB3C;
+$introInnerBorderColor: #0C0E0F;
+$breadcrumbBGColor: #161B38;
+$breadcrumbBorderColor: #0C0E0F;
+$linkColorDefault: #6CAB3C;
+$linkColorHover: #9CF757;
+$linkColorActive: #53852D;
+
+$introInnerBorderSize: 3px;
+
 //Font
 $primaryFont: 'Arial', Helvetica, sans-serif;
 $secondaryFont: 'Times New Roman', Times, serif;
@@ -98,11 +124,11 @@ footer {
 //  Headings
 //=========================================================
 h1 {
-    color: $fontColor2;
+    color: $headingColor;
 }
 
 h2 {
-    color: $fontColor2;
+    color: $headingColor;
 }
 
 //=========================================================
@@ -116,32 +142,40 @@ p {
 //  Links
 //=========================================================
 a {
-    border-bottom: 1px solid;
-    border-bottom-width: 1px;
+    border: {
+        style: solid;
+        color: $linkColorDefault;
+        width:0;
+        bottom-width: 1px;
+    }
     font-size: 1em;
-    text-shadow: $accentColor3 1px 1px 2px;
-    transition-duration: 300ms;
+    //text-shadow: black 2px 2px 10px;
+    transition-duration: 200ms;
     transition-property:
-        border-bottom-width,
+        border,
         color;
 
     &:active {
-        color: $accentColor2;
+        color: $linkColorActive;
     }
 
     &:link,
     &:visited {
-        color: $fontColor2;
+        color: $linkColorDefault;
     }
 
     &:hover {
-        border-bottom-width: 3px;
-        color: $linkColor;
+        border: {
+            style: solid;
+            color: $linkColorHover;
+            bottom-width: 3px;
+        }
+        color: $linkColorHover;
         cursor: pointer;
         transition-property:
-            border-bottom-width,
+            border,
             color;
-        transition-duration: 100ms;
+        transition-duration: 200ms;
     }
 }
 
@@ -156,10 +190,47 @@ Make section background colors different to break up the content
 //=========================================================
 @import 'nav-bar.scss';
 
+//=========================================================
+//  Introduction
+//=========================================================
+.intro {
+    height: 100%;
+    margin: auto;
+    position: relative;
+    //width: 90%;
+    font-size: 1.5em;
+    background-color: $contentBorderColor;
+    //padding: 5px;
+    //padding-left: 30px;
+    border-top: solid $contentBorderColor $separatorHeight;
+    overflow:hidden;
+    border-left: solid $contentBorderColor $separatorHeight;
+    border-right: solid $contentBorderColor $separatorHeight;
+}
+
+.breadcrumb {
+    height: 20px;
+    background-color: $breadcrumbBGColor;
+    //width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-color: $breadcrumbBorderColor;
+    border-width: 0;
+    border-left-width: 5px;
+    border-right-width: 5px;
+    //margin-bottom: 10px;
+    //border-top-left-radius: 10px;
+    //border-top-right-radius: 10px;
+}
+
 //-------------------------
 //  Intro: Header          |
 //-------------------------
 .intro__header {
+    background-color: $contentBGColor;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
     display: flex;
     padding-left: 30px;
 }
@@ -188,7 +259,7 @@ Make section background colors different to break up the content
             name: intro__header__title-underline-animation;
         }
 
-        background: $accentColor2;
+        background: $contentFrameColor;
         border-radius: 20px;
         content: "";
         display: grid;
@@ -209,8 +280,8 @@ Make section background colors different to break up the content
 
 .intro__header__github-link {
     align-self: center;
-    background-color: $accentColor2;
-    box-shadow: #3191ff 0px 0px, #3191ff 0px 0px;
+    background-color: $githubBGColor;
+    box-shadow: $githubBorderColor 3px 3px, $githubBorderColor -3px -3px;
     height: 60px;
     margin-left: auto;
     rotate: 45deg;
@@ -241,7 +312,7 @@ Make section background colors different to break up the content
     }
 
     &:hover {
-        box-shadow: #3191ff 3px 3px, #3191ff -3px -3px;
+        box-shadow: $githubBorderColor 5px 5px, $githubBorderColor -5px -5px;
         cursor: pointer;
         transition-duration: 250ms;
         transition-property: box-shadow;
@@ -257,6 +328,9 @@ Make section background colors different to break up the content
     overflow: visible;
     //align-items: center;
     font-size: 0.8em;
+    background-color: $contentBGColor;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 .intro__summary__content {
@@ -286,12 +360,15 @@ Make section background colors different to break up the content
     }
 
     p {
-        background-color: $accentColor2;
+        background-color: $contentFrameColor;
         border-radius: 20px;
         font-size: 1em;
         //margin-bottom: 100px;
         padding: 30px;
         width: 500px;
+        border-style: solid;
+        border-width: $introInnerBorderSize;
+        border-color: $introInnerBorderColor;
     }
 }
 
@@ -312,8 +389,11 @@ Make section background colors different to break up the content
         timing-function:$animTimeFunc_IntroSummary;
     }
 
-    background: $accentColor2;
+    background: $contentFrameColor;
     border-radius: 20px;
+    border-style: solid;
+    border-width: $introInnerBorderSize;
+    border-color: $introInnerBorderColor;
     height: 250px;
     width: 250px;
     align-self: center;
@@ -338,7 +418,7 @@ Make section background colors different to break up the content
 //  Section Separators
 //=========================================================
 .separator__container {
-    background-color: $accentColor4;
+    background-color: $contentBGColor;
 
     border: {
         radius: 20px;
@@ -347,8 +427,8 @@ Make section background colors different to break up the content
     }
 
     display: grid;
-    grid-template: "a b c" 45px "d . e" 100px / 1fr 0fr 1fr;
-    height: 50px;
+    grid-template: "a b c" 35px "d . e" 100px / 1fr 0fr 1fr;
+    height: 40px;
     overflow: visible;
 }
 
@@ -356,7 +436,7 @@ Make section background colors different to break up the content
 //  Separators: Sides      |
 //-------------------------
 .separator__container__side-1 {
-    background-color: $fontColor2;
+    background-color: $contentBorderColor;
 
     border: {
         bottom-left-radius: 20px;
@@ -364,12 +444,12 @@ Make section background colors different to break up the content
     }
 
     height: $separatorHeight;
-    margin-top: 10px;
+    //margin-top: 10px;
     width: 100%;
 }
 
 .separator__container__side-2 {
-    background-color: $fontColor2;
+    background-color: $contentBorderColor;
 
     border: {
         bottom-right-radius: 20px;
@@ -377,7 +457,7 @@ Make section background colors different to break up the content
     }
 
     height: $separatorHeight;
-    margin-top: 10px;
+    //margin-top: 10px;
     width: 100%;
 }
 
@@ -385,7 +465,7 @@ Make section background colors different to break up the content
 //  Separators: Separator  |
 //-------------------------
 .separator {
-    background-color: $accentColor4;
+    background-color: $contentBGColor;
     //Temp disabled
     //box-shadow: $fontColor2 -12px 8px 0px 8px, $fontColor2 12px 8px 0px 8px;
     height: 110px;
@@ -393,7 +473,7 @@ Make section background colors different to break up the content
     margin: {
         left: auto;
         right: auto;
-        top: 50px;
+        top: 40px;
     }
 
     position: relative;
@@ -454,7 +534,7 @@ Make section background colors different to break up the content
 }
 
 .separator__notch__spacer {
-    background-color: $fontColor2;
+    background-color: $contentBorderColor;
     height: $separatorNotchHeight;
     margin-left: auto;
     margin-right: auto;
@@ -466,7 +546,7 @@ Make section background colors different to break up the content
 //-------------------------
 .separator__footer {
     display: flex;
-    background-color: $accentColor4;
+    background-color: $contentBGColor;
     border-radius: 20px;
 }
 
@@ -478,7 +558,7 @@ Make section background colors different to break up the content
 }
 
 .separator__footer--1 {
-    background-color: $fontColor2;
+    background-color: $contentBorderColor;
 
     border: {
         top-left-radius: 20px;
@@ -492,7 +572,7 @@ Make section background colors different to break up the content
 }
 
 .separator__footer--2 {
-    background-color: $fontColor2;
+    background-color: $contentBorderColor;
 
     border: {
         bottom-left-radius: 20px;
@@ -517,7 +597,7 @@ Make section background colors different to break up the content
 //  Flexbox 1x3 Classes
 //=========================================================
 .flex-box--1x3 {
-    background-color: $fontColor2;
+    background-color: $contentBorderColor;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     padding: 40px;
@@ -526,7 +606,7 @@ Make section background colors different to break up the content
 }
 
 .flex-box--1x3__inner {
-    background-color: #4C0C5E;
+    background-color: $contentBGColor;
     border-radius: 20px;
     height: 500px;
     width: auto;
@@ -559,7 +639,7 @@ Make section background colors different to break up the content
 //  Flexbox 1x3: Column    |
 //-------------------------
 .flex-box--1x3__col {
-    background-color: $accentColor2;
+    background-color: $contentFrameColor;
 
     border: {
         color: $backgroundColor2;
@@ -683,7 +763,7 @@ Make section background colors different to break up the content
 //  Flexbox 1x4 Classes
 //=========================================================
 .flex-box--1x4 {
-    background-color: $fontColor2;
+    background-color: $contentBorderColor;
     border-radius: 20px;
     margin-left: auto;
     margin-right: auto;
@@ -692,7 +772,7 @@ Make section background colors different to break up the content
 }
 
 .flex-box--1x4__inner {
-    background-color: #4C0C5E;
+    background-color: $contentBGColor;
     border-radius: 20px;
     display: block;
     padding: 20px;
@@ -705,7 +785,7 @@ Make section background colors different to break up the content
 }
 
 .flex-box--1x4__col {
-    background-color: #075C61;
+    background-color: $contentFrameColor;
 
     border: {
         color: #212436;
@@ -736,7 +816,7 @@ Make section background colors different to break up the content
 //  Footer Classes
 //=========================================================
 .footer{
-    background-color: #1c1e1f;
+    background-color: $footerBGColor;
     //background-color:rgb(28, 26, 26);
     margin-left: auto;
     margin-right: auto;

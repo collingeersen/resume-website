@@ -1,10 +1,23 @@
 //=========================================================
+//  Variables
+//=========================================================
+//Colors
+$navBGColor: #161B38;
+$navBorderColor: #0C0E0F;
+$dropMenuBGColor: #161B38;
+$navBtnBGColorDefault: #1B304F;
+$navBtnBGColorHover: #122036;
+$navBtnShadow: #1C0B3D;
+//$navLinkColor: #4F8CE8;
+//231B5C
+
+//=========================================================
 //  Nav-Bar
 //=========================================================
 nav {
     //position and make a truncated version when scrolling down
-    background-color: $mainColor;
-    box-shadow: inset 0px -5px 0px $fontColor2; //Used to create a pseudo border
+    background-color: $navBGColor;
+    box-shadow: inset 0px -5px 0px $navBorderColor; //Used to create a pseudo border
     height: 100px;
     //padding: 1% 0 1% 0;
     position: relative;
@@ -30,21 +43,21 @@ nav {
 }
 
 .nav-bar__btn--hamburger {
-    background-color: $accentColor2;
+    background-color: $navBtnBGColorDefault;
     border: 0;
     border-radius: 20%;
     box-shadow:
         inset 2px 0px 4px $insetShadow,
         inset -2px -4px 4px $insetShadow,
         $accentColor3 0px 2px 3px;
-    transition-duration: 150ms;
+    transition-duration: 200ms;
     transition-property:
         background-color,
         box-shadow;
     width: 4rem;
 
     &:hover {
-        background-color: $accentColor1;
+        background-color: $navBtnBGColorHover;
         border-radius: 20%;
         cursor: pointer;
     }
@@ -65,10 +78,10 @@ nav {
             top: 0;
         }
 
-        color: $fontColor2;
+        color: $linkColorDefault;
         font-size: 2rem;
         line-height: 1.5;
-        transition-duration: 150ms;
+        transition-duration: 200ms;
         transition-property: translate;
         translate: 0px 0px;
         width: 100%;
@@ -134,7 +147,7 @@ nav {
 //-------------------------
 .nav-bar__divider {
     display: block;
-    background-color: #3191ff;
+    //background-color: #3191ff;
     width: 10px;
     height: 50px;
     margin-right: auto;
@@ -179,7 +192,7 @@ nav {
 //  Nav-Bar: Dropdown Menu |
 //-------------------------
 .nav-bar__drop-down {
-    background: $dropdownColorBG;
+    background: $dropMenuBGColor;
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
     //display: grid;
@@ -208,13 +221,12 @@ nav {
 
 //Dropdown Menu: Expand/Collapse Toggle
 .nav-bar__drop-down__header__toggle {
-    font-size: 0.9em;
+    font-size: 0.8em;
     align-self: center;
-    //display:flex;
-    //display: grid;
     margin-right: 20px;
 
     label {
+        padding-left: 5px;
         translate: 5px -3px;
 
         &:hover {
@@ -222,60 +234,69 @@ nav {
         }
     }
 
+    //Selects both the container and icon
     span {
-        font-size: 0.9em;
-        color: $fontColor2;
-        background-color: $accentColor2;
         border-radius: 20px;
-        padding: 5px;
-
-        margin-left: 4px;
-        //margin-right: 10px;
         display: inline-flex;
-        //flex-wrap: wrap;
+        font-size: 0.9em;
+        margin-left: 4px;
+        padding: 5px;
+    }
 
-        transition-duration: 150ms;
+    //Selects only the span for the container and not icon
+    &>span {
+        background-color: $navBtnBGColorDefault;
+        box-shadow: $navBtnShadow 0px 3px 1px;
+        color: $linkColorDefault;
+        margin-right: 25px;
+        transition-duration: 200ms;
         transition-property: background-color, box-shadow, translate;
 
         &:hover {
-            background-color: $accentColor1;
+            background-color: $navBtnBGColorHover;
             cursor: pointer;
+        }
+
+        &:active {
+            box-shadow: $navBtnShadow 0px 0px 0px;
+            translate: 0px 3px;
         }
     }
 
     [class="material-symbols-rounded"] {
-        font-size: 1.3em;
         background-color: $transparent;
+        border-radius: 0;
+        font-size: 1.3em;
         translate: -4px 3px;
     }
 }
 
 //Dropdown Menu: Btn Exit
 .nav-bar__drop-down__btn--exit {
-    background-color: $accentColor2;
+    background-color: $navBtnBGColorDefault;
     border: 0;
     border-radius: 20%;
-    box-shadow: $accentColor3 0 5px 1px;
+    box-shadow: $navBtnShadow 0 5px 1px;
     display: block;
     line-height: 0%;
     margin-left: auto;
     padding: 0;
-    transition-duration: 150ms;
+    transition-duration: 200ms;
     transition-property: background-color, box-shadow, translate;
 
     &:hover {
-        background-color: $accentColor1;
+        background-color: $navBtnBGColorHover;
         cursor: pointer;
     }
 
     &:active {
-        box-shadow: $accentColor3 0 0px 1px;
+        box-shadow: $navBtnShadow 0 0px 1px;
         translate: 0px 2.5px;
     }
 
     span {
         font-size: 3rem;
-        color: $fontColor2;
+        color: $linkColorDefault;
     }
 }
 
@@ -296,14 +317,13 @@ nav {
 .nav-bar__drop-down__sub__span {
 
     label {
-        color: $fontColor2;
-        margin-right: auto;
+        color: $linkColorDefault;
         //text-shadow: black 0 0 0;
         border: 0;
 
         border: {
             style: solid;
-            color: $fontColor2;
+            color: $linkColorDefault;
             bottom-width: 1px;
             bottom-left-radius: 0%;
         }
@@ -315,20 +335,20 @@ nav {
         &:hover {
             //text-shadow: black 2px 2px 3px;
             cursor: pointer;
-            color: $linkColor;
+            color: $linkColorHover;
             transition-property: border, color, rotate;
             transition-duration: 100ms;
 
             border: {
                 style: solid;
-                color: $linkColor;
+                color: $linkColorHover;
                 bottom-width: 3px;
                 bottom-left-radius: 0%;
             }
 
             &~span {
                 //Duration also effects the rotate transition for arrow toggle classes
-                color: $linkColor;
+                color: $linkColorHover;
                 transition-property: border, color, rotate;
                 transition-duration: 100ms;
             }
@@ -337,7 +357,7 @@ nav {
 
     //Span used by Google Material Icons
     span {
-        color: $fontColor2;
+        color: $linkColorDefault;
         translate: 0 8px; //Centers icon
     }
 }
@@ -487,33 +507,4 @@ nav {
 
 .--nonactive {
     //filter:grayscale(100%);
-}
-
-//=========================================================
-//  Introduction
-//=========================================================
-.intro {
-    height: 100%;
-    margin: auto;
-    position: relative;
-    //width: 90%;
-    font-size: 1.5em;
-    background-color: $accentColor4;
-    //padding: 5px;
-    //padding-left: 30px;
-    border-top: solid black 30px;
-    //border-top-left-radius: 10px;
-    //border-top-right-radius: 10px;
-    overflow:hidden;
-}
-
-.breadcrumb {
-    height: 20px;
-    background-color: #0E3D69;
-    //width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    //margin-bottom: 10px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
 }
