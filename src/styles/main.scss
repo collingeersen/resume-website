@@ -23,25 +23,29 @@ $backgroundColor2: #181D1F;
 $dropdownColorBG: #2B3E4D; //temp color
 $fontColor1: #e1e0e0;
 $fontColor2: #40DB8D;
-$footerColor: #000000;
 $insetShadow: rgba(0, 0, 0, 0.6);
 $mainColor: #2B3E4D;
 $transparent: rgba(0, 0, 0, 0);
 
+//Breadcrumb Colors
+$breadcrumbBGColor: #161B38;
+$breadcrumbBorderColor: #0C0E0F;
 //Content Colors
 $contentBGColor: #161B38;
 $contentBorderColor: #0C0E0F;
 $contentFrameColor: #1B304F;
+//Footer Colors
 $footerBGColor: #181D1F;
-$headingColor: #6CAB3C;
-//Intro Colors
-$introInnerBorderColor: #0C0E0F;
+$footerColor: #000000;
+$footerFontColor: #828d91;
 //Github Colors
 $githubBGColor: #1B304F;
 $githubBorderColor: #0C0E0F;
-//Breadcrumb Colors
-$breadcrumbBGColor: #161B38;
-$breadcrumbBorderColor: #0C0E0F;
+//Heading Colors
+$headingColor: #6CAB3C;
+//Intro Colors
+$introInnerBorderColor: #0C0E0F;
+
 //Link Colors
 $linkColorActive: #53852D;
 $linkColorDefault: #6CAB3C;
@@ -639,7 +643,7 @@ Make section background colors different to break up the content
 }
 
 .flex-box--1x3__container {
-    background-color: $mainColor;
+    //background-color: $mainColor;
     border-radius: 100px;
     column-gap: 1%;
     display: flex;
@@ -656,7 +660,7 @@ Make section background colors different to break up the content
     background-color: $contentFrameColor;
 
     border: {
-        color: $backgroundColor2;
+        color: $contentBorderColor;
         radius: 10px;
         style: solid;
     }
@@ -679,7 +683,7 @@ Make section background colors different to break up the content
         translate: 0 -20px;
 
         h3::after {
-            background-color: #40DB8D;
+            background-color: $headingColor;
             content: '';
             display: block;
             height: 3px;
@@ -743,12 +747,12 @@ Make section background colors different to break up the content
     }
 
     h3 {
-        color: $fontColor2;
+        color: $headingColor;
         width: fit-content;
         padding-left: 30px;
 
         &::after {
-            background-color: #40DB8D;
+            background-color: $headingColor;
             content: '';
             display: block;
             height: 3px;
@@ -839,11 +843,11 @@ Make section background colors different to break up the content
 
     //Removes the link styling
     a{
-        border-color: #828d91;
+        border-color: $footerFontColor;
 
         &:hover {
-            color: #828d91;
-            border-color: #828d91;
+            color: $footerFontColor;
+            border-color: $footerFontColor;
         }
     }
 }
@@ -856,7 +860,7 @@ Make section background colors different to break up the content
 
 .footer__col {
     align-self: center;
-    color: #828d91;
+    color: $footerFontColor;
     display: block;
     //background-color: rgb(28, 26, 26);
     margin-left: auto;
@@ -881,7 +885,7 @@ Make section background colors different to break up the content
 }
 
 .footer__divider--top{
-    background-color: #828d91;
+    background-color: $footerFontColor;
     border-radius: 10px;
     display: block;
     height: 1px;
@@ -893,7 +897,7 @@ Make section background colors different to break up the content
 
 .footer__divider--side {
     align-self: center;
-    background-color: #828d91;
+    background-color: $footerFontColor;
     border-radius: 10px;
     display: block;
     height: 150px;
