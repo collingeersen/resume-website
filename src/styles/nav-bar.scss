@@ -1,13 +1,18 @@
 //=========================================================
 //  Variables
 //=========================================================
-//Colors
+//-------------------------
+//  Colors                 |
+//-------------------------
+$dropMenuBGColor: #161B38;
 $navBGColor: #161B38;
 $navBorderColor: #0C0E0F;
-$dropMenuBGColor: #161B38;
+//Button Colors
 $navBtnBGColorDefault: #1B304F;
 $navBtnBGColorHover: #122036;
 $navBtnShadow: #1C0B3D;
+
+//Saved Colors
 //$navLinkColor: #4F8CE8;
 //231B5C
 
@@ -19,19 +24,14 @@ nav {
     background-color: $navBGColor;
     box-shadow: inset 0px -5px 0px $navBorderColor; //Used to create a pseudo border
     height: 100px;
-    //padding: 1% 0 1% 0;
     position: relative;
-    //width: 100%;
     z-index: 101;
 }
 
 .nav-bar {
     align-items: center;
     display: flex;
-    //font-weight: 750;
     font-size: 1.2em;
-    //margin-left: 10%;
-
 }
 
 //-------------------------
@@ -147,7 +147,6 @@ nav {
 //-------------------------
 .nav-bar__divider {
     display: block;
-    //background-color: #3191ff;
     width: 10px;
     height: 50px;
     margin-right: auto;
@@ -195,8 +194,6 @@ nav {
     background: $dropMenuBGColor;
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
-    //display: grid;
-    //grid-template-columns: 100px / 200px;
     height: auto;
     margin: auto;
     padding: 2%;
@@ -215,7 +212,6 @@ nav {
 .nav-bar__drop-down__header {
     display: flex;
     flex-wrap: nowrap;
-    //padding: 1px;
     margin-bottom: 50px;
 }
 
@@ -333,7 +329,6 @@ nav {
         transition-duration: 300ms;
 
         &:hover {
-            //text-shadow: black 2px 2px 3px;
             cursor: pointer;
             color: $linkColorHover;
             transition-property: border, color, rotate;
