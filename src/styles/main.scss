@@ -1,13 +1,19 @@
 //=========================================================
 //  Variables
 //=========================================================
-//Widths
+//-------------------------
+//  Widths                 |
+//-------------------------
 $bodyWidth: 100%;
 $mainWidth: 80%;
-//Heights
+//-------------------------
+//  Heights                |
+//-------------------------
 $separatorHeight: 40px;
 $separatorNotchHeight: 70px;
-//Colors
+//-------------------------
+//  Colors                 |
+//-------------------------
 $accentColor1: #0E3D69;
 $accentColor2: #075C61;
 $accentColor3: #1C0B3D;
@@ -15,15 +21,32 @@ $accentColor4: #1E181F;
 $backgroundColor1: #181D1F;
 $backgroundColor2: #181D1F;
 $dropdownColorBG: #2B3E4D; //temp color
-$footerColor: #000000;
 $fontColor1: #e1e0e0;
 $fontColor2: #40DB8D;
+$footerColor: #000000;
 $insetShadow: rgba(0, 0, 0, 0.6);
-$linkColor: #3191ff;
 $mainColor: #2B3E4D;
 $transparent: rgba(0, 0, 0, 0);
 
+//Content Colors
 $contentBGColor: #161B38;
+$contentBorderColor: #0C0E0F;
+$contentFrameColor: #1B304F;
+$footerBGColor: #181D1F;
+$headingColor: #6CAB3C;
+//Intro Colors
+$introInnerBorderColor: #0C0E0F;
+//Github Colors
+$githubBGColor: #1B304F;
+$githubBorderColor: #0C0E0F;
+//Breadcrumb Colors
+$breadcrumbBGColor: #161B38;
+$breadcrumbBorderColor: #0C0E0F;
+//Link Colors
+$linkColorActive: #53852D;
+$linkColorDefault: #6CAB3C;
+$linkColorHover: #9CF757;
+//Saved Colors
 //181D1F
 //1F1D1C
 //161B38
@@ -33,27 +56,15 @@ $contentBGColor: #161B38;
 //0C0E0F
 //314185
 //53852D
-$contentFrameColor: #1B304F;
-$contentBorderColor: #0C0E0F;
-$githubBGColor: #1B304F;
-$githubBorderColor: #0C0E0F;
-$footerBGColor: #181D1F;
-$headingColor: #6CAB3C;
-$introInnerBorderColor: #0C0E0F;
-$breadcrumbBGColor: #161B38;
-$breadcrumbBorderColor: #0C0E0F;
-$linkColorDefault: #6CAB3C;
-$linkColorHover: #9CF757;
-$linkColorActive: #53852D;
-
+//$linkColor: #3191ff;
 $introInnerBorderSize: 3px;
 
 //Font
 $primaryFont: 'Arial', Helvetica, sans-serif;
 $secondaryFont: 'Times New Roman', Times, serif;
 //Animations
-$animDuration_IntroSummary: 2000ms;
 $animDelay_IntroSummary: 3000ms;
+$animDuration_IntroSummary: 2000ms;
 $animTimeFunc_IntroSummary: cubic-bezier(0.19, 1, 0.22, 1);
 
 //=========================================================
