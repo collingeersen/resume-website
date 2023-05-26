@@ -222,10 +222,12 @@ nav {
     align-self: center;
     font-size: 0.8em;
     margin-right: 20px;
+    //background-color: brown;
 
     label {
-        padding-left: 5px;
-        translate: 5px -3px;
+        padding: 5px;
+        padding-left: 10px;
+        padding-top: 0;
 
         &:hover {
             cursor: pointer;
@@ -234,7 +236,6 @@ nav {
 
     //Selects both the container and icon
     span {
-        border-radius: 20px;
         display: inline-flex;
         font-size: 0.9em;
         margin-left: 4px;
@@ -249,6 +250,8 @@ nav {
         margin-right: 25px;
         transition-duration: 200ms;
         transition-property: background-color, box-shadow, translate;
+        padding: 0;
+        border-radius: 20px;
 
         &:active {
             box-shadow: $navBtnShadow 0px 0px 0px;
@@ -263,7 +266,6 @@ nav {
 
     [class="material-symbols-rounded"] {
         background-color: $transparent;
-        border-radius: 0;
         font-size: 1.3em;
         translate: -4px 3px;
     }
