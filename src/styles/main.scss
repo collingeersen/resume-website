@@ -836,6 +836,16 @@ Make section background colors different to break up the content
     margin-right: auto;
     padding-top: 30px;
     width: 80%;
+
+    //Removes the link styling
+    a{
+        border-color: #828d91;
+
+        &:hover {
+            color: #828d91;
+            border-color: #828d91;
+        }
+    }
 }
 
 .footer__flex {
