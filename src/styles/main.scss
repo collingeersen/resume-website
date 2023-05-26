@@ -730,11 +730,11 @@ Make section background colors different to break up the content
 
                 @keyframes flex-box--1x3__col__corner-out-anim {
                     from {
-                        box-shadow: inset $flexCardHoverColor 0px 0px;
+                        box-shadow: inset $flexCardHoverColor 0px 0px 0px -1px;
                     }
 
                     to {
-                        box-shadow: inset $flexCardHoverColor 0px 100px;
+                        box-shadow: inset $flexCardHoverColor 0px 100px 0px -1px;
                     }
                 }
             }
@@ -772,7 +772,7 @@ Make section background colors different to break up the content
                 }
 
                 to {
-                    box-shadow: inset $flexCardHoverColor 0px 0px;
+                    box-shadow: inset $flexCardHoverColor 0px 0px -1px;
                 }
             }
         }
