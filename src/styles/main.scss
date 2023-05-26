@@ -35,7 +35,7 @@ $contentBGColor: #161B38;
 $contentBorderColor: #0C0E0F;
 $contentFrameColor: #1B304F;
 //Flex Card Colors
-$flexCardDefaultColor: black;
+$flexCardDefaultColor: #161B38;
 $flexCardHoverColor: #6CAB3C;
 //Footer Colors
 $footerBGColor: #181D1F;
@@ -44,6 +44,7 @@ $footerFontColor: #828d91;
 //Github Colors
 $githubBGColor: #1B304F;
 $githubBorderColor: #0C0E0F;
+$githubUnderlineColor: white; //temp
 //Heading Colors
 $headingColor: #6CAB3C;
 //Intro Colors
@@ -332,14 +333,36 @@ Make section background colors different to break up the content
         margin-right: auto;
         width: 60px;
         word-wrap: break-word;
+
+        &::after {
+            background-color: $githubUnderlineColor;
+            content: '';
+            display: block;
+            height: 3px;
+            transition-duration: 300ms;
+            transition-property: all;
+            width: 0px;
+        }
     }
 
     &:hover {
-        box-shadow: $githubBorderColor 5px 5px, $githubBorderColor -5px -5px;
+        box-shadow: $githubBorderColor 6px 6px, $githubBorderColor -6px -6px;
         cursor: pointer;
-        transition-duration: 250ms;
+        transition-duration: 300ms;
         transition-property: box-shadow;
         user-select: none;
+
+        h3 {
+            &::after {
+                background-color: $githubUnderlineColor;
+                content: '';
+                display: block;
+                height: 3px;
+                transition-duration: 300ms;
+                transition-property: all;
+                width: 55px;
+            }
+        }
     }
 }
 
