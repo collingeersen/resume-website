@@ -34,6 +34,9 @@ $breadcrumbBorderColor: #0C0E0F;
 $contentBGColor: #161B38;
 $contentBorderColor: #0C0E0F;
 $contentFrameColor: #1B304F;
+//Flex Card Colors
+$flexCardDefaultColor: black;
+$flexCardHoverColor: #6CAB3C;
 //Footer Colors
 $footerBGColor: #181D1F;
 $footerColor: #000000;
@@ -45,11 +48,13 @@ $githubBorderColor: #0C0E0F;
 $headingColor: #6CAB3C;
 //Intro Colors
 $introInnerBorderColor: #0C0E0F;
-
 //Link Colors
 $linkColorActive: #53852D;
 $linkColorDefault: #6CAB3C;
 $linkColorHover: #9CF757;
+
+$sectionDividerColor: #0C0E0F;
+
 //Saved Colors
 //181D1F
 //1F1D1C
@@ -160,15 +165,15 @@ a {
     border: {
         style: solid;
         color: $linkColorDefault;
-        width:0;
+        width: 0;
         bottom-width: 1px;
     }
+
     font-size: 1em;
     //text-shadow: black 2px 2px 10px;
     transition-duration: 200ms;
-    transition-property:
-        border,
-        color;
+    transition-property: border,
+    color;
 
     &:active {
         color: $linkColorActive;
@@ -185,11 +190,11 @@ a {
             color: $linkColorHover;
             bottom-width: 3px;
         }
+
         color: $linkColorHover;
         cursor: pointer;
-        transition-property:
-            border,
-            color;
+        transition-property: border,
+        color;
         transition-duration: 200ms;
     }
 }
@@ -218,7 +223,7 @@ Make section background colors different to break up the content
     //padding: 5px;
     //padding-left: 30px;
     border-top: solid $contentBorderColor $separatorHeight;
-    overflow:hidden;
+    overflow: hidden;
     border-left: solid $contentBorderColor $separatorHeight;
     border-right: solid $contentBorderColor $separatorHeight;
 }
@@ -335,7 +340,7 @@ Make section background colors different to break up the content
         transition-duration: 250ms;
         transition-property: box-shadow;
         user-select: none;
-    } 
+    }
 }
 
 //-------------------------
@@ -362,7 +367,7 @@ Make section background colors different to break up the content
         duration: $animDuration_IntroSummary;
         fill-mode: both;
         name: intro__summary__content-load-animation;
-        timing-function:$animTimeFunc_IntroSummary;
+        timing-function: $animTimeFunc_IntroSummary;
     }
 
     @keyframes intro__summary__content-load-animation {
@@ -404,7 +409,7 @@ Make section background colors different to break up the content
         duration: $animDuration_IntroSummary;
         fill-mode: both;
         name: intro__summary__frame-load-animation;
-        timing-function:$animTimeFunc_IntroSummary;
+        timing-function: $animTimeFunc_IntroSummary;
     }
 
     background: $contentFrameColor;
@@ -663,9 +668,10 @@ Make section background colors different to break up the content
         color: $contentBorderColor;
         radius: 10px;
         style: solid;
+        width: 3px;
     }
 
-    box-shadow: #000000 0px 0px;
+    box-shadow: $flexCardDefaultColor 0px 0px 0px -3px;
     height: 250px;
     margin: auto;
     //padding-left: 30px;
@@ -675,7 +681,7 @@ Make section background colors different to break up the content
     box-shadow;
 
     &:hover {
-        box-shadow: #000000 0px 20px;
+        box-shadow: $flexCardHoverColor 0px 20px 0px -3px;
         cursor: pointer;
         transition-duration: 500ms;
         transition-property: translate,
@@ -701,11 +707,11 @@ Make section background colors different to break up the content
 
                 @keyframes flex-box--1x3__col__corner-out-anim {
                     from {
-                        box-shadow: inset black 0px 0px;
+                        box-shadow: inset $flexCardHoverColor 0px 0px;
                     }
 
                     to {
-                        box-shadow: inset black 0px 100px;
+                        box-shadow: inset $flexCardHoverColor 0px 100px;
                     }
                 }
             }
@@ -728,19 +734,22 @@ Make section background colors different to break up the content
         div {
             animation-duration: 500ms;
             animation-name: flex-box--1x3__col__corner-in-anim;
-            background-color: #1C0B3D;
+            background-color: $flexCardDefaultColor;
             height: 100px;
             rotate: -45deg;
             translate: 30px -40px;
             width: 20px;
+            //border-style: solid;
+            //border-color: $contentBorderColor;
+            //border-width: 2px;
 
             @keyframes flex-box--1x3__col__corner-in-anim {
                 from {
-                    box-shadow: inset black 0px -100px;
+                    box-shadow: inset $flexCardHoverColor 0px -100px;
                 }
 
                 to {
-                    box-shadow: inset black 0px 0px;
+                    box-shadow: inset $flexCardHoverColor 0px 0px;
                 }
             }
         }
@@ -775,6 +784,19 @@ Make section background colors different to break up the content
         margin-right: auto;
         width: 200px;
     }
+}
+
+//=========================================================
+//  Divider Classes
+//=========================================================
+.divider--thin {
+    background-color: $sectionDividerColor;
+    height: 3px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 80%;
 }
 
 //=========================================================
@@ -818,22 +840,9 @@ Make section background colors different to break up the content
 }
 
 //=========================================================
-//  Divider Classes
-//=========================================================
-.divider--thin {
-    background-color:#40DB8D;
-    height: 1px;
-    margin-bottom: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
-    width: 80%;
-}
-
-//=========================================================
 //  Footer Classes
 //=========================================================
-.footer{
+.footer {
     background-color: $footerBGColor;
     //background-color:rgb(28, 26, 26);
     margin-left: auto;
@@ -842,7 +851,7 @@ Make section background colors different to break up the content
     width: 80%;
 
     //Removes the link styling
-    a{
+    a {
         border-color: $footerFontColor;
 
         &:hover {
@@ -884,7 +893,7 @@ Make section background colors different to break up the content
     text-align: end;
 }
 
-.footer__divider--top{
+.footer__divider--top {
     background-color: $footerFontColor;
     border-radius: 10px;
     display: block;
