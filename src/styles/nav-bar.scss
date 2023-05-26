@@ -16,11 +16,13 @@ $navBtnShadow: #1C0B3D;
 //$navLinkColor: #4F8CE8;
 //231B5C
 
+//Notes
+//position and make a truncated version when scrolling down
+
 //=========================================================
 //  Nav-Bar
 //=========================================================
 nav {
-    //position and make a truncated version when scrolling down
     background-color: $navBGColor;
     box-shadow: inset 0px -5px 0px $navBorderColor; //Used to create a pseudo border
     height: 100px;
@@ -34,26 +36,23 @@ nav {
     font-size: 1.2em;
 }
 
-//-------------------------
-//  Nav-Bar: Btn-Hamburger |
-//-------------------------
+//=========================================================
+//  Nav-Bar: Btn-Hamburger
+//=========================================================
 .nav-bar__btn {
-    margin-right: 5%;
     margin-left: 12%;
+    margin-right: 5%;
 }
 
 .nav-bar__btn--hamburger {
     background-color: $navBtnBGColorDefault;
     border: 0;
     border-radius: 20%;
-    box-shadow:
-        inset 2px 0px 4px $insetShadow,
+    box-shadow: inset 2px 0px 4px $insetShadow,
         inset -2px -4px 4px $insetShadow,
         $accentColor3 0px 2px 3px;
     transition-duration: 200ms;
-    transition-property:
-        background-color,
-        box-shadow;
+    transition-property: background-color, box-shadow;
     width: 4rem;
 
     &:hover {
@@ -71,13 +70,6 @@ nav {
 
     //Span used by Google Material Icon
     span {
-        padding: {
-            bottom: 0;
-            left: 0;
-            right: 0;
-            top: 0;
-        }
-
         color: $linkColorDefault;
         font-size: 2rem;
         line-height: 1.5;
@@ -86,15 +78,22 @@ nav {
         translate: 0px 0px;
         width: 100%;
 
+        padding: {
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 0;
+        }
+
         &:active {
             translate: 0px 2.5px;
         }
     }
 }
 
-//-------------------------
-//  Nav-Bar: Theme Switch  |
-//-------------------------
+//=========================================================
+//  Nav-Bar: Theme Switch
+//=========================================================
 .nav-bar__theme-switch {
     display: inline-block;
     height: 38px;
@@ -116,9 +115,9 @@ nav {
         cursor: pointer;
         left: 0;
         position: absolute;
+        right: 0;
         top: 0;
         transition: 300ms;
-        right: 0;
     }
 
     span::before {
@@ -142,20 +141,20 @@ nav {
     }
 }
 
-//-------------------------
-//  Nav-Bar: Divider       |
-//-------------------------
+//=========================================================
+//  Nav-Bar: Divider
+//=========================================================
 .nav-bar__divider {
     display: block;
-    width: 10px;
     height: 50px;
-    margin-right: auto;
     margin-left: auto;
+    margin-right: auto;
+    width: 10px;
 }
 
-//-------------------------
-//  Nav-Bar: Links         |
-//-------------------------
+//=========================================================
+//  Nav-Bar: Links
+//=========================================================
 .nav-bar__link__menu {
     align-content: center;
     display: flex;
@@ -187,9 +186,9 @@ nav {
     }
 }
 
-//-------------------------
-//  Nav-Bar: Dropdown Menu |
-//-------------------------
+//=========================================================
+//  Nav-Bar: Dropdown Menu
+//=========================================================
 .nav-bar__drop-down {
     background: $dropMenuBGColor;
     border-bottom-right-radius: 20px;
@@ -207,18 +206,21 @@ nav {
     z-index: 1;
 }
 
-//  Dropdown Menu: Header
-//-----------------------
+//-------------------------
+//  Dropdown Menu: Header  |
+//-------------------------
 .nav-bar__drop-down__header {
     display: flex;
     flex-wrap: nowrap;
     margin-bottom: 50px;
 }
 
-//Dropdown Menu: Expand/Collapse Toggle
+//-----------------------------------------
+//  Dropdown Menu: Expand/Collapse Toggle  |
+//-----------------------------------------
 .nav-bar__drop-down__header__toggle {
-    font-size: 0.8em;
     align-self: center;
+    font-size: 0.8em;
     margin-right: 20px;
 
     label {
@@ -248,14 +250,14 @@ nav {
         transition-duration: 200ms;
         transition-property: background-color, box-shadow, translate;
 
-        &:hover {
-            background-color: $navBtnBGColorHover;
-            cursor: pointer;
-        }
-
         &:active {
             box-shadow: $navBtnShadow 0px 0px 0px;
             translate: 0px 3px;
+        }
+
+        &:hover {
+            background-color: $navBtnBGColorHover;
+            cursor: pointer;
         }
     }
 
@@ -267,11 +269,13 @@ nav {
     }
 }
 
-//Dropdown Menu: Btn Exit
+//---------------------------
+//  Dropdown Menu: Btn Exit  |
+//---------------------------
 .nav-bar__drop-down__btn--exit {
     background-color: $navBtnBGColorDefault;
-    border: 0;
     border-radius: 20%;
+    border: 0;
     box-shadow: $navBtnShadow 0 5px 1px;
     display: block;
     line-height: 0%;
@@ -280,24 +284,25 @@ nav {
     transition-duration: 200ms;
     transition-property: background-color, box-shadow, translate;
 
-    &:hover {
-        background-color: $navBtnBGColorHover;
-        cursor: pointer;
-    }
-
     &:active {
         box-shadow: $navBtnShadow 0 0px 1px;
         translate: 0px 2.5px;
     }
 
+    &:hover {
+        background-color: $navBtnBGColorHover;
+        cursor: pointer;
+    }
+
     span {
-        font-size: 3rem;
         color: $linkColorDefault;
+        font-size: 3rem;
     }
 }
 
-//  Dropdown Menu: Sub
-//--------------------
+//-------------------------
+//  Dropdown Menu: Sub     |
+//-------------------------
 .nav-bar__drop-down__sub {
     display: block;
     padding-bottom: 20px;
@@ -313,9 +318,10 @@ nav {
 .nav-bar__drop-down__sub__span {
 
     label {
-        color: $linkColorDefault;
-        //text-shadow: black 0 0 0;
         border: 0;
+        color: $linkColorDefault;
+        transition-duration: 300ms;
+        transition-property: border, color;
 
         border: {
             style: solid;
@@ -324,28 +330,24 @@ nav {
             bottom-left-radius: 0%;
         }
 
-        transition-property: border,
-        color;
-        transition-duration: 300ms;
-
         &:hover {
-            cursor: pointer;
             color: $linkColorHover;
-            transition-property: border, color, rotate;
+            cursor: pointer;
             transition-duration: 100ms;
+            transition-property: border, color, rotate;
 
             border: {
-                style: solid;
-                color: $linkColorHover;
-                bottom-width: 3px;
                 bottom-left-radius: 0%;
+                bottom-width: 3px;
+                color: $linkColorHover;
+                style: solid;
             }
 
             &~span {
                 //Duration also effects the rotate transition for arrow toggle classes
                 color: $linkColorHover;
-                transition-property: border, color, rotate;
                 transition-duration: 100ms;
+                transition-property: border, color, rotate;
             }
         }
     }
@@ -357,9 +359,16 @@ nav {
     }
 }
 
-//  Dropdown Menu: Footer
-//-----------------------
+//-------------------------
+//  Dropdown Menu: Footer  |
+//-------------------------
 .nav-bar__drop-down__footer {
+
+    //About Section Link
+    a {
+        display: inline;
+        font-size: 0.75em;
+    }
 
     //Empty div to shift the footer down and retain dynamic resizing 
     div {
@@ -367,17 +376,11 @@ nav {
         width: 100%;
     }
 
+    //Material Icon
     span {
         font-size: 1.5em;
-        //Move down Material Icon
-        translate: 0 3px;
+        translate: 0 3px; //Moves down Material Icon
         margin-bottom: 10px;
-    }
-
-    //About Section Link
-    a {
-        display: inline;
-        font-size: 0.75em;
     }
 }
 
@@ -393,23 +396,27 @@ nav {
     width: 100%;
 }
 
+//=========================================================
+//  Nav-Bar: Events
+//=========================================================
 //-------------------------
 //  Nav-Bar: Events        |
 //-------------------------
 .--hidden {
-    transition-property: right;
-    transition-duration: 400ms;
     right: 100%;
+    transition-duration: 400ms;
+    transition-property: right;
 }
 
 .--visible {
-    transition-property: right;
-    transition-duration: 400ms;
     right: 70%;
+    transition-duration: 400ms;
+    transition-property: right;
 }
 
-//  Events: Main Window Blur
-//--------------------------
+//---------------------------
+//  Events: Main Window Blur |
+//---------------------------
 .--unblur {
     filter: blur(0);
     transition-duration: 400ms;
@@ -422,7 +429,8 @@ nav {
     transition-property: filter;
 }
 
-//  Events: Expand/Collapse
+//--------------------------
+//  Events: Expand/Collapse |
 //--------------------------
 [class$="--sub-collapse"] {
     height: 0;
@@ -460,8 +468,8 @@ nav {
     width: 100%;
 
     animation: {
-        name: subAnimIn;
         duration: 200ms;
+        name: subAnimIn;
         timing-function: ease-out;
     }
 
@@ -484,8 +492,9 @@ nav {
     }
 }
 
-//  Events: Arrow Expand
-//--------------------------
+//------------------------------
+//  Events: Arrow Expand        |
+//------------------------------
 //Duration for both is under the span/label transition
 [class$="--expand-more"] {
     rotate: (0deg);
@@ -495,6 +504,9 @@ nav {
     rotate: (180deg);
 }
 
+//-------------------------
+//  Events: Grey-out       |
+//-------------------------
 //Expand/Collapse Grey-out
 .--active {
     //filter:grayscale(0);
