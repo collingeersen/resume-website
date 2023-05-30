@@ -54,6 +54,9 @@ $introInnerBorderColor: #0C0E0F;
 $linkColorActive: #53852D;
 $linkColorDefault: #6CAB3C;
 $linkColorHover: #9CF757;
+//Scroll to Top Colors
+$scrollBtnBGColor:#1B304F;
+$scrollBtnFontColor: #6CAB3C;
 
 $sectionDividerColor: #0C0E0F;
 
@@ -940,4 +943,50 @@ Make section background colors different to break up the content
     display: block;
     height: 150px;
     width: 0px;
+}
+
+.scroll-to-top {
+    bottom: 120px;
+    position:fixed;
+    right: 4%;
+
+    button {
+        background-color: $scrollBtnBGColor;
+        border-radius: 40px;
+        border:0;
+        color: $scrollBtnFontColor;
+        padding: 15px;
+
+        &:hover {
+            cursor: pointer;
+
+            span {
+                transition-duration: 300ms;
+                transition-property: all;
+                translate: 0 -5px;
+            }
+        }
+    }
+
+    span {
+        display: block;
+        font-size: 40;
+        text-shadow: #000000 0px 5px;
+        transition-duration: 300ms;
+        transition-property: all;
+    }
+    
+}
+.scroll-to-top--hidden {
+    opacity: 0;
+    transition-duration: 300ms;
+    transition-property: all;
+    visibility: hidden;
+    
+}
+.scroll-to-top--visible {
+    opacity: 1;
+    transition-duration: 300ms;
+    transition-property: all;
+    visibility: visible;
 }

@@ -1,20 +1,37 @@
 //Selectors that fire the initial event
 const btnHamburger = document.getElementsByClassName("nav-bar__btn--hamburger")[0];
 const btnExit = document.getElementsByClassName("nav-bar__drop-down__btn--exit")[0];
-const mainExit = document.getElementsByClassName("main")[0];
+const btnTop = document.getElementsByClassName("scroll-to-top__btn")[0];
 const toggleDisplay = document.querySelectorAll(".--toggle-display");
 const toggleExpandAll = document.getElementsByClassName("nav-bar__drop-down__header__toggle--expand")[0];
 const toggleCollapseAll = document.getElementsByClassName("nav-bar__drop-down__header__toggle--collapse")[0];
+const toTopScroll = document.getElementsByClassName("scroll-to-top--hidden")[0];
 
 //Btn click events
 btnHamburger.addEventListener("click", dropDown);
 btnExit.addEventListener("click", dropDown);
 
+
+document.addEventListener("scroll", (event) => {
+  if (window.scrollY > 180) {
+    toTopScroll.classList.replace("scroll-to-top--hidden", "scroll-to-top--visible");
+  } else {
+    toTopScroll.classList.replace("scroll-to-top--visible", "scroll-to-top--hidden")
+  }
+});
+
+//Scrolls the user back to top
+btnTop.addEventListener("click", (event) => {
+  if (window.scrollY > 0) {
+    window.scroll(0, 0);
+  }
+});
+
 //Used for dropdown menu toggle
 function dropDown() {
   const elementDropDown = document.getElementsByClassName("nav-bar__drop-down")[0];
   const main = document.getElementsByClassName("main")[0];
-  const footer =document.getElementsByClassName("footer")[0];
+  const footer = document.getElementsByClassName("footer")[0];
 
   //Blurs the <main> element and everything within
   if (
@@ -45,11 +62,11 @@ function dropDown() {
 
   //Makes it exit when clicked outside of dropdown when active 
   if (elementDropDown.classList[1] == "--visible") {
-    mainExit.addEventListener("click", dropDown)
+    main.addEventListener("click", dropDown)
   }
   //Needed so when exit button is pressed to removes event from main
   if (elementDropDown.classList[1] == "--hidden") {
-    mainExit.removeEventListener("click", dropDown)
+    main.removeEventListener("click", dropDown)
   }
 }
 
@@ -95,10 +112,6 @@ for (let i = 0; i < toggleDisplay.length; i++) {
       subArrow.classList.replace("--" + i + "--expand-more",
         "--" + i + "--expand-less");
     }
-    /*
-    if(sub.classList[i] === "--display-block"){
-      toggleExpandAll.classList.replace("--active", "--nonactive")
-    }*/
   }
 
   function subCollapseAll() {
@@ -108,18 +121,5 @@ for (let i = 0; i < toggleDisplay.length; i++) {
       subArrow.classList.replace("--" + i + "--expand-less",
         "--" + i + "--expand-more");
     }
-    /*
-    if(sub.classList[i] !== "--display-none"){
-      toggleCollapseAll.classList.replace("--nonactive", "--active")
-    }*/
   }
 }
-
-/*
-Array.from(span).forEach(elem => {
-  elem.addEventListener("click", function(event) {
-
-    })
-  
-  })
-  */

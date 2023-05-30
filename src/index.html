@@ -10,17 +10,25 @@
     <!--Favicon-->
     <!--Canonical link-->
     <!--CSS critical-->
-    <!--Load CSS before js-->
     <link rel="stylesheet" href="../src/styles/main.scss">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
     <script src="../src/scripts/index.ts" defer></script>
     <!--Include error pages-->
     <!--W3C tests-->
     <!--Adblock test-->
+    <!--Include page informing user to have javascript enabled to utilize the site-->
 </head>
 
 <body>
     <div class="global-container">
+
+        <!--Display a scroll to top button once scrolled a certain amount down the page-->
+        <div class="scroll-to-top scroll-to-top--hidden">
+            <button class="scroll-to-top__btn">
+                <span class="material-symbols-rounded">arrow_upward</span>
+            </button>
+        </div>
+
         <nav>
             <div class="nav-bar" role="menubar">
 
@@ -272,7 +280,7 @@
         <main class="main --unblur">
 
             <div class="breadcrumb"></div>
-            
+
             <!--Introduction Section-->
             <div class="intro" role="group">
                 <!--Add triangle behind and have collin image on the opposite side-->
@@ -280,7 +288,11 @@
                 <div class="intro__header" role="group">
                     <!--Title for page-->
                     <h1 class="intro__header__title">Title for head of page</h1>
-                    <div class="intro__header__github-link"><div><img src="../src/images/github-mark.svg" alt="Github Logo"><h3>Github Source</h3></div></div>
+                    <div class="intro__header__github-link">
+                        <div><img src="../src/images/github-mark.svg" alt="Github Logo">
+                            <h3>Github Source</h3>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="intro__summary" role="group">
