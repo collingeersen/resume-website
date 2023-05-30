@@ -216,6 +216,61 @@ Make section background colors different to break up the content
 @import 'nav-bar.scss';
 
 //=========================================================
+//  Scroll to Top
+//=========================================================
+.scroll-to-top {
+    bottom: 120px;
+    position:fixed;
+    right: 4%;
+
+    button {
+        background-color: $scrollBtnBGColor;
+        border-radius: 40px;
+        border:0;
+        color: $scrollBtnFontColor;
+        padding: 15px;
+        border-style: solid;
+        border-color: $scrollBtnFontColor;
+        border-width: 3px;
+
+        &:hover {
+            cursor: pointer;
+
+            span {
+                transition-duration: 300ms;
+                transition-property: all;
+                translate: 0 -5px;
+            }
+        }
+    }
+
+    span {
+        display: block;
+        font-size: 40;
+        text-shadow: #000000 0px 3px;
+        transition-duration: 300ms;
+        transition-property: all;
+    }
+}
+
+//-------------------------
+//  Scroll Events          |
+//-------------------------
+.scroll-to-top--hidden {
+    opacity: 0;
+    transition-duration: 300ms;
+    transition-property: all;
+    visibility: hidden;
+    
+}
+.scroll-to-top--visible {
+    opacity: 1;
+    transition-duration: 300ms;
+    transition-property: all;
+    visibility: visible;
+}
+
+//=========================================================
 //  Introduction
 //=========================================================
 .intro {
@@ -943,50 +998,4 @@ Make section background colors different to break up the content
     display: block;
     height: 150px;
     width: 0px;
-}
-
-.scroll-to-top {
-    bottom: 120px;
-    position:fixed;
-    right: 4%;
-
-    button {
-        background-color: $scrollBtnBGColor;
-        border-radius: 40px;
-        border:0;
-        color: $scrollBtnFontColor;
-        padding: 15px;
-
-        &:hover {
-            cursor: pointer;
-
-            span {
-                transition-duration: 300ms;
-                transition-property: all;
-                translate: 0 -5px;
-            }
-        }
-    }
-
-    span {
-        display: block;
-        font-size: 40;
-        text-shadow: #000000 0px 5px;
-        transition-duration: 300ms;
-        transition-property: all;
-    }
-    
-}
-.scroll-to-top--hidden {
-    opacity: 0;
-    transition-duration: 300ms;
-    transition-property: all;
-    visibility: hidden;
-    
-}
-.scroll-to-top--visible {
-    opacity: 1;
-    transition-duration: 300ms;
-    transition-property: all;
-    visibility: visible;
 }
