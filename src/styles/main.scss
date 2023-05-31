@@ -225,16 +225,20 @@ Make section background colors different to break up the content
 
     button {
         background-color: $scrollBtnBGColor;
-        border-radius: 40px;
         border:0;
+        border-color: $scrollBtnFontColor;
+        border-radius: 40px;
+        border-style: solid;
+        border-width: 3px;
         color: $scrollBtnFontColor;
         padding: 15px;
-        border-style: solid;
-        border-color: $scrollBtnFontColor;
-        border-width: 3px;
+        transition-duration: 300ms;
 
         &:hover {
             cursor: pointer;
+            scale: 1.1;
+            transition-duration: 300ms;
+            transition-property: all;
 
             span {
                 transition-duration: 300ms;
