@@ -55,7 +55,7 @@ $linkColorActive: #53852D;
 $linkColorDefault: #6CAB3C;
 $linkColorHover: #9CF757;
 //Scroll to Top Colors
-$scrollBtnBGColor:#1B304F;
+$scrollBtnBGColor: #1B304F;
 $scrollBtnFontColor: #6CAB3C;
 
 $sectionDividerColor: #0C0E0F;
@@ -220,12 +220,12 @@ Make section background colors different to break up the content
 //=========================================================
 .scroll-to-top {
     bottom: 120px;
-    position:fixed;
+    position: fixed;
     right: 4%;
 
     button {
         background-color: $scrollBtnBGColor;
-        border:0;
+        border: 0;
         border-color: $scrollBtnFontColor;
         border-radius: 40px;
         border-style: solid;
@@ -265,8 +265,9 @@ Make section background colors different to break up the content
     transition-duration: 300ms;
     transition-property: all;
     visibility: hidden;
-    
+
 }
+
 .scroll-to-top--visible {
     opacity: 1;
     transition-duration: 300ms;
@@ -725,7 +726,7 @@ Make section background colors different to break up the content
 .flex-box--1x3__inner {
     background-color: $contentBGColor;
     border-radius: 20px;
-    height: 500px;
+    height: auto;
     width: auto;
 }
 
@@ -766,7 +767,7 @@ Make section background colors different to break up the content
     }
 
     box-shadow: $flexCardDefaultColor 0px 0px 0px -3px;
-    height: 250px;
+    height: auto;
     margin: auto;
     //padding-left: 30px;
     translate: 0;
@@ -809,6 +810,13 @@ Make section background colors different to break up the content
                     }
                 }
             }
+        }
+
+        //Hover effect to darken img and show arrow icon
+        .material-symbols-rounded {
+            opacity: 1;
+            transition-duration: 200ms;
+            transition-property: all;
         }
     }
 }
@@ -865,15 +873,32 @@ Make section background colors different to break up the content
 }
 
 .flex-box--1x3__col__content {
+    padding-bottom: 30px;
     padding-left: 30px;
     padding-right: 30px;
 
+    //Container for img
     div {
         background-color: #212436;
-        height: 100px;
+        height: 200px;
         margin-left: auto;
         margin-right: auto;
         width: 200px;
+    }
+
+    //Material Icon span
+    span {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: $fontColor1;
+        display: block;
+        font-size: 40;
+        height: 100%;
+        opacity: 0;
+        padding-top: 80px;
+        position: relative;
+        text-align: center;
+        transition-duration: 200ms;
+        transition-property: all;
     }
 }
 
