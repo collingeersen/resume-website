@@ -6,6 +6,7 @@
 //-------------------------
 $dropMenuBGColor: #161B38;
 $navBGColor: #161B38;
+$navminiBGColor: rgba(22, 27, 56, 0.95);
 $navBorderColor: #0C0E0F;
 //Button Colors
 $navBtnBGColorDefault: #1B304F;
@@ -16,12 +17,55 @@ $navBtnShadow: #1C0B3D;
 //$navLinkColor: #4F8CE8;
 //231B5C
 
+//-------------------------
+//  Duration               |
+//-------------------------
+$navminiDuration: 300ms;
+
 //Notes
 //position and make a truncated version when scrolling down
 
 //=========================================================
 //  Nav-Bar
 //=========================================================
+[class$="nav-bar--mini"] {
+    
+    .nav-bar {
+        background-color: $navminiBGColor;
+        box-shadow: inset 0px -5px 0px $navBorderColor;
+        height: 60px;
+        position: fixed;
+        //transition-duration: $navminiDuration;
+        //transition-property: height;
+        width: 100%;
+    }
+
+    .nav-bar__btn--hamburger {
+        scale: 0.85;
+        transition-duration: $navminiDuration;
+        transition-property: all;
+    }
+
+    .nav-bar__link__menu {
+        //font-size: 15;
+
+        a {
+            //visibility: hidden;
+            font-size: 16;
+            transition-property: all;
+            transition-duration: $navminiDuration;
+        }
+
+        span {
+            //visibility: visible;
+            font-size: 25;
+            transition-property: all;
+            transition-duration: $navminiDuration;
+        }
+    }
+
+}
+
 nav {
     background-color: $navBGColor;
     box-shadow: inset 0px -5px 0px $navBorderColor; //Used to create a pseudo border
@@ -34,6 +78,12 @@ nav {
     align-items: center;
     display: flex;
     font-size: 1.2em;
+    height: 100px;
+    //transition-duration: 500ms;
+    //transition-property: height;
+    //background-color: $navBGColor;
+    //box-shadow: inset 0px -5px 0px $navBorderColor;
+
 }
 
 //=========================================================
@@ -52,7 +102,8 @@ nav {
         inset -2px -4px 4px $insetShadow,
         $accentColor3 0px 2px 3px;
     transition-duration: 200ms;
-    transition-property: background-color, box-shadow;
+    transition-property: background-color, box-shadow, scale;
+    scale: 1;
     width: 4rem;
 
     &:hover {
@@ -156,7 +207,7 @@ nav {
 //  Nav-Bar: Links
 //=========================================================
 .nav-bar__link__menu {
-    align-content: center;
+    //align-content: center;
     display: flex;
     flex-wrap: wrap;
     position: relative;
@@ -166,8 +217,15 @@ nav {
     li {
         display: inline;
         list-style: none;
+        padding-bottom: 10px;
         padding-right: 5em;
         position: relative;
+
+        a {
+            font-size: 20;
+            transition-property: font-size;
+            transition-duration: $navminiDuration;
+        }
 
         //Span used by Google Material Icons
         //Centers icons

@@ -6,11 +6,19 @@ const toggleDisplay = document.querySelectorAll(".--toggle-display");
 const toggleExpandAll = document.getElementsByClassName("nav-bar__drop-down__header__toggle--expand")[0];
 const toggleCollapseAll = document.getElementsByClassName("nav-bar__drop-down__header__toggle--collapse")[0];
 const toTopScroll = document.getElementsByClassName("scroll-to-top--hidden")[0];
+const navMini = document.getElementsByClassName("nav-bar--default")[0];
 
 //Btn click events
 btnHamburger.addEventListener("click", dropDown);
 btnExit.addEventListener("click", dropDown);
 
+document.addEventListener("scroll", (event) => {
+  if (window.scrollY > 80){
+    navMini.classList.replace("nav-bar--default", "nav-bar--mini");
+  } else {
+    navMini.classList.replace("nav-bar--mini", "nav-bar--default");
+  }
+});
 
 document.addEventListener("scroll", (event) => {
   if (window.scrollY > 180) {
