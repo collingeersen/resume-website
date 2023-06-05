@@ -419,6 +419,10 @@ nav {
     }
 }
 
+.nav-bar__drop-down__sub__content__list{
+    list-style: none;
+}
+
 //-------------------------
 //  Dropdown Menu: Footer  |
 //-------------------------
@@ -460,18 +464,20 @@ nav {
 //  Nav-Bar: Events
 //=========================================================
 //-------------------------
-//  Nav-Bar: Events        |
+//  Events: Hidden/Visible |
 //-------------------------
 .--hidden {
     right: 100%;
     transition-duration: 400ms;
     transition-property: right;
+    transition-timing-function:cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .--visible {
     right: 70%;
     transition-duration: 400ms;
     transition-property: right;
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 //---------------------------
@@ -493,62 +499,26 @@ nav {
 //  Events: Expand/Collapse |
 //--------------------------
 [class$="--sub-collapse"] {
-    height: 0;
+    height: 10px;
     overflow: hidden;
     width: 0%;
 
-    animation: {
-        duration: 500ms;
-        name: subAnimOut;
-        timing-function: cubic-bezier(1, 0, 0, 1);
-    }
-
     transition: {
-        duration: 250ms;
+        duration: 150ms;
         property: all;
-        timing-function: ease-in-out;
-    }
-
-    @keyframes subAnimOut {
-        from {
-            margin-bottom: 5%;
-            margin-top: 5%;
-        }
-
-        to {
-            margin-bottom: 0%;
-            margin-top: 0%;
-        }
+        timing-function: ease-in;
     }
 }
 
 [class$="--sub-expand"] {
-    height: 100%;
+    height: 120px;
     overflow: hidden;
     width: 100%;
 
-    animation: {
-        duration: 200ms;
-        name: subAnimIn;
-        timing-function: ease-out;
-    }
-
     transition: {
-        duration: 300ms;
+        duration: 150ms;
         property: all;
-        timing-function: ease-in-out;
-    }
-
-    @keyframes subAnimIn {
-        from {
-            margin-bottom: 5%;
-            margin-top: 5%;
-        }
-
-        to {
-            margin-bottom: 0%;
-            margin-top: 0%;
-        }
+        timing-function: ease-in;
     }
 }
 
@@ -558,10 +528,14 @@ nav {
 //Duration for both is under the span/label transition
 [class$="--expand-more"] {
     rotate: (0deg);
+    transition-property: all;
+    transition-duration: 100ms;
 }
 
 [class$="--expand-less"] {
     rotate: (180deg);
+    transition-property: all;
+    transition-duration: 100ms;
 }
 
 //-------------------------
