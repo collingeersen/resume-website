@@ -29,7 +29,6 @@ $navminiDuration: 300ms;
 //  Nav-Bar
 //=========================================================
 [class$="nav-bar--mini"] {
-    
     .nav-bar {
         background-color: $navminiBGColor;
         box-shadow: inset 0px -5px 0px $navBorderColor;
@@ -64,6 +63,9 @@ $navminiDuration: 300ms;
         }
     }
 
+    .nav-bar__drop-down{
+        top: 60px;
+    }
 }
 
 nav {
@@ -72,6 +74,8 @@ nav {
     height: 100px;
     position: relative;
     z-index: 101;
+    //transition-duration: $navminiDuration;
+    //transition-property: height;
 }
 
 .nav-bar {
@@ -79,8 +83,8 @@ nav {
     display: flex;
     font-size: 1.2em;
     height: 100px;
-    //transition-duration: 500ms;
-    //transition-property: height;
+    transition-duration: 400ms;
+    transition-property: height;
     //background-color: $navBGColor;
     //box-shadow: inset 0px -5px 0px $navBorderColor;
 
@@ -196,6 +200,7 @@ nav {
 //  Nav-Bar: Divider
 //=========================================================
 .nav-bar__divider {
+    //background-color: #0C0E0F;
     display: block;
     height: 50px;
     margin-left: auto;
@@ -223,8 +228,6 @@ nav {
 
         a {
             font-size: 20;
-            transition-property: font-size;
-            transition-duration: $navminiDuration;
         }
 
         //Span used by Google Material Icons
@@ -251,16 +254,18 @@ nav {
     background: $dropMenuBGColor;
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
+    bottom: 0px;
     height: auto;
     margin: auto;
+    overflow-y: scroll;
     padding: 2%;
-    position: absolute;
-    right: 70%;
-    top: 100%; //Used to shift down from top of navbar
+    position: fixed;
+    scrollbar-width: thin;
+    top: 100px;
     transition-duration: 400ms;
     transition-property: opacity;
     user-select: none;
-    width: 30%;
+    width: 25%;
     z-index: 1;
 }
 
@@ -303,13 +308,13 @@ nav {
     //Selects only the span for the container and not icon
     &>span {
         background-color: $navBtnBGColorDefault;
+        border-radius: 20px;
         box-shadow: $navBtnShadow 0px 3px 1px;
         color: $linkColorDefault;
         margin-right: 25px;
+        padding: 0;
         transition-duration: 200ms;
         transition-property: background-color, box-shadow, translate;
-        padding: 0;
-        border-radius: 20px;
 
         &:active {
             box-shadow: $navBtnShadow 0px 0px 0px;
@@ -367,7 +372,7 @@ nav {
     display: block;
     padding-bottom: 20px;
     position: relative;
-    white-space: nowrap;
+    //white-space: nowrap;
 }
 
 .nav-bar__drop-down__header__toggle {
@@ -419,14 +424,19 @@ nav {
     }
 }
 
-.nav-bar__drop-down__sub__content__list{
+.nav-bar__drop-down__sub__content__list {
     list-style: none;
+
+    li {
+        padding-bottom: 10px;
+    }
 }
 
 //-------------------------
 //  Dropdown Menu: Footer  |
 //-------------------------
 .nav-bar__drop-down__footer {
+    //bottom: 10px;
 
     //About Section Link
     a {
@@ -443,8 +453,8 @@ nav {
     //Material Icon
     span {
         font-size: 1.5em;
-        translate: 0 3px; //Moves down Material Icon
         margin-bottom: 10px;
+        translate: 0 3px; //Moves down Material Icon
     }
 }
 
@@ -468,31 +478,62 @@ nav {
 //-------------------------
 .--hidden {
     right: 100%;
-    transition-duration: 400ms;
+    transition-duration: 300ms;
     transition-property: right;
-    transition-timing-function:cubic-bezier(0.19, 1, 0.22, 1);
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .--visible {
-    right: 70%;
-    transition-duration: 400ms;
+    right: 75%;
+    transition-duration: 300ms;
     transition-property: right;
     transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 //---------------------------
-//  Events: Main Window Blur |
+//  Events: Main Window      |
 //---------------------------
-.--unblur {
-    filter: blur(0);
-    transition-duration: 400ms;
-    transition-property: filter;
+.--undarken {
+    &::before {
+        background-color: #000000;
+        content: '';
+        display:block;
+        height: 100%;
+        position:fixed;
+        transform: translateY(-100px); //Shifts the overlay up to accommodate for mini nav bar size change
+        transition-duration: 200ms;
+        transition-property: all;
+        transition-timing-function: ease-out;
+        width: 0%;
+        z-index: 100;
+    } 
 }
 
-.--blur {
-    filter: blur(15);
-    transition-duration: 400ms;
-    transition-property: filter;
+.--darken {
+    &::before {
+        animation-duration: 300ms;
+        animation-name: main-overlay-ani;
+        background-color: #000000;
+        content: '';
+        display:block;
+        height: 100%;
+        opacity: 0.6;
+        position:fixed;
+        transform: translateY(-100px); //Shifts the overlay up to accommodate for mini nav bar size change
+        transition-duration: 200ms;
+        transition-property: all;
+        transition-timing-function: ease;
+        width: 100%;
+        z-index: 100;
+    }
+}
+
+.--scroll{
+    overflow: visible;
+}
+
+.--scroll-block{
+    overflow: hidden;
 }
 
 //--------------------------
@@ -511,7 +552,8 @@ nav {
 }
 
 [class$="--sub-expand"] {
-    height: 120px;
+    //Keep in mind that the height here controls the sub content height
+    height: 140px;
     overflow: hidden;
     width: 100%;
 
