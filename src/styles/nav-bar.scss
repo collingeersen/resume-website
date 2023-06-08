@@ -252,8 +252,6 @@ nav {
 //=========================================================
 .nav-bar__drop-down {
     background: $dropMenuBGColor;
-    border-bottom-right-radius: 20px;
-    border-top-right-radius: 20px;
     bottom: 0px;
     height: auto;
     margin: auto;
@@ -267,6 +265,16 @@ nav {
     user-select: none;
     width: 25%;
     z-index: 1;
+
+    //Emulate the thin scrollbar from Firefox
+    &::-webkit-scrollbar{
+        background: #16192f;
+        height: 12px;
+        width: 8px;
+    }
+    &::-webkit-scrollbar-thumb{
+        background: #5f606e;
+    }
 }
 
 //-------------------------
@@ -495,24 +503,36 @@ nav {
 //---------------------------
 .--undarken {
     &::before {
+        animation-delay: 200ms;
+        animation-duration: 200ms;
+        animation-fill-mode: forwards;
+        animation-name: main-overlay-ani;
         background-color: #000000;
         content: '';
         display:block;
         height: 100%;
+        opacity: 0;
         position:fixed;
         transform: translateY(-100px); //Shifts the overlay up to accommodate for mini nav bar size change
         transition-duration: 200ms;
-        transition-property: all;
+        transition-property: opacity;
         transition-timing-function: ease-out;
-        width: 0%;
+        width: 100%;
         z-index: 100;
+
+        @keyframes main-overlay-ani {
+            from {
+                height: 100%;
+            }
+            to {
+                height: 0;
+            }
+        }
     } 
 }
 
 .--darken {
     &::before {
-        animation-duration: 300ms;
-        animation-name: main-overlay-ani;
         background-color: #000000;
         content: '';
         display:block;
@@ -521,7 +541,7 @@ nav {
         position:fixed;
         transform: translateY(-100px); //Shifts the overlay up to accommodate for mini nav bar size change
         transition-duration: 200ms;
-        transition-property: all;
+        transition-property: opacity;
         transition-timing-function: ease;
         width: 100%;
         z-index: 100;

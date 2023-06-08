@@ -113,6 +113,15 @@ body {
     padding: 0;
     width: $bodyWidth;
     z-index: 1;
+
+    //Emulate scrollbar from Firefox
+    &::-webkit-scrollbar{
+        background: #171b1e;
+    }
+    &::-webkit-scrollbar-thumb{
+        background: #5f6263;
+        //-webkit-border-radius:20px;
+    }
 }
 
 //=========================================================
