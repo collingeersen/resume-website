@@ -50,6 +50,7 @@ $githubIconBGColor: white; //temp
 $headingColor: #6CAB3C;
 //Intro Colors
 $introInnerBorderColor: #0C0E0F;
+$introHeaderTitleBG: #1B304F;
 //Link Colors
 $linkColorActive: #53852D;
 $linkColorDefault: #6CAB3C;
@@ -77,9 +78,7 @@ $introInnerBorderSize: 3px;
 $primaryFont: 'Arial', Helvetica, sans-serif;
 $secondaryFont: 'Times New Roman', Times, serif;
 //Animations
-$animDelay_IntroSummary: 3000ms;
-$animDuration_IntroSummary: 2000ms;
-$animTimeFunc_IntroSummary: cubic-bezier(0.19, 1, 0.22, 1);
+
 
 //=========================================================
 //  Reset
@@ -115,10 +114,11 @@ body {
     z-index: 1;
 
     //Emulate scrollbar from Firefox
-    &::-webkit-scrollbar{
+    &::-webkit-scrollbar {
         background: #171b1e;
     }
-    &::-webkit-scrollbar-thumb{
+
+    &::-webkit-scrollbar-thumb {
         background: #5f6263;
         //-webkit-border-radius:20px;
     }
@@ -331,43 +331,21 @@ Make section background colors different to break up the content
 
 .intro__header__title {
     animation-name: intro__header__title-load-animation;
-    animation-duration: 1500ms;
+    animation-duration: 800ms;
+    background-color: $introHeaderTitleBG;
+    margin-top: 0px;
+    padding: 15px;
+    padding-bottom: 5px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 
     @keyframes intro__header__title-load-animation {
         from {
-            opacity: 0;
-            translate: 0px 20px;
+            translate: 0px -100px;
         }
 
         to {
-            opacity: 1;
             translate: 0px 0px;
-        }
-    }
-
-    &::after {
-        animation: {
-            delay: 1500ms;
-            duration: 1500ms;
-            fill-mode: forwards;
-            name: intro__header__title-underline-animation;
-        }
-
-        background: $contentFrameColor;
-        border-radius: 20px;
-        content: "";
-        display: grid;
-        height: 4px;
-        width: 0;
-    }
-
-    @keyframes intro__header__title-underline-animation {
-        from {
-            width: 0;
-        }
-
-        to {
-            width: 500px;
         }
     }
 }
@@ -450,96 +428,7 @@ Make section background colors different to break up the content
 //-------------------------
 //  Intro: Summary         |
 //-------------------------
-.intro__summary {
-    display: flex;
-    overflow: visible;
-    //align-items: center;
-    font-size: 0.8em;
-    background-color: $contentBGColor;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
-
-.intro__summary__content {
-    //margin-right: 190px;
-    margin-left: 30px;
-    //margin-left: auto;
-    //margin-right: auto;
-
-    animation: {
-        delay: $animDelay_IntroSummary;
-        duration: $animDuration_IntroSummary;
-        fill-mode: both;
-        name: intro__summary__content-load-animation;
-        timing-function: $animTimeFunc_IntroSummary;
-    }
-
-    @keyframes intro__summary__content-load-animation {
-        from {
-            opacity: 0;
-            translate: 0px 20px;
-        }
-
-        to {
-            opacity: 1;
-            translate: 0px 0px;
-        }
-    }
-
-    p {
-        background-color: $contentFrameColor;
-        border-radius: 20px;
-        font-size: 1em;
-        //margin-bottom: 100px;
-        padding: 30px;
-        width: 500px;
-        border-style: solid;
-        border-width: $introInnerBorderSize;
-        border-color: $introInnerBorderColor;
-    }
-}
-
-.intro__summary__divider {
-    //background-color: $accentColor2;
-    //border-radius: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    //width: 5px;
-}
-
-.intro__summary__frame {
-    animation: {
-        delay: $animDelay_IntroSummary;
-        duration: $animDuration_IntroSummary;
-        fill-mode: both;
-        name: intro__summary__frame-load-animation;
-        timing-function: $animTimeFunc_IntroSummary;
-    }
-
-    background: $contentFrameColor;
-    border-radius: 20px;
-    border-style: solid;
-    border-width: $introInnerBorderSize;
-    border-color: $introInnerBorderColor;
-    height: 250px;
-    width: 250px;
-    align-self: center;
-    //margin-left: auto;
-    margin-right: auto;
-    padding: 0%;
-
-    @keyframes intro__summary__frame-load-animation {
-        from {
-            opacity: 0;
-            translate: 0px 20px;
-        }
-
-        to {
-            opacity: 1;
-            translate: 0px 0px;
-        }
-    }
-}
+@import "../styles/intro_summary.scss";
 
 //=========================================================
 //  Section Separators
