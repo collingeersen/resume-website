@@ -22,9 +22,6 @@ $navBtnShadow: #1C0B3D;
 //-------------------------
 $navminiDuration: 300ms;
 
-//Notes
-//position and make a truncated version when scrolling down
-
 //=========================================================
 //  Nav-Bar
 //=========================================================
@@ -34,8 +31,6 @@ $navminiDuration: 300ms;
         box-shadow: inset 0px -5px 0px $navBorderColor;
         height: 60px;
         position: fixed;
-        //transition-duration: $navminiDuration;
-        //transition-property: height;
         width: 100%;
     }
 
@@ -63,7 +58,7 @@ $navminiDuration: 300ms;
         }
     }
 
-    .nav-bar__drop-down{
+    .nav-bar__drop-down {
         top: 60px;
     }
 }
@@ -96,52 +91,52 @@ nav {
 .nav-bar__btn {
     margin-left: 12%;
     margin-right: 5%;
-}
 
-.nav-bar__btn--hamburger {
-    background-color: $navBtnBGColorDefault;
-    border: 0;
-    border-radius: 20%;
-    box-shadow: inset 2px 0px 4px $insetShadow,
-        inset -2px -4px 4px $insetShadow,
-        $accentColor3 0px 2px 3px;
-    transition-duration: 200ms;
-    transition-property: background-color, box-shadow, scale;
-    scale: 1;
-    width: 4rem;
-
-    &:hover {
-        background-color: $navBtnBGColorHover;
+    &--hamburger{
+        background-color: $navBtnBGColorDefault;
+        border: 0;
         border-radius: 20%;
-        cursor: pointer;
-    }
-
-    &:active {
-        box-shadow:
-            inset -1px -1px 4px $insetShadow,
-            inset 1px 0px 4px $insetShadow,
-            #1C0B3D 0px 1px 1px;
-    }
-
-    //Span used by Google Material Icon
-    span {
-        color: $linkColorDefault;
-        font-size: 2rem;
-        line-height: 1.5;
+        box-shadow: inset 2px 0px 4px $insetShadow,
+            inset -2px -4px 4px $insetShadow,
+            $accentColor3 0px 2px 3px;
         transition-duration: 200ms;
-        transition-property: translate;
-        translate: 0px 0px;
-        width: 100%;
-
-        padding: {
-            bottom: 0;
-            left: 0;
-            right: 0;
-            top: 0;
+        transition-property: background-color, box-shadow, scale;
+        scale: 1;
+        width: 4rem;
+    
+        &:hover {
+            background-color: $navBtnBGColorHover;
+            border-radius: 20%;
+            cursor: pointer;
         }
-
+    
         &:active {
-            translate: 0px 2.5px;
+            box-shadow:
+                inset -1px -1px 4px $insetShadow,
+                inset 1px 0px 4px $insetShadow,
+                #1C0B3D 0px 1px 1px;
+        }
+    
+        //Span used by Google Material Icon
+        span {
+            color: $linkColorDefault;
+            font-size: 2rem;
+            line-height: 1.5;
+            transition-duration: 200ms;
+            transition-property: translate;
+            translate: 0px 0px;
+            width: 100%;
+    
+            padding: {
+                bottom: 0;
+                left: 0;
+                right: 0;
+                top: 0;
+            }
+    
+            &:active {
+                translate: 0px 2.5px;
+            }
         }
     }
 }
@@ -232,7 +227,7 @@ nav {
 
         //Span used by Google Material Icons
         //Centers icons
-        span {
+        [class$="material-symbols-rounded"] {
             font-size: 1.5em;
             line-height: -10%;
             translate: 0 3px;
@@ -266,34 +261,31 @@ nav {
     width: 25%;
     z-index: 1;
 
-    //Emulate the thin scrollbar from Firefox
-    &::-webkit-scrollbar{
+    //Emulate the thin scrollbar from Firefox for Chrome
+    &::-webkit-scrollbar {
         background: #16192f;
         height: 12px;
         width: 8px;
     }
-    &::-webkit-scrollbar-thumb{
+
+    &::-webkit-scrollbar-thumb {
         background: #5f606e;
     }
 }
 
-//-------------------------
-//  Dropdown Menu: Header  |
-//-------------------------
+//-----------------------------------------
+//  Dropdown Menu: Expand/Collapse Toggle  |
+//-----------------------------------------
 .nav-bar__drop-down__header {
     display: flex;
     flex-wrap: nowrap;
     margin-bottom: 50px;
 }
 
-//-----------------------------------------
-//  Dropdown Menu: Expand/Collapse Toggle  |
-//-----------------------------------------
 .nav-bar__drop-down__header__toggle {
     align-self: center;
     font-size: 0.8em;
     margin-right: 20px;
-    //background-color: brown;
 
     label {
         padding: 5px;
@@ -335,7 +327,7 @@ nav {
         }
     }
 
-    [class="material-symbols-rounded"] {
+    [class$="material-symbols-rounded"] {
         background-color: $transparent;
         font-size: 1.3em;
         translate: -4px 3px;
@@ -367,6 +359,7 @@ nav {
         cursor: pointer;
     }
 
+    //Material Icon
     span {
         color: $linkColorDefault;
         font-size: 3rem;
@@ -380,16 +373,12 @@ nav {
     display: block;
     padding-bottom: 20px;
     position: relative;
-    //white-space: nowrap;
-}
-
-.nav-bar__drop-down__header__toggle {
-    color: #3191ff;
 }
 
 //Span that holds the subsection title and Material Icons
 .nav-bar__drop-down__sub__span {
 
+    //Section Title
     label {
         border: 0;
         color: $linkColorDefault;
@@ -416,6 +405,7 @@ nav {
                 style: solid;
             }
 
+            //Arrow Class
             &~span {
                 //Duration also effects the rotate transition for arrow toggle classes
                 color: $linkColorHover;
@@ -425,18 +415,24 @@ nav {
         }
     }
 
-    //Span used by Google Material Icons
+    //Material Icon
     span {
         color: $linkColorDefault;
         translate: 0 8px; //Centers icon
     }
 }
 
-.nav-bar__drop-down__sub__content__list {
-    list-style: none;
+.nav-bar__drop-down__sub__content {
+    margin-bottom: auto;
 
-    li {
-        padding-bottom: 10px;
+    //Section page name
+    ol {
+        list-style: none;
+
+        //Page sections
+        li {
+            padding-bottom: 10px;
+        }
     }
 }
 
@@ -444,12 +440,17 @@ nav {
 //  Dropdown Menu: Footer  |
 //-------------------------
 .nav-bar__drop-down__footer {
-    //bottom: 10px;
 
     //About Section Link
     a {
         display: inline;
         font-size: 0.75em;
+
+        //Material Icon
+        span {
+            font-size: 1.5em;
+            translate: 0 3px; //Moves down Material Icon
+        }
     }
 
     //Empty div to shift the footer down and retain dynamic resizing 
@@ -458,24 +459,18 @@ nav {
         width: 100%;
     }
 
-    //Material Icon
-    span {
-        font-size: 1.5em;
+    >span {
+        //Creates the divider from subsections to footer
+        background-color: $dropdownColorBG;
+        box-shadow:
+            inset 0px 2px 2px 0px $insetShadow,
+            inset -0px -2px 2px 0px $insetShadow,
+            black 0px 0px 1px;
+        display: inline-block;
+        height: 5px;
         margin-bottom: 10px;
-        translate: 0 3px; //Moves down Material Icon
+        width: 100%;
     }
-}
-
-.nav-bar__drop-down__footer__break {
-    //Creates the divider from subsections to footer
-    background-color: $dropdownColorBG;
-    box-shadow:
-        inset 0px 2px 2px 0px $insetShadow,
-        inset -0px -2px 2px 0px $insetShadow,
-        black 0px 0px 1px;
-    display: inline-block;
-    height: 5px;
-    width: 100%;
 }
 
 //=========================================================
@@ -484,24 +479,25 @@ nav {
 //-------------------------
 //  Events: Hidden/Visible |
 //-------------------------
+$hiddenVisible_Transition: 300ms right cubic-bezier(0.19, 1, 0.22, 1);
+
 .--hidden {
     right: 100%;
-    transition-duration: 300ms;
-    transition-property: right;
-    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    transition: $hiddenVisible_Transition;
 }
 
 .--visible {
     right: 75%;
-    transition-duration: 300ms;
-    transition-property: right;
-    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    transition: $hiddenVisible_Transition;
 }
 
 //---------------------------
 //  Events: Main Window      |
 //---------------------------
+
+
 .--undarken {
+
     &::before {
         animation-delay: 200ms;
         animation-duration: 200ms;
@@ -509,10 +505,10 @@ nav {
         animation-name: main-overlay-ani;
         background-color: #000000;
         content: '';
-        display:block;
+        display: block;
         height: 100%;
         opacity: 0;
-        position:fixed;
+        position: fixed;
         transform: translateY(-100px); //Shifts the overlay up to accommodate for mini nav bar size change
         transition-duration: 200ms;
         transition-property: opacity;
@@ -524,21 +520,23 @@ nav {
             from {
                 height: 100%;
             }
+
             to {
                 height: 0;
             }
         }
-    } 
+    }
 }
 
 .--darken {
+
     &::before {
         background-color: #000000;
         content: '';
-        display:block;
+        display: block;
         height: 100%;
         opacity: 0.6;
-        position:fixed;
+        position: fixed;
         transform: translateY(-100px); //Shifts the overlay up to accommodate for mini nav bar size change
         transition-duration: 200ms;
         transition-property: opacity;
@@ -548,11 +546,11 @@ nav {
     }
 }
 
-.--scroll{
+.--scroll {
     overflow: visible;
 }
 
-.--scroll-block{
+.--scroll-block {
     overflow: hidden;
 }
 
@@ -587,17 +585,17 @@ nav {
 //------------------------------
 //  Events: Arrow Expand        |
 //------------------------------
+$expand_Transition: 100ms all;
+
 //Duration for both is under the span/label transition
 [class$="--expand-more"] {
     rotate: (0deg);
-    transition-property: all;
-    transition-duration: 100ms;
+    transition: $expand_Transition;
 }
 
 [class$="--expand-less"] {
     rotate: (180deg);
-    transition-property: all;
-    transition-duration: 100ms;
+    transition: $expand_Transition;
 }
 
 //-------------------------
