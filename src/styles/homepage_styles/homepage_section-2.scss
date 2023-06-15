@@ -1,0 +1,291 @@
+//=========================================================
+//  Variables
+//=========================================================
+//-------------------------
+//  Widths                 |
+//-------------------------
+$bodyWidth: 100%;
+$mainWidth: 80%;
+//-------------------------
+//  Heights                |
+//-------------------------
+$separatorHeight: 40px;
+$separatorNotchHeight: 70px;
+//-------------------------
+//  Colors                 |
+//-------------------------
+$accentColor1: #0E3D69;
+$accentColor2: #075C61;
+$accentColor3: #1C0B3D;
+$accentColor4: #1E181F;
+$backgroundColor1: #181D1F;
+$backgroundColor2: #181D1F;
+$dropdownColorBG: #2B3E4D; //temp color
+$fontColor1: #e1e0e0;
+$fontColor2: #40DB8D;
+$insetShadow: rgba(0, 0, 0, 0.6);
+$mainColor: #2B3E4D;
+$transparent: rgba(0, 0, 0, 0);
+
+//Breadcrumb Colors
+$breadcrumbBGColor: #161B38;
+$breadcrumbBorderColor: #0C0E0F;
+//Content Colors
+$contentBGColor: #161B38;
+$contentBorderColor: #0C0E0F;
+$contentFrameColor: #1B304F;
+//Flex Card Colors
+$flexCardDefaultColor: #161B38;
+$flexCardHoverColor: #6CAB3C;
+//Footer Colors
+$footerBGColor: #181D1F;
+$footerColor: #000000;
+$footerFontColor: #828d91;
+//Github Colors
+$githubBGColor: #1B304F;
+$githubBorderColor: #0C0E0F;
+$githubUnderlineColor: white; //temp
+$githubIconBGColor: white; //temp
+//Heading Colors
+$headingColor: #6CAB3C;
+//Intro Colors
+$introInnerBorderColor: #0C0E0F;
+$introHeaderTitleBG: #1B304F;
+//Link Colors
+$linkColorActive: #53852D;
+$linkColorDefault: #6CAB3C;
+$linkColorHover: #9CF757;
+//Scroll to Top Colors
+$scrollBtnBGColor: #1B304F;
+$scrollBtnFontColor: #6CAB3C;
+
+$sectionDividerColor: #0C0E0F;
+
+//=========================================================
+//  Second Section Classes
+//=========================================================
+.div-second-section {
+    margin: auto;
+    width: 90%;
+}
+
+//=========================================================
+//  Flexbox 1x3 Classes
+//=========================================================
+.flex-box--1x3 {
+    background-color: $contentBorderColor;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 40px;
+    padding-top: 0px;
+    margin-top: -20px;
+}
+
+.flex-box--1x3__inner {
+    background-color: $contentBGColor;
+    border-radius: 20px;
+    height: auto;
+    width: auto;
+}
+
+.flex-box--1x3__title {
+    display: block;
+    margin-left: 75px;
+    padding-top: 20px;
+}
+
+.flex-box--1x3__description {
+    display: block;
+    margin-left: 75px;
+    width: 50%;
+}
+
+.flex-box--1x3__container {
+    //background-color: $mainColor;
+    border-radius: 100px;
+    //column-gap: 1%;
+    //display: flex;
+    //display: grid;
+    //grid-template-columns: auto 50%;
+    //column-gap: 0px;
+    //row-gap: 80px;
+    //flex-wrap: nowrap;
+    //padding: 50px;
+    //margin-left: 30px;
+    //margin-right: 30px;
+}
+
+.flex-box--1x3__container__para{
+width: 70%;
+background-color: #075C61;
+//margin-left: auto;
+//margin-right: 20px;
+margin-left: auto;
+margin-right: auto;
+height: auto;
+display: flex;
+padding: 20px;
+
+    >h2{
+        padding: 20px;
+        background-color: #161B38;
+    }
+    >p{
+        padding: 20px;
+        background-color: #1C0B3D;
+    }
+}
+
+//-------------------------
+//  Flexbox 1x3: Column    |
+//-------------------------
+.flex-box--1x3__col {
+    background-color: $contentFrameColor;
+
+    border: {
+        color: $contentBorderColor;
+        radius: 10px;
+        style: solid;
+        width: 3px;
+    }
+
+    box-shadow: $flexCardDefaultColor 0px 0px 0px -3px;
+    //height: auto;
+    //margin: auto;
+    height: 400px;
+    //margin-left: 20px;
+    //margin-right: auto;
+    //padding-left: 30px;
+    translate: 0;
+    transition-duration: 500ms;
+    transition-property: translate,
+    box-shadow;
+
+    &:hover {
+        box-shadow: $flexCardHoverColor 0px 20px 0px -3px;
+        cursor: pointer;
+        transition-duration: 500ms;
+        transition-property: translate,
+            box-shadow;
+        translate: 0 -20px;
+        //transition-delay: 100ms;
+
+        h3::after {
+            background-color: $headingColor;
+            content: '';
+            display: block;
+            height: 3px;
+            transition-duration: 200ms;
+            transition-property: width;
+            transition-timing-function: ease-in-out;
+            width: 100%;
+        }
+
+        span {
+            div {
+                animation-duration: 500ms;
+                animation-fill-mode: both;
+                animation-name: flex-box--1x3__col__corner-out-anim;
+                //animation-delay: 100ms;
+
+                @keyframes flex-box--1x3__col__corner-out-anim {
+                    from {
+                        box-shadow: inset $flexCardHoverColor 0px 0px 0px -1px;
+                    }
+
+                    to {
+                        box-shadow: inset $flexCardHoverColor 0px 100px 0px -1px;
+                    }
+                }
+            }
+        }
+
+        //Hover effect to darken img and show arrow icon
+        .material-symbols-rounded {
+            opacity: 1;
+            transition-duration: 200ms;
+            transition-property: all;
+        }
+    }
+}
+
+.flex-box--1x3__col__header {
+    display: flex;
+    flex-wrap: nowrap;
+
+    span {
+        display: inline-block;
+        height: 50px;
+        margin-left: auto;
+        margin-right: 0;
+        overflow: hidden;
+        width: 60px;
+
+        div {
+            animation-duration: 500ms;
+            animation-name: flex-box--1x3__col__corner-in-anim;
+            background-color: $flexCardDefaultColor;
+            height: 100px;
+            rotate: -45deg;
+            translate: 30px -40px;
+            width: 20px;
+
+            @keyframes flex-box--1x3__col__corner-in-anim {
+                from {
+                    box-shadow: inset $flexCardHoverColor 0px -100px;
+                }
+
+                to {
+                    box-shadow: inset $flexCardHoverColor 0px 0px -1px;
+                }
+            }
+        }
+    }
+
+    h3 {
+        color: $headingColor;
+        width: fit-content;
+        padding-left: 30px;
+
+        &::after {
+            background-color: $headingColor;
+            content: '';
+            display: block;
+            height: 3px;
+            transition-duration: 200ms;
+            transition-property: width;
+            transition-timing-function: ease-in-out;
+            width: 0%;
+        }
+    }
+}
+
+.flex-box--1x3__col__content {
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    //Container for img
+    div {
+        background-color: #212436;
+        height: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 200px;
+    }
+
+    //Material Icon span
+    span {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: $fontColor1;
+        display: block;
+        font-size: 40;
+        height: 100%;
+        opacity: 0;
+        padding-top: 80px;
+        position: relative;
+        text-align: center;
+        transition-duration: 200ms;
+        transition-property: all;
+    }
+}

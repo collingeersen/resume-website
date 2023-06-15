@@ -1,0 +1,191 @@
+//=========================================================
+//  Variables
+//=========================================================
+//-------------------------
+//  Heights                |
+//-------------------------
+$separatorHeight: 40px;
+$separatorNotchHeight: 70px;
+//-------------------------
+//  Colors                 |
+//-------------------------
+$accentColor1: #0E3D69;
+$accentColor2: #075C61;
+$accentColor3: #1C0B3D;
+$accentColor4: #1E181F;
+$backgroundColor2: #181D1F;
+$fontColor1: #e1e0e0;
+$fontColor2: #40DB8D;
+
+//Content Colors
+$contentBGColor: #161B38;
+$contentBorderColor: #0C0E0F;
+$contentFrameColor: #1B304F;
+
+.separator__container {
+    background-color: $contentBGColor;
+
+    border: {
+        radius: 20px;
+        top-left-radius: 0%;
+        top-right-radius: 0%;
+    }
+
+    display: grid;
+    grid-template: "a b c" 35px "d . e" 100px / 1fr 0fr 1fr;
+    height: 40px;
+    overflow: visible;
+}
+
+//-------------------------
+//  Separators: Sides      |
+//-------------------------
+.separator__container__side-1 {
+    background-color: $contentBorderColor;
+
+    border: {
+        bottom-left-radius: 20px;
+        top-right-radius: 20px;
+    }
+
+    height: $separatorHeight;
+    //margin-top: 10px;
+    width: 100%;
+}
+
+.separator__container__side-2 {
+    background-color: $contentBorderColor;
+
+    border: {
+        bottom-right-radius: 20px;
+        top-left-radius: 20px;
+    }
+
+    height: $separatorHeight;
+    //margin-top: 10px;
+    width: 100%;
+}
+
+//-------------------------
+//  Separators: Separator  |
+//-------------------------
+.separator {
+    background-color: $contentBGColor;
+    //Temp disabled
+    //box-shadow: $fontColor2 -12px 8px 0px 8px, $fontColor2 12px 8px 0px 8px;
+    height: 110px;
+
+    margin: {
+        left: auto;
+        right: auto;
+        top: 40px;
+    }
+
+    position: relative;
+    overflow: hidden;
+    width: 130px;
+}
+
+//-------------------------
+//  Separators: Notches    |
+//-------------------------
+.separator__container__notch-1 {
+    background-color: $backgroundColor2;
+
+    border: {
+        bottom-left-radius: 0;
+        color: $fontColor2;
+        left-width: 0;
+        radius: 20px;
+        style: solid;
+        top-left-radius: 0;
+        width: 0px;
+    }
+
+    height: $separatorNotchHeight;
+
+    margin: {
+        left: auto;
+        right: 25px;
+        top: 5px;
+    }
+
+    width: 100px;
+}
+
+.separator__container__notch-2 {
+    background-color: $backgroundColor2;
+
+    border: {
+        bottom-right-radius: 0;
+        color: $fontColor2;
+        left-width: 5px;
+        radius: 20px;
+        right-width: 0;
+        style: solid;
+        top-right-radius: 0;
+        width: 0px;
+    }
+
+    height: $separatorNotchHeight;
+
+    margin: {
+        left: auto;
+        top: 5px;
+    }
+
+    translate: 126px;
+    width: 100px;
+}
+
+.separator__notch__spacer {
+    background-color: $contentBorderColor;
+    height: $separatorNotchHeight;
+    margin-left: auto;
+    margin-right: auto;
+    width: 220px;
+}
+
+//-------------------------
+//  Separators: Footer     |
+//-------------------------
+.separator__footer {
+    display: flex;
+    background-color: $contentBGColor;
+    border-radius: 20px;
+}
+
+.separator__footer__divider {
+    margin-left: 0px;
+    margin-right: -1px;
+    position: relative;
+    width: 280px;
+}
+
+.separator__footer--1 {
+    background-color: $contentBorderColor;
+
+    border: {
+        top-left-radius: 20px;
+        top-right-radius: 0px;
+        bottom-right-radius: 20px;
+    }
+
+    height: $separatorHeight;
+    margin-left: auto;
+    width: 100%;
+}
+
+.separator__footer--2 {
+    background-color: $contentBorderColor;
+
+    border: {
+        bottom-left-radius: 20px;
+        top-right-radius: 20px;
+        bottom-right-radius: 0px;
+    }
+
+    height: $separatorHeight;
+    margin-right: auto;
+    width: 100%;
+}

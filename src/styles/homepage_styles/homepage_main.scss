@@ -1,0 +1,73 @@
+//Content Colors
+$contentBGColor: #161B38;
+$contentBorderColor: #0C0E0F;
+$contentFrameColor: #1B304F;
+$sectionDividerColor: #0C0E0F;
+
+//=========================================================
+//  First Section Classes
+//=========================================================
+@import "../homepage_styles/homepage_section-1.scss";
+
+//=========================================================
+//  Section Separators
+//=========================================================
+@import "../homepage_styles/homepage_separator.scss";
+
+//=========================================================
+//  Second Section Classes
+//=========================================================
+@import "../homepage_styles/homepage_section-2.scss";
+
+//=========================================================
+//  Divider Classes
+//=========================================================
+.divider--thin {
+    background-color: $sectionDividerColor;
+    height: 3px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 80%;
+}
+
+//=========================================================
+//  Flexbox 1x4 Classes
+//=========================================================
+.flex-box--1x4 {
+    background-color: $contentBorderColor;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    width: 60%;
+}
+
+.flex-box--1x4__inner {
+    background-color: $contentBGColor;
+    border-radius: 20px;
+    display: block;
+    padding: 20px;
+}
+
+.flex-box--1x4__container {
+    display: grid;
+    grid: auto-flow / 1fr 1fr;
+    row-gap: 20px;
+}
+
+.flex-box--1x4__col {
+    background-color: $contentFrameColor;
+
+    border: {
+        color: #212436;
+        radius: 10px;
+        style: solid;
+        width: 2px;
+    }
+
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
