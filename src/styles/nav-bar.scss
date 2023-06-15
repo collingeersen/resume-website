@@ -25,6 +25,27 @@ $navminiDuration: 300ms;
 //=========================================================
 //  Nav-Bar
 //=========================================================
+nav {
+    background-color: $navBGColor;
+    box-shadow: inset 0px -5px 0px $navBorderColor; //Used to create a pseudo border
+    height: 100px;
+    position: relative;
+    z-index: 101;
+    //transition-duration: $navminiDuration;
+    //transition-property: height;
+}
+
+.nav-bar {
+    align-items: center;
+    display: flex;
+    font-size: 1.2em;
+    height: 100px;
+    transition-duration: 400ms;
+    transition-property: height;
+    //background-color: $navBGColor;
+    //box-shadow: inset 0px -5px 0px $navBorderColor;
+}
+
 [class$="nav-bar--mini"] {
     .nav-bar {
         background-color: $navminiBGColor;
@@ -62,29 +83,6 @@ $navminiDuration: 300ms;
         top: 60px;
     }
 }
-
-nav {
-    background-color: $navBGColor;
-    box-shadow: inset 0px -5px 0px $navBorderColor; //Used to create a pseudo border
-    height: 100px;
-    position: relative;
-    z-index: 101;
-    //transition-duration: $navminiDuration;
-    //transition-property: height;
-}
-
-.nav-bar {
-    align-items: center;
-    display: flex;
-    font-size: 1.2em;
-    height: 100px;
-    transition-duration: 400ms;
-    transition-property: height;
-    //background-color: $navBGColor;
-    //box-shadow: inset 0px -5px 0px $navBorderColor;
-
-}
-
 //=========================================================
 //  Nav-Bar: Btn-Hamburger
 //=========================================================
