@@ -62,10 +62,23 @@ padding: 20px;
     >h2{
         padding: 20px;
         background-color: #161B38;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        box-shadow: inset -2px 0px 3px black;
+        height: 21rem;
+        margin-right: 0;
+        text-align: center;
+        writing-mode: sideways-lr;
+        align-self: center;
     }
     >p{
         padding: 20px;
         background-color: #1C0B3D;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        height: 23rem;
+        align-self: center;
+        //box-shadow: 10px 10px black;
     }
 }
 
@@ -79,7 +92,7 @@ $section2Card_TransitionDelay: 50ms;
 
     border: {
         color: $contentBorderColor;
-        radius: 10px;
+        radius: 20px;
         style: solid;
         width: 3px;
     }
@@ -97,12 +110,12 @@ $section2Card_TransitionDelay: 50ms;
     box-shadow;
 
     &:hover {
-        box-shadow: $flexCardHoverColor 0px 20px 0px -3px;
+        box-shadow: $flexCardHoverColor 10px 10px 0px -3px;
         cursor: pointer;
         transition-duration: 500ms;
         transition-property: translate,
             box-shadow;
-        translate: 0 -20px;
+        translate: -10px -10px;
         transition-delay: $section2Card_TransitionDelay;
 
         h3::after {
@@ -121,10 +134,10 @@ $section2Card_TransitionDelay: 50ms;
             div {
                 animation-duration: 500ms;
                 animation-fill-mode: both;
-                animation-name: flex-box--1x3__col__corner-out-anim;
+                animation-name: box__card__corner-out-anim;
                 animation-delay: $section2Card_TransitionDelay;
 
-                @keyframes flex-box--1x3__col__corner-out-anim {
+                @keyframes box__card__corner-out-anim {
                     from {
                         box-shadow: inset $flexCardHoverColor 0px 0px 0px -1px;
                     }
@@ -157,15 +170,17 @@ $section2Card_TransitionDelay: 50ms;
         margin-right: 0;
         overflow: hidden;
         width: 60px;
+        //background-color: aliceblue;
 
         div {
             animation-duration: 500ms;
             animation-name: flex-box--1x3__col__corner-in-anim;
             background-color: $flexCardDefaultColor;
-            height: 100px;
+            height: 90px;
             rotate: -45deg;
-            translate: 30px -40px;
+            translate: -10px -30px;
             width: 20px;
+            margin-left: auto;
 
             @keyframes flex-box--1x3__col__corner-in-anim {
                 from {
@@ -183,6 +198,8 @@ $section2Card_TransitionDelay: 50ms;
         color: $headingColor;
         width: fit-content;
         padding-left: 30px;
+        //background-color: #0C0E0F;
+        //margin-right: auto;
 
         &::after {
             background-color: $headingColor;
