@@ -17,17 +17,8 @@ $flexCardHoverColor: #6CAB3C;
 //Heading Colors
 $headingColor: #6CAB3C;
 
-
 //=========================================================
-//  Second Section Classes
-//=========================================================
-.div-second-section {
-    margin: auto;
-    width: 90%;
-}
-
-//=========================================================
-//  Flexbox 1x3 Classes
+//  Section 2 Classes
 //=========================================================
 .section-2 {
     background-color: $contentBorderColor;
@@ -79,8 +70,10 @@ padding: 20px;
 }
 
 //-------------------------
-//  Flexbox 1x3: Column    |
+//  Section 2: Card        |
 //-------------------------
+$section2Card_TransitionDelay: 50ms;
+
 .section-2__container__box__card {
     background-color: $contentFrameColor;
 
@@ -110,7 +103,7 @@ padding: 20px;
         transition-property: translate,
             box-shadow;
         translate: 0 -20px;
-        //transition-delay: 100ms;
+        transition-delay: $section2Card_TransitionDelay;
 
         h3::after {
             background-color: $headingColor;
@@ -120,6 +113,7 @@ padding: 20px;
             transition-duration: 200ms;
             transition-property: width;
             transition-timing-function: ease-in-out;
+            transition-delay: $section2Card_TransitionDelay;
             width: 100%;
         }
 
@@ -128,7 +122,7 @@ padding: 20px;
                 animation-duration: 500ms;
                 animation-fill-mode: both;
                 animation-name: flex-box--1x3__col__corner-out-anim;
-                //animation-delay: 100ms;
+                animation-delay: $section2Card_TransitionDelay;
 
                 @keyframes flex-box--1x3__col__corner-out-anim {
                     from {
@@ -147,6 +141,7 @@ padding: 20px;
             opacity: 1;
             transition-duration: 200ms;
             transition-property: all;
+            transition-delay: $section2Card_TransitionDelay;
         }
     }
 }
@@ -197,6 +192,7 @@ padding: 20px;
             transition-duration: 200ms;
             transition-property: width;
             transition-timing-function: ease-in-out;
+            transition-delay: $section2Card_TransitionDelay;
             width: 0%;
         }
     }
@@ -229,5 +225,6 @@ padding: 20px;
         text-align: center;
         transition-duration: 200ms;
         transition-property: all;
+        transition-delay: $section2Card_TransitionDelay;
     }
 }
