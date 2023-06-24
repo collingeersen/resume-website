@@ -20,6 +20,7 @@ document.addEventListener("scroll", (event) => {
   }
 });
 
+//Scroll Events
 document.addEventListener("scroll", (event) => {
   if (window.scrollY > 180) {
     toTopScroll.classList.replace("scroll-to-top--hidden", "scroll-to-top--visible");
