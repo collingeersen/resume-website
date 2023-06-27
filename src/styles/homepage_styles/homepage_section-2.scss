@@ -114,6 +114,7 @@ $headingColor: #6CAB3C;
 $section2Card_TransitionDelay: 50ms;
 
 .section-2__container__box__card {
+    align-self: center;
     background-color: $contentFrameColor;
 
     border: {
@@ -129,6 +130,7 @@ $section2Card_TransitionDelay: 50ms;
     translate: -10px;
     transition-property: translate,
     box-shadow;
+
 
     &:hover {
         box-shadow: $flexCardHoverColor 10px 10px 0px -3px;
