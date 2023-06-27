@@ -49,38 +49,39 @@ $headingColor: #6CAB3C;
 }
 
 .section-2__container__box {
-    width: 70%;
     background-color: #075C61;
-    //margin-left: auto;
-    //margin-right: 20px;
+    display: flex;
+    height: auto;
+    margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
-    height: auto;
-    display: flex;
-    padding: 20px;
     opacity: 0;
+    padding: 20px;
+    width: 70%;
 
     >h2 {
-        padding: 20px;
+        align-self: center;
         background-color: #161B38;
-        border-top-left-radius: 20px;
         border-bottom-left-radius: 20px;
+        border-top-left-radius: 20px;
         box-shadow: inset -2px 0px 3px black;
+        font-size: 1.8em;
         height: 21rem;
         margin-right: 0;
+        padding: 20px;
         text-align: center;
+        user-select: none;
         writing-mode: sideways-lr;
-        align-self: center;
     }
 
     >p {
-        padding: 20px;
-        background-color: #1C0B3D;
-        border-top-left-radius: 20px;
-        border-bottom-left-radius: 20px;
-        height: 23rem;
         align-self: center;
-        //box-shadow: 10px 10px black;
+        background-color: #1C0B3D;
+        border-bottom-left-radius: 20px;
+        border-top-left-radius: 20px;
+        font-size: 1.5em;
+        height: 23rem;
+        padding: 50px;
     }
 }
 
@@ -123,14 +124,9 @@ $section2Card_TransitionDelay: 50ms;
     }
 
     box-shadow: $flexCardDefaultColor 0px 0px 0px -3px;
-    //height: auto;
-    //margin: auto;
     height: 400px;
-    //margin-left: 20px;
-    //margin-right: auto;
-    //padding-left: 30px;
-    translate: 0;
     transition-duration: 500ms;
+    translate: -10px;
     transition-property: translate,
     box-shadow;
 
@@ -140,7 +136,7 @@ $section2Card_TransitionDelay: 50ms;
         transition-duration: 500ms;
         transition-property: translate,
             box-shadow;
-        translate: -10px -10px;
+        translate: -20px -10px;
         transition-delay: $section2Card_TransitionDelay;
 
         h3::after {
