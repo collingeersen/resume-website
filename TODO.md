@@ -5,10 +5,10 @@
     -   Primary Color
     -   Secondary Color
     -   Tertiary Color?
-    -   Style of shapes (i.e circles or triangles)
--   Integrate javascript
+    -   <s>Style of shapes (i.e circles or triangles)</s>
+-   <s>Integrate javascript</s>
 -   Add favicon
--   Add base CSS resets for browser
+-   <s>Add base CSS resets for browser</s>
 -   Integrate a11y principals
 -   Make sure that styles are consistent between browsers, mobile/desktop, and resolutions.
 -   Make non-JS version for those that disable it?
@@ -16,39 +16,44 @@
 ## Homepage
 -   Create in the style of the website theme
 -   Nav-bar
-    -   Hamburger button to expand site map
-    -   Homepage button
-    -   Contact Info
+    -   <s>Hamburger button to expand site map</s>
+    -   <s>Homepage button</s>
+    -   <s>Contact Info</s>
     -   Link to Resume PDF
-    -   Back to top button on the right most of nav-bar
+    -   <s>Back to top button on the right most of nav-bar</s>
     -   Include page name?
-    -   Once scrolled down a certain amount make the nav-bar become a truncated version that
+    -   <s>Once scrolled down a certain amount make the nav-bar become a truncated version</s> that
          expands to default size when hovered over.
     -   Light mode and dark mode toggle
+        -   Use either cookies or web storage api for cross page pref. Note: will most likely use web storage api since it only stores for session
+    -   May add toggle for a more straight forward style with no animations for accessibility
 -   Background
+    -   Add animated svg (maybe spinning cog)
 -   Intro flex-box
-    -   Create svg version of self at top of page, may animate
+    -   <s>Create svg version of self at top of page, may animate</s>
+        -   Change to an animated little stick man avatar
     -   Small introduction about self
--   Banner break (thin)
+-   <s>Banner break (thin)</s>
 -   Primary Content flex-box
-    -   Three sub flex-boxes will be within
+    -   <s>Three sub flex-boxes will be within</s>
+    -   Add animated svg to each box
     -   First flex-box: The process that led me to programming (link to professional journey page)
     -   Second flex-box: Skills (provide emphasis to this box, link to skills page)
     -   Third flex-box: Projects (link to projects page)
--   Banner break (thick)
+-   <s>Banner break (thick)</s>
 -   Small summary of the secondary content flex-box
--   Secondary Content flex-box
+-   Secondary Content flex-box: Will display projects worked on here and WIP ones
     -   Four sub flex-boxes will be within
     -   First flex-box:
     -   Second flex-box:
     -   Third flex-box:
     -   Fourth flex-box:
--   Banner break (thin)
+-   <s>Banner break (thin)</s>
 -   Footer
     -   Include:
-        -   Name
+        -   <s>Name</s>
         -   Contact Info
-        -   Year of creation
+        -   <s>Year of creation</s>
         -   Form submission for contact?
 ***
 ## Content Page
