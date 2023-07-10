@@ -33,41 +33,6 @@ $sectionDividerColor: #0C0E0F;
 }
 
 //=========================================================
-//  Flexbox 1x4 Classes
+//  Third Section Classes
 //=========================================================
-.flex-box--1x4 {
-    background-color: $contentBorderColor;
-    border-radius: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 30px;
-    width: 60%;
-}
-
-.flex-box--1x4__inner {
-    background-color: $contentBGColor;
-    border-radius: 20px;
-    display: block;
-    padding: 20px;
-}
-
-.flex-box--1x4__container {
-    display: grid;
-    grid: auto-flow / 1fr 1fr;
-    row-gap: 20px;
-}
-
-.flex-box--1x4__col {
-    background-color: $contentFrameColor;
-
-    border: {
-        color: #212436;
-        radius: 10px;
-        style: solid;
-        width: 2px;
-    }
-
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px;
-}
+@import "../homepage_styles/homepage_section-3.scss";

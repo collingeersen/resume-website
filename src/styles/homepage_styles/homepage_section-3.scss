@@ -1,0 +1,49 @@
+$contentBGColor: #161B38;
+$contentBorderColor: #0C0E0F;
+$contentFrameColor: #1B304F;
+
+.section-3 {
+    background-color: $contentBorderColor;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    width: 60%;
+}
+
+.section-3__container {
+    background-color: $contentBGColor;
+    border-radius: 20px;
+    display: block;
+    padding: 30px;
+
+    >div{
+        //display: flex;
+        display: grid;
+        grid: auto-flow / 200px 200px 200px;
+        row-gap: 30px;
+        column-gap: 30px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+
+        //padding: 30px;
+        //padding-bottom: 0;
+    }
+}
+
+.section-3__container__box__card {
+    background-color: $contentFrameColor;
+
+    border: {
+        color: #212436;
+        radius: 10px;
+        style: solid;
+        width: 2px;
+    }
+
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    width: 200px;
+    height: 200px;
+}
