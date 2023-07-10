@@ -30,9 +30,12 @@ document.addEventListener("scroll", (event) => {
 });
 
 //Scrolls the user back to top
+let documentHeight = document.documentElement.offsetHeight;
+let viewportHeight = window.innerHeight;
+
 btnTop.addEventListener("click", (event) => {
   if (window.scrollY > 0) {
-    window.scroll(0, 0);
+    window.scrollTo({left:0, top: viewportHeight - documentHeight, behavior: "smooth"});
   }
 });
 
