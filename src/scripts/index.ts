@@ -35,7 +35,7 @@ let viewportHeight = window.innerHeight;
 
 btnTop.addEventListener("click", (event) => {
   if (window.scrollY > 0) {
-    window.scrollTo({left:0, top: viewportHeight - documentHeight, behavior: "smooth"});
+    window.scrollTo({ left: 0, top: viewportHeight - documentHeight, behavior: "smooth" });
   }
 });
 
