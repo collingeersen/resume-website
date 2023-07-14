@@ -17,6 +17,9 @@ $flexCardHoverColor: #6CAB3C;
 //Heading Colors
 $headingColor: #6CAB3C;
 
+$containerBoxBGColor_1: #075C61;
+$containerBoxBGColor_2: brown;
+
 //=========================================================
 //  Section 2 Classes
 //=========================================================
@@ -32,32 +35,43 @@ $headingColor: #6CAB3C;
 .section-2__container {
     background-color: $contentBGColor;
     border-radius: 20px;
+    padding-bottom: 100px;
+    padding-top: 50px;
     height: auto;
     width: auto;
 }
 
-.section-2__container__title {
-    display: block;
-    margin-left: 75px;
-    padding-top: 20px;
+.section-2__container__intro{
+    display:block;
+    margin-inline: auto;
+    background-color: brown;
+    width: 80%;
+    text-align: center;
+    padding: 20px;
+
+    h2{
+
+    }
+
+    p{
+
+    }
 }
 
-.section-2__container__description {
-    display: block;
-    margin-left: 75px;
-    width: 50%;
-}
+
 
 .section-2__container__box {
-    background-color: #075C61;
+    //background-color: #075C61;
+    background: linear-gradient($containerBoxBGColor_1 50%, $containerBoxBGColor_2 50%);
     display: flex;
     height: auto;
-    margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
     opacity: 0;
     padding: 20px;
-    width: 70%;
+    width: 80%;
+    padding-bottom: 80px;
+    padding-top: 80px;
 
     >h2 {
         align-self: center;
@@ -68,6 +82,7 @@ $headingColor: #6CAB3C;
         font-size: 1.8em;
         height: 21rem;
         margin-right: 0;
+        margin-left: 10px;
         padding: 20px;
         text-align: center;
         user-select: none;
@@ -82,8 +97,11 @@ $headingColor: #6CAB3C;
         font-size: 1.5em;
         height: 23rem;
         padding: 50px;
+        margin: 0;
     }
 }
+
+
 
 .section-2__container__box--transition {
     animation-duration: 500ms;
@@ -130,7 +148,6 @@ $section2Card_TransitionDelay: 50ms;
     translate: -10px;
     transition-property: translate,
     box-shadow;
-
 
     &:hover {
         box-shadow: $flexCardHoverColor 10px 10px 0px -3px;
