@@ -1,24 +1,314 @@
 <!DOCTYPE html>
 <html lang="en" , dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-        <title>Collin Geersen- Template</title>
-        <!--Description cannot be more than 150 characters-->
-        <meta name="description" content="Will add later">
-        <link rel="stylesheet" href="../src/styles/main.scss">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
-        <script src="../src/scripts/index.ts" defer></script>
-    </head>
-    <body>
-        <nav>
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Collin Geersen- Homepage</title>
+    <!--Description cannot be more than 150 characters-->
+    <meta name="description" content="Will add later">
+    <!--Favicon-->
+    <!--Canonical link-->
+    <!--CSS critical-->
+    <link rel="stylesheet" href="../src/styles/main.scss">
+    <link rel="stylesheet" href="../src/styles/homepage_styles/homepage_main.scss">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
+    <script src="../src/scripts/index.ts" defer></script>
+    <!--Include error pages-->
+    <!--W3C tests-->
+    <!--Adblock test-->
+    <!--Include page informing user to have javascript enabled to utilize the site-->
+</head>
+
+<body class="--scroll">
+    <div class="global-container">
+
+        <!--Display a scroll to top button once scrolled a certain amount down the page-->
+        <div class="scroll-to-top scroll-to-top--hidden">
+            <button class="scroll-to-top__btn">
+                <span class="material-symbols-rounded">arrow_upward</span>
+            </button>
+        </div>
+
+        <nav class="nav-bar--default">
+            <div class="nav-bar" role="menubar">
+
+                <!--Hamburger button used to activate the drop-down-->
+                <div class="nav-bar__btn" role="menuitem">
+                    <button class="nav-bar__btn--hamburger" type="button">
+                        <span class="material-symbols-rounded">
+                            menu
+                        </span>
+                    </button>
+                </div>
+
+                <!--Theme switch from dark to light-->
+                <div role="group">
+                    <label class="nav-bar__theme-switch" role="menuitem">
+                        <input class="theme-switch__input" type="checkbox" role="switch">
+                        <span class="theme-switch__slider"></span>
+                    </label>
+                </div>
+
+                <span role="presentation" class="nav-bar__divider"></span>
+
+                <!--Main links for site-->
+                <div class="nav-bar__link" role="group">
+                    <menu class="nav-bar__link__menu">
+                        <li role="group">
+                            <a role="menuitem" class="nav-bar__link__item--home" href="../src/index.html">
+                                <span class="material-symbols-rounded">
+                                    home
+                                </span>
+                                Home
+                            </a>
+                        </li>
+                        <li role="group">
+                            <a role="menuitem" class="nav-bar__link__item--contact" href="../src/index.html">
+                                <span class="material-symbols-rounded">
+                                    link
+                                </span>
+                                Contact
+                            </a>
+                        </li>
+                        <li role="group">
+                            <a role="menuitem" class="nav-bar__link__item--resume" href="../src/index.html">
+                                <span class="material-symbols-rounded">
+                                    description
+                                </span>
+                                Resume
+                            </a>
+                        </li>
+                    </menu>
+                </div>
+
+                <span role="presentation" class="nav-bar__divider"></span>
+
+                <!--Drop-down to represent site map-->
+                <div role="menu" class="nav-bar__drop-down --hidden">
+
+                    <div class="nav-bar__drop-down__header">
+                        <span class="nav-bar__drop-down__header__toggle">
+                            <span class="nav-bar__drop-down__header__toggle--expand --active">
+                                <label>
+                                    Expand
+                                    <span class="material-symbols-rounded">
+                                        expand
+                                    </span>
+                                </label>
+
+                            </span>
+                            <span class="nav-bar__drop-down__header__toggle--collapse --nonactive">
+                                <label>
+                                    Collapse
+                                    <span class="material-symbols-rounded">
+                                        compress
+                                    </span>
+                                </label>
+
+                            </span>
+                        </span>
+
+                        <!--Drop-down Exit Button-->
+                        <button class="nav-bar__drop-down__btn--exit" type="button">
+                            <!--Material Design by Google for Exit Symbol-->
+                            <span class="material-symbols-rounded">
+                                close
+                            </span>
+                        </button>
+                    </div>
+
+                    <!--Drop-down Group-->
+                    <div role="group">
+                        <!--Drop-down Sub-1-->
+                        <div class="nav-bar__drop-down__sub" role="group">
+
+                            <span class="nav-bar__drop-down__sub__span">
+                                <label class="--toggle-display">Home</label>
+                                <span class="material-symbols-rounded --0--expand-more">
+                                    expand_more
+                                </span>
+                            </span>
+
+                            <div class="nav-bar__drop-down__sub__content --0--sub-collapse" role="group">
+                                <ol role="menu">
+                                    <li role="presentation">
+                                        <a role="menuitem" href="index.html">
+                                            Intro
+                                        </a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a role="menuitem" href="index.html">
+                                            Cards1
+                                        </a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a role="menuitem" href="index.html">
+                                            Additional Section
+                                        </a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a role="menuitem" href="index.html">
+                                            Cards2
+                                        </a>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <!--Drop-down Sub-2-->
+                        <div class="nav-bar__drop-down__sub" role="group">
+
+                            <span class="nav-bar__drop-down__sub__span">
+                                <label class="--toggle-display">Sub2</label>
+                                <span class="material-symbols-rounded --1--expand-more">
+                                    expand_more
+                                </span>
+                            </span>
+
+                            <div class="nav-bar__drop-down__sub__content --1--sub-collapse" role="group">
+                                <ol role="menu">
+                                    <li role="presentation">
+                                        <a role="menuitem" href="index.html">
+                                            Intro
+                                        </a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a role="menuitem" href="index.html">
+                                            Cards1
+                                        </a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a role="menuitem" href="index.html">
+                                            Additional Section
+                                        </a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a role="menuitem" href="index.html">
+                                            Cards2
+                                        </a>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <!--Drop-down Sub-3-->
+                        <div class="nav-bar__drop-down__sub" role="group">
+
+                            <span class="nav-bar__drop-down__sub__span">
+                                <label class="--toggle-display">Sub3</label>
+                                <span class="material-symbols-rounded --2--expand-more">
+                                    expand_more
+                                </span>
+                            </span>
+
+                            <div class="nav-bar__drop-down__sub__content --2--sub-collapse" role="group">
+                                <ol role="menu">
+                                    <li role="presentation">
+                                        <a role="menuitem" href="index.html">
+                                            Intro
+                                        </a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a role="menuitem" href="index.html">
+                                            Cards1
+                                        </a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a role="menuitem" href="index.html">
+                                            Additional Section
+                                        </a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a role="menuitem" href="index.html">
+                                            Cards2
+                                        </a>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <!--Drop-down Sub-4-->
+                        <div class="nav-bar__drop-down__sub" role="group">
+
+                            <span class="nav-bar__drop-down__sub__span">
+                                <label class="--toggle-display">Sub4</label>
+                                <span class="material-symbols-rounded --3--expand-more">
+                                    expand_more
+                                </span>
+                            </span>
+
+                            <div class="nav-bar__drop-down__sub__content --3--sub-collapse" role="group">
+                                <ol role="menu">
+                                    <li role="presentation">
+                                        <a role="menuitem" href="index.html">
+                                            Intro
+                                        </a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a role="menuitem" href="index.html">
+                                            Cards1
+                                        </a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a role="menuitem" href="index.html">
+                                            Additional Section
+                                        </a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a role="menuitem" href="index.html">
+                                            Cards2
+                                        </a>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="nav-bar__drop-down__footer">
+                            <!--Div used to create spacing between sub sections and footer-->
+                            <div role="presentation"></div>
+                            <span role="presentation"></span>
+                            <a href="about.html">
+                                <span class="material-symbols-rounded">
+                                    info
+                                </span> About / Licenses</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </nav>
-        <main>
 
+        <main class="main --undarken">
+
+            <div class="breadcrumb"></div>
+
+            <!--Introduction Section-->
+            
         </main>
-    </body>
-    <foot>
-        
-    </foot>
+    </div>
+</body>
+
+<footer role="contentinfo">
+    <div class="footer --unblur">
+        <div role="presentation" class="footer__divider--top"></div>
+        <div class="footer__flex">
+            <div class="footer__col --footer-col-1">
+                <span><a>About / Licenses</a></span>
+                <span><a>Site Map</a></span>
+            </div>
+            <div role="presentation" class="footer__divider--side"></div>
+            <div class="footer__col --footer-col-2">
+                <p>Made With &#10084</p>
+            </div>
+            <div role="presentation" class="footer__divider--side"></div>
+            <div class="footer__col --footer-col-3">
+                <p>&#169 2023</p>
+                <p>Designed and Built by Collin Geersen</p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
 </html>
