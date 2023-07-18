@@ -443,6 +443,14 @@ nav {
     a {
         display: inline;
         font-size: 0.75em;
+        margin-right: clamp(30%, 40% + 1.2em, 80%);
+
+        //Move the Site Map Link Over
+        &:last-child{
+            margin-right: 0;
+            margin-left: auto;
+            flex-wrap: nowrap;
+        }
 
         //Material Icon
         span {
