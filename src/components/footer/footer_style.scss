@@ -1,0 +1,73 @@
+//=========================================================
+//  Footer Classes
+//=========================================================
+.footer {
+    background-color: $footerBGColor;
+    //background-color:rgb(28, 26, 26);
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+    width: 80%;
+
+    //Removes the link styling
+    a {
+        border-color: $footerFontColor;
+
+        &:hover {
+            color: $footerFontColor;
+            border-color: $footerFontColor;
+        }
+    }
+}
+
+.footer__flex {
+    display: flex;
+    flex-wrap: nowrap;
+    //background-color: #075C61;
+}
+
+.footer__col {
+    align-self: center;
+    color: $footerFontColor;
+    display: block;
+    //background-color: rgb(28, 26, 26);
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+}
+
+.--footer-col-1 {
+    //background-color: #40DB8D;
+
+    span {
+        padding-left: 20px;
+    }
+}
+
+.--footer-col-2 {
+    text-align: center;
+}
+
+.--footer-col-3 {
+    text-align: end;
+}
+
+.footer__divider--top {
+    background-color: $footerFontColor;
+    border-radius: 10px;
+    display: block;
+    height: 1px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.footer__divider--side {
+    align-self: center;
+    background-color: $footerFontColor;
+    border-radius: 10px;
+    display: block;
+    height: 150px;
+    width: 0px;
+}
