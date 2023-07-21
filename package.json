@@ -8,7 +8,7 @@
   "type": "module",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build",
+    "build": "rm -rf dist/* && parcel build --no-optimize",
     "check": "tsc --noEmit",
     "lint": "eslint"
   },
