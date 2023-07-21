@@ -1,0 +1,59 @@
+//=========================================================
+//  Scroll to Top
+//=========================================================
+.scroll-to-top {
+    bottom: 120px;
+    position: fixed;
+    right: 4%;
+
+    button {
+        background-color: $scrollBtnBGColor;
+        border: 0;
+        border-color: $scrollBtnFontColor;
+        border-radius: 40px;
+        border-style: solid;
+        border-width: 3px;
+        color: $scrollBtnFontColor;
+        padding: 15px;
+        transition-duration: 300ms;
+
+        &:hover {
+            cursor: pointer;
+            scale: 1.1;
+            transition-duration: 300ms;
+            transition-property: all;
+
+            span {
+                transition-duration: 300ms;
+                transition-property: all;
+                translate: 0 -5px;
+            }
+        }
+    }
+
+    span {
+        display: block;
+        font-size: 40;
+        text-shadow: #000000 0px 3px;
+        transition-duration: 300ms;
+        transition-property: all;
+    }
+}
+
+//-------------------------
+//  Scroll Events          |
+//-------------------------
+.scroll-to-top--hidden {
+    opacity: 0;
+    transition-duration: 300ms;
+    transition-property: all;
+    visibility: hidden;
+
+}
+
+.scroll-to-top--visible {
+    opacity: 1;
+    transition-duration: 300ms;
+    transition-property: all;
+    visibility: visible;
+}
