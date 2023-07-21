@@ -216,138 +216,14 @@ a {
 //=========================================================
 //  Nav-Bar
 //=========================================================
-@import 'nav-bar.scss';
+@import '../components/nav-bar/nav-bar_style.scss';
 
 //=========================================================
 //  Scroll to Top
 //=========================================================
-.scroll-to-top {
-    bottom: 120px;
-    position: fixed;
-    right: 4%;
-
-    button {
-        background-color: $scrollBtnBGColor;
-        border: 0;
-        border-color: $scrollBtnFontColor;
-        border-radius: 40px;
-        border-style: solid;
-        border-width: 3px;
-        color: $scrollBtnFontColor;
-        padding: 15px;
-        transition-duration: 300ms;
-
-        &:hover {
-            cursor: pointer;
-            scale: 1.1;
-            transition-duration: 300ms;
-            transition-property: all;
-
-            span {
-                transition-duration: 300ms;
-                transition-property: all;
-                translate: 0 -5px;
-            }
-        }
-    }
-
-    span {
-        display: block;
-        font-size: 40;
-        text-shadow: #000000 0px 3px;
-        transition-duration: 300ms;
-        transition-property: all;
-    }
-}
-
-//-------------------------
-//  Scroll Events          |
-//-------------------------
-.scroll-to-top--hidden {
-    opacity: 0;
-    transition-duration: 300ms;
-    transition-property: all;
-    visibility: hidden;
-
-}
-
-.scroll-to-top--visible {
-    opacity: 1;
-    transition-duration: 300ms;
-    transition-property: all;
-    visibility: visible;
-}
+@import '../components/scroll-to-top/scroll-to-top_style.scss';
 
 //=========================================================
 //  Footer Classes
 //=========================================================
-.footer {
-    background-color: $footerBGColor;
-    //background-color:rgb(28, 26, 26);
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 30px;
-    width: 80%;
-
-    //Removes the link styling
-    a {
-        border-color: $footerFontColor;
-
-        &:hover {
-            color: $footerFontColor;
-            border-color: $footerFontColor;
-        }
-    }
-}
-
-.footer__flex {
-    display: flex;
-    flex-wrap: nowrap;
-    //background-color: #075C61;
-}
-
-.footer__col {
-    align-self: center;
-    color: $footerFontColor;
-    display: block;
-    //background-color: rgb(28, 26, 26);
-    margin-left: auto;
-    margin-right: auto;
-    width: 300px;
-}
-
-.--footer-col-1 {
-    //background-color: #40DB8D;
-
-    span {
-        padding-left: 20px;
-    }
-}
-
-.--footer-col-2 {
-    text-align: center;
-}
-
-.--footer-col-3 {
-    text-align: end;
-}
-
-.footer__divider--top {
-    background-color: $footerFontColor;
-    border-radius: 10px;
-    display: block;
-    height: 1px;
-    margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-}
-
-.footer__divider--side {
-    align-self: center;
-    background-color: $footerFontColor;
-    border-radius: 10px;
-    display: block;
-    height: 150px;
-    width: 0px;
-}
+@import '../components/footer/footer_style.scss'
