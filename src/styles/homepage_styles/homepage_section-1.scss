@@ -21,7 +21,7 @@ $contentFrameColor: #1B304F;
 //Github Colors
 $githubBGColor: #1B304F;
 $githubBorderColor: #0C0E0F;
-$githubUnderlineColor: white; //temp
+$githubUnderlineColor: #9CF757;
 $githubIconBGColor: white; //temp
 
 //Intro Colors
@@ -111,7 +111,7 @@ $introNote_AnimDelay:$introContent_AnimDelay+800ms;
     background-color: $githubUnderlineColor;
     content: '';
     display: block;
-    height: 3px;
+    height: 0.5vh;
     transition-duration: 300ms;
     transition-property: all;
 }
@@ -119,49 +119,50 @@ $introNote_AnimDelay:$introContent_AnimDelay+800ms;
 .intro__header__github-link {
     align-self: center;
     background-color: $githubBGColor;
-    box-shadow: $githubBorderColor 3px 3px, $githubBorderColor -3px -3px;
-    height: 60px;
+    box-shadow: $githubBorderColor 0.5vh 0.5vh, $githubBorderColor -0.5vh -0.5vh;
+    height: clamp(4dvh, 7dvh, 10dvh);
     margin-left: auto;
     rotate: 45deg;
     transition-duration: 250ms;
     transition-property: box-shadow;
-    translate: 100px 10px;
-    width: 300px;
+    translate: 10dvh 0.5dvh;
+    width: clamp(10dvw, 16dvw, 20dvw);
 
     div {
         display: flex;
-        height: 60px;
-        margin-left: auto;
-        margin-right: auto;
-        width: fit-content;
+        height: 6dvh;
+        margin-left: 3.5dvw;
+        margin-right: 2dvh;
+        margin-top: 0.5dvh;
+        width: 10dvw;
     }
 
     h3 {
         align-self: center;
-        font-size: 16px;
+        font-size: clamp(1dvh, 2dvh, 5dvh);
         height: fit-content;
         margin-right: auto;
-        width: 60px;
+        margin-top: 0.5dvh;
         word-wrap: break-word;
 
         //Initial underline for Github link
         &::after {
             @include githubLink_Transition;
-            width: 0px;
+            width: 0;
         }
     }
 
     img {
-        scale: 0.75;
+        scale: 0.80;
         background-color: $githubIconBGColor;
-        border-radius: 50px;
-        padding: 1px;
+        border-radius: 10dvh;
+        padding: 0.5dvh;
         transition-duration: 300ms;
         transition-property: scale;
     }
 
     &:hover {
-        box-shadow: $githubBorderColor 6px 6px, $githubBorderColor -6px -6px;
+        box-shadow: $githubBorderColor 0.75vh 0.75vh, $githubBorderColor -0.75vh -0.75vh;
         cursor: pointer;
         transition-duration: 300ms;
         transition-property: box-shadow;
@@ -172,13 +173,13 @@ $introNote_AnimDelay:$introContent_AnimDelay+800ms;
             //End state underline for Github link
             &::after {
                 @include githubLink_Transition;
-                width: 55px;
+                width: 3.5dvw;
             }
         }
 
         //Github Logo
         img {
-            scale: 0.8;
+            scale: 0.9;
             transition-duration: 300ms;
             transition-property: scale;
         }
