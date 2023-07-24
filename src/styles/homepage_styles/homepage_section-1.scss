@@ -58,18 +58,18 @@ $introNote_AnimDelay:$introContent_AnimDelay+800ms;
 //  Intro
 //=========================================================
 .intro {
-    height: 100%;
-    margin: auto;
-    position: relative;
-    //width: 90%;
-    font-size: 1.5em;
-    background-color: $contentBorderColor;
-    //padding: 5px;
     //padding-left: 30px;
-    border-top: solid $contentBorderColor $separatorHeight;
-    overflow: hidden;
+    //padding: 5px;
+    //width: 90%;
+    background-color: $contentBorderColor;
     border-left: solid $contentBorderColor $separatorHeight;
     border-right: solid $contentBorderColor $separatorHeight;
+    border-top: solid $contentBorderColor $separatorHeight;
+    font-size: 1.5em;
+    height: 100%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
 }
 
 //=========================================================
@@ -88,18 +88,18 @@ $introNote_AnimDelay:$introContent_AnimDelay+800ms;
     animation-duration: 800ms;
     background-color: $introHeaderTitleBG;
     margin-top: 0px;
-    padding: 15px;
-    padding-bottom: 5px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    padding: clamp(1dvh, 2dvh, 4dvh);
+    border-bottom-left-radius: 1dvw;
+    border-bottom-right-radius: 1dvw;
+    font-size: clamp(3dvh, 5.5dvh, 10dvh);
 
     @keyframes intro__header__title-load-animation {
         from {
-            translate: 0px -100px;
+            translate: 0 -13dvh;
         }
 
         to {
-            translate: 0px 0px;
+            translate: 0 0dvh;
         }
     }
 }
