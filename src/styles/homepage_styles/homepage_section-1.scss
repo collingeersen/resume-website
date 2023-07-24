@@ -55,25 +55,6 @@ $introContent_AnimDuration: 1000ms;
 $introNote_AnimDelay:$introContent_AnimDelay+800ms;
 
 //=========================================================
-//  Breadcrumb
-//=========================================================
-.breadcrumb {
-    height: 20px;
-    background-color: $breadcrumbBGColor;
-    //width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    border-style: solid;
-    border-color: $breadcrumbBorderColor;
-    border-width: 0;
-    border-left-width: 5px;
-    border-right-width: 5px;
-    //margin-bottom: 10px;
-    //border-top-left-radius: 10px;
-    //border-top-right-radius: 10px;
-}
-
-//=========================================================
 //  Intro
 //=========================================================
 .intro {
