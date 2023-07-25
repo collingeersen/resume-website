@@ -4,7 +4,7 @@
 //-------------------------
 //  Heights                |
 //-------------------------
-$separatorHeight: 40px;
+$separatorHeight: 4dvh;
 $separatorNotchHeight: 70px;
 //-------------------------
 //  Colors                 |
@@ -191,8 +191,8 @@ $introNote_AnimDelay:$introContent_AnimDelay+800ms;
 //=========================================================
 .intro__summary {
     background-color: $contentBGColor;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 3dvh;
+    border-bottom-right-radius: 3dvh;
 }
 
 .intro__summary__greeting {
@@ -200,9 +200,10 @@ $introNote_AnimDelay:$introContent_AnimDelay+800ms;
     align-items: center;
     //overflow: hidden;
     //background-color: #000000;
-    padding-top: 30px;
+    padding-top: 4dvh;
     margin-right: auto;
     margin-left: auto;
+    //width: 57dvw;
     width: 80%;
 
     >div {
@@ -215,8 +216,15 @@ $introNote_AnimDelay:$introContent_AnimDelay+800ms;
         margin-left: auto;
         margin-right: auto;
 
+        //Selects everything other than the frame container
         :not(:last-child) {
-            height: 200px;
+            height: 20dvh;
+            //width: 16dvw;
+        }
+
+        //Selects the im container
+        :nth-child(2){
+            width: 13dvw;
         }
 
         [class$="--frame"] {
@@ -228,16 +236,16 @@ $introNote_AnimDelay:$introContent_AnimDelay+800ms;
             animation-fill-mode: forwards;
             animation-name: frame-anim;
             background-color: $breadcrumbBorderColor;
-            border-radius: 100px;
-            height: 400px;
-            margin: 20px;
-            translate: 500px;
-            width: 400px;
+            border-radius: 10dvh;
+            height: 20dvw;
+            margin: 2dvh;
+            translate: 50dvw;
+            width: 20dvw;
             z-index: 2;
 
             @keyframes frame-anim {
                 from {
-                    translate: 500px;
+                    translate: 50dvw;
                 }
 
                 to {
@@ -249,26 +257,26 @@ $introNote_AnimDelay:$introContent_AnimDelay+800ms;
 }
 
 .intro__summary__greeting__heading {
-    font-size: 4em;
+    font-size: clamp(1dvh, 10dvh, 15dvh);
     animation-duration: 800ms;
     animation-fill-mode: forwards;
     animation-name: headingGreeting-ani;
-    translate: 0 200px;
+    translate: 0 20dvh;
 
     @keyframes headingGreeting-ani {
         from {
-            translate: 0 200px;
+            translate: 0 20dvh;
         }
 
         70% {
-            translate: 0 -15px;
-            text-shadow: 0px 10px 0px black;
+            translate: 0 -2dvh;
+            text-shadow: 0 1dvh 0 black;
         }
 
         to {
             //transform: scale(1);
-            translate: 0 0px;
-            text-shadow: 0px 0px 0px black;
+            translate: 0 0;
+            text-shadow: 0 0 0 black;
         }
     }
 }
@@ -281,18 +289,18 @@ $introNote_AnimDelay:$introContent_AnimDelay+800ms;
     background-color: #9CF757;
     height: 0;
     overflow: visible;
-    translate: 330px 0px;
-    width: 30px;
+    //translate: 330px 0px;
+    width: 2dvw;
 
     @keyframes accent-ani {
         from {
             height: 0;
-            translate: 330px 0px;
+            translate: 34dvh 0px;
         }
 
         to {
-            height: 300px;
-            translate: 330px 200px;
+            height: 31dvh;
+            translate: 34dvh 20dvh;
         }
     }
 }
@@ -305,23 +313,24 @@ $introNote_AnimDelay:$introContent_AnimDelay+800ms;
     animation-fill-mode: forwards;
     background-color: $introGreetingBGColor;
     overflow: hidden;
-    padding-left: 20px;
+    padding-left: 1dvw; 
 }
 
 .intro__summary__greeting--hello {
     @include greeting_Animation;
     animation-delay: $introGreetingDivDelay;
     animation-name: hello-div-ani;
-    border-top-left-radius: 20px;
-    translate: -500px;
+    border-top-left-radius: 3dvh;
+    translate: -50dvh;
+    line-height: 8dvh;
 
     @keyframes hello-div-ani {
         from {
-            translate: -500px;
+            translate: -50dvh;
         }
 
         to {
-            translate: 0px;
+            translate: 0;
         }
     }
 
@@ -334,18 +343,20 @@ $introNote_AnimDelay:$introContent_AnimDelay+800ms;
     @include greeting_Animation;
     animation-delay: $introGreetingDivDelay;
     animation-name: im-div-ani;
-    border-bottom-right-radius: 20px;
-    border-top-right-radius: 20px;
-    translate: 0 -500px;
-    width: 225px;
+    border-bottom-right-radius: 3dvh;
+    border-top-right-radius: 3dvh;
+    padding-bottom: 24dvh;
+    translate: 0 -50dvh;
+    line-height: 8dvh;
+    //width: 225px;
 
     @keyframes im-div-ani {
         from {
-            translate: 0 -500px;
+            translate: 0 -50dvh;
         }
 
         to {
-            translate: 0px;
+            translate: 0;
         }
     }
 
@@ -359,19 +370,19 @@ $introNote_AnimDelay:$introContent_AnimDelay+800ms;
     @include greeting_Animation;
     animation-delay: $introGreetingDivDelay;
     animation-name: collin-div-ani;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    margin-top: -15px;
-    padding-right: 20px;
-    translate: 0 500px;
+    border-bottom-left-radius: 3dvh;
+    border-bottom-right-radius: 3dvh;
+    padding-right: 2dvh;
+    line-height: 2dvh;
+    translate: 0 50dvh;
 
     @keyframes collin-div-ani {
         from {
-            translate: 0 500px;
+            translate: 0 50dvh;
         }
 
         to {
-            translate: 0px;
+            translate: 0 -4dvh;
         }
     }
 
@@ -387,11 +398,12 @@ $introNote_AnimDelay:$introContent_AnimDelay+800ms;
     animation-name: corner-ani;
     background-color: #1B304F;
     display: block;
-    height: 20px;
+    height: 2dvh;
     opacity: 0;
     position: absolute;
-    translate: 339px 200px;
-    width: 20px;
+    //translate: 339px 200px;
+    translate: 35.1dvh 24dvh;
+    width: 2dvh;
 
 
     @keyframes corner-ani {
@@ -406,10 +418,10 @@ $introNote_AnimDelay:$introContent_AnimDelay+800ms;
 
     div {
         background-color: #161B38;
-        border-top-left-radius: 20px;
+        border-top-left-radius: 3dvh;
         //display: block;
-        height: 20px;
-        width: 20px;
+        height: 2dvh;
+        width: 2dvh;
     }
 }
 
