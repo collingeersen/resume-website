@@ -52,7 +52,7 @@ $introGreetingAccentTimingFunction: linear;
 
 $introContent_AnimDelay: $introGreetingFrameDelay;
 $introContent_AnimDuration: 1000ms;
-$introNote_AnimDelay:$introContent_AnimDelay+800ms;
+$introNote_AnimDelay: $introContent_AnimDelay+800ms;
 
 //=========================================================
 //  Intro
@@ -223,7 +223,7 @@ $introNote_AnimDelay:$introContent_AnimDelay+800ms;
         }
 
         //Selects the im container
-        :nth-child(2){
+        :nth-child(2) {
             width: 13dvw;
         }
 
@@ -313,7 +313,7 @@ $introNote_AnimDelay:$introContent_AnimDelay+800ms;
     animation-fill-mode: forwards;
     background-color: $introGreetingBGColor;
     overflow: hidden;
-    padding-left: 1dvw; 
+    padding-left: 1dvw;
 }
 
 .intro__summary__greeting--hello {
@@ -436,9 +436,6 @@ $introNote_AnimDelay:$introContent_AnimDelay+800ms;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
-    //padding-bottom: 50px;
-    width: fit-content;
 
     animation: {
         delay: $introContent_AnimDelay;
@@ -451,7 +448,7 @@ $introNote_AnimDelay:$introContent_AnimDelay+800ms;
     @keyframes content-load-animation {
         from {
             opacity: 0;
-            translate: 0px 20px;
+            translate: 0px 2dvh;
         }
 
         to {
@@ -459,124 +456,133 @@ $introNote_AnimDelay:$introContent_AnimDelay+800ms;
             translate: 0px 0px;
         }
     }
+}
+.intro__summary__content__heading{
+    background-color: #9CF757;
+    border-bottom-left-radius: 3dvh;
+    border-top-left-radius: 3dvh;
+    height: 40dvh;
+    margin: 0;
+    padding-left: 2dvh;
+    padding-right: 2dvh;
+    text-align: center;
+    writing-mode: sideways-lr;
+    font-size: clamp(2dvh, 4dvh, 6dvh);
+}
 
-    h2 {
-        background-color: #9CF757;
-        border-bottom-left-radius: 20px;
-        border-top-left-radius: 20px;
-        height: 400px;
-        margin: 0;
-        padding-left: 10px;
-        padding-right: 20px;
-        text-align: center;
-        writing-mode: sideways-lr;
-
-    }
-
-    p {
-        background-color: $contentFrameColor;
-        border-bottom-right-radius: 20px;
-        border-top-right-radius: 20px;
-        font-size: 1em;
-        height: 400px;
-        margin: 0;
-        padding: 30px;
-        width: 700px;
-    }
+.intro__summary__content__text{
+    background-color: $contentFrameColor;
+    border-bottom-right-radius: 3dvh;
+    border-top-right-radius: 3dvh;
+    font-size: clamp(2.5dvh, 1dvh + 1rem, 3.5dvh);
+    height: clamp(30dvh, 40dvh, 50dvh);
+    margin: 0;
+    padding: 3dvh;
+    width: 40dvw;
 }
 
 //-------------------------
 //  Note                   |
 //-------------------------
 .intro__summary__note {
-    height: 400px;
+    height: 40dvh;
     margin-left: auto;
     margin-right: auto;
-    overflow: hidden;
-    padding-bottom: 100px;
     text-align: center;
-    width: 500px;
+    width: 30dvw;
     word-wrap: break-word;
 
-    div{
+    //Select the first outer div
+    >div {
         animation-delay: $introNote_AnimDelay;
         animation-duration: 1000ms;
         animation-fill-mode: forwards;
         animation-name: noteFallback_Anim;
-        background-color:#0C0E0F;
+        background-color: #0C0E0F;
         display: flex;
-        height: 0px;
-        margin-left: auto;
-        margin-right: auto;
+        //height: 0;
         opacity: 0;
+        translate: 0 60dvh;
 
         @keyframes noteFallback_Anim {
             from {
                 opacity: 0;
             }
+
             to {
                 opacity: 1;
             }
         }
     }
+}
 
-    //Note Title
-    h3 {
-        background-color: #000000;
-        margin-right: 0;
-        opacity: 0;
-        padding: 10px;
-        translate: 50px;
-        writing-mode: sideways-rl;
-    }
+.intro__summary__note__text {
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
 
     //Note Content
     p {
         background-color: #000000;
-        margin-right: auto;
+        font-size: clamp(3dvh, 1dvh + 1.2rem, 3.5dvh);
+        line-height: clamp(3.3dvh, 2dvh + 1.3rem, 4.5dvh);
+        margin-left: 3.5dvh;
+        margin-right: 4.6dvh;
         opacity: 0;
-        padding: 10px;
-        translate: 0px 10px;
-        width: 300px;
-        //padding-bottom: 30px;
-        line-height: 35px;
+        padding: 2dvh;
+        text-align: right;
+        width: 20dvw;
+        translate: 2dvh;
 
-        span{
+        //Highlight of text
+        span {
             background-color: #161B38;
-            //translate: 0 -100px;
-            //padding-top: 30px;
         }
     }
 }
 
-.intro__summary__note--transition{
-    div{
-        height: 250px;
+.intro__summary__note__title {
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: auto;
+
+    //Note Title
+    h3 {
+        background-color: #000000;
+        border-radius: 5dvh;
+        font-size: clamp(4dvh, 1dvh + 1.5rem, 5dvh);
+        margin: auto;
+        opacity: 0;
+        padding: 2dvh;
+        padding-bottom: 4dvh;
+        padding-top: 4dvh;
+        writing-mode: sideways-rl;
+        translate: 2dvh;
+    }
+}
+
+.intro__summary__note--transition {
+    div {
+        //height: 30dvh;
+        translate: 0;
         transition-duration: 1000ms;
-        transition-property: height;
+        transition-property: translate;
     }
 
-    h3{
+    h3 {
         opacity: 1;
         transition-delay: 1200ms;
         transition-duration: 500ms;
-        transition-property: all;
-        translate: 0px;
+        transition-property: opacity, translate;
+        translate: 0;
     }
 
     p {
         opacity: 1;
         transition-delay: 1800ms;
         transition-duration: 500ms;
-        transition-property: all;
-        translate: 0px;
+        transition-property: opacity, translate;
+        translate: 0;
     }
-}
-
-.intro__summary__divider {
-    //background-color: $accentColor2;
-    //border-radius: 20px;
-    //margin-left: auto;
-    //margin-right: auto;
-    //width: 5px;
 }
