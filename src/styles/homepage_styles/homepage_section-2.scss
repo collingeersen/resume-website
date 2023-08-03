@@ -25,40 +25,38 @@ $containerBoxBGColor_2: brown;
 //=========================================================
 .section-2 {
     background-color: $contentBorderColor;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    padding: 40px;
-    padding-top: 0px;
-    margin-top: -20px;
+    border-bottom-left-radius: 3dvh;
+    border-bottom-right-radius: 3dvh;
+    padding: 4dvh;
+    padding-top: 0;
+    margin-top: -6dvh;
 }
 
 .section-2__container {
     background-color: $contentBGColor;
-    border-radius: 20px;
-    padding-bottom: 100px;
-    padding-top: 50px;
+    border-radius: 3dvh;
+    padding-bottom: 10dvh;
+    padding-top: 8dvh;
     height: auto;
     width: auto;
 }
 
-.section-2__container__intro{
-    display:block;
+.section-2__container__intro {
+    display: block;
     margin-inline: auto;
     background-color: brown;
     width: 80%;
     text-align: center;
-    padding: 20px;
+    padding: 2dvh;
 
-    h2{
-
+    h2 {
+        font-size: clamp(3dvh, 2.2dvh + 1em, 5dvh);
     }
 
-    p{
-
+    p {
+        font-size: clamp(2dvh, 1dvh + 0.75em, 2.75dvh);
     }
 }
-
-
 
 .section-2__container__box {
     //background-color: #075C61;
@@ -68,36 +66,57 @@ $containerBoxBGColor_2: brown;
     margin-left: auto;
     margin-right: auto;
     opacity: 0;
-    padding: 20px;
+    padding: 3dvh;
     width: 80%;
-    padding-bottom: 80px;
-    padding-top: 80px;
+    padding-bottom: 3dvh;
+    padding-top: 3dvh;
 
     >h2 {
         align-self: center;
         background-color: #161B38;
-        border-bottom-left-radius: 20px;
-        border-top-left-radius: 20px;
+        border-bottom-left-radius: 3dvh;
+        border-top-left-radius: 3dvh;
         box-shadow: inset -2px 0px 3px black;
-        font-size: 1.8em;
-        height: 21rem;
+        font-size: clamp(2dvh, 2dvh + 0.75em, 3.75dvh);
+        height: 32dvh;
         margin-right: 0;
-        margin-left: 10px;
-        padding: 20px;
+        margin-left: 1dvh;
+        padding: 2dvh;
         text-align: center;
         user-select: none;
         writing-mode: sideways-lr;
     }
+}
 
-    >p {
+.section-2__container__box__paragraph {
+    background-color: #6CAB3C;
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    //background-color: #1C0B3D;
+    border-bottom-left-radius: 3dvh;
+    border-top-left-radius: 3dvh;
+    height: 38dvh;
+
+    p {
         align-self: center;
         background-color: #1C0B3D;
-        border-bottom-left-radius: 20px;
-        border-top-left-radius: 20px;
-        font-size: 1.5em;
-        height: 23rem;
-        padding: 50px;
-        margin: 0;
+        border-bottom-left-radius: 3dvh;
+        border-top-left-radius: 3dvh;
+        font-size: clamp(2dvh, 1dvh + 0.75em, 2.75dvh);
+        //height: auto;
+        //width: 60dvw;
+        padding: 5dvh;
+        //padding-top: 11dvh;
+        //padding-bottom: 11dvh;
+        //padding-top: clamp(11dvh, 11dvh + 1.2em, 15dvh);
+        //padding-bottom: clamp(11dvh, 11dvh + 1.2em, 15dvh);
+        //margin: 0;
+        margin-top: auto;
+        margin-bottom: auto;
+
+
+        word-wrap: break-word;
     }
 }
 
@@ -129,40 +148,42 @@ $containerBoxBGColor_2: brown;
 //-------------------------
 //  Section 2: Card        |
 //-------------------------
-$section2Card_TransitionDelay: 50ms;
+$section2Card_TransitionDelay: 0ms;
 
 .section-2__container__box__card {
     align-self: center;
     background-color: $contentFrameColor;
-
-    border: {
-        color: $contentBorderColor;
-        radius: 20px;
-        style: solid;
-        width: 3px;
-    }
-
-    box-shadow: $flexCardDefaultColor 0px 0px 0px -3px;
-    height: 400px;
-    transition-duration: 500ms;
-    translate: -10px;
+    border-color: $contentBorderColor;
+    border-radius: 3dvh;
+    border-style: solid;
+    border-width: 0.75dvh;
+    box-shadow: $flexCardDefaultColor 0px 0px 0px 0px;
+    height: fit-content;
+    transition-duration: 300ms;
+    translate: -3dvh;
     transition-property: translate,
-    box-shadow;
+        box-shadow;
 
     &:hover {
-        box-shadow: $flexCardHoverColor 10px 10px 0px -3px;
+        box-shadow: $flexCardHoverColor 1dvh 1dvh 0px 0;
         cursor: pointer;
-        transition-duration: 500ms;
+        transition-duration: 300ms;
         transition-property: translate,
             box-shadow;
-        translate: -20px -10px;
+        translate: -4dvh -1dvh;
         transition-delay: $section2Card_TransitionDelay;
 
+        h3{
+            //Gives link hover color
+            color: #9CF757;
+        }
+
+        //Creates the hover state for the pseudo underline effect
         h3::after {
-            background-color: $headingColor;
+            background-color: #9CF757;
             content: '';
             display: block;
-            height: 3px;
+            height: 0.5dvh;
             transition-duration: 200ms;
             transition-property: width;
             transition-timing-function: ease-in-out;
@@ -183,7 +204,7 @@ $section2Card_TransitionDelay: 50ms;
                     }
 
                     to {
-                        box-shadow: inset $flexCardHoverColor 0px 100px 0px -1px;
+                        box-shadow: inset $flexCardHoverColor 0px 15dvh 0px -1px;
                     }
                 }
             }
@@ -205,30 +226,30 @@ $section2Card_TransitionDelay: 50ms;
 
     span {
         display: inline-block;
-        height: 50px;
+        height: 8dvh;
         margin-left: auto;
         margin-right: 0;
         overflow: hidden;
-        width: 60px;
+        width: 11dvh;
         //background-color: aliceblue;
 
         div {
             animation-duration: 500ms;
             animation-name: flex-box--1x3__col__corner-in-anim;
             background-color: $flexCardDefaultColor;
-            height: 90px;
+            height: 13dvh;
             rotate: -45deg;
-            translate: -10px -30px;
-            width: 20px;
+            translate: -2dvh -4dvh;
+            width: 2.5dvh;
             margin-left: auto;
 
             @keyframes flex-box--1x3__col__corner-in-anim {
                 from {
-                    box-shadow: inset $flexCardHoverColor 0px -100px;
+                    box-shadow: inset $flexCardHoverColor 0px -20dvh;
                 }
 
                 to {
-                    box-shadow: inset $flexCardHoverColor 0px 0px -1px;
+                    box-shadow: inset $flexCardHoverColor 0px 0px -0.1dvh;
                 }
             }
         }
@@ -237,7 +258,9 @@ $section2Card_TransitionDelay: 50ms;
     h3 {
         color: $headingColor;
         width: fit-content;
-        padding-left: 30px;
+        padding-left: 3dvh;
+        padding-top: 1dvh;
+        font-size: clamp(2.5dvh, 1dvh + 0.75em, 3dvh);
         //background-color: #0C0E0F;
         //margin-right: auto;
 
@@ -245,7 +268,7 @@ $section2Card_TransitionDelay: 50ms;
             background-color: $headingColor;
             content: '';
             display: block;
-            height: 3px;
+            height: 0.5dvh;
             transition-duration: 200ms;
             transition-property: width;
             transition-timing-function: ease-in-out;
@@ -256,32 +279,49 @@ $section2Card_TransitionDelay: 50ms;
 }
 
 .section-2__container__box__card--content {
-    padding-bottom: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-bottom: 3dvh;
+    padding-left: 3dvh;
+    padding-right: 3dvh;
 
-    //Container for img
-    div {
-        background-color: #212436;
-        height: 200px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 200px;
+    h4 {
+        margin-top: -2dvh;
+        font-size: 1.8dvh;
     }
 
-    //Material Icon span
-    span {
-        background-color: rgba(0, 0, 0, 0.5);
-        color: $fontColor1;
-        display: block;
-        font-size: 40;
-        height: 100%;
-        opacity: 0;
-        padding-top: 80px;
-        position: relative;
+    p {
+        font-size: 1.75dvh;
         text-align: center;
-        transition-duration: 200ms;
-        transition-property: all;
-        transition-delay: $section2Card_TransitionDelay;
+
+        span{
+            font-size: 1.5dvh;
+            translate: 0 0dvh;
+        }
+    }
+
+    //Container for svg
+    div {
+        background-color: #212436;
+        height: 20dvh;
+        margin-left: auto;
+        margin-right: auto;
+        width: 20dvh;
+        margin-bottom: 1dvh;
+        margin-top: 3dvh;
+
+        //Material Icon span
+        span {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: $fontColor1;
+            display: block;
+            font-size: 4dvh;
+            height: 100%;
+            opacity: 0;
+            padding-top: 8dvh;
+            position: relative;
+            text-align: center;
+            transition-duration: 200ms;
+            transition-property: all;
+            transition-delay: $section2Card_TransitionDelay;
+        }
     }
 }
