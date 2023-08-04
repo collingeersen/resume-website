@@ -178,6 +178,7 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
     margin-right: auto;
     margin-left: auto;
 
+    //Container that wraps the divs
     >div {
         display: grid;
         grid-template-columns: auto auto;
@@ -187,13 +188,11 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
             height: fit-content;
             overflow: hidden;
             
+            //Fixes width for the im heading
             &:nth-child(2){
                 width: fit-content;
             }
         }
-
-
-        
     }
 }
 
