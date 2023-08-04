@@ -24,11 +24,11 @@ $sectionDividerColor: #0C0E0F;
 //=========================================================
 .divider--thin {
     background-color: $sectionDividerColor;
-    height: 3px;
-    margin-bottom: 50px;
+    height: 0.3dvh;
+    margin-bottom: 5dvh;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
+    margin-top: 5dvh;
     width: 80%;
 }
 
