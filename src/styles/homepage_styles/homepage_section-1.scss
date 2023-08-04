@@ -77,10 +77,10 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
 //=========================================================
 .intro__header {
     background-color: $contentBGColor;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-top-left-radius: 3dvh;
+    border-top-right-radius: 3dvh;
     display: flex;
-    padding-left: 30px;
+    padding-left: 3dvh;
 }
 
 .intro__header__title {
