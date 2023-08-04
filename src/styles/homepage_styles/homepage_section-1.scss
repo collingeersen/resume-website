@@ -1,7 +1,7 @@
 //=========================================================
 //  Variables
 //=========================================================
-$borderRadius:clamp(1dvw, 1em, 2dvw);
+$borderRadius: clamp(1dvw, 1em, 2dvw);
 //-------------------------
 //  Heights                |
 //-------------------------
@@ -10,9 +10,9 @@ $separatorNotchHeight: 70px;
 //-------------------------
 //  Colors                 |
 //-------------------------
-$backgroundColor:#161B38;
-$mainBorderColor:#0C0E0F;
-$boxBackgroundColor:#1B304F;
+$backgroundColor: #161B38;
+$mainBorderColor: #0C0E0F;
+$boxBackgroundColor: #1B304F;
 
 //Github Colors
 $githubBorderColor: #0C0E0F;
@@ -51,9 +51,8 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
 //=========================================================
 .intro {
     background-color: $mainBorderColor;
-    border-left: solid $mainBorderColor $separatorHeight;
-    border-right: solid $mainBorderColor $separatorHeight;
-    border-top: solid $mainBorderColor $separatorHeight;
+    border: solid $mainBorderColor $separatorHeight;
+    border-bottom: 0;
     font-size: 1.5em;
     margin: auto;
     overflow: hidden;
@@ -151,6 +150,7 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
 
         h3 {
             color: #9CF757;
+
             //End state underline for Github link
             &::after {
                 @include githubLink_Transition;
@@ -179,8 +179,6 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
 .intro__summary__greeting {
     display: flex;
     align-items: center;
-    //overflow: hidden;
-    //background-color: #000000;
     padding-top: 4dvh;
     margin-right: auto;
     margin-left: auto;
@@ -188,7 +186,6 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
     width: 80%;
 
     >div {
-        //align-items: center;
         overflow: hidden;
         //width: 50%;
         //background-color: #2B3E4D;
@@ -215,7 +212,7 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
             animation-delay: $introGreetingFrameDelay;
             animation-duration: 500ms;
             animation-fill-mode: forwards;
-            animation-name: frame-anim;
+            animation-name: frame-load-animation;
             background-color: #0C0E0F;
             border-radius: 20dvw;
             height: 20dvw;
@@ -224,7 +221,7 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
             width: 20dvw;
             z-index: 2;
 
-            @keyframes frame-anim {
+            @keyframes frame-load-animation {
                 from {
                     translate: 50dvw;
                 }
@@ -241,10 +238,10 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
     font-size: clamp(1dvh, 10dvh, 15dvh);
     animation-duration: 800ms;
     animation-fill-mode: forwards;
-    animation-name: headingGreeting-ani;
+    animation-name: intro__summary__greeting__heading-animation;
     translate: 0 20dvh;
 
-    @keyframes headingGreeting-ani {
+    @keyframes intro__summary__greeting__heading-animation {
         from {
             translate: 0 20dvh;
         }
@@ -255,7 +252,6 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
         }
 
         to {
-            //transform: scale(1);
             translate: 0 0;
             text-shadow: 0 0 0 black;
         }
@@ -266,14 +262,15 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
     animation-delay: $introGreetingAccentDelay;
     animation-duration: $introGreetingAccentDuration;
     animation-fill-mode: forwards;
-    animation-name: accent-ani;
+    animation-name: intro__summary__greeting--accent-animation;
     background-color: #9CF757;
     height: 0;
     overflow: visible;
     //translate: 330px 0px;
     width: 2dvw;
+    visibility: hidden;
 
-    @keyframes accent-ani {
+    @keyframes intro__summary__greeting--accent-animation {
         from {
             height: 0;
             translate: 34dvh 0px;
@@ -300,12 +297,12 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
 .intro__summary__greeting--hello {
     @include greeting_Animation;
     animation-delay: $introGreetingDivDelay;
-    animation-name: hello-div-ani;
+    animation-name: intro__summary__greeting--hello-animation;
     border-top-left-radius: $borderRadius;
     translate: -50dvh;
     line-height: 8dvh;
 
-    @keyframes hello-div-ani {
+    @keyframes intro__summary__greeting--hello-animation {
         from {
             translate: -50dvh;
         }
@@ -323,7 +320,7 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
 .intro__summary__greeting--im {
     @include greeting_Animation;
     animation-delay: $introGreetingDivDelay;
-    animation-name: im-div-ani;
+    animation-name: intro__summary__greeting--im-animation;
     border-bottom-right-radius: $borderRadius;
     border-top-right-radius: $borderRadius;
     padding-bottom: 24dvh;
@@ -331,7 +328,7 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
     line-height: 8dvh;
     //width: 225px;
 
-    @keyframes im-div-ani {
+    @keyframes intro__summary__greeting--im-animation {
         from {
             translate: 0 -50dvh;
         }
@@ -350,14 +347,14 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
     //box-shadow: 0px 15px 0px black;
     @include greeting_Animation;
     animation-delay: $introGreetingDivDelay;
-    animation-name: collin-div-ani;
+    animation-name: intro__summary__greeting--collin-animation;
     border-bottom-left-radius: $borderRadius;
     border-bottom-right-radius: $borderRadius;
     padding-right: 2dvh;
     line-height: 2dvh;
     translate: 0 50dvh;
 
-    @keyframes collin-div-ani {
+    @keyframes intro__summary__greeting--collin-animation {
         from {
             translate: 0 50dvh;
         }
@@ -376,7 +373,7 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
     animation-delay: 1500ms;
     animation-duration: 300ms;
     animation-fill-mode: forwards;
-    animation-name: corner-ani;
+    animation-name: intro__summary__greeting--corner-animation;
     background-color: #1B304F;
     display: block;
     height: 2dvh;
@@ -387,7 +384,7 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
     width: 2dvh;
 
 
-    @keyframes corner-ani {
+    @keyframes intro__summary__greeting--corner-animation {
         from {
             opacity: 0;
         }
@@ -416,16 +413,13 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    animation-delay: $introContent_AnimDelay;
+    animation-duration: $introContent_AnimDuration;
+    animation-fill-mode: both;
+    animation-name: intro__summary__content-load-animation;
+    animation-timing-function: linear;
 
-    animation: {
-        delay: $introContent_AnimDelay;
-        duration: $introContent_AnimDuration;
-        fill-mode: both;
-        name: content-load-animation;
-        timing-function: linear;
-    }
-
-    @keyframes content-load-animation {
+    @keyframes intro__summary__content-load-animation {
         from {
             opacity: 0;
             translate: 0px 2dvh;
@@ -437,7 +431,8 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
         }
     }
 }
-.intro__summary__content__heading{
+
+.intro__summary__content__heading {
     background-color: #9CF757;
     border-bottom-right-radius: $borderRadius;
     border-top-right-radius: $borderRadius;
@@ -451,7 +446,7 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
     font-size: clamp(2dvh, 4dvh, 6dvh);
 }
 
-.intro__summary__content__text{
+.intro__summary__content__text {
     background-color: $boxBackgroundColor;
     border-bottom-right-radius: $borderRadius;
     border-top-right-radius: $borderRadius;
@@ -478,14 +473,14 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
         animation-delay: $introNote_AnimDelay;
         animation-duration: 1000ms;
         animation-fill-mode: forwards;
-        animation-name: noteFallback_Anim;
+        animation-name: intro__summary__note-fallback-animation;
         background-color: #0C0E0F;
         display: flex;
         //height: 0;
         opacity: 0;
         translate: 0 60dvh;
 
-        @keyframes noteFallback_Anim {
+        @keyframes intro__summary__note-fallback-animation {
             from {
                 opacity: 0;
             }
