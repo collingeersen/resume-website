@@ -74,9 +74,9 @@ $containerBoxBGColor_2: brown;
     >h2 {
         align-self: center;
         background-color: #161B38;
-        border-bottom-left-radius: 3dvh;
-        border-top-left-radius: 3dvh;
-        box-shadow: inset -2px 0px 3px black;
+        border-bottom-right-radius: 3dvh;
+        border-top-right-radius: 3dvh;
+        box-shadow: inset 2px 0px 3px black;
         font-size: clamp(2dvh, 2dvh + 0.75em, 3.75dvh);
         height: 32dvh;
         margin-right: 0;
@@ -84,7 +84,8 @@ $containerBoxBGColor_2: brown;
         padding: 2dvh;
         text-align: center;
         user-select: none;
-        writing-mode: sideways-lr;
+        writing-mode: vertical-lr;
+        rotate: 180deg;
     }
 }
 

@@ -459,14 +459,15 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
 }
 .intro__summary__content__heading{
     background-color: #9CF757;
-    border-bottom-left-radius: 3dvh;
-    border-top-left-radius: 3dvh;
+    border-bottom-right-radius: 3dvh;
+    border-top-right-radius: 3dvh;
     height: 40dvh;
     margin: 0;
     padding-left: 2dvh;
     padding-right: 2dvh;
     text-align: center;
-    writing-mode: sideways-lr;
+    writing-mode: vertical-lr;
+    rotate: 180deg;
     font-size: clamp(2dvh, 4dvh, 6dvh);
 }
 
@@ -557,7 +558,7 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
         padding: 2dvh;
         padding-bottom: 4dvh;
         padding-top: 4dvh;
-        writing-mode: sideways-rl;
+        writing-mode: vertical-lr;
         translate: 2dvh;
     }
 }
