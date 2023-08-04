@@ -33,16 +33,11 @@ $githubIconBGColor: white;
 //#211B4
 
 //Delay for intro animation
-$introGreetingDivDelay: 1000ms;
-$introGreetingDelay: $introGreetingDivDelay+700ms;
-$introGreetingFrameDelay: $introGreetingDelay+1000ms;
-$introGreetingAccentDelay: $introGreetingFrameDelay+1000ms;
+$introGreetingDelay: 1000ms;
+$introGreetingFrameDelay: $introGreetingDelay+700ms;
+$introGreetingAccentDelay: $introGreetingFrameDelay+700ms;
 
-$introGreetingDivDuration: 500ms;
-$introGreetingAccentDuration: 1500ms;
-$introGreetingAccentTimingFunction: linear;
-
-$introContent_AnimDelay: $introGreetingFrameDelay;
+$introContent_AnimDelay: $introGreetingFrameDelay+800ms;
 $introContent_AnimDuration: 1000ms;
 $introNote_AnimDelay: $introContent_AnimDelay+800ms;
 
@@ -182,63 +177,34 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
     padding-top: 4dvh;
     margin-right: auto;
     margin-left: auto;
-    //width: 57dvw;
-    width: 80%;
 
     >div {
-        overflow: hidden;
-        //width: 50%;
-        //background-color: #2B3E4D;
         display: grid;
         grid-template-columns: auto auto;
-        margin-left: auto;
-        margin-right: auto;
-
-        //Selects everything other than the frame container
-        :not(:last-child) {
-            height: 20dvh;
-            //width: 16dvw;
-        }
-
-        //Selects the im container
-        :nth-child(2) {
-            width: 13dvw;
-        }
-
-        [class$="--frame"] {
-            //border-color: #9CF757;
-            //border-style: solid;
-            //border-width: 10px;
-            animation-delay: $introGreetingFrameDelay;
-            animation-duration: 500ms;
-            animation-fill-mode: forwards;
-            animation-name: frame-load-animation;
-            background-color: #0C0E0F;
-            border-radius: 20dvw;
-            height: 20dvw;
-            margin: 2dvh;
-            translate: 50dvw;
-            width: 20dvw;
-            z-index: 2;
-
-            @keyframes frame-load-animation {
-                from {
-                    translate: 50dvw;
-                }
-
-                to {
-                    translate: 0;
-                }
+        margin-inline: auto;
+        
+        div{
+            height: fit-content;
+            overflow: hidden;
+            
+            &:nth-child(2){
+                width: fit-content;
             }
         }
+
+
+        
     }
 }
 
 .intro__summary__greeting__heading {
-    font-size: clamp(1dvh, 10dvh, 15dvh);
     animation-duration: 800ms;
     animation-fill-mode: forwards;
     animation-name: intro__summary__greeting__heading-animation;
+    background-color: $boxBackgroundColor;
+    font-size: clamp(1dvh, 10dvh, 15dvh);
+    margin: 0;
+    padding: 0.1em;
     translate: 0 20dvh;
 
     @keyframes intro__summary__greeting__heading-animation {
@@ -258,147 +224,52 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
     }
 }
 
-.intro__summary__greeting--accent {
-    animation-delay: $introGreetingAccentDelay;
-    animation-duration: $introGreetingAccentDuration;
-    animation-fill-mode: forwards;
-    animation-name: intro__summary__greeting--accent-animation;
-    background-color: #9CF757;
-    height: 0;
-    overflow: visible;
-    //translate: 330px 0px;
-    width: 2dvw;
-    visibility: hidden;
-
-    @keyframes intro__summary__greeting--accent-animation {
-        from {
-            height: 0;
-            translate: 34dvh 0px;
-        }
-
-        to {
-            height: 31dvh;
-            translate: 34dvh 20dvh;
-        }
-    }
-}
-
 //-------------------------
 //  Greeting Animation     |
 //-------------------------
-@mixin greeting_Animation {
-    animation-duration: $introGreetingDivDuration;
-    animation-fill-mode: forwards;
-    background-color: $boxBackgroundColor;
-    overflow: hidden;
-    padding-left: 1dvw;
-}
-
 .intro__summary__greeting--hello {
-    @include greeting_Animation;
-    animation-delay: $introGreetingDivDelay;
-    animation-name: intro__summary__greeting--hello-animation;
     border-top-left-radius: $borderRadius;
-    translate: -50dvh;
-    line-height: 8dvh;
-
-    @keyframes intro__summary__greeting--hello-animation {
-        from {
-            translate: -50dvh;
-        }
-
-        to {
-            translate: 0;
-        }
-    }
-
     h2 {
         animation-delay: $introGreetingDelay;
     }
 }
 
 .intro__summary__greeting--im {
-    @include greeting_Animation;
-    animation-delay: $introGreetingDivDelay;
-    animation-name: intro__summary__greeting--im-animation;
-    border-bottom-right-radius: $borderRadius;
     border-top-right-radius: $borderRadius;
-    padding-bottom: 24dvh;
-    translate: 0 -50dvh;
-    line-height: 8dvh;
-    //width: 225px;
-
-    @keyframes intro__summary__greeting--im-animation {
-        from {
-            translate: 0 -50dvh;
-        }
-
-        to {
-            translate: 0;
-        }
-    }
-
+    border-bottom-right-radius: $borderRadius;
     h2 {
         animation-delay: $introGreetingDelay+200ms;
     }
 }
 
 .intro__summary__greeting--collin {
-    //box-shadow: 0px 15px 0px black;
-    @include greeting_Animation;
-    animation-delay: $introGreetingDivDelay;
-    animation-name: intro__summary__greeting--collin-animation;
     border-bottom-left-radius: $borderRadius;
     border-bottom-right-radius: $borderRadius;
-    padding-right: 2dvh;
-    line-height: 2dvh;
-    translate: 0 50dvh;
-
-    @keyframes intro__summary__greeting--collin-animation {
-        from {
-            translate: 0 50dvh;
-        }
-
-        to {
-            translate: 0 -4dvh;
-        }
-    }
-
     h2 {
         animation-delay: $introGreetingDelay+400ms;
     }
 }
 
-.intro__summary__greeting--corner {
-    animation-delay: 1500ms;
-    animation-duration: 300ms;
+.intro__summary__greeting--avatar{
+    animation-delay: $introGreetingDelay+400ms;
+    animation-duration: 1000ms;
     animation-fill-mode: forwards;
-    animation-name: intro__summary__greeting--corner-animation;
-    background-color: #1B304F;
-    display: block;
-    height: 2dvh;
+    animation-name: intro__summary__greeting--avatar-animation;
+    background-color: #9CF757;
+    border-radius: $borderRadius;
+    border-top-left-radius: 0;
     opacity: 0;
-    position: absolute;
-    //translate: 339px 200px;
-    translate: 35.05dvh 24dvh;
-    width: 2dvh;
+    translate: 0 100px;
 
-
-    @keyframes intro__summary__greeting--corner-animation {
-        from {
+    @keyframes intro__summary__greeting--avatar-animation {
+        from{
             opacity: 0;
+            translate: 0 100px;
         }
-
-        to {
+        to{
             opacity: 1;
+            translate: 0;
         }
-    }
-
-    div {
-        background-color: $backgroundColor;
-        border-top-left-radius: $borderRadius;
-        height: 2dvh;
-        width: 2dvh;
     }
 }
 
