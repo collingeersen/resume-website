@@ -10,25 +10,15 @@ $separatorNotchHeight: 70px;
 //-------------------------
 //  Colors                 |
 //-------------------------
-
-//Breadcrumb Colors
-$breadcrumbBGColor: #161B38;
-$breadcrumbBorderColor: #0C0E0F;
-//Content Colors
-$contentBGColor: #161B38;
-$contentBorderColor: #0C0E0F;
-$contentFrameColor: #1B304F;
+$backgroundColor:#161B38;
+$mainBorderColor:#0C0E0F;
+$boxBackgroundColor:#1B304F;
 
 //Github Colors
-$githubBGColor: #1B304F;
 $githubBorderColor: #0C0E0F;
 $githubUnderlineColor: #9CF757;
-$githubIconBGColor: white; //temp
+$githubIconBGColor: white;
 
-//Intro Colors
-$introInnerBorderColor: #0C0E0F;
-$introHeaderTitleBG: #1B304F;
-$introGreetingBGColor: #1B304F;
 
 //Saved Colors
 //181D1F
@@ -40,6 +30,7 @@ $introGreetingBGColor: #1B304F;
 //0C0E0F
 //314185
 //53852D
+//#211B4
 
 //Delay for intro animation
 $introGreetingDivDelay: 1000ms;
@@ -59,10 +50,10 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
 //  Intro
 //=========================================================
 .intro {
-    background-color: $contentBorderColor;
-    border-left: solid $contentBorderColor $separatorHeight;
-    border-right: solid $contentBorderColor $separatorHeight;
-    border-top: solid $contentBorderColor $separatorHeight;
+    background-color: $mainBorderColor;
+    border-left: solid $mainBorderColor $separatorHeight;
+    border-right: solid $mainBorderColor $separatorHeight;
+    border-top: solid $mainBorderColor $separatorHeight;
     font-size: 1.5em;
     margin: auto;
     overflow: hidden;
@@ -73,7 +64,7 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
 //  Header
 //=========================================================
 .intro__header {
-    background-color: $contentBGColor;
+    background-color: $backgroundColor;
     border-top-left-radius: $borderRadius;
     border-top-right-radius: $borderRadius;
     display: flex;
@@ -83,7 +74,7 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
 .intro__header__title {
     animation-duration: 800ms;
     animation-name: intro__header__title-load-animation;
-    background-color: $introHeaderTitleBG;
+    background-color: $boxBackgroundColor;
     border-bottom-left-radius: $borderRadius;
     border-bottom-right-radius: $borderRadius;
     font-size: clamp(2.5dvw, 3em, 2.5dvw);
@@ -115,7 +106,7 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
 }
 
 .intro__header__github-link {
-    background-color: $githubBGColor;
+    background-color: $boxBackgroundColor;
     border-bottom-left-radius: $borderRadius;
     border-top-right-radius: $borderRadius;
     box-shadow: $githubBorderColor clamp(0.2dvh, 0.7dvh, 1dvh) clamp(0.2dvh, 0.7dvh, 1dvh);
@@ -180,7 +171,7 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
 //  Summary
 //=========================================================
 .intro__summary {
-    background-color: $contentBGColor;
+    background-color: $backgroundColor;
     border-bottom-left-radius: $borderRadius;
     border-bottom-right-radius: $borderRadius;
 }
@@ -225,7 +216,7 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
             animation-duration: 500ms;
             animation-fill-mode: forwards;
             animation-name: frame-anim;
-            background-color: $breadcrumbBorderColor;
+            background-color: #0C0E0F;
             border-radius: 20dvw;
             height: 20dvw;
             margin: 2dvh;
@@ -301,7 +292,7 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
 @mixin greeting_Animation {
     animation-duration: $introGreetingDivDuration;
     animation-fill-mode: forwards;
-    background-color: $introGreetingBGColor;
+    background-color: $boxBackgroundColor;
     overflow: hidden;
     padding-left: 1dvw;
 }
@@ -407,9 +398,8 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
     }
 
     div {
-        background-color: #161B38;
+        background-color: $backgroundColor;
         border-top-left-radius: $borderRadius;
-        //display: block;
         height: 2dvh;
         width: 2dvh;
     }
@@ -462,7 +452,7 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
 }
 
 .intro__summary__content__text{
-    background-color: $contentFrameColor;
+    background-color: $boxBackgroundColor;
     border-bottom-right-radius: $borderRadius;
     border-top-right-radius: $borderRadius;
     font-size: clamp(2.5dvh, 1dvh + 1rem, 3.5dvh);
