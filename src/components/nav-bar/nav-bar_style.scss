@@ -228,16 +228,18 @@ nav {
     display: flex;
     flex-wrap: nowrap;
     margin-bottom: 5dvh;
+    text-align: center;
 }
 
 .nav-bar__drop-down__header__toggle {
     align-self: center;
-    font-size: 0.8em;
-    margin-right: 20px;
+    font-size: clamp(0.8em, 2dvh, 5dvh);
+    //margin-right: 200px;
 
     label {
-        padding: 5px;
-        padding-left: 10px;
+        padding: 0.5dvh;
+        padding-left: 1dvh;
+        padding-right: 1dvh;
         padding-top: 0;
 
         &:hover {
@@ -248,37 +250,36 @@ nav {
     //Selects both the container and icon
     span {
         display: inline-flex;
-        font-size: 0.9em;
-        margin-left: 4px;
-        padding: 5px;
+        font-size: 0.8em;
     }
 
     //Selects only the span for the container and not icon
     &>span {
         background-color: $navBtnBGColorDefault;
-        border-radius: 20px;
-        box-shadow: $navBtnShadow 0px 3px 1px;
+        border-radius: 20dvh;
+        box-shadow: $navBtnShadow 0 0.5dvh 0;
         color: $linkColorDefault;
-        margin-right: 25px;
-        padding: 0;
+        margin-right: 10px;
+        margin-top: 10px;
+        //padding: 0;
+        translate: 0;
         transition-duration: 200ms;
         transition-property: background-color, box-shadow, translate;
 
         &:active {
-            box-shadow: $navBtnShadow 0px 0px 0px;
-            translate: 0px 3px;
+            box-shadow: $navBtnShadow 0 0 0;
+            translate: 0 0.5dvh;
         }
 
         &:hover {
             background-color: $navBtnBGColorHover;
-            cursor: pointer;
         }
     }
 
     [class$="material-symbols-rounded"] {
-        background-color: $transparent;
+        background-color: transparent;
         font-size: 1.3em;
-        translate: -4px 3px;
+        translate: 0 0.4dvh;
     }
 }
 
@@ -287,9 +288,9 @@ nav {
 //---------------------------
 .nav-bar__drop-down__btn--exit {
     background-color: $navBtnBGColorDefault;
-    border-radius: 20%;
+    border-radius: 1dvh;
     border: 0;
-    box-shadow: $navBtnShadow 0 5px 1px;
+    box-shadow: $navBtnShadow 0 0.5dvh 0;
     display: block;
     line-height: 0%;
     margin-left: auto;
@@ -298,8 +299,8 @@ nav {
     transition-property: background-color, box-shadow, translate;
 
     &:active {
-        box-shadow: $navBtnShadow 0 0px 1px;
-        translate: 0px 2.5px;
+        box-shadow: $navBtnShadow 0 0 0;
+        translate: 0 0.25dvh;
     }
 
     &:hover {
@@ -310,7 +311,7 @@ nav {
     //Material Icon
     span {
         color: $linkColorDefault;
-        font-size: 3rem;
+        font-size: clamp(3em, 5dvh, 10dvh);
     }
 }
 
