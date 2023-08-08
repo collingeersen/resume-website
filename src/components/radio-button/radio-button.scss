@@ -1,0 +1,49 @@
+//=========================================================
+//  Nav-Bar: Theme Switch
+//=========================================================
+.nav-bar__theme-switch {
+    display: inline-block;
+    height: 38px;
+    position: relative;
+    width: 65px;
+
+    //Removes the default checkbox style
+    input {
+        height: 0;
+        opacity: 0;
+        width: 0;
+    }
+
+    //This draws the container for the switch
+    span {
+        background-color: $accentColor2;
+        border-radius: 20px;
+        bottom: 0;
+        cursor: pointer;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: 300ms;
+    }
+
+    span::before {
+        background-color: $fontColor1;
+        bottom: 6px;
+        border-radius: 50%;
+        content: "";
+        height: 25px;
+        left: 6px;
+        position: absolute;
+        transition: 300ms;
+        width: 25px;
+    }
+
+    input:checked+span {
+        background-color: $accentColor4;
+    }
+
+    input:checked+span::before {
+        transform: translateX(28px);
+    }
+}
