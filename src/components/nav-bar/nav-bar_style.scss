@@ -83,6 +83,7 @@ nav {
         top: 60px;
     }
 }
+
 //=========================================================
 //  Nav-Bar: Btn-Hamburger
 //=========================================================
@@ -90,7 +91,7 @@ nav {
     margin-left: 12%;
     margin-right: 5%;
 
-    &--hamburger{
+    &--hamburger {
         background-color: $navBtnBGColorDefault;
         border: 0;
         border-radius: 20%;
@@ -101,20 +102,20 @@ nav {
         transition-property: background-color, box-shadow, scale;
         scale: 1;
         width: 4rem;
-    
+
         &:hover {
             background-color: $navBtnBGColorHover;
             border-radius: 20%;
             cursor: pointer;
         }
-    
+
         &:active {
             box-shadow:
                 inset -1px -1px 4px $insetShadow,
                 inset 1px 0px 4px $insetShadow,
                 #1C0B3D 0px 1px 1px;
         }
-    
+
         //Span used by Google Material Icon
         span {
             color: $linkColorDefault;
@@ -124,14 +125,14 @@ nav {
             transition-property: translate;
             translate: 0px 0px;
             width: 100%;
-    
+
             padding: {
                 bottom: 0;
                 left: 0;
                 right: 0;
                 top: 0;
             }
-    
+
             &:active {
                 translate: 0px 2.5px;
             }
@@ -320,7 +321,7 @@ nav {
 //-------------------------
 .nav-bar__drop-down__sub {
     display: block;
-    padding-bottom: 20px;
+    padding-bottom: 2dvh;
     position: relative;
 }
 
@@ -333,26 +334,24 @@ nav {
         color: $linkColorDefault;
         transition-duration: 300ms;
         transition-property: border, color;
+        font-size: clamp(1em, 2dvh, 4dvh);
 
         border: {
             style: solid;
             color: $linkColorDefault;
-            bottom-width: 1px;
-            bottom-left-radius: 0%;
+            bottom-width: 0.1dvh;
+            bottom-left-radius: 0;
         }
 
         &:hover {
+            border-bottom-left-radius: 0;
+            border-bottom-width: 0.4dvh;
+            border-color: $linkColorHover;
+            border-style: solid;
             color: $linkColorHover;
             cursor: pointer;
             transition-duration: 100ms;
-            transition-property: border, color, rotate;
-
-            border: {
-                bottom-left-radius: 0%;
-                bottom-width: 3px;
-                color: $linkColorHover;
-                style: solid;
-            }
+            transition-property: border, color;
 
             //Arrow Class
             &~span {
@@ -367,7 +366,8 @@ nav {
     //Material Icon
     span {
         color: $linkColorDefault;
-        translate: 0 8px; //Centers icon
+        translate: -0.5dvh 0.9dvh; //Centers icon
+        font-size: clamp(1em, 3dvh, 4dvh);
     }
 }
 
@@ -397,7 +397,7 @@ nav {
         margin-right: clamp(30%, 40% + 1.2em, 80%);
 
         //Move the Site Map Link Over
-        &:last-child{
+        &:last-child {
             margin-right: 0;
             margin-left: auto;
             flex-wrap: nowrap;
@@ -437,7 +437,7 @@ nav {
 //  Events: Hidden/Visible |
 //-------------------------
 
-@mixin hiddenVisible_Transition{
+@mixin hiddenVisible_Transition {
     transition: {
         duration: 300ms;
         property: right;
@@ -460,7 +460,7 @@ nav {
 //---------------------------
 $darkenDuration: 400ms;
 
-@mixin darkenEvent{
+@mixin darkenEvent {
     background-color: #000000;
     content: '';
     display: block;
@@ -516,7 +516,7 @@ $darkenDuration: 400ms;
 //--------------------------
 //  Events: Expand/Collapse |
 //--------------------------
-@mixin expandCollapse_Transition{
+@mixin expandCollapse_Transition {
     transition: {
         duration: 150ms;
         property: all;
@@ -542,7 +542,7 @@ $darkenDuration: 400ms;
 //------------------------------
 //  Events: Arrow Expand        |
 //------------------------------
-@mixin arrow_Transition{
+@mixin arrow_Transition {
     transition: {
         duration: 100ms;
         property: all;
