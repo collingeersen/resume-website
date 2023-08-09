@@ -331,17 +331,14 @@ nav {
     //Section Title
     label {
         border: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-width: 0.1dvh;
+        border-color: $linkColorDefault;
+        border-style: solid;
         color: $linkColorDefault;
+        font-size: clamp(1em, 2dvh, 4dvh);
         transition-duration: 300ms;
         transition-property: border, color;
-        font-size: clamp(1em, 2dvh, 4dvh);
-
-        border: {
-            style: solid;
-            color: $linkColorDefault;
-            bottom-width: 0.1dvh;
-            bottom-left-radius: 0;
-        }
 
         &:hover {
             border-bottom-left-radius: 0;
@@ -380,7 +377,8 @@ nav {
 
         //Page sections
         li {
-            padding-bottom: 10px;
+            padding-bottom: 1dvh;
+            font-size: clamp(1em, 1dvh + 1.2em, 2dvh);
         }
     }
 }
@@ -534,7 +532,7 @@ $darkenDuration: 400ms;
 [class$="--sub-expand"] {
     //Keep in mind that the height here controls the sub content height
     @include expandCollapse_Transition;
-    height: 140px;
+    height: max(14dvh, 8em);
     overflow: hidden;
     width: 100%;
 }
