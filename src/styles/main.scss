@@ -175,16 +175,12 @@ p {
 //  Links
 //=========================================================
 a {
-    border: {
-        style: solid;
-        color: $linkColorDefault;
-        width: 0;
-        bottom-width: 1px;
-    }
-
+    border: 0;
+    border-bottom-width: 0.1dvh;
+    border-color: $linkColorDefault;
+    border-style: solid;
     font-size: 1em;
-    //text-shadow: black 2px 2px 10px;
-    transition-duration: 200ms;
+    transition-duration: 300ms;
     transition-property: border,
     color;
 
@@ -198,17 +194,14 @@ a {
     }
 
     &:hover {
-        border: {
-            style: solid;
-            color: $linkColorHover;
-            bottom-width: 3px;
-        }
-
+        border-bottom-width: 0.4dvh;
+        border-color: $linkColorHover;
+        border-style: solid;
         color: $linkColorHover;
         cursor: pointer;
         transition-property: border,
         color;
-        transition-duration: 200ms;
+        transition-duration: 100ms;
     }
 }
 
