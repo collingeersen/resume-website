@@ -43,7 +43,6 @@ nav {
     //transition-duration: 400ms;
     //transition-property: height;
     //background-color: beige;
-    //box-shadow: inset 0px -5px 0px $navBorderColor;
 }
 
 [class$="nav-bar--mini"] {
@@ -61,22 +60,10 @@ nav {
         transition-property: all;
     }
 
-    .nav-bar__link__menu {
-        //font-size: 15;
-
-        a {
-            //visibility: hidden;
-            font-size: 16;
-            transition-property: all;
-            transition-duration: $navminiDuration;
-        }
-
-        span {
-            //visibility: visible;
-            font-size: 25;
-            transition-property: all;
-            transition-duration: $navminiDuration;
-        }
+    .nav-bar__link__menu__item {
+        font-size: max(1.75dvh, 0.75em);
+        transition-property: all;
+        transition-duration: $navminiDuration;
     }
 
     .nav-bar__drop-down {
@@ -134,7 +121,6 @@ nav {
     }
 }
 
-
 //=========================================================
 //  Nav-Bar: Divider
 //=========================================================
@@ -181,14 +167,6 @@ nav {
             font-size: 1.5em;
             line-height: -10%;
             translate: 0 3px;
-        }
-
-        //!FIX
-        //Used to center the contact icon
-        [class="nav-bar__link__item--contact"] {
-            span {
-                translate: 0 7px;
-            }
         }
     }
 }
@@ -570,7 +548,7 @@ $darkenDuration: 400ms;
 //-------------------------
 //  Media Queries: Big     |
 //-------------------------
-@mixin mediaQuery_btnHam($height, $scale){
+@mixin mediaQuery_btnHam($height, $scale) {
     @media screen and (height > $height) {
         scale: $scale;
     }
