@@ -1,6 +1,7 @@
 //=========================================================
 //  Variables
 //=========================================================
+$navHeight: max(100px, 10dvh);
 //-------------------------
 //  Colors                 |
 //-------------------------
@@ -28,7 +29,8 @@ $navminiDuration: 300ms;
 nav {
     background-color: $navBGColor;
     box-shadow: inset 0px -5px 0px $navBorderColor; //Used to create a pseudo border
-    height: 100px;
+    //height: 100px;
+    height: $navHeight;
     position: relative;
     z-index: 101;
     //transition-duration: $navminiDuration;
@@ -39,10 +41,10 @@ nav {
     align-items: center;
     display: flex;
     font-size: 1.2em;
-    height: 100px;
-    transition-duration: 400ms;
-    transition-property: height;
-    //background-color: $navBGColor;
+    height: $navHeight;
+    //transition-duration: 400ms;
+    //transition-property: height;
+    //background-color: beige;
     //box-shadow: inset 0px -5px 0px $navBorderColor;
 }
 
@@ -88,67 +90,62 @@ nav {
 //  Nav-Bar: Btn-Hamburger
 //=========================================================
 .nav-bar__btn {
-    margin-left: 12%;
-    margin-right: 5%;
+    margin-left: 20%;
+    //margin-right: 8dvh;
+}
 
-    &--hamburger {
-        background-color: $navBtnBGColorDefault;
-        border: 0;
+.nav-bar__btn--hamburger {
+    background-color: $navBtnBGColorDefault;
+    border: 0;
+    border-radius: 20%;
+    box-shadow: inset 2px 0px 4px $insetShadow,
+        inset -2px -4px 4px $insetShadow,
+        $accentColor3 0px 2px 3px;
+    transition-duration: 200ms;
+    transition-property: background-color, box-shadow, scale;
+    scale: 1;
+    width: 4rem;
+
+    &:hover {
+        background-color: $navBtnBGColorHover;
         border-radius: 20%;
-        box-shadow: inset 2px 0px 4px $insetShadow,
-            inset -2px -4px 4px $insetShadow,
-            $accentColor3 0px 2px 3px;
-        transition-duration: 200ms;
-        transition-property: background-color, box-shadow, scale;
-        scale: 1;
-        width: 4rem;
+        cursor: pointer;
+    }
 
-        &:hover {
-            background-color: $navBtnBGColorHover;
-            border-radius: 20%;
-            cursor: pointer;
-        }
+    &:active {
+        box-shadow:
+            inset -1px -1px 4px $insetShadow,
+            inset 1px 0px 4px $insetShadow,
+            #1C0B3D 0px 1px 1px;
+    }
+
+    //Span used by Google Material Icon
+    span {
+        color: $linkColorDefault;
+        font-size: 2rem;
+        line-height: 1.5;
+        transition-duration: 200ms;
+        transition-property: translate;
+        translate: 0px 0px;
+        width: 100%;
+        padding: 0;
 
         &:active {
-            box-shadow:
-                inset -1px -1px 4px $insetShadow,
-                inset 1px 0px 4px $insetShadow,
-                #1C0B3D 0px 1px 1px;
-        }
-
-        //Span used by Google Material Icon
-        span {
-            color: $linkColorDefault;
-            font-size: 2rem;
-            line-height: 1.5;
-            transition-duration: 200ms;
-            transition-property: translate;
-            translate: 0px 0px;
-            width: 100%;
-
-            padding: {
-                bottom: 0;
-                left: 0;
-                right: 0;
-                top: 0;
-            }
-
-            &:active {
-                translate: 0px 2.5px;
-            }
+            translate: 0px 2.5px;
         }
     }
 }
+
 
 //=========================================================
 //  Nav-Bar: Divider
 //=========================================================
 .nav-bar__divider {
-    //background-color: #0C0E0F;
+    background-color: #0C0E0F;
     display: block;
     height: 50px;
-    margin-left: auto;
-    margin-right: auto;
+    //margin-left: auto;
+    margin-right: 8%;
     width: 10px;
 }
 
@@ -162,6 +159,10 @@ nav {
     position: relative;
     user-select: none;
     white-space: nowrap; //Prevents last item from wrapping
+    //height: min(100px, 10dvh);
+    //top:clamp(3dvh, 1em, 10dvh);
+    //bottom: 0;
+    //background-color: #0C0E0F;
 
     li {
         display: inline;
@@ -171,7 +172,9 @@ nav {
         position: relative;
 
         a {
-            font-size: 20;
+            //font-size: clamp(2dvh + 0.1em, 1em, 2.5dvh);
+            font-size: max(2dvh, 1em);
+            //padding-top: max(2dvh, 1em);
         }
 
         //Span used by Google Material Icons
@@ -182,6 +185,7 @@ nav {
             translate: 0 3px;
         }
 
+        //!FIX
         //Used to center the contact icon
         [class="nav-bar__link__item--contact"] {
             span {
@@ -203,7 +207,7 @@ nav {
     padding: min(2em, 3dvh);
     position: fixed;
     scrollbar-width: thin;
-    top: 100px;
+    top: $navHeight;
     transition-duration: 400ms;
     transition-property: opacity;
     user-select: none;
@@ -331,7 +335,7 @@ nav {
     //Section Title
     label {
         border: 0;
-        border-bottom-left-radius: 0;
+        //border-bottom-left-radius: 0;
         border-bottom-width: 0.1dvh;
         border-color: $linkColorDefault;
         border-style: solid;
@@ -341,7 +345,7 @@ nav {
         transition-property: border, color;
 
         &:hover {
-            border-bottom-left-radius: 0;
+            //border-bottom-left-radius: 0;
             border-bottom-width: 0.4dvh;
             border-color: $linkColorHover;
             border-style: solid;
@@ -387,7 +391,7 @@ nav {
 //  Dropdown Menu: Footer  |
 //-------------------------
 .nav-bar__drop-down__footer {
-    
+
     //About Section Link
     a {
         display: inline-flex;
@@ -562,14 +566,57 @@ $darkenDuration: 400ms;
     rotate: (180deg);
 }
 
+//=========================================================
+//  Nav-Bar: Media Queries
+//=========================================================
 //-------------------------
-//  Events: Grey-out       |
+//  Media Queries: Big     |
 //-------------------------
-//Expand/Collapse Grey-out
-.--active {
-    //filter:grayscale(0);
+@mixin mediaQuery_btnHam($height, $scale){
+    @media screen and (height > $height) {
+        scale: $scale;
+    }
 }
 
-.--nonactive {
-    //filter:grayscale(100%);
+.nav-bar__btn--hamburger {
+    @include mediaQuery_btnHam(1000px, 1.2);
+    @include mediaQuery_btnHam(1200px, 1.4);
+    @include mediaQuery_btnHam(1400px, 1.6);
+    @include mediaQuery_btnHam(1500px, 1.8);
+    @include mediaQuery_btnHam(1600px, 2);
+    @include mediaQuery_btnHam(1800px, 2.2);
+    @include mediaQuery_btnHam(2000px, 2.4);
+}
+
+//-------------------------
+//  Media Queries: Small   |
+//-------------------------
+@media screen and (height < 550px),
+(width < 1000px) {
+    main {
+        overflow: hidden;
+    }
+
+    .nav-bar__btn--hamburger {
+        scale: 0.8;
+    }
+
+    .nav-bar__link__menu {
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: -10px;
+        margin-left: -50px;
+
+        li {
+            padding: 0;
+        }
+    }
+
+    .nav-bar__link__menu__item {
+        visibility: collapse;
+
+        span {
+            visibility: visible;
+        }
+    }
 }
