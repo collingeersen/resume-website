@@ -2,6 +2,7 @@
 //  Variables
 //=========================================================
 $navHeight: max(100px, 10dvh);
+$navMiniHeight: max(60px, 6dvh);
 //-------------------------
 //  Colors                 |
 //-------------------------
@@ -48,8 +49,8 @@ nav {
 [class$="nav-bar--mini"] {
     .nav-bar {
         background-color: $navminiBGColor;
-        box-shadow: inset 0px -5px 0px $navBorderColor;
-        height: 60px;
+        box-shadow: inset 0px -0.5dvh 0px $navBorderColor;
+        height: $navMiniHeight;
         position: fixed;
         width: 100%;
     }
@@ -79,7 +80,7 @@ nav {
     }
 
     .nav-bar__drop-down {
-        top: 60px;
+        top: $navMiniHeight;
     }
 }
 
@@ -468,9 +469,9 @@ $darkenDuration: 400ms;
     display: block;
     height: 100%;
     position: fixed;
-    transform: translateY(-100px); //Shifts the overlay up to accommodate for mini nav bar size change
     transition-duration: $darkenDuration;
     transition-property: opacity;
+    scale: 2; //Used to extend beneath and beyond nav-bar
     width: 100%;
     z-index: 100;
 }
