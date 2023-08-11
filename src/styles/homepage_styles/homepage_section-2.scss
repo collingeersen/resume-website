@@ -121,8 +121,6 @@ $containerBoxBGColor_2: brown;
     }
 }
 
-
-
 .section-2__container__box--transition {
     animation-duration: 500ms;
     animation-fill-mode: forwards;
@@ -150,6 +148,12 @@ $containerBoxBGColor_2: brown;
 //  Section 2: Card        |
 //-------------------------
 $section2Card_TransitionDelay: 0ms;
+.section-2__container__box{
+    a:focus{
+        outline: auto;
+        outline-offset: 3dvh;
+    }
+}
 
 .section-2__container__box__card {
     align-self: center;

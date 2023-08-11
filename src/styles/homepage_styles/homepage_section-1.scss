@@ -135,6 +135,10 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
         transition-property: scale;
     }
 
+    &:focus{
+        outline: auto;
+    }
+
     &:hover {
         box-shadow: $githubBorderColor clamp(0.5dvh, 1.2dvh, 1.4dvh) clamp(0.5dvh, 1.2dvh, 1.4dvh);
         cursor: pointer;
