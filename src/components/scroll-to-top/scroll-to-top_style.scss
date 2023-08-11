@@ -1,42 +1,48 @@
 //=========================================================
 //  Scroll to Top
 //=========================================================
+@mixin scroll-to-top_Transition{
+    transition-duration: 200ms;
+    transition-timing-function: linear;
+}
+
 .scroll-to-top {
-    bottom: 120px;
+    bottom: 12dvh;
     position: fixed;
     right: 4%;
 
     button {
+        @include scroll-to-top_Transition;
         background-color: $scrollBtnBGColor;
         border: 0;
         border-color: $scrollBtnFontColor;
-        border-radius: 40px;
+        border-radius: 20dvh;
         border-style: solid;
-        border-width: 3px;
+        border-width: min(1em, 0.5dvh);
         color: $scrollBtnFontColor;
-        padding: 15px;
-        transition-duration: 300ms;
+        padding: 1.5dvh;
+
 
         &:hover {
+            @include scroll-to-top_Transition;
             cursor: pointer;
-            scale: 1.1;
-            transition-duration: 300ms;
-            transition-property: all;
+            scale: 1.2;
+            transition-property: scale;
 
             span {
-                transition-duration: 300ms;
-                transition-property: all;
-                translate: 0 -5px;
+                @include scroll-to-top_Transition;
+                transition-property: translate;
+                translate: 0 -0.2em;
             }
         }
     }
 
     span {
+        @include scroll-to-top_Transition;
         display: block;
-        font-size: 40;
-        text-shadow: #000000 0px 3px;
-        transition-duration: 300ms;
-        transition-property: all;
+        font-size: min(5dvh, 15em);
+        text-shadow: #000000 0 0.1em;
+        transition-property: text-shadow, translate;
     }
 }
 
@@ -44,16 +50,16 @@
 //  Scroll Events          |
 //-------------------------
 .scroll-to-top--hidden {
+    @include scroll-to-top_Transition;
     opacity: 0;
-    transition-duration: 300ms;
-    transition-property: all;
+    transition-property: opacity;
     visibility: hidden;
 
 }
 
 .scroll-to-top--visible {
+    @include scroll-to-top_Transition;
     opacity: 1;
-    transition-duration: 300ms;
-    transition-property: all;
+    transition-property: opacity;
     visibility: visible;
 }
