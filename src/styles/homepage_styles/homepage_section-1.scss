@@ -177,6 +177,7 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
     padding-top: 4dvh;
     margin-right: auto;
     margin-left: auto;
+    //background-color: rgba($color: #1B304F, $alpha: 0.4);
 
     //Container that wraps the divs
     >div {
@@ -200,7 +201,7 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
     animation-duration: 800ms;
     animation-fill-mode: forwards;
     animation-name: intro__summary__greeting__heading-animation;
-    background-color: $boxBackgroundColor;
+    //background-color: $boxBackgroundColor;
     font-size: clamp(1dvh, 10dvh, 15dvh);
     margin: 0;
     padding: 0.1em;
@@ -227,36 +228,36 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
 //  Greeting Animation     |
 //-------------------------
 .intro__summary__greeting--hello {
-    border-top-left-radius: $borderRadius;
+    //border-top-left-radius: $borderRadius;
     h2 {
         animation-delay: $introGreetingDelay;
     }
 }
 
 .intro__summary__greeting--im {
-    border-top-right-radius: $borderRadius;
-    border-bottom-right-radius: $borderRadius;
+    //border-top-right-radius: $borderRadius;
+    //border-bottom-right-radius: $borderRadius;
     h2 {
         animation-delay: $introGreetingDelay+200ms;
     }
 }
 
 .intro__summary__greeting--collin {
-    border-bottom-left-radius: $borderRadius;
-    border-bottom-right-radius: $borderRadius;
+    //border-bottom-left-radius: $borderRadius;
+    //border-bottom-right-radius: $borderRadius;
     h2 {
         animation-delay: $introGreetingDelay+400ms;
     }
 }
 
 .intro__summary__greeting--avatar{
-    animation-delay: $introGreetingDelay+400ms;
-    animation-duration: 1000ms;
+    animation-delay: $introGreetingDelay+1000ms;
+    animation-duration: 800ms;
     animation-fill-mode: forwards;
     animation-name: intro__summary__greeting--avatar-animation;
     background-color: #9CF757;
     border-radius: $borderRadius;
-    border-top-left-radius: 0;
+    //border-top-left-radius: 0;
     opacity: 0;
     translate: 0 100px;
 
