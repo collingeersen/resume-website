@@ -54,13 +54,10 @@
     @include scroll-to-top_Transition;
     opacity: 0;
     transition-property: opacity;
-    visibility: hidden;
-
 }
 
 .scroll-to-top--visible {
     @include scroll-to-top_Transition;
     opacity: 1;
     transition-property: opacity;
-    visibility: visible;
 }
