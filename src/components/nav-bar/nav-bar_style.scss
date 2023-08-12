@@ -40,9 +40,6 @@ nav {
     display: flex;
     font-size: 1.2em;
     height: $navHeight;
-    //transition-duration: 400ms;
-    //transition-property: height;
-    //background-color: beige;
 }
 
 [class$="nav-bar--mini"] {
@@ -76,7 +73,7 @@ nav {
 //=========================================================
 .nav-bar__btn {
     margin-left: 20%;
-    //margin-right: 8dvh;
+    margin-right: 5%;
 }
 
 .nav-bar__btn--hamburger {
@@ -125,11 +122,10 @@ nav {
 //  Nav-Bar: Divider
 //=========================================================
 .nav-bar__divider {
-    background-color: #0C0E0F;
+    //background-color: #0C0E0F;
     display: block;
     height: 50px;
-    //margin-left: auto;
-    margin-right: 8%;
+    //margin-right: 3%;
     width: 10px;
 }
 
@@ -143,21 +139,22 @@ nav {
     position: relative;
     user-select: none;
     white-space: nowrap; //Prevents last item from wrapping
-    //height: min(100px, 10dvh);
-    //top:clamp(3dvh, 1em, 10dvh);
-    //bottom: 0;
-    //background-color: #0C0E0F;
+    margin-right: auto;
+    margin-left: auto;
 
     li {
         display: inline;
         list-style: none;
         padding-bottom: 10px;
-        padding-right: 5em;
         position: relative;
+
+        &:not(:nth-child(3)){
+            padding-right: min(5em, 5dvh);
+        }
 
         a {
             //font-size: clamp(2dvh + 0.1em, 1em, 2.5dvh);
-            font-size: max(2dvh, 1em);
+            font-size: max(2dvh, 0.75em);
             //padding-top: max(2dvh, 1em);
 
             //Add default focus functionality back
@@ -174,6 +171,16 @@ nav {
             line-height: -10%;
             translate: 0 3px;
         }
+    }
+}
+
+.accent--line{
+    margin-left: auto;
+    margin-right: 15%;
+
+    svg{
+        width: max(3em, 12dvh);
+        height: max(3em, 3dvh);
     }
 }
 
@@ -584,13 +591,18 @@ $darkenDuration: 400ms;
     }
 
     .nav-bar__link__menu {
-        display: grid;
-        grid-template-columns: auto auto;
+        //display: grid;
+        //grid-template-columns: auto auto auto;
         column-gap: -10px;
         margin-left: -50px;
 
         li {
             padding: 0;
+
+            &:last-child{
+                padding-bottom: 10px;
+            }
+            
         }
     }
 
