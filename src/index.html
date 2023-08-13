@@ -9,13 +9,11 @@
     <meta name="description" content="Will add later">
     <!--Favicon-->
     <!--Canonical link-->
-    <!--CSS critical-->
     <link rel="stylesheet" href="../src/styles/main.scss">
     <link rel="stylesheet" href="../src/styles/homepage_styles/homepage_main.scss">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
     <script src="../src/scripts/index.ts" defer></script>
     <script src="../src/scripts/homepage.ts" defer></script>
-    <!--Include error pages-->
     <!--W3C tests-->
 </head>
 
@@ -54,13 +52,15 @@
                     </button>
                 </div>
 
+                <!--Used to space the menu links out better-->
                 <span role="presentation" class="nav-bar__divider"></span>
 
                 <!--Main links for site-->
                 <div class="nav-bar__link" role="group">
                     <menu class="nav-bar__link__menu">
                         <li role="group">
-                            <a role="menuitem" class="nav-bar__link__menu__item" href="../src/index.html" tabindex="9" title="Home Page Link">
+                            <a role="menuitem" class="nav-bar__link__menu__item" href="../src/index.html" tabindex="9"
+                                title="Home Page Link">
                                 <span class="material-symbols-rounded">
                                     home
                                 </span>
@@ -68,7 +68,8 @@
                             </a>
                         </li>
                         <li role="group">
-                            <a role="menuitem" class="nav-bar__link__menu__item" href="../src/index.html" tabindex="9" title="Contact Page Link">
+                            <a role="menuitem" class="nav-bar__link__menu__item" href="../src/index.html" tabindex="9"
+                                title="Contact Page Link">
                                 <span class="material-symbols-rounded">
                                     link
                                 </span>
@@ -76,7 +77,8 @@
                             </a>
                         </li>
                         <li role="group">
-                            <a role="menuitem" class="nav-bar__link__menu__item" href="../src/index.html" tabindex="9" title="Resume Page Link">
+                            <a role="menuitem" class="nav-bar__link__menu__item" href="../src/index.html" tabindex="9"
+                                title="Resume Page Link">
                                 <span class="material-symbols-rounded">
                                     description
                                 </span>
@@ -86,66 +88,69 @@
                     </menu>
                 </div>
 
+                <!--Used to space the menu links out better-->
                 <span role="presentation" class="nav-bar__divider"></span>
 
                 <div role="presentation" class="accent--line">
-                    <svg width="100" height="24" viewBox="0 0 100 24" fill="none" xmlns="http://www.w3.org/2000/svg" alt="">
+                    <svg width="100" height="24" viewBox="0 0 100 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        alt="">
                         <g id="accent">
-                            <path id="top" d="M96 -8.74228e-08C98.2091 -3.91405e-08 100 1.79086 100 4L100 8L4 8C1.79086 8 -1.35705e-07 6.20914 -8.74228e-08 4V4C-3.91405e-08 1.79086 1.79086 -2.14643e-06 4 -2.09815e-06L96 -8.74228e-08Z" fill="#F47D7D"/>
-                            <path id="middle" d="M100 8L100 16L54 16C51.7909 16 50 14.2091 50 12V12C50 9.79086 51.7909 8 54 8L100 8Z" fill="#7793DB"/>
-                            <path id="bottom" d="M100 16L100 20C100 22.2091 98.2091 24 96 24L79 24C76.7909 24 75 22.2091 75 20V20C75 17.7909 76.7909 16 79 16L100 16Z" fill="#2EC2CB"/>
+                            <path id="top"
+                                d="M96 -8.74228e-08C98.2091 -3.91405e-08 100 1.79086 100 4L100 8L4 8C1.79086 8 -1.35705e-07 6.20914 -8.74228e-08 4V4C-3.91405e-08 1.79086 1.79086 -2.14643e-06 4 -2.09815e-06L96 -8.74228e-08Z"
+                                fill="#F47D7D" />
+                            <path id="middle"
+                                d="M100 8L100 16L54 16C51.7909 16 50 14.2091 50 12V12C50 9.79086 51.7909 8 54 8L100 8Z"
+                                fill="#7793DB" />
+                            <path id="bottom"
+                                d="M100 16L100 20C100 22.2091 98.2091 24 96 24L79 24C76.7909 24 75 22.2091 75 20V20C75 17.7909 76.7909 16 79 16L100 16Z"
+                                fill="#2EC2CB" />
                         </g>
                     </svg>
                 </div>
 
-                
-
-                <!--Drop-down to represent site map-->
+                <!--Drop-down menu-->
                 <div role="menu" class="nav-bar__drop-down --hidden">
 
                     <div class="nav-bar__drop-down__header">
                         <span class="nav-bar__drop-down__header__toggle">
-                            <span class="nav-bar__drop-down__header__toggle--expand --active">
+                            <!--Drop-down Expand Button-->
+                            <span class="nav-bar__drop-down__header__toggle--expand">
                                 <label>
                                     Expand
                                     <span class="material-symbols-rounded">
                                         expand
                                     </span>
                                 </label>
-
                             </span>
-                            <span class="nav-bar__drop-down__header__toggle--collapse --nonactive">
+                            <!--Drop-down Collapse Button-->
+                            <span class="nav-bar__drop-down__header__toggle--collapse">
                                 <label>
                                     Collapse
                                     <span class="material-symbols-rounded">
                                         compress
                                     </span>
                                 </label>
-
                             </span>
                         </span>
-
                         <!--Drop-down Exit Button-->
                         <button class="nav-bar__drop-down__btn--exit" type="button">
-                            <!--Material Design by Google for Exit Symbol-->
                             <span class="material-symbols-rounded">
                                 close
                             </span>
                         </button>
                     </div>
 
-                    <!--Drop-down Group-->
+                    <!--Drop-down Groups-->
                     <div role="group">
+
                         <!--Drop-down Sub-1-->
                         <div class="nav-bar__drop-down__sub" role="group">
-
                             <span class="nav-bar__drop-down__sub__span">
                                 <label class="--toggle-display">Homepage Quick Links</label>
                                 <span class="material-symbols-rounded --0--expand-more">
                                     expand_more
                                 </span>
                             </span>
-
                             <div class="nav-bar__drop-down__sub__content --0--sub-collapse" role="group">
                                 <ol role="menu">
                                     <li role="presentation">
@@ -174,14 +179,12 @@
 
                         <!--Drop-down Sub-2-->
                         <div class="nav-bar__drop-down__sub" role="group">
-
                             <span class="nav-bar__drop-down__sub__span">
                                 <label class="--toggle-display">Projects</label>
                                 <span class="material-symbols-rounded --1--expand-more">
                                     expand_more
                                 </span>
                             </span>
-
                             <div class="nav-bar__drop-down__sub__content --1--sub-collapse" role="group">
                                 <ol role="menu">
                                     <li role="presentation">
@@ -210,14 +213,12 @@
 
                         <!--Drop-down Sub-3-->
                         <div class="nav-bar__drop-down__sub" role="group">
-
                             <span class="nav-bar__drop-down__sub__span">
                                 <label class="--toggle-display">About Me</label>
                                 <span class="material-symbols-rounded --2--expand-more">
                                     expand_more
                                 </span>
                             </span>
-
                             <div class="nav-bar__drop-down__sub__content --2--sub-collapse" role="group">
                                 <ol role="menu">
                                     <li role="presentation">
@@ -242,6 +243,7 @@
                         <div class="nav-bar__drop-down__footer">
                             <!--Div used to create spacing between sub sections and footer-->
                             <div role="presentation"></div>
+                            <!--Used to create dividing bar-->
                             <span role="presentation"></span>
                             <a href="about.html" title="About/Licenses Page Link">
                                 <span class="material-symbols-rounded">
@@ -252,17 +254,17 @@
                             <a href="site-map.html" title="Site Map Page Link">
                                 <span class="material-symbols-rounded">
                                     help
-                                </span> 
+                                </span>
                                 Site Map
                             </a>
                         </div>
+
                         <div class="accent">
                             <div class="accent-1"></div>
                             <div class="accent-2"></div>
                             <div class="accent-3"></div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </nav>
@@ -271,20 +273,18 @@
 
             <!--Introduction Section-->
             <div class="intro" role="group">
-                <!--Add triangle behind and have collin image on the opposite side-->
 
                 <div class="intro__header" role="group">
                     <!--Title for page-->
                     <h1 class="intro__header__title">Homepage</h1>
-                    <a class="intro__header__github-link disable__link-style" href="../src/index.html" tabindex="9" title="Github Source Link">
+                    <a class="intro__header__github-link disable__link-style" href="../src/index.html" tabindex="9"
+                        title="Github Source Link">
                         <img src="../src/images/github-mark.svg" alt="Github Logo">
                         <h3>Github Source</h3>
                     </a>
                 </div>
 
                 <div class="intro__summary" role="group">
-
-
 
                     <div class="intro__summary__greeting">
                         <div>
@@ -301,29 +301,30 @@
                                 <svg></svg>
                             </div>
                         </div>
-
                     </div>
-
-                    <!--<div role="presentation" class="intro__summary__divider"></div>-->
 
                     <div class="intro__summary__content">
                         <h2 class="intro__summary__content__heading">Introduction Title</h2>
-                        <p class="intro__summary__content__text">Short paragraph introducing myself. Sea eirmod no
+                        <p class="intro__summary__content__text">
+                            Short paragraph introducing myself. Sea eirmod no
                             feugiat quis tation vel lorem clitaullamcorper
                             gubergren vero dolor. Diam sit sanctus justo volutpat amet rebum nonummy in kasd ullamcorper
                             clita facilisis. Sea eirmod no feugiat quis tation vel lorem clita ullamcorper
                             gubergren vero dolor. Diam sit sanctus justo volutpat amet rebum nonummy in kasd ullamcorper
                             clita facilisis.
                         </p>
-
                     </div>
 
                     <div class="intro__summary__note">
                         <div>
                             <div class="intro__summary__note__text">
-                                <p>Made entirely from the ground up <b>without templates or
-                                        frameworks</b>...<br><span>...but most importantly made with love
-                                        &#10084.</span></p>
+                                <p>Made entirely from the ground up <b>without templates or frameworks</b>...
+                                    <br>
+                                    <span>
+                                        ...but most importantly made with love
+                                        &#10084.
+                                    </span>
+                                </p>
                             </div>
                             <div class="intro__summary__note__title">
                                 <h3>Note</h3>
@@ -334,6 +335,8 @@
                 </div>
             </div>
 
+            <!--Separator between intro and section-2-->
+            <!--Separator: Top-->
             <div role="presentation" class="separator__container">
                 <div role="presentation" class="separator__container__side--1"></div>
                 <div role="presentation" class="separator"></div>
@@ -342,7 +345,7 @@
                 <div role="presentation" class="separator__container__notch__divider"></div>
                 <div role="presentation" class="separator__container__notch--2"></div>
             </div>
-
+            <!--Separator: Bottom-->
             <div role="presentation" class="separator__notch__spacer"></div>
             <div role="presentation" class="separator__footer">
                 <div role="presentation" class="separator__footer--1"></div>
@@ -350,23 +353,20 @@
                 <div role="presentation" class="separator__footer--2"></div>
             </div>
 
-
-
-            <!-- <div class="banner">
-                <img class="banner__img--thin" src="../src/images/blank.svg" alt="">
-            </div> -->
-
+            <!--Section-2-->
             <div class="section-2">
-
                 <div class="section-2__container">
+
                     <div class="section-2__container__intro">
                         <h2>Main Pages(WIP)</h2>
                         <p>Description of the cards. Diam sit sanctus justo
                             volutpat amet
-                            rebum nonummy in kasd ullamcorper</p>
+                            rebum nonummy in kasd ullamcorper
+                        </p>
                     </div>
 
                     <div>
+                        <!--Section-2 Content: Education-->
                         <div class="section-2__container__box">
                             <h2>TEST</h2>
                             <div class="section-2__container__box__paragraph">
@@ -377,12 +377,13 @@
                                     clita facilisis. Sea eirmod no feugiat quis tation vel lorem clita ullamcorper
                                     gubergren vero dolor. Diam sit sanctus justo volutpat amet rebum nonummy in kasd
                                     ullamcorper
-                                    clita facilisis.</p>
+                                    clita facilisis.
+                                </p>
                             </div>
-
-                            <a class="disable__link-style" href="../src/index.html" target="_blank" rel="noreferrer, noopener" tabindex="9" title="Education Page Link">
+                            <!--Section-2 Content: Card 1-->
+                            <a class="disable__link-style" href="../src/index.html" target="_blank"
+                                rel="noreferrer, noopener" tabindex="9" title="Education Page Link">
                                 <div class="section-2__container__box__card">
-
                                     <div class="section-2__container__box__card--header">
                                         <h3>Education</h3>
                                         <span role="presentation">
@@ -400,12 +401,10 @@
                                             </span>
                                         </p>
                                     </div>
-
                                 </div>
                             </a>
-
                         </div>
-
+                        <!--Section-2 Content: Skills-->
                         <div class="section-2__container__box">
                             <h2>TEST</h2>
                             <div class="section-2__container__box__paragraph">
@@ -416,11 +415,13 @@
                                     clita facilisis. Sea eirmod no feugiat quis tation vel lorem clita ullamcorper
                                     gubergren vero dolor. Diam sit sanctus justo volutpat amet rebum nonummy in kasd
                                     ullamcorper
-                                    clita facilisis.</p>
+                                    clita facilisis.
+                                </p>
                             </div>
-                            <a class="disable__link-style" href="../src/index.html" target="_blank" rel="noreferrer, noopener" tabindex="9" title="Skills Page Link">
+                            <!--Section-2 Content: Card 2-->
+                            <a class="disable__link-style" href="../src/index.html" target="_blank"
+                                rel="noreferrer, noopener" tabindex="9" title="Skills Page Link">
                                 <div class="section-2__container__box__card">
-
                                     <div class="section-2__container__box__card--header">
                                         <h3>Skills</h3>
                                         <span role="presentation">
@@ -438,12 +439,10 @@
                                             </span>
                                         </p>
                                     </div>
-
                                 </div>
                             </a>
-
                         </div>
-
+                        <!--Section-2 Content: Projects-->
                         <div class="section-2__container__box">
                             <h2>TEST</h2>
                             <div class="section-2__container__box__paragraph">
@@ -454,9 +453,12 @@
                                     clita facilisis. Sea eirmod no feugiat quis tation vel lorem clita ullamcorper
                                     gubergren vero dolor. Diam sit sanctus justo volutpat amet rebum nonummy in kasd
                                     ullamcorper
-                                    clita facilisis.</p>
+                                    clita facilisis.
+                                </p>
                             </div>
-                            <a class="disable__link-style" href="../src/index.html" target="_blank" rel="noreferrer, noopener" tabindex="9" title="Projects Page Link">
+                            <!--Section-2 Content: Card 3-->
+                            <a class="disable__link-style" href="../src/index.html" target="_blank"
+                                rel="noreferrer, noopener" tabindex="9" title="Projects Page Link">
                                 <div class="section-2__container__box__card">
 
                                     <div class="section-2__container__box__card--header">
@@ -476,25 +478,24 @@
                                             </span>
                                         </p>
                                     </div>
-
                                 </div>
                             </a>
-
                         </div>
                     </div>
                 </div>
-
             </div>
 
             <div role="presentation" class="divider--thin"></div>
 
+            <!--Section-3-->
             <div class="section-3">
                 <div class="section-3__container">
+                    <!--Section-3 Header-->
                     <h2 class="section-3__container__title">Projects</h2>
                     <p class="section-3__container__description">Just quick links to my projects from the homepage.</p>
 
                     <div class="section-3__container__box">
-
+                        <!--Section-3 Card-1-->
                         <div class="section-3__container__box__card">
                             <div class="section-3__container__box__card--header">
                                 <h3>this.website</h3>
@@ -507,7 +508,7 @@
                             </div>
                             <a class="disable__link-style" href="../src/index.html" tabindex="9">(Page Link)</a>
                         </div>
-
+                        <!--Section-3 Card-2-->
                         <div class="section-3__container__box__card">
                             <div class="section-3__container__box__card--header">
                                 <h3>CSS Snippets</h3>
@@ -520,7 +521,7 @@
                             </div>
                             <a class="disable__link-style" href="../src/index.html" tabindex="9">(Page Link)</a>
                         </div>
-
+                        <!--Section-3 Card-3-->
                         <div class="section-3__container__box__card">
                             <div class="section-3__container__box__card--header">
                                 <h3>React Website (WIP)</h3>
@@ -533,7 +534,7 @@
                             </div>
                             <a class="disable__link-style" href="../src/index.html" tabindex="9">(Page Link)</a>
                         </div>
-
+                        <!--Section-3 Card-4-->
                         <div class="section-3__container__box__card">
                             <div class="section-3__container__box__card--header">
                                 <h3>More to Come :)</h3>
@@ -546,7 +547,6 @@
                             </div>
                             <a class="disable__link-style" href="../src/index.html" tabindex="9">(Page Link)</a>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -559,7 +559,8 @@
         <div role="presentation" class="footer__divider--top"></div>
         <div class="footer__flex">
             <div class="footer__col --footer-col-1">
-                <span><a href="../src/about.html" tabindex="10" title="About / Licenses Page Link">About / Licenses</a></span>
+                <span><a href="../src/about.html" tabindex="10" title="About / Licenses Page Link">About /
+                        Licenses</a></span>
                 <span><a href="../src/site-map.html" tabindex="10" title="Site Map Page Link">Site Map</a></span>
             </div>
             <div role="presentation" class="footer__divider--side"></div>
@@ -570,7 +571,6 @@
             <div class="footer__col --footer-col-3">
                 <p>&#169 2023</p>
                 <p>Designed and Built by Collin Geersen</p>
-
             </div>
         </div>
     </div>
