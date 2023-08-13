@@ -182,6 +182,18 @@ nav {
         width: max(3em, 12dvh);
         height: max(3em, 3dvh);
     }
+
+    #top{
+        fill: red;
+    }
+
+    #middle{
+        fill: black;
+    }
+
+    #bottom{
+        fill: blue;
+    }
 }
 
 //=========================================================
@@ -613,4 +625,28 @@ $darkenDuration: 400ms;
             visibility: visible;
         }
     }
+}
+
+.accent{
+    display: block;
+    //background-color: #5f606e;
+    width: 100%;
+    //height: 100px;
+    margin-top: 50px;
+}
+
+.accent-1{
+    background-color: #0C0E0F;
+    width: 100%;
+    height: 10px;
+}
+.accent-2{
+    background-color: rgb(22, 21, 21);
+    width: 50%;
+    height: 10px;
+}
+.accent-3{
+    background-color: rgb(40, 39, 39);
+    width: 25%;
+    height: 10px;
 }
