@@ -1,6 +1,12 @@
 //=========================================================
 //  Scroll to Top
 //=========================================================
+//Colors
+$scrollBackgroundColor: #161B38;
+$scrollArrowColor: #6CAB3C;
+$scrollArrowShadowColor:#000000;
+$scrollBorderColor: #6CAB3C;
+
 @mixin scroll-to-top_Transition{
     transition-duration: 200ms;
     transition-timing-function: linear;
@@ -14,13 +20,13 @@
 
     button {
         @include scroll-to-top_Transition;
-        background-color: $scrollBtnBGColor;
+        background-color: $scrollBackgroundColor;
         border: 0;
-        border-color: $scrollBtnFontColor;
+        border-color: $scrollBorderColor;
         border-radius: 20dvh;
         border-style: solid;
         border-width: min(1em, 0.5dvh);
-        color: $scrollBtnFontColor;
+        color: $scrollArrowColor;
         padding: 1.5dvh;
 
 
@@ -42,7 +48,7 @@
         @include scroll-to-top_Transition;
         display: block;
         font-size: min(5dvh, 15em);
-        text-shadow: #000000 0 0.1em;
+        text-shadow: $scrollArrowShadowColor 0 0.1em;
         transition-property: text-shadow, translate;
     }
 }
