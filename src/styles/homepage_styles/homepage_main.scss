@@ -1,9 +1,3 @@
-//Content Colors
-$contentBGColor: #161B38;
-$contentBorderColor: #0C0E0F;
-$contentFrameColor: #1B304F;
-$sectionDividerColor: #0C0E0F;
-
 //=========================================================
 //  First Section Classes
 //=========================================================
@@ -22,12 +16,13 @@ $sectionDividerColor: #0C0E0F;
 //=========================================================
 //  Divider Classes
 //=========================================================
+$dividerBackgroundColor: #0C0E0F;
+
 .divider--thin {
-    background-color: $sectionDividerColor;
+    background-color: $dividerBackgroundColor;
     height: 0.3dvh;
     margin-bottom: 5dvh;
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline: auto;
     margin-top: 5dvh;
     width: 80%;
 }
