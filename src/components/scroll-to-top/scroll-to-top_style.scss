@@ -56,14 +56,43 @@ $scrollBorderColor: #6CAB3C;
 //-------------------------
 //  Scroll Events          |
 //-------------------------
+@mixin scroll-to-top_Animation{
+    animation-fill-mode: forwards;
+    animation-duration: 0ms;
+    animation-timing-function: linear;
+}
+
 .scroll-to-top--hidden {
     @include scroll-to-top_Transition;
+    @include scroll-to-top_Animation;
+    animation-delay: 200ms;
+    animation-name: scroll-to-top--hidden__animation;
     opacity: 0;
     transition-property: opacity;
+
+    @keyframes scroll-to-top--hidden__animation {
+        from{
+            visibility: visible;
+        }
+        to{
+            visibility: hidden;
+        }
+    }
 }
 
 .scroll-to-top--visible {
     @include scroll-to-top_Transition;
+    @include scroll-to-top_Animation;
+    animation-name: scroll-to-top--visible__animation;
     opacity: 1;
     transition-property: opacity;
+
+    @keyframes scroll-to-top--visible__animation {
+        from{
+            visibility: hidden;
+        }
+        to{
+            visibility: visible;
+        }
+    }
 }
