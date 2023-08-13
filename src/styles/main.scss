@@ -236,4 +236,13 @@ a {
 //=========================================================
 //  Footer Classes
 //=========================================================
-@import '../components/footer/footer_style.scss'
+@import '../components/footer/footer_style.scss';
+
+//=========================================================
+//  Nav-Bar: Media Queries
+//=========================================================
+@media screen and (width < 970px){
+    main{
+        width: 100%;
+    }
+}
