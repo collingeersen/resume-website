@@ -1,29 +1,19 @@
 //=========================================================
-//  Variables
+//  Homepage- Separator
 //=========================================================
 //-------------------------
-//  Heights                |
+//  Variables              |
 //-------------------------
+//Heights/Widths
 $separatorHeight: 4dvh;
 $separatorNotchHeight: 10dvh;
-//-------------------------
-//  Colors                 |
-//-------------------------
-$accentColor1: #0E3D69;
-$accentColor2: #075C61;
-$accentColor3: #1C0B3D;
-$accentColor4: #1E181F;
+//Colors
+$backgroundColor: #2b3463;
 $backgroundColor2: #181D1F;
-$fontColor1: #e1e0e0;
-$fontColor2: #40DB8D;
-
-//Content Colors
-$contentBGColor: #161B38;
-$contentBorderColor: #0C0E0F;
-$contentFrameColor: #1B304F;
+$borderColor: #0c1020;
 
 .separator__container {
-    background-color: $contentBGColor;
+    background-color: $backgroundColor;
     border-radius: 3dvh;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
@@ -38,7 +28,7 @@ $contentFrameColor: #1B304F;
 //-------------------------
 @mixin separatorSides {
     height: $separatorHeight;
-    background-color: $contentBorderColor;
+    background-color: $borderColor;
     width: 100%;
 }
 
@@ -58,7 +48,7 @@ $contentFrameColor: #1B304F;
 //  Separators: Separator  |
 //-------------------------
 .separator {
-    background-color: $contentBGColor;
+    background-color: $backgroundColor;
     height: 10dvh;
     margin-left: auto;
     margin-right: auto;
@@ -91,7 +81,7 @@ $contentFrameColor: #1B304F;
 }
 
 .separator__notch__spacer {
-    background-color: $contentBorderColor;
+    background-color: $borderColor;
     height: $separatorNotchHeight;
     margin-left: auto;
     margin-right: auto;
@@ -102,13 +92,13 @@ $contentFrameColor: #1B304F;
 //  Separators: Footer     |
 //-------------------------
 @mixin separatorFooter{
-    background-color: $contentBorderColor;
+    background-color: $borderColor;
     height: $separatorHeight;
     width: 143dvh;
 }
 
 .separator__footer {
-    background-color: $contentBGColor;
+    background-color: $backgroundColor;
     border-radius: 3dvh;
     display: flex;
     height: $separatorNotchHeight;

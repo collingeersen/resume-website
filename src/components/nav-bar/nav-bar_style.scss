@@ -1,13 +1,16 @@
 //=========================================================
-//  Variables
+//  Nav-Bar
 //=========================================================
+//-------------------------
+//  Variables              |
+//-------------------------
+//Height/Width
 $navHeight: max(100px, 10dvh);
 $navMiniHeight: max(60px, 6dvh);
-//-------------------------
-//  Colors                 |
-//-------------------------
-$dropMenuBGColor: #161B38;
-$navBGColor: #161B38;
+
+//Color
+$dropMenuBGColor: #20274A;
+$navBGColor: #20274A;
 $navminiBGColor: rgba(22, 27, 56, 0.95);
 $navBorderColor: #0C0E0F;
 //Button Colors
@@ -15,13 +18,7 @@ $navBtnBGColorDefault: #1B304F;
 $navBtnBGColorHover: #122036;
 $navBtnShadow: #1C0B3D;
 
-//Saved Colors
-//$navLinkColor: #4F8CE8;
-//231B5C
-
-//-------------------------
-//  Duration               |
-//-------------------------
+//Duration
 $navminiDuration: 300ms;
 
 //=========================================================

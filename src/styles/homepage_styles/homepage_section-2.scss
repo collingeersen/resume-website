@@ -1,53 +1,56 @@
 //=========================================================
-//  Variables
+//  Homepage- Section 2
 //=========================================================
-
 //-------------------------
-//  Colors                 |
+//  Variables              |
 //-------------------------
+$borderRadius: clamp(1dvw, 1em, 3dvw);
+//Colors
 
+$backgroundColor_2: #20274a;
+$backgroundColor: #2b3463;
+$borderColor: #0c1020;
+$boxBackgroundColor: #20274a;
+$flexCardDefaultColor: #0c1020;
+$flexCardHoverColor: #80C24A;
 $fontColor1: #e1e0e0;
-//Content Colors
-$contentBGColor: #161B38;
-$contentBorderColor: #0C0E0F;
-$contentFrameColor: #1B304F;
-//Flex Card Colors
-$flexCardDefaultColor: #161B38;
-$flexCardHoverColor: #6CAB3C;
-//Heading Colors
-$headingColor: #6CAB3C;
-
-$containerBoxBGColor_1: #075C61;
-$containerBoxBGColor_2: brown;
+$headingColor: #80C24A;
 
 //=========================================================
 //  Section 2 Classes
 //=========================================================
 .section-2 {
-    background-color: $contentBorderColor;
-    border-bottom-left-radius: 3dvh;
-    border-bottom-right-radius: 3dvh;
+    background-color: $borderColor;
+    border-bottom-left-radius: $borderRadius;
+    border-bottom-right-radius: $borderRadius;
     padding: 4dvh;
     padding-top: 0;
     margin-top: -6dvh;
 }
 
 .section-2__container {
-    background-color: $contentBGColor;
-    border-radius: 3dvh;
+    background-color: $backgroundColor;
+    //background-image: linear-gradient($backgroundColor 8%, $backgroundColor_2);
+    border-radius: $borderRadius;
     padding-bottom: 10dvh;
-    padding-top: 8dvh;
+    padding-top: 9dvh;
     height: auto;
     width: auto;
+
 }
 
 .section-2__container__intro {
     display: block;
     margin-inline: auto;
-    background-color: brown;
+    background-color: $boxBackgroundColor;
+    border-radius: 100em;
+    border-style: solid;
+    border-width: 5px;
+    border-color: $borderColor;
     width: 80%;
     text-align: center;
-    padding: 2dvh;
+    padding: 6dvh;
+    margin-bottom: 30px;
 
     h2 {
         font-size: clamp(3dvh, 2.2dvh + 1em, 5dvh);
@@ -60,7 +63,6 @@ $containerBoxBGColor_2: brown;
 
 .section-2__container__box {
     //background-color: #075C61;
-    background: linear-gradient($containerBoxBGColor_1 50%, $containerBoxBGColor_2 50%);
     display: flex;
     height: auto;
     margin-left: auto;
@@ -73,10 +75,10 @@ $containerBoxBGColor_2: brown;
 
     >h2 {
         align-self: center;
-        background-color: #161B38;
-        border-bottom-right-radius: 3dvh;
-        border-top-right-radius: 3dvh;
-        box-shadow: inset 2px 0px 3px black;
+        background-color: $borderColor;
+        border-bottom-right-radius: $borderRadius;
+        border-top-right-radius: $borderRadius;
+        //box-shadow: inset 2px 0px 3px black;
         font-size: clamp(2dvh, 2dvh + 0.75em, 3.75dvh);
         height: 32dvh;
         margin-right: 0;
@@ -90,33 +92,27 @@ $containerBoxBGColor_2: brown;
 }
 
 .section-2__container__box__paragraph {
-    background-color: #6CAB3C;
+    background-color: $boxBackgroundColor;
     display: block;
     margin-top: auto;
     margin-bottom: auto;
     //background-color: #1C0B3D;
-    border-bottom-left-radius: 3dvh;
-    border-top-left-radius: 3dvh;
+    border-bottom-left-radius: $borderRadius;
+    border-top-left-radius: $borderRadius;
     height: 38dvh;
+    border-color: $borderColor;
+    border-style: solid;
+    border-width: 10px;
 
     p {
         align-self: center;
-        background-color: #1C0B3D;
-        border-bottom-left-radius: 3dvh;
-        border-top-left-radius: 3dvh;
+        //background-color: #1C0B3D;
+        border-bottom-left-radius: $borderRadius;
+        border-top-left-radius: $borderRadius;
         font-size: clamp(2dvh, 1dvh + 0.75em, 2.75dvh);
-        //height: auto;
-        //width: 60dvw;
         padding: 5dvh;
-        //padding-top: 11dvh;
-        //padding-bottom: 11dvh;
-        //padding-top: clamp(11dvh, 11dvh + 1.2em, 15dvh);
-        //padding-bottom: clamp(11dvh, 11dvh + 1.2em, 15dvh);
-        //margin: 0;
         margin-top: auto;
         margin-bottom: auto;
-
-
         word-wrap: break-word;
     }
 }
@@ -157,9 +153,9 @@ $section2Card_TransitionDelay: 0ms;
 
 .section-2__container__box__card {
     align-self: center;
-    background-color: $contentFrameColor;
-    border-color: $contentBorderColor;
-    border-radius: 3dvh;
+    background-color: $boxBackgroundColor;
+    border-color: $borderColor;
+    border-radius: $borderRadius;
     border-style: solid;
     border-width: 0.75dvh;
     box-shadow: $flexCardDefaultColor 0px 0px 0px 0px;
@@ -180,12 +176,12 @@ $section2Card_TransitionDelay: 0ms;
 
         h3{
             //Gives link hover color
-            color: #9CF757;
+            color: #3F6321;
         }
 
         //Creates the hover state for the pseudo underline effect
         h3::after {
-            background-color: #9CF757;
+            background-color: #3F6321;
             content: '';
             display: block;
             height: 0.5dvh;

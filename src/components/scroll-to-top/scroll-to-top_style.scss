@@ -2,10 +2,10 @@
 //  Scroll to Top
 //=========================================================
 //Colors
-$scrollBackgroundColor: #161B38;
-$scrollArrowColor: #6CAB3C;
+$scrollBackgroundColor: #20274A;
+$scrollArrowColor: #80C24A;
 $scrollArrowShadowColor:#000000;
-$scrollBorderColor: #6CAB3C;
+$scrollBorderColor: #80C24A;
 
 @mixin scroll-to-top_Transition{
     transition-duration: 200ms;

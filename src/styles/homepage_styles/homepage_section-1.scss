@@ -1,36 +1,21 @@
 //=========================================================
-//  Variables
+//  Homepage- Section 1
 //=========================================================
+//-------------------------
+//  Variables              |
+//-------------------------
 $borderRadius: clamp(1dvw, 1em, 2dvw);
-//-------------------------
-//  Heights                |
-//-------------------------
+//Heights/Widths
 $separatorHeight: 4dvh;
 $separatorNotchHeight: 70px;
-//-------------------------
-//  Colors                 |
-//-------------------------
-$backgroundColor: #161B38;
-$mainBorderColor: #0C0E0F;
-$boxBackgroundColor: #1B304F;
+//Colors
+$backgroundColor: #2b3463;
+$borderColor: #0c1020;
+$boxBackgroundColor: #20274A;
 
-//Github Colors
-$githubBorderColor: #0C0E0F;
-$githubUnderlineColor: #9CF757;
-$githubIconBGColor: white;
-
-
-//Saved Colors
-//181D1F
-//1F1D1C
-//161B38
-//223138
-//424B85
-//424C85
-//0C0E0F
-//314185
-//53852D
-//#211B4
+$githubHoverColor: #3F6321;
+$githubIconBackgroundColor: white;
+$githubUnderlineColor: #3F6321;
 
 //Delay for intro animation
 $introGreetingDelay: 1000ms;
@@ -45,8 +30,8 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
 //  Intro
 //=========================================================
 .intro {
-    background-color: $mainBorderColor;
-    border: solid $mainBorderColor $separatorHeight;
+    background-color: $borderColor;
+    border: solid $borderColor $separatorHeight;
     border-bottom: 0;
     font-size: 1.5em;
     margin: auto;
@@ -74,7 +59,13 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
     font-size: clamp(2.5dvw, 3em, 2.5dvw);
     height: min(2em, 5em);
     margin-top: 0;
-    padding: min(0.5em, 1em);
+    padding: min(0.5em, 1dvh);
+    padding-bottom: max(0.6em, 2dvh);
+    border-style: solid;
+    border-width: max(0.1em, 0.5dvh);
+    border-color: $borderColor;
+    border-top-width: 0;
+    color: #80C24A;
 
     @keyframes intro__header__title-load-animation {
         from {
@@ -103,7 +94,7 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
     background-color: $boxBackgroundColor;
     border-bottom-left-radius: $borderRadius;
     border-top-right-radius: $borderRadius;
-    box-shadow: $githubBorderColor clamp(0.2dvh, 0.7dvh, 1dvh) clamp(0.2dvh, 0.7dvh, 1dvh);
+    box-shadow: $borderColor clamp(0.2dvh, 0.7dvh, 1dvh) clamp(0.2dvh, 0.7dvh, 1dvh);
     height: fit-content;
     margin-left: auto;
     padding: clamp(0.2em, 0.5em, 1em);
@@ -125,7 +116,7 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
     }
 
     img {
-        background-color: $githubIconBGColor;
+        background-color: $githubIconBackgroundColor;
         border-radius: 10dvh;
         display: block;
         height: clamp(3dvw, 1dvw + 2em, 8dvw);
@@ -140,7 +131,7 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
     }
 
     &:hover {
-        box-shadow: $githubBorderColor clamp(0.5dvh, 1.2dvh, 1.4dvh) clamp(0.5dvh, 1.2dvh, 1.4dvh);
+        box-shadow: $borderColor clamp(0.5dvh, 1.2dvh, 1.4dvh) clamp(0.5dvh, 1.2dvh, 1.4dvh);
         cursor: pointer;
         transition-duration: 300ms;
         transition-property: box-shadow, translate;
@@ -148,7 +139,7 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
         user-select: none;
 
         h3 {
-            color: #9CF757;
+            color: $githubHoverColor;
 
             //End state underline for Github link
             &::after {
@@ -173,6 +164,7 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
     background-color: $backgroundColor;
     border-bottom-left-radius: $borderRadius;
     border-bottom-right-radius: $borderRadius;
+    //background-image: linear-gradient($summaryBackgroundColor 10%, $backgroundColor);
 }
 
 .intro__summary__greeting {
@@ -259,9 +251,11 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
     animation-duration: 800ms;
     animation-fill-mode: forwards;
     animation-name: intro__summary__greeting--avatar-animation;
-    background-color: #9CF757;
+    background-color: $boxBackgroundColor;
     border-radius: $borderRadius;
-    //border-top-left-radius: 0;
+    border-style: solid;
+    border-width: max(0.1em, 0.5dvh);
+    border-color: $borderColor;
     opacity: 0;
     translate: 0 100px;
 
@@ -288,6 +282,7 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 20px;
     animation-delay: $introContent_AnimDelay;
     animation-duration: $introContent_AnimDuration;
     animation-fill-mode: both;
@@ -308,7 +303,7 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
 }
 
 .intro__summary__content__heading {
-    background-color: #9CF757;
+    background-color: $borderColor;
     border-bottom-right-radius: $borderRadius;
     border-top-right-radius: $borderRadius;
     height: 40dvh;
@@ -330,6 +325,9 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
     margin: 0;
     padding: 3dvh;
     width: 40dvw;
+    border-style: solid;
+    border-width: 10px;
+    border-color: $borderColor;
 }
 
 //-------------------------

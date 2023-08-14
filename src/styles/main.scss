@@ -1,18 +1,13 @@
 //=========================================================
-//  Variables
+//  Main
 //=========================================================
 //-------------------------
-//  Widths                 |
+//  Variable               |
 //-------------------------
-
-//-------------------------
-//  Heights                |
-//-------------------------
+//Height/Width
 $separatorHeight: 40px;
 $separatorNotchHeight: 70px;
-//-------------------------
-//  Colors                 |
-//-------------------------
+//Colors
 $accentColor1: #0E3D69;
 $accentColor2: #075C61;
 $accentColor3: #1C0B3D;
@@ -24,60 +19,18 @@ $fontColor1: #e1e0e0;
 $fontColor2: #40DB8D;
 $insetShadow: rgba(0, 0, 0, 0.6);
 $mainColor: #2B3E4D;
-$transparent: rgba(0, 0, 0, 0);
 
-//Breadcrumb Colors
-$breadcrumbBGColor: #161B38;
-$breadcrumbBorderColor: #0C0E0F;
-//Content Colors
-$contentBGColor: #161B38;
-$contentBorderColor: #0C0E0F;
-$contentFrameColor: #1B304F;
-//Flex Card Colors
-$flexCardDefaultColor: #161B38;
-$flexCardHoverColor: #6CAB3C;
-//Footer Colors
-$footerBGColor: #181D1F;
-$footerColor: #000000;
-$footerFontColor: #828d91;
-//Github Colors
-$githubBGColor: #1B304F;
-$githubBorderColor: #0C0E0F;
-$githubUnderlineColor: white; //temp
-$githubIconBGColor: white; //temp
 //Heading Colors
-$headingColor: #6CAB3C;
-//Intro Colors
-$introInnerBorderColor: #0C0E0F;
-$introHeaderTitleBG: #1B304F;
+$headingColor: #80C24A;
+
 //Link Colors
 $linkColorActive: #53852D;
-$linkColorDefault: #6CAB3C;
-$linkColorHover: #9CF757;
-//Scroll to Top Colors
-$scrollBtnBGColor: #1B304F;
-$scrollBtnFontColor: #6CAB3C;
-
-$sectionDividerColor: #0C0E0F;
-
-//Saved Colors
-//181D1F
-//1F1D1C
-//161B38
-//223138
-//424B85
-//424C85
-//0C0E0F
-//314185
-//53852D
-//$linkColor: #3191ff;
-$introInnerBorderSize: 3px;
+$linkColorDefault: #80C24A;
+$linkColorHover: #3F6321;
 
 //Font
 $primaryFont: 'Arial', Helvetica, sans-serif;
 $secondaryFont: 'Times New Roman', Times, serif;
-//Animations
-
 
 //=========================================================
 //  Reset
