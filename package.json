@@ -1,6 +1,6 @@
 {
   "name": "collin-website",
-  "source": "src/index.html",
+  "source": ["src/index.html", "src/pages/index.html", "src/pages/projects/index.html"],
   "version": "1.0.0",
   "description": "Node project for website.",
   "private": true,
