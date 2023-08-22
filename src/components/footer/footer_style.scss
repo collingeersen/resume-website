@@ -10,8 +10,9 @@ $footerFontColor: #828d91;
     //background-color:rgb(28, 26, 26);
     margin-left: auto;
     margin-right: auto;
-    padding-top: 30px;
+    padding-top: 3em;
     width: 80%;
+    font-size: clamp(1em, 1dvh + 0.3em, 5dvh);
 
     //Removes the link styling
     a {
@@ -44,7 +45,7 @@ $footerFontColor: #828d91;
     //background-color: #40DB8D;
 
     span {
-        padding-left: 20px;
+        padding-left: 2em;
     }
 }
 
@@ -60,8 +61,8 @@ $footerFontColor: #828d91;
     background-color: $footerFontColor;
     border-radius: 10px;
     display: block;
-    height: 1px;
-    margin-bottom: 20px;
+    height: max(1px, 0.1dvh);
+    margin-bottom: 2em;
     margin-left: auto;
     margin-right: auto;
     width: 90%;
@@ -72,6 +73,6 @@ $footerFontColor: #828d91;
     background-color: $footerFontColor;
     border-radius: 10px;
     display: block;
-    height: 150px;
+    height: 10em;
     width: 0px;
 }
