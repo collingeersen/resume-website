@@ -185,7 +185,7 @@ a {
 //  Scroll Transitions
 //=========================================================
 @mixin scroll_Transition{
-    transition-property: all;
+    transition-property: opacity;
     transition-duration: 1000ms;
 }
 
