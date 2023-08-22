@@ -67,7 +67,7 @@ $headingColor: #80C24A;
     height: auto;
     margin-left: auto;
     margin-right: auto;
-    opacity: 0;
+    //opacity: 0;
     padding: 3dvh;
     width: 80%;
     padding-bottom: 3dvh;
@@ -117,28 +117,28 @@ $headingColor: #80C24A;
     }
 }
 
-.section-2__container__box--transition {
-    animation-duration: 500ms;
-    animation-fill-mode: forwards;
-    animation-name: box--transition-Anim;
-    opacity: 1;
-    transition-duration: 300ms;
-    transition-property: opacity;
+// .section-2__container__box--transition {
+//     animation-duration: 500ms;
+//     animation-fill-mode: forwards;
+//     animation-name: box--transition-Anim;
+//     opacity: 1;
+//     transition-duration: 300ms;
+//     transition-property: opacity;
 
-    @keyframes box--transition-Anim {
-        from {
-            translate: 0 100px;
-        }
+//     @keyframes box--transition-Anim {
+//         from {
+//             translate: 0 100px;
+//         }
 
-        50% {
-            translate: 0 -15px;
-        }
+//         50% {
+//             translate: 0 -15px;
+//         }
 
-        to {
-            translate: 0;
-        }
-    }
-}
+//         to {
+//             translate: 0;
+//         }
+//     }
+// }
 
 //-------------------------
 //  Section 2: Card        |

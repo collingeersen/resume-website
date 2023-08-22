@@ -24,7 +24,7 @@ $introGreetingAccentDelay: $introGreetingFrameDelay+700ms;
 
 $introContent_AnimDelay: $introGreetingFrameDelay+800ms;
 $introContent_AnimDuration: 1000ms;
-$introNote_AnimDelay: $introContent_AnimDelay+800ms;
+$introNote_AnimDelay: $introContent_AnimDelay+1200ms;
 
 //=========================================================
 //  Intro
@@ -352,7 +352,7 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
         display: flex;
         //height: 0;
         opacity: 0;
-        translate: 0 60dvh;
+        //translate: 0 60dvh;
 
         @keyframes intro__summary__note-fallback-animation {
             from {
@@ -378,11 +378,11 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
         line-height: clamp(3.3dvh, 2dvh + 1.3rem, 4.5dvh);
         margin-left: 3.5dvh;
         margin-right: 4.6dvh;
-        opacity: 0;
+        //opacity: 0;
         padding: 2dvh;
         text-align: right;
         width: 20dvw;
-        translate: 2dvh;
+        //translate: 2dvh;
 
         //Highlight of text
         span {
@@ -403,36 +403,36 @@ $introNote_AnimDelay: $introContent_AnimDelay+800ms;
         border-radius: 5dvh;
         font-size: clamp(4dvh, 1dvh + 1.5rem, 5dvh);
         margin: auto;
-        opacity: 0;
+        //opacity: 0;
         padding: 2dvh;
         padding-bottom: 4dvh;
         padding-top: 4dvh;
         writing-mode: vertical-lr;
-        translate: 2dvh;
+        //translate: 2dvh;
     }
 }
 
-.intro__summary__note--transition {
-    div {
-        //height: 30dvh;
-        translate: 0;
-        transition-duration: 1000ms;
-        transition-property: translate;
-    }
+// .intro__summary__note--transition {
+//     div {
+//         //height: 30dvh;
+//         translate: 0;
+//         transition-duration: 1000ms;
+//         transition-property: translate;
+//     }
 
-    h3 {
-        opacity: 1;
-        transition-delay: 1200ms;
-        transition-duration: 500ms;
-        transition-property: opacity, translate;
-        translate: 0;
-    }
+//     h3 {
+//         opacity: 1;
+//         transition-delay: 1200ms;
+//         transition-duration: 500ms;
+//         transition-property: opacity, translate;
+//         translate: 0;
+//     }
 
-    p {
-        opacity: 1;
-        transition-delay: 1800ms;
-        transition-duration: 500ms;
-        transition-property: opacity, translate;
-        translate: 0;
-    }
-}
+//     p {
+//         opacity: 1;
+//         transition-delay: 1800ms;
+//         transition-duration: 500ms;
+//         transition-property: opacity, translate;
+//         translate: 0;
+//     }
+// }
