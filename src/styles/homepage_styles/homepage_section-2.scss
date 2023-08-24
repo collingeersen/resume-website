@@ -117,35 +117,13 @@ $headingColor: #80C24A;
     }
 }
 
-// .section-2__container__box--transition {
-//     animation-duration: 500ms;
-//     animation-fill-mode: forwards;
-//     animation-name: box--transition-Anim;
-//     opacity: 1;
-//     transition-duration: 300ms;
-//     transition-property: opacity;
-
-//     @keyframes box--transition-Anim {
-//         from {
-//             translate: 0 100px;
-//         }
-
-//         50% {
-//             translate: 0 -15px;
-//         }
-
-//         to {
-//             translate: 0;
-//         }
-//     }
-// }
-
 //-------------------------
 //  Section 2: Card        |
 //-------------------------
 $section2Card_TransitionDelay: 0ms;
-.section-2__container__box{
-    a:focus{
+
+.section-2__container__box {
+    a:focus {
         outline: auto;
         outline-offset: 3dvh;
     }
@@ -168,13 +146,14 @@ $section2Card_TransitionDelay: 0ms;
     &:hover {
         box-shadow: $flexCardHoverColor 1dvh 1dvh 0px 0;
         cursor: pointer;
-        transition-duration: 300ms;
+        transition-duration: 250ms;
         transition-property: translate,
             box-shadow;
         translate: -4dvh -1dvh;
         transition-delay: $section2Card_TransitionDelay;
+        transition-timing-function: linear;
 
-        h3{
+        h3 {
             //Gives link hover color
             color: #3F6321;
         }
@@ -214,6 +193,15 @@ $section2Card_TransitionDelay: 0ms;
         //Hover effect to darken img and show arrow icon
         .material-symbols-rounded {
             opacity: 1;
+            transition-duration: 200ms;
+            transition-property: all;
+            transition-delay: $section2Card_TransitionDelay;
+        }
+
+        puzzle-comp,
+        computer-comp,
+        projects-comp {
+            filter: grayscale(1);
             transition-duration: 200ms;
             transition-property: all;
             transition-delay: $section2Card_TransitionDelay;
@@ -293,7 +281,7 @@ $section2Card_TransitionDelay: 0ms;
         font-size: 1.75dvh;
         text-align: center;
 
-        span{
+        span {
             font-size: 1.5dvh;
             translate: 0 0dvh;
         }
@@ -309,17 +297,22 @@ $section2Card_TransitionDelay: 0ms;
         margin-bottom: 1dvh;
         margin-top: 3dvh;
 
+        puzzle-comp,
+        computer-comp,
+        projects-comp {
+            filter: grayscale(0);
+        }
+
         //Material Icon span
         span {
-            background-color: rgba(0, 0, 0, 0.5);
             color: $fontColor1;
             display: block;
             font-size: 4dvh;
             height: 100%;
             opacity: 0;
             padding-top: 8dvh;
-            position: relative;
             text-align: center;
+            translate: 0 -20.3dvh;
             transition-duration: 200ms;
             transition-property: all;
             transition-delay: $section2Card_TransitionDelay;
