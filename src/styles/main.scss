@@ -135,7 +135,7 @@ a {
     font-size: 1em;
     transition-duration: 300ms;
     transition-property: border,
-    color;
+        color;
 
     &:active {
         color: $linkColorActive;
@@ -153,25 +153,25 @@ a {
         color: $linkColorHover;
         cursor: pointer;
         transition-property: border,
-        color;
+            color;
         transition-duration: 100ms;
     }
 
-    &:focus{
+    &:focus {
         outline: auto;
     }
 }
 
 .disable__link-style {
-    border:0;
+    border: 0;
     transition-property: none;
 
     &:hover {
-        border:0;
+        border: 0;
         transition-property: none;
     }
 
-    &:focus{
+    &:focus {
         outline: none;
     }
 }
@@ -184,41 +184,41 @@ a {
 //=========================================================
 //  Scroll Transitions
 //=========================================================
-@mixin scroll_Transition{
+@mixin scroll_Transition {
     transition-property: opacity;
     transition-duration: 1000ms;
 }
 
 .scroll--hide,
-.scroll--hide--once{
+.scroll--hide--once {
     @include scroll_Transition;
     opacity: 0;
 }
 
 .scroll--show,
-.scroll--show--once{
+.scroll--show--once {
     @include scroll_Transition;
-    opacity: 1;
     animation-duration: 500ms;
-     animation-fill-mode: forwards;
-     animation-name: scroll--transition-Anim;
+    animation-fill-mode: forwards;
+    animation-name: scroll--transition-Anim;
+    opacity: 1;
 
-     @keyframes scroll--transition-Anim {
-         from {
-             translate: 0 100px;
-             filter: blur(0.5em);
-         }
+    @keyframes scroll--transition-Anim {
+        from {
+            translate: 0 100px;
+            filter: blur(0.5em);
+        }
 
-         50% {
-             translate: 0 -15px;
-         }
+        50% {
+            translate: 0 -15px;
+        }
 
-         to {
-             translate: 0;
-             filter: blur(0em);
-         }
-     }
- }
+        to {
+            translate: 0;
+            filter: blur(0em);
+        }
+    }
+}
 
 //=========================================================
 //  Scroll to Top
@@ -233,8 +233,8 @@ a {
 //=========================================================
 //  Nav-Bar: Media Queries
 //=========================================================
-@media screen and (width < 970px){
-    main{
+@media screen and (width < 970px) {
+    main {
         width: 100%;
     }
 }
