@@ -50,7 +50,7 @@ $headingColor: #80C24A;
     width: 80%;
     text-align: center;
     padding: 6dvh;
-    margin-bottom: 30px;
+    //margin-bottom: 30px;
 
     h2 {
         font-size: clamp(3dvh, 2.2dvh + 1em, 5dvh);
@@ -71,7 +71,8 @@ $headingColor: #80C24A;
     padding: 3dvh;
     width: 80%;
     padding-bottom: 3dvh;
-    padding-top: 3dvh;
+    //padding-top: 3dvh;
+    margin-top: 10dvh;
 
     >h2 {
         align-self: center;
