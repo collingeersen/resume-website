@@ -26,16 +26,26 @@ $paragraphColor:white;
     padding: 3dvh;
 
     h3 {
-        font-size: clamp(1em, 3dvh, 8dvh);
+        font-size: clamp(1em, 2.5dvh, 8dvh);
+        background-color: #0c1020;
+        padding: 1em;
+        text-align: center;
+        border-radius: 1dvh;
     }
 
     p {
         font-size: clamp(1em, 2dvh, 5dvh);
-        word-wrap: break-word;
         text-align: center;
-        &:first-child{
-            background-color: grey;
-        }
+    }
+
+    span{
+        margin-top: 1em;
+        margin-bottom: 1em;
+        display: block;
+        background-color: #0c1020;
+        height: 0.1em;
+        width: 60%;
+        margin-inline: auto;
     }
 }
 .section-3__container__header{
@@ -52,55 +62,67 @@ $paragraphColor:white;
     font-size: clamp(2em, 4dvh, 10dvh);
 }
 
-.section-3__container__description {
-    //text-align: center;
-    //width: 70%;
-    //margin-inline: auto;
-}
-
 .section-3__container__box {
     justify-content: center;
     row-gap: 1dvh;
     column-gap: 1dvw;
     display: flex;
     flex-wrap: wrap;
-    //background-color: gray;
     margin-top: 2dvh;
+
+    //Adds staggered delay to the scroll transition for the second and fourth content cards
+    div:nth-child(2),
+    div:nth-child(4){
+        transition-delay: 500ms;
+        animation-delay: 500ms;
+    }
 }
 
 .section-3__container__box__card {
     background-color: $boxBackgroundColor;
     padding: 1em;
     width: min(30dvh, 400px);
-    //height: min(30dvh, 800px);
     border-color: $borderColor;
-    border-radius: 10px;
+    border-radius: 2dvh;
     border-style: solid;
-    border-width: 3px;
-    transition-property: translate;
-    transition-duration: 300ms;
-    //box-shadow: inset 6em 6em 0px black, inset -5em -6em 0px black;
-    box-shadow: inset 0 2dvh 0px black;
+    border-width: 0.3em;
+    box-shadow: inset 0 2dvh 0px black;;
     
     a:focus{
         outline: auto;
     }
-
-    &:hover{
-        translate: 0 -1dvh;
-        transition-property: translate;
-        transition-duration: 300ms;
-    }
-}
-
-.section-3__container__box__card--header{
-    //background-color: #0C0E0F;
 }
 
 .section-3__container__box__card--content {
-    //background-color: aqua;
-    //margin-top: 100px;
-    //margin-bottom: auto;
-    //display: block;
-    //width: 40%;   
+    display: block;
+
+    //Used to fix hover styling conflict for link
+    @mixin section-3__container__box__card--content__border{
+        border-color: $borderColor;
+        border-radius: 10dvh;
+        border-style: solid;
+        border-width: 0.2em;
+    }
+    a{
+        @include section-3__container__box__card--content__border;
+        display: flex;
+        background-color:#2b3463;
+        width: fit-content;
+        margin-inline: auto;
+        padding: 0.75em;
+        box-shadow: 0 0 0 $borderColor;
+        transition-property: box-shadow, translate;
+        transition-duration: 200ms;
+        translate: 0;
+        font-size: clamp(1em, 1.75dvh, 4dvh);
+        text-align: center;
+    
+        &:hover{
+            @include section-3__container__box__card--content__border;
+            transition-property: box-shadow, translate;
+            transition-duration: 200ms;
+            translate: 0 -0.4em;
+            box-shadow: 0 0.4em 0 $borderColor;
+        }
+    }
 }
