@@ -166,6 +166,7 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
     border-bottom-left-radius: $borderRadius;
     border-bottom-right-radius: $borderRadius;
     //background-image: linear-gradient($summaryBackgroundColor 10%, $backgroundColor);
+    padding-bottom: 3em;
 }
 
 .intro__summary__greeting {
@@ -336,54 +337,56 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
 //  Note                   |
 //-------------------------
 .intro__summary__note {
-    height: 40dvh;
-    margin-left: auto;
-    margin-right: auto;
+    animation-delay: $introNote_AnimDelay;
+    animation-duration: 1000ms;
+    animation-fill-mode: forwards;
+    animation-name: intro__summary__note-fallback-animation;
+    margin-inline: auto;
+    opacity: 0;
     text-align: center;
-    width: 30dvw;
+    width: 100%;
     word-wrap: break-word;
+
+    @keyframes intro__summary__note-fallback-animation {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
 
     //Select the first outer div
     >div {
-        animation-delay: $introNote_AnimDelay;
-        animation-duration: 1000ms;
-        animation-fill-mode: forwards;
-        animation-name: intro__summary__note-fallback-animation;
-        background-color: #0C0E0F;
-        display: flex;
-        //height: 0;
-        opacity: 0;
-        //translate: 0 60dvh;
-
-        @keyframes intro__summary__note-fallback-animation {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
+        background-color: $borderColor;
+        border-bottom-left-radius: $borderRadius;
+        border-bottom-right-radius: $borderRadius;
+        display: grid;
+        grid-template-columns: auto auto;
+        margin-inline: auto;
+        width: min-content;
+        padding: 2em;
     }
 }
 
 .intro__summary__note__text {
     display: block;
-    margin-top: auto;
-    margin-bottom: auto;
-
+    margin-left: 3.5dvh;
+    margin-right: 4.6dvh;
+    width: 80%;
+    
     //Note Content
     p {
-        background-color: #000000;
-        font-size: clamp(3dvh, 1dvh + 1.2rem, 3.5dvh);
+        background-color: $boxBackgroundColor;
+        border-color:#80C24A;
+        border-radius: $borderRadius;
+        border-style: solid;
+        border-width: 0.5rem;
+        font-size: clamp(3dvh, 1dvh + 1.2rem, 3.5dvh);   
         line-height: clamp(3.3dvh, 2dvh + 1.3rem, 4.5dvh);
-        margin-left: 3.5dvh;
-        margin-right: 4.6dvh;
-        //opacity: 0;
         padding: 2dvh;
         text-align: right;
-        width: 20dvw;
-        //translate: 2dvh;
 
         //Highlight of text
         span {
@@ -394,46 +397,23 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
 
 .intro__summary__note__title {
     display: block;
-    margin-top: auto;
     margin-bottom: auto;
-    height: auto;
+    margin-inline: auto;
+    margin-top: auto;
+    //margin-right: 2em;
+    //margin-left: auto;
 
     //Note Title
     h3 {
-        background-color: #000000;
-        border-radius: 5dvh;
-        font-size: clamp(4dvh, 1dvh + 1.5rem, 5dvh);
-        margin: auto;
-        //opacity: 0;
+        background-color: $boxBackgroundColor;
+        border-radius: $borderRadius;
+        border-style: solid;
+        border-width: 0.5rem;
+        color:#80C24A;
+        font-size: clamp(4dvh, 1dvh + 1rem, 5dvh);
         padding: 2dvh;
         padding-bottom: 4dvh;
         padding-top: 4dvh;
         writing-mode: vertical-lr;
-        //translate: 2dvh;
     }
 }
-
-// .intro__summary__note--transition {
-//     div {
-//         //height: 30dvh;
-//         translate: 0;
-//         transition-duration: 1000ms;
-//         transition-property: translate;
-//     }
-
-//     h3 {
-//         opacity: 1;
-//         transition-delay: 1200ms;
-//         transition-duration: 500ms;
-//         transition-property: opacity, translate;
-//         translate: 0;
-//     }
-
-//     p {
-//         opacity: 1;
-//         transition-delay: 1800ms;
-//         transition-duration: 500ms;
-//         transition-property: opacity, translate;
-//         translate: 0;
-//     }
-// }
