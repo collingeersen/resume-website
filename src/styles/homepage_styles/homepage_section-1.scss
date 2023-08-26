@@ -280,7 +280,7 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
     //background-color: lightblue;
     align-items: center;
     display: flex;
-    height: fit-content;
+    //height: fit-content;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
@@ -327,10 +327,13 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
     height: clamp(30dvh, 40dvh, 50dvh);
     margin: 0;
     padding: 3dvh;
-    width: 40dvw;
+    width: 60%;
     border-style: solid;
     border-width: 10px;
     border-color: $borderColor;
+    overflow-y: auto;
+    word-wrap: break-word;
+    scrollbar-width:thin;
 }
 
 //-------------------------
@@ -345,7 +348,7 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
     opacity: 0;
     text-align: center;
     width: 100%;
-    word-wrap: break-word;
+    //word-wrap: break-word;
 
     @keyframes intro__summary__note-fallback-animation {
         from {
@@ -360,13 +363,13 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
     //Select the first outer div
     >div {
         background-color: $borderColor;
-        border-bottom-left-radius: $borderRadius;
-        border-bottom-right-radius: $borderRadius;
+        border-radius: $borderRadius;
         display: grid;
         grid-template-columns: auto auto;
         margin-inline: auto;
         width: min-content;
         padding: 2em;
+        margin-top: 1em;
     }
 }
 
@@ -415,5 +418,61 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
         padding-bottom: 4dvh;
         padding-top: 4dvh;
         writing-mode: vertical-lr;
+    }
+}
+
+//-------------------------
+//  Media Queries          |
+//-------------------------
+@media screen and (width < 685) {
+    .intro__header__title{
+        font-size: min(1em, 5dvw);
+    }
+    .intro__header__github-link>h3{
+        font-size: min(0.5em, 3dvw);
+    }
+    .intro__summary__greeting__heading{
+        font-size: min(2em, 8dvw);
+        overflow: visible;
+    }
+    .intro__summary__note>div{
+        border-radius: 0;
+        margin-top: 0;
+        width: auto;
+    }
+    .intro__summary__note__text{
+        margin-left: 0;
+        margin-right: 0;
+        width: auto;
+        p{
+            font-size: min(1em, 5dvw);
+        }
+        
+    }
+
+}
+
+@media screen and (width < 455) {
+    .intro__summary__content{
+        flex-wrap: wrap;
+    }
+    .intro__summary__content__heading{
+        border-radius: 0;
+        height: auto;
+        margin-inline: auto;
+        rotate: 360deg;
+        width: 100%;
+        writing-mode:horizontal-tb;
+    }
+    .intro__summary__content__text{
+        border-radius: 0;
+        width: auto;
+    }
+    .intro__summary__note>div{
+        display: flex;
+        flex-wrap: wrap-reverse;
+    }
+    .intro__summary__note__title>h3{
+        writing-mode:horizontal-tb;
     }
 }
