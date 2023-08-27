@@ -338,6 +338,7 @@ $section2Card_TransitionDelay: 0ms;
             rotate: 0deg;
             width: min-content;
             writing-mode: horizontal-tb;
+            //margin-inline: auto;
         }
     }
 
@@ -347,6 +348,7 @@ $section2Card_TransitionDelay: 0ms;
         margin-inline: auto;
         max-height: 400px;
         width: 80dvw;
+        min-width: 20em;
 
         p {
             padding: 10px;
@@ -367,12 +369,14 @@ $section2Card_TransitionDelay: 0ms;
 
 @media screen and (width < 800) and (height > 930) {
     .section-2__container__box {
-
-        background-color: #3F6321;
-    }
-
-    .section-2__container__box {
         scale: 0.8;
     }
+}
 
+@media screen and (width < 1175) and (height > 880) {
+    .section-2__container__box__paragraph{
+        min-height: 300px;
+        width: 80dvw;
+        min-width: 20em;
+    }
 }
