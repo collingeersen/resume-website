@@ -623,3 +623,48 @@ $darkenDuration: 400ms;
         }
     }
 }
+
+@media screen and (height > 500px) and (width < 680px) {
+    nav{
+        overflow: hidden;
+    }
+
+    .nav-bar__btn {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .nav-bar__link__menu {
+        flex-wrap: nowrap;
+
+        li {
+            &:nth-child(2){
+                margin-left: -50px;
+            }
+            &:nth-child(3){
+                margin-left: -50px;
+            }
+        }
+    }
+    .accent--line{
+        visibility: hidden;
+    }
+}
+
+@media screen and (width < 1150) {
+    .nav-bar__drop-down{
+        width: 40%;
+    }
+    .--visible{
+        right: 60%;
+    }
+}
+
+@media screen and (width < 700) {
+    .nav-bar__drop-down{
+        width: 80%;
+    }
+    .--visible{
+        right: 20%;
+    }
+}
