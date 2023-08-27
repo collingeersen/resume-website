@@ -30,27 +30,24 @@ $headingColor: #80C24A;
 
 .section-2__container {
     background-color: $backgroundColor;
-    //background-image: linear-gradient($backgroundColor 8%, $backgroundColor_2);
     border-radius: $borderRadius;
+    height: auto;
     padding-bottom: 10dvh;
     padding-top: 9dvh;
-    height: auto;
     width: auto;
-
 }
 
 .section-2__container__intro {
+    background-color: $boxBackgroundColor;
+    border-color: $borderColor;
+    border-radius: 10em;
+    border-style: solid;
+    border-width: 0.5em;
     display: block;
     margin-inline: auto;
-    background-color: $boxBackgroundColor;
-    border-radius: 100em;
-    border-style: solid;
-    border-width: 5px;
-    border-color: $borderColor;
-    width: 80%;
-    text-align: center;
     padding: 6dvh;
-    //margin-bottom: 30px;
+    text-align: center;
+    width: 80%;
 
     h2 {
         font-size: clamp(3dvh, 2.2dvh + 1em, 5dvh);
@@ -62,28 +59,30 @@ $headingColor: #80C24A;
 }
 
 .section-2__container__box {
-    //background-color: #075C61;
+    align-items: center;
     display: flex;
     height: auto;
     margin-left: auto;
     margin-right: auto;
-    //opacity: 0;
+    margin-top: 6dvh;
+    padding-bottom: 3dvh;
     padding: 3dvh;
     width: 80%;
-    padding-bottom: 3dvh;
-    //padding-top: 3dvh;
-    margin-top: 6dvh;
+
+    a:focus {
+        outline: auto;
+        outline-offset: 3dvh;
+    }
 
     >h2 {
         align-self: center;
         background-color: $borderColor;
         border-bottom-right-radius: $borderRadius;
         border-top-right-radius: $borderRadius;
-        //box-shadow: inset 2px 0px 3px black;
         font-size: clamp(2dvh, 2dvh + 0.75em, 3.75dvh);
         height: 32dvh;
         margin-right: 0;
-        margin-left: 1dvh;
+        margin-left: auto;
         padding: 2dvh;
         text-align: center;
         user-select: none;
@@ -94,27 +93,28 @@ $headingColor: #80C24A;
 
 .section-2__container__box__paragraph {
     background-color: $boxBackgroundColor;
-    display: block;
-    margin-top: auto;
-    margin-bottom: auto;
-    //background-color: #1C0B3D;
     border-bottom-left-radius: $borderRadius;
-    border-top-left-radius: $borderRadius;
-    height: 38dvh;
     border-color: $borderColor;
     border-style: solid;
-    border-width: 10px;
+    border-top-left-radius: $borderRadius;
+    border-width: 0.5em;
+    display: block;
+    margin-bottom: auto;
+    margin-top: auto;
+    max-height: 60dvh;
+    max-width: 40dvw;
+    min-height: 40dvh;
+    min-width: 35dvw;
+    
 
     p {
         align-self: center;
-        //background-color: #1C0B3D;
         border-bottom-left-radius: $borderRadius;
         border-top-left-radius: $borderRadius;
         font-size: clamp(2dvh, 1dvh + 0.75em, 2.75dvh);
         padding: 5dvh;
         margin-top: auto;
         margin-bottom: auto;
-        word-wrap: break-word;
     }
 }
 
@@ -122,13 +122,6 @@ $headingColor: #80C24A;
 //  Section 2: Card        |
 //-------------------------
 $section2Card_TransitionDelay: 0ms;
-
-.section-2__container__box {
-    a:focus {
-        outline: auto;
-        outline-offset: 3dvh;
-    }
-}
 
 .section-2__container__box__card {
     align-self: center;
@@ -221,7 +214,6 @@ $section2Card_TransitionDelay: 0ms;
         margin-right: 0;
         overflow: hidden;
         width: 11dvh;
-        //background-color: aliceblue;
 
         div {
             animation-duration: 500ms;
@@ -251,8 +243,6 @@ $section2Card_TransitionDelay: 0ms;
         padding-left: 3dvh;
         padding-top: 1dvh;
         font-size: clamp(2.5dvh, 1dvh + 0.75em, 3dvh);
-        //background-color: #0C0E0F;
-        //margin-right: auto;
 
         &::after {
             background-color: $headingColor;
@@ -319,4 +309,70 @@ $section2Card_TransitionDelay: 0ms;
             transition-delay: $section2Card_TransitionDelay;
         }
     }
+}
+
+//-------------------------
+//  Media Queries          |
+//-------------------------
+@media screen and (width < 685) {
+    .section-2__container__intro {
+        scale: 0.9;
+        border-radius: 4em;
+        width: fit-content;
+        padding: 1em;
+    }
+
+    .section-2__container__box {
+        display: block;
+        margin-inline: auto;
+        margin-top: -60px;
+        padding: 0;
+        scale: 0.8;
+        width: min-content;
+
+        >h2 {
+            border-bottom-right-radius: 0;
+            border-top-left-radius: $borderRadius;
+            height: auto;
+            margin: 0;
+            rotate: 0deg;
+            width: min-content;
+            writing-mode: horizontal-tb;
+        }
+    }
+
+    .section-2__container__box__paragraph {
+        border-radius: $borderRadius;
+        border-top-left-radius: 0;
+        margin-inline: auto;
+        max-height: 400px;
+        width: 80dvw;
+
+        p {
+            padding: 10px;
+        }
+    }
+
+    .section-2__container__box__card {
+        margin-inline: auto;
+        translate: 0;
+        width: min-content;
+
+        &:hover {
+            box-shadow: $flexCardHoverColor 0dvh 0dvh 0px 0;
+            translate: 0;
+        }
+    }
+}
+
+@media screen and (width < 800) and (height > 930) {
+    .section-2__container__box {
+
+        background-color: #3F6321;
+    }
+
+    .section-2__container__box {
+        scale: 0.8;
+    }
+
 }
