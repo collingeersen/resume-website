@@ -26,11 +26,11 @@ $paragraphColor:white;
     padding: 3dvh;
 
     h3 {
-        font-size: clamp(1em, 2.5dvh, 8dvh);
         background-color: #0c1020;
+        border-radius: 1dvh;
+        font-size: clamp(1em, 2.5dvh, 8dvh);
         padding: 1em;
         text-align: center;
-        border-radius: 1dvh;
     }
 
     p {
@@ -39,36 +39,36 @@ $paragraphColor:white;
     }
 
     span{
-        margin-top: 1em;
-        margin-bottom: 1em;
-        display: block;
         background-color: #0c1020;
+        display: block;
         height: 0.1em;
-        width: 60%;
+        margin-bottom: 1em;
         margin-inline: auto;
+        margin-top: 1em;
+        width: 60%;
     }
 }
 .section-3__container__header{
+    background-color: $boxBackgroundColor;
+    border-color: $borderColor;
     border-radius: 100em;
     border-style: solid;
     border-width: 5px;
-    border-color: $borderColor;
-    background-color: $boxBackgroundColor;
 }
 
 .section-3__container__header__title {
-    text-align: center;
-    margin-inline: auto;
     font-size: clamp(2em, 4dvh, 10dvh);
+    margin-inline: auto;
+    text-align: center;
 }
 
 .section-3__container__box {
-    justify-content: center;
-    row-gap: 1dvh;
     column-gap: 1dvw;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     margin-top: 2dvh;
+    row-gap: 1dvh;
 
     //Adds staggered delay to the scroll transition for the second and fourth content cards
     div:nth-child(2),
@@ -80,13 +80,13 @@ $paragraphColor:white;
 
 .section-3__container__box__card {
     background-color: $boxBackgroundColor;
-    padding: 1em;
-    width: min(30dvh, 400px);
     border-color: $borderColor;
     border-radius: 2dvh;
     border-style: solid;
     border-width: 0.3em;
-    box-shadow: inset 0 2dvh 0px black;;
+    box-shadow: inset 0 2dvh 0px black;
+    padding: 1em;
+    width: min(30dvh, 400px);
     
     a:focus{
         outline: auto;
@@ -105,24 +105,37 @@ $paragraphColor:white;
     }
     a{
         @include section-3__container__box__card--content__border;
-        display: flex;
         background-color:#2b3463;
-        width: fit-content;
+        box-shadow: 0 0 0 $borderColor;
+        display: flex;
+        font-size: clamp(1em, 1.75dvh, 4dvh);
         margin-inline: auto;
         padding: 0.75em;
-        box-shadow: 0 0 0 $borderColor;
-        transition-property: box-shadow, translate;
-        transition-duration: 200ms;
-        translate: 0;
-        font-size: clamp(1em, 1.75dvh, 4dvh);
         text-align: center;
+        transition-duration: 200ms;
+        transition-property: box-shadow, translate;
+        translate: 0;
+        width: fit-content;
     
         &:hover{
             @include section-3__container__box__card--content__border;
-            transition-property: box-shadow, translate;
-            transition-duration: 200ms;
-            translate: 0 -0.4em;
             box-shadow: 0 0.4em 0 $borderColor;
+            transition-duration: 200ms;
+            transition-property: box-shadow, translate;
+            translate: 0 -0.4em;
         }
+    }
+}
+
+@media screen and (width < 540) {
+    .section-3 {
+        margin-inline: auto;
+        width: 90%;
+    }
+    .section-3__container__header{
+        border-radius: 1em;
+        margin-inline: auto;
+        padding: 10px;
+        width: 80%;
     }
 }
