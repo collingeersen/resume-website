@@ -7,7 +7,6 @@ $footerFontColor: #828d91;
 
 .footer {
     background-color: $footerBGColor;
-    //background-color:rgb(28, 26, 26);
     margin-left: auto;
     margin-right: auto;
     padding-top: 3em;
@@ -28,21 +27,19 @@ $footerFontColor: #828d91;
 .footer__flex {
     display: flex;
     flex-wrap: nowrap;
-    //background-color: #075C61;
 }
 
 .footer__col {
     align-self: center;
     color: $footerFontColor;
     display: block;
-    //background-color: rgb(28, 26, 26);
     margin-left: auto;
     margin-right: auto;
     width: 300px;
 }
 
 .--footer-col-1 {
-    //background-color: #40DB8D;
+    white-space: nowrap;
 
     span {
         padding-left: 2em;
@@ -75,4 +72,26 @@ $footerFontColor: #828d91;
     display: block;
     height: 10em;
     width: 0px;
+}
+
+//-------------------------
+//  Media Queries          |
+//-------------------------
+@media screen and (width < 720) {
+    .footer__flex{
+        flex-wrap: wrap;
+    }
+
+    .footer__col{
+        text-align: center;
+        width: fit-content;
+    }
+
+    .--footer-col-1 {
+        display: grid;
+        row-gap: 30px;
+        span {
+            padding-left: 0;
+        }
+    }
 }
