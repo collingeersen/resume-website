@@ -66,13 +66,15 @@ $borderColor: #0c1020;
     border-radius: 3dvh;
     height: $separatorNotchHeight;
     margin-top: 0.5dvh;
-    width: 30dvh;
+    width: 100%;
 }
 
 .separator__container__notch--1 {
     @include separatorNotch;
     margin-left: auto;
-    margin-right: 4dvh;
+    //margin-right: 4dvh;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
 }
 
 .separator__container__notch--2 {
@@ -85,7 +87,7 @@ $borderColor: #0c1020;
     height: $separatorNotchHeight;
     margin-left: auto;
     margin-right: auto;
-    width: 60dvh;
+    width: 0;
 }
 
 //-------------------------
@@ -94,7 +96,9 @@ $borderColor: #0c1020;
 @mixin separatorFooter{
     background-color: $borderColor;
     height: $separatorHeight;
-    width: 143dvh;
+    //width: 143dvh;
+    //width: 97%;
+    width: 100%;
 }
 
 .separator__footer {
@@ -106,17 +110,22 @@ $borderColor: #0c1020;
 
 .separator__footer__divider {
     position: relative;
-    width: 28dvh;
+    //width: 28dvh;
+    //min-width: 95.13px;
+    //min-width: 6.5em;
+    //background-color: antiquewhite
 }
 
 .separator__footer--1 {
     @include separatorFooter;
     border-top-left-radius: 3dvh;
     border-bottom-right-radius: 3dvh;
+    margin-right: 13dvh;
 }
 
 .separator__footer--2 {
     @include separatorFooter;
     border-bottom-left-radius: 3dvh;
     border-top-right-radius: 3dvh;
+    margin-left: auto;
 }
