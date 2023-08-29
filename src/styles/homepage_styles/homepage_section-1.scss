@@ -260,6 +260,7 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
     border-color: $borderColor;
     opacity: 0;
     translate: 0 100px;
+    margin-right: 5%;
 
     @keyframes intro__summary__greeting--avatar-animation {
         from{
@@ -284,7 +285,8 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
+    margin-top: 1em;
+    margin-bottom: 1em;
     animation-delay: $introContent_AnimDelay;
     animation-duration: $introContent_AnimDuration;
     animation-fill-mode: both;
@@ -459,15 +461,21 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
     }
     .intro__summary__content__heading{
         border-radius: 0;
+        border-top-left-radius: $borderRadius;
+        border-top-right-radius: $borderRadius;
         height: auto;
         margin-inline: auto;
         rotate: 360deg;
-        width: 100%;
+        width: fit-content;
         writing-mode:horizontal-tb;
+        padding: 0.25em;
+        font-size: 1.1em;
     }
     .intro__summary__content__text{
         border-radius: 0;
-        width: auto;
+        width: fit-content;
+        margin-inline: 1em;
+        margin-bottom: 1em;
     }
     .intro__summary__note>div{
         display: flex;
