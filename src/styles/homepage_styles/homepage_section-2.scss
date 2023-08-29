@@ -405,7 +405,8 @@ $section2Card_TransitionDelay: 0ms;
 
     .section-2__container__box__card--header {
         h3 {
-            font-size: 2dvh;
+            font-size: 1.75dvh;
+            padding-left: 1dvh;
         }
     }
 
@@ -413,8 +414,8 @@ $section2Card_TransitionDelay: 0ms;
         padding: 0;
 
         h4 {
-            font-size: 1.6dvh;
-            padding-left: 3dvh;
+            font-size: 1.3dvh;
+            padding-left: 1dvh;
         }
 
         p {
@@ -431,6 +432,7 @@ $section2Card_TransitionDelay: 0ms;
         div {
             margin-top: -3dvh;
             scale: 0.6;
+            translate: -15px;
         }
     }
 }
