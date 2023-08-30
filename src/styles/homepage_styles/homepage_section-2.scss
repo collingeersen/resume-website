@@ -106,15 +106,15 @@ $headingColor: #80C24A;
     min-height: 40dvh;
     min-width: 35dvw;
 
-
     p {
-        align-self: center;
         border-bottom-left-radius: $borderRadius;
         border-top-left-radius: $borderRadius;
         font-size: clamp(2dvh, 1dvh + 0.75em, 2.75dvh);
-        padding: 5dvh;
-        margin-top: auto;
+        line-height: 5dvh;
         margin-bottom: auto;
+        margin-top: auto;
+        padding: 5dvh;
+        text-indent: 1.2em;
     }
 }
 
@@ -352,6 +352,7 @@ $section2Card_TransitionDelay: 0ms;
 
         p {
             padding: 10px;
+            font-size: clamp(1dvh, 1dvh + 0.5em, 2dvh);
         }
     }
 
