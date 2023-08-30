@@ -310,11 +310,10 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
     background-color: $borderColor;
     border-bottom-right-radius: $borderRadius;
     border-top-right-radius: $borderRadius;
-    height: 40dvh;
+    //height: 50dvh;
     margin: 0;
     margin-right: -10px;
-    padding-left: 2dvh;
-    padding-right: 2dvh;
+    padding: 2dvh;
     text-align: center;
     writing-mode: vertical-lr;
     rotate: 180deg;
@@ -323,19 +322,29 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
 
 .intro__summary__content__text {
     background-color: $boxBackgroundColor;
-    border-bottom-right-radius: $borderRadius;
-    border-top-right-radius: $borderRadius;
+    border-radius: $borderRadius;
     font-size: clamp(2.5dvh, 1dvh + 1rem, 3.5dvh);
-    height: clamp(30dvh, 40dvh, 50dvh);
+    //font-size: min(1em, 3dvh);
+    //height: clamp(30dvh, 50dvh, 60dvh);
+    //min-height: 40dvh;
+    //max-height: 66dvh;
+    //height: auto;
     margin: 0;
     padding: 3dvh;
+    padding-top: 1dvh;
     width: 60%;
     border-style: solid;
     border-width: 10px;
     border-color: $borderColor;
-    overflow-y: auto;
+    //overflow-y: auto;
     word-wrap: break-word;
-    scrollbar-width:thin;
+    //scrollbar-width:thin;
+
+    display: block;
+
+    p{
+        line-height: 1.5em;
+    }
 }
 
 //-------------------------
@@ -395,7 +404,8 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
 
         //Highlight of text
         span {
-            background-color: #161B38;
+            //background-color: #161B38;
+            color: rgb(219, 75, 75);
         }
     }
 }
@@ -426,6 +436,12 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
 //-------------------------
 //  Media Queries          |
 //-------------------------
+@media screen and (width < 970px) and (height > 600) {
+    .intro__summary__content__text{
+        font-size: min(1em, 2dvh);
+    }
+}
+
 @media screen and (width < 685) {
     .intro__header__title{
         font-size: min(1em, 5dvw);
@@ -476,6 +492,8 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
         width: fit-content;
         margin-inline: 1em;
         margin-bottom: 1em;
+        overflow-y: scroll;
+        max-height: 50dvh;
     }
     .intro__summary__note>div{
         display: flex;
