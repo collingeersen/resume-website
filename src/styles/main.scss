@@ -246,38 +246,40 @@ a {
 //=========================================================
 //  Scroll Transitions
 //=========================================================
-@mixin scroll_Transition {
-    transition-property: opacity;
-    transition-duration: 1000ms;
-}
-
-.scroll--hide,
-.scroll--hide--once {
-    @include scroll_Transition;
-    opacity: 0;
-}
-
-.scroll--show,
-.scroll--show--once {
-    @include scroll_Transition;
-    animation-duration: 500ms;
-    animation-fill-mode: forwards;
-    animation-name: scroll--transition-Anim;
-    opacity: 1;
-
-    @keyframes scroll--transition-Anim {
-        from {
-            translate: 0 100px;
-            filter: blur(0.5em);
-        }
-
-        50% {
-            translate: 0 -15px;
-        }
-
-        to {
-            translate: 0;
-            filter: blur(0em);
+@media (pointer: fine){
+    @mixin scroll_Transition {
+        transition-property: opacity;
+        transition-duration: 1000ms;
+    }
+    
+    .scroll--hide,
+    .scroll--hide--once {
+        @include scroll_Transition;
+        opacity: 0;
+    }
+    
+    .scroll--show,
+    .scroll--show--once {
+        @include scroll_Transition;
+        animation-duration: 500ms;
+        animation-fill-mode: forwards;
+        animation-name: scroll--transition-Anim;
+        opacity: 1;
+    
+        @keyframes scroll--transition-Anim {
+            from {
+                translate: 0 100px;
+                filter: blur(0.5em);
+            }
+    
+            50% {
+                translate: 0 -15px;
+            }
+    
+            to {
+                translate: 0;
+                filter: blur(0em);
+            }
         }
     }
 }
