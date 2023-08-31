@@ -1,5 +1,8 @@
 import('../components/nav-bar/nav-bar_script').then();
 import('../components/scroll-to-top/scroll-to-top_script').then();
+import('../components/svg/puzzle_svg').then();
+import('../components/svg/computer_svg').then();
+import('../components/svg/projects_svg').then();
 
 const OBSERVER_OPTIONS = {
     rootMargin: '0px', //This can be thought of the initial offset margin
