@@ -24,7 +24,7 @@ $headingColor: #80C24A;
     position: relative;
 }
 
-.section-1__title {
+.page-title {
     animation-duration: 800ms;
     animation-name: section-1__title--animation;
     background-color: $boxBackgroundColor;
@@ -66,11 +66,12 @@ $headingColor: #80C24A;
 
 .section-1__intro__svg {
     background-color: $boxBackgroundColor;
-    border-radius: 20em;
+    border-radius: 20dvh;
     height: 30dvh;
+    //margin: 0;
     margin-inline: auto;
-    min-height: 300px;
-    min-width: 300px;
+    //min-height: 300px;
+    //min-width: 300px;
     width: 30dvh;
 }
 
@@ -92,12 +93,12 @@ $headingColor: #80C24A;
     min-height: 5px;
     width: 40dvh;
 
-    &:nth-child(1){
+    &:nth-child(1) {
         margin-left: auto;
         margin-right: -1px;
     }
 
-    &:nth-child(3){
+    &:nth-child(3) {
         margin-left: -1px;
         margin-right: auto;
     }
@@ -130,7 +131,7 @@ $headingColor: #80C24A;
     padding: max(30px, 3dvh);
 }
 
-.section-1__container__headings {
+.section-1__container__heading {
     align-items: center;
     background-color: $boxBackgroundColor;
     border-color: $borderColor;
@@ -143,7 +144,7 @@ $headingColor: #80C24A;
     margin-top: max(80px, 8dvh);
     padding: max(15px, 1.5dvh);
 
-    h2{
+    h2 {
         margin-right: 20px;
     }
 
@@ -154,7 +155,7 @@ $headingColor: #80C24A;
 
 }
 
-.section-1__container__headings__accent {
+.section-1__container__heading__accent {
     background-color: #0c1020;
     border-radius: 20em;
     height: 1.5dvh;
@@ -167,32 +168,36 @@ $headingColor: #80C24A;
 .section-1__container__paragraph {
     background-color: $boxBackgroundColor;
     border-radius: 1em;
-    font-size: clamp(2.5dvh, 1dvh + 1rem, 3.5dvh);
+    font-size: clamp(2.5dvh, 1dvh + 1rem, 3.5dvh - 3em);
     margin-left: auto;
     margin-right: auto;
     width: 25em;
 
-    p{
+    p {
         padding: 1em;
     }
 }
 
-.section-1__container__svg {
+.section-1__container__figure {
     background-color: $boxBackgroundColor;
     border-radius: 1em;
     display: block;
-    height: 30dvh;
     margin-left: auto;
     margin-right: auto;
-    min-height: 300px;
-    min-width: 300px;
-    width: 30dvh;
+    padding: 1em;
+    margin-top: 0;
 
-        p{
-            //margin-top: 30dvh;
-            //margin-bottom: auto;
-            font-size: clamp(1.8dvh, 18px, 2dvh);
-        }
+    img{
+        display: block;
+        margin-inline: auto;
+        width: max(150px, 15dvh);
+    }
+
+    figcaption {
+        font-size: clamp(1dvh, 0.5em, 2dvh);
+        padding-top: 0.5em;
+        text-align: center;
+    }
 }
 
 //=========================================================
@@ -224,7 +229,7 @@ $headingColor: #80C24A;
 //-------------------------
 //  Section-2: Page Nav    |
 //-------------------------
-@mixin page-nav__transition{
+@mixin page-nav__transition {
     transition-duration: 200ms;
     transition-timing-function: linear;
     transition-property: translate, box-shadow;
