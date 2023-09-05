@@ -270,23 +270,151 @@
 
         <main class="main --undarken">
 
-            <section>
-                <h1>About</h1>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod officia corrupti provident sed, rerum
-                    obcaecati
-                    delectus itaque repellendus quasi incidunt libero alias enim voluptate assumenda sequi recusandae,
-                    natus hic! Fuga.
+            <header>
+                <h1 class="page-title">About/Licenses</h1>
+            </header>
+
+            <section class="about">
+                <h2 class="about__title">About</h2>
+                <p class="about__paragraph">
+                    This website was created by Collin Geersen for the purposes of being a portfolio/resume.
                 </p>
             </section>
 
-            <section>
-                <h1>Licenses</h1>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti quibusdam,
-                    nulla maiores quod ipsum temporibus nihil maxime nostrum hic dicta? Soluta omnis nam iste odit
-                    repudiandae a, voluptates dolore reiciendis?
-                </p>
+            <section class="licenses">
+
+                <h2 class="licenses__title">Licenses</h2>
+                <section class="licenses__section--website">
+                    <p class="licenses__section--website__paragraph">
+                        Everything created by me is under the MIT License. All other content like fonts and icons fall
+                        under their respective licenses.
+                    </p>
+                    <details class="licenses__section--website__license">
+                        <summary>MIT License</summary>
+                        <p>Copyright 2023 Collin Geersen</p>
+                        <p>                        
+                            Permission is hereby granted, free of charge, to any person obtaining a copy of this
+                            software and associated documentation files (the “Software”), to deal in the Software
+                            without restriction, including without limitation the rights to use, copy, modify,
+                            merge, publish, distribute, sublicense, and/or sell copies of the Software, and to
+                            permit persons to whom the Software is furnished to do so, subject to the following
+                            conditions:
+                        </p>
+                        <p>
+                            The above copyright notice and this permission notice shall be included in all copies or
+                            substantial portions of the Software.
+                        </p>
+                        <p>
+                            THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+                            INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+                            PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+                            LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT
+                            OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+                            OTHER DEALINGS IN THE SOFTWARE.
+                        </p>
+                    </details>
+                </section>
+
+                <section class="licenses__section--toolchain">
+                    <h3 class="licenses__section--toolchain__title">Project Toolchain Licenses</h3>
+                    <p>**Note: External Links will open in new tab.**</p>
+                    <ul class="licenses__section--toolchain__list">
+                        <li><a href="https://github.com/whatwg/html/blob/main/LICENSE" target="_blank" rel="noreferrer, noopener, external, license">
+                            HTML5
+                        </a></li>
+
+                        <li> <a href="https://www.w3.org/copyright/software-license/" target="_blank" rel="noreferrer, noopener, external, license">
+                            CSS3
+                        </a></li>
+
+                        <li> <a href="https://github.com/sass/dart-sass/blob/main/LICENSE" target="_blank" rel="noreferrer, noopener, external, license">
+                            SASS/SCSS
+                        </a></li>
+
+                        <li><a href="https://www.ecma-international.org/policies/by-ipr/ecma-international-policy-on-submission-inclusion-and-licensing-of-software/E" target="_blank" rel="noreferrer, noopener, external, license">
+                            javascript
+                        </a></li>
+
+                        <li><a href="https://github.com/nodejs/node/blob/main/LICENSE" target="_blank" rel="noreferrer, noopener, external, license">
+                            Node.js
+                        </a></li>
+
+                        <li><a href="https://github.com/microsoft/TypeScript/blob/main/LICENSE.txt" target="_blank" rel="noreferrer, noopener, external, license">
+                            typescript
+                        </a></li>
+
+                        <li><a href="https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/LICENSE" target="_blank" rel="noreferrer, noopener, external, license">
+                            @types/node
+                        </a></li>
+
+                        <li><a href="https://github.com/eslint/eslint/blob/main/LICENSE" target="_blank" rel="noreferrer, noopener, external, license">
+                            ESLint
+                        </a></li>
+
+                        <li><a href="https://github.com/typescript-eslint/typescript-eslint/blob/main/LICENSE" target="_blank" rel="noreferrer, noopener, external, license">
+                            @typescript-eslint/parser
+                        </a></li>
+
+                        <li><a href="https://github.com/typescript-eslint/typescript-eslint/blob/main/LICENSE" target="_blank" rel="noreferrer, noopener, external, license">
+                            @typescript-eslint/eslint-plugin
+                        </a></li>
+
+                        <li><a href="https://github.com/parcel-bundler/parcel/blob/v2/LICENSE" target="_blank" rel="noreferrer, noopener, external, license">
+                            parcel
+                        </a></li>
+
+                        <li><a href="https://github.com/parcel-bundler/parcel/blob/v2/LICENSE" target="_blank" rel="noreferrer, noopener, external, license">
+                            @parcel/transformer-sass
+                        </a></li>
+
+                        <li><a href="https://github.com/svg/svgo/blob/main/LICENSE" target="_blank" rel="noreferrer, noopener, external, license">
+                            svgo
+                        </a></li>
+                    </ul>
+                </section>
+
+                <section class="licenses__section--fonts">
+                    <h3 class="licenses__section--fonts__title">Fonts</h3>
+                    <ul>
+                        <li><a
+                                href="https://fonts.google.com/specimen/EB+Garamond/about?vfonly=true&sort=popularity&subset=latin&noto.script=Latn">
+                                EB Garamond
+                            </a></li>
+                        <li><a
+                                href="https://fonts.google.com/specimen/Source+Code+Pro/about?vfonly=true&sort=popularity&subset=latin&noto.script=Latn">
+                                Source Code Pro
+                            </a></li>
+                        <li><a
+                                href="https://fonts.google.com/specimen/Raleway/about?vfonly=true&sort=popularity&subset=latin&noto.script=Latn">
+                                Raleway
+                            </a></li>
+                    </ul>
+                </section>
+
+                <section class="licenses__section--icons">
+                    <h3 class="licenses__section--icons__title">Icons</h3>
+                    <ul>
+                        <li>
+                            <a href="https://fonts.google.com/icons?icon.style=Rounded">Material Icons by Google</a>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="licenses__section--images">
+                    <h3 class="licenses__section--images__title">Image Sources</h3>
+                    <ul>
+                        <li><a
+                                href="https://commons.wikimedia.org/wiki/File:North_Carolina_State_University_Athletic_logo.svg">
+                                North Carolina State Logo
+                            </a></li>
+                        <li><a href="https://commons.wikimedia.org/wiki/File:Visual_Studio_Code_1.35_icon.svg">
+                                VSCode Logo
+                            </a></li>
+                        <li><a href="https://commons.wikimedia.org/wiki/File:Python-logo-notext.svg">
+                                Python Logo
+                            </a></li>
+                    </ul>
+                </section>
             </section>
 
         </main>
