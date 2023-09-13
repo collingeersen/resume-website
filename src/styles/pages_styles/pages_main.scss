@@ -24,38 +24,6 @@ $headingColor: #80C24A;
     position: relative;
 }
 
-.page-title {
-    animation-duration: 800ms;
-    animation-name: section-1__title--animation;
-    background-color: $boxBackgroundColor;
-    border-bottom-left-radius: $borderRadius;
-    border-bottom-right-radius: $borderRadius;
-    border-color: $borderColor;
-    border-style: solid;
-    border-width: max(0.1em, 0.5dvh);
-    border-top-width: 0;
-    color: #80C24A;
-    font-size: clamp(2.5dvw, 3em, 2.5dvw);
-    height: min(2em, 5em);
-    margin-left: clamp(2dvh, 3dvh, 5dvh);
-    margin-top: 0;
-    padding-bottom: max(0.6em, 2dvh);
-    padding: min(0.5em, 1dvh);
-    translate: 0 0dvw;
-    user-select: none;
-    width: fit-content;
-
-    @keyframes section-1__title--animation {
-        from {
-            translate: 0 -13dvw;
-        }
-
-        to {
-            translate: 0 0dvw;
-        }
-    }
-}
-
 //-------------------------
 //  Section-1 Intro        |
 //-------------------------
@@ -64,15 +32,21 @@ $headingColor: #80C24A;
     //margin-bottom: 80px;
 }
 
-.section-1__intro__svg {
+.section-1__intro__graphic {
     background-color: $boxBackgroundColor;
     border-radius: 20dvh;
-    height: 30dvh;
+    //height: 30dvh;
     //margin: 0;
     margin-inline: auto;
     //min-height: 300px;
     //min-width: 300px;
-    width: 30dvh;
+    //width: 30dvh;
+    
+    //Wrapper for the svg component to allow forced scaling
+    div{
+        //scale: 0.5;
+    }
+
 }
 
 .section-1__intro__heading {
