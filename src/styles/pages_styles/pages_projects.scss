@@ -20,8 +20,8 @@ $borderWidth: max(5px, 0.5dvh);
 .section-1__project-pane__title{
     grid-column-start: 1;
     grid-column-end: 4;
-    margin-left: max(95px, 9.5dvh);
     font-size: clamp(2.5dvh, 1dvh + 1rem, 3.5dvh);
+    margin-inline: auto;
 }
 
 .section-1__project-pane__side{
@@ -177,16 +177,16 @@ $borderWidth: max(5px, 0.5dvh);
 //=========================================================
 @media screen and (width < 615){
     .section-1__project-pane__side{
-        font-size: clamp(1dvh, 1dvh + 0.1rem, 2dvh);
-        margin-top: 0;
+        font-size: clamp(1dvh, 1dvh + 0.1rem, 2dvh);  
         margin: max(20px, 2dvh);
+        margin-top: 0;
         padding: max(10px, 1dvh);
     }
 
     .section-1__project-pane__side__card{
         padding: max(10px, 1dvh);
     }
-    
+
     .section-1__project-pane__frame{
         height: 50dvh;
         margin-bottom: max(20px, 2dvh);
