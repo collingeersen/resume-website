@@ -171,3 +171,28 @@ $borderWidth: max(5px, 0.5dvh);
 .page-nav{
     margin: 0;
 }
+
+//=========================================================
+//  Media Queries
+//=========================================================
+@media screen and (width < 615){
+    .section-1__project-pane__side{
+        font-size: clamp(1dvh, 1dvh + 0.1rem, 2dvh);
+        margin-top: 0;
+        margin: max(20px, 2dvh);
+        padding: max(10px, 1dvh);
+    }
+
+    .section-1__project-pane__side__card{
+        padding: max(10px, 1dvh);
+    }
+    
+    .section-1__project-pane__frame{
+        height: 50dvh;
+        margin-bottom: max(20px, 2dvh);
+        margin-right: max(20px, 2dvh);
+        min-height: 500px;
+        min-width: 200px;
+        overflow-y: scroll;
+    }
+}
