@@ -75,9 +75,26 @@ $borderWidth: max(5px, 0.5dvh);
     background-color: $boxBackgroundColor;
     border-radius: $borderRadius;
     display: block;
-    //margin: auto;
     padding: max(25px, 2.5dvh);
     width: fit-content;
+
+    span{
+        animation-name: test;
+        animation-duration: 500ms;
+        animation-iteration-count: infinite;
+        animation-delay: 500ms;
+        animation-direction: alternate;
+        font-size: clamp(2dvh, 1dvh + 0.8rem, 2dvh);
+
+        @keyframes test {
+            from{
+                translate: 0;
+            }
+            to{
+                translate: -10px;
+            }
+        }
+    }
 }
 
 .section-1__project-pane__frame__content__link{
