@@ -11,6 +11,8 @@ $borderWidth: max(5px, 0.5dvh);
 .section-1__project-pane{
     background-color: $borderColor;
     border-radius: $borderRadius;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
     display: grid;
     grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(2, auto);
@@ -146,4 +148,19 @@ $borderWidth: max(5px, 0.5dvh);
 
 .content-show{
     visibility: visible;
+}
+
+.section-2{
+    border-width: 10px;
+    border-color: $borderColor;
+    border-style: solid;
+    background-color: $boxBackgroundColor;
+    border-radius: 3em;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-top: 0;
+    padding: max(20px, 2dvh);
+}
+.page-nav{
+    margin: 0;
 }
