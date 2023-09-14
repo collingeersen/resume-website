@@ -341,6 +341,7 @@ $badge__name-misc__inlineSpacing: 10px;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    user-select: none;
 }
 
 .badge{
