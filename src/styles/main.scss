@@ -335,44 +335,48 @@ a {
 //=========================================================
 //  Badge
 //=========================================================
-$badge__name-misc__inlineSpacing: 10px;
+$badge__name-misc__inlineSpacing: max(10px, 1dvh);
 
 .badge__wrapper{
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    gap: max(30px, 3dvh);
     user-select: none;
 }
 
 .badge{
     background-color: #0c1020;
     border-color:#1e821b;
-    border-radius: 3px;
+    border-radius: max(20px, 2dvh);
     border-style: solid;
-    border-width: 3px;
+    border-width: max(3px, 0.3dvh);
     display: grid;
     grid-template-columns: repeat(2, auto);
     height: auto;
     overflow: hidden;
-    padding: 10px;
+    padding: max(10px, 1dvh);
     width: auto;
 }
 
 .badge__icon{
     background-color: black;
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
-    height: 24px;
+    border-radius: max(7px, 0.7dvh);
+    height: 2.4dvh;
+    min-height: 24px;
+    min-width: 24px;
     overflow: hidden;
-    width: 24px;
+    width: 2.4dvh;
 }
 .badge__icon--white{
     background-color: white;
+    border-radius: max(7px, 0.7dvh);
 }
 
 .badge__name-misc__wrapper{
     display: flex;
-    font-size: 16px;
+    font-size: max(16px, 1.3dvh);
     gap: $badge__name-misc__inlineSpacing;
     margin: auto;
     margin-left: 10px;
@@ -386,9 +390,11 @@ $badge__name-misc__inlineSpacing: 10px;
         border-radius: 2em;
         content: '';
         display: inline-block;
-        height: 10px;
+        height: 1dvh;
         margin-right: $badge__name-misc__inlineSpacing;
-        width: 10px;
+        min-height: 10px;
+        min-width: 10px;
+        width: 1dvh;
     }
 }
 
