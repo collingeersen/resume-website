@@ -79,14 +79,14 @@ $borderWidth: max(5px, 0.5dvh);
     width: fit-content;
 
     span{
-        animation-name: test;
+        animation-name: section-1__project-pane__frame__default__Animation;
         animation-duration: 500ms;
         animation-iteration-count: infinite;
         animation-delay: 500ms;
         animation-direction: alternate;
         font-size: clamp(2dvh, 1dvh + 0.8rem, 2dvh);
 
-        @keyframes test {
+        @keyframes section-1__project-pane__frame__default__Animation {
             from{
                 translate: 0;
             }
