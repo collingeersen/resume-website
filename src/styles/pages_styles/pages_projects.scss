@@ -45,6 +45,7 @@ $borderWidth: max(5px, 0.5dvh);
     transform: translateY(0px);
     transition-duration: 200ms;
     transition-property: transform, box-shadow;
+    user-select: none;
 
     h3{
         text-align: center;
@@ -52,7 +53,7 @@ $borderWidth: max(5px, 0.5dvh);
 
     &:hover{
         background-color: darkslategrey;
-        box-shadow: 0px 5px 20px black;
+        box-shadow: 0px max(5px, 0.5dvh) max(20px, 2dvh) black;
         cursor: pointer;
         transform: translateY(-10px);
         transition-duration: 200ms;
