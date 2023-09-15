@@ -361,18 +361,14 @@ $badge__name-misc__inlineSpacing: max(10px, 1dvh);
 }
 
 .badge__icon{
-    background-color: black;
-    border-radius: max(7px, 0.7dvh);
     height: 2.4dvh;
     margin: auto;
     min-height: 24px;
     min-width: 24px;
-    overflow: hidden;
     width: 2.4dvh;
 }
 .badge__icon--white{
-    background-color: white;
-    border-radius: max(7px, 0.7dvh);
+    filter: invert(1);
 }
 
 .badge__name-misc__wrapper{
