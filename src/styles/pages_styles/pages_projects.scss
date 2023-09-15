@@ -98,15 +98,16 @@ $borderWidth: max(5px, 0.5dvh);
 }
 
 .section-1__project-pane__frame__content__link{
-    display: block;
-    margin-inline: auto;
-    width: fit-content;
+    border-color: $borderColor;
+    border-radius: $borderRadius;
     border-style: solid;
     border-width: max(5px, 0.5dvh);
-    border-radius: $borderRadius;
-    border-color: $borderColor;
-    padding: max(10px, 1dvh);
+    display: block;
     font-size: clamp(1.75dvh, 1dvh + 0.4rem, 2.75dvh);
+    margin-bottom: 50px;
+    margin-top: 50px;
+    padding: max(10px, 1dvh);
+    width: fit-content;
 
     >span{
         animation-duration: 1000ms;
