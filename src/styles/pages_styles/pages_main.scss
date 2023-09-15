@@ -134,7 +134,7 @@ $headingColor: #80C24A;
 
 .section-1__container__paragraph {
     background-color: $boxBackgroundColor;
-    border-radius: 1em;
+    border-radius: $borderRadius;
     font-size: clamp(2.5dvh, 1dvh + 1rem, 3.5dvh - 3em);
     margin-left: auto;
     margin-right: auto;
