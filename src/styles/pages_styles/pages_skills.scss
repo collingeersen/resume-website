@@ -2,6 +2,8 @@
     flex-wrap: wrap;
 }
 .section-1__container__paragraph{
-    padding: 30px;
-    margin:auto;
+    padding: max(30px, 3dvh);
+    margin-bottom: max(15px, 1.5dvh);
+    margin-top: max(15px, 1.5dvh);
+    align-self: center;
 }
