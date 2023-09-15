@@ -27,24 +27,14 @@ $headingColor: #80C24A;
 //-------------------------
 //  Section-1 Intro        |
 //-------------------------
-.section-1__intro {
-    display: block;
-    //margin-bottom: 80px;
-}
-
 .section-1__intro__graphic {
-    background-color: $boxBackgroundColor;
-    border-radius: 20dvh;
-    //height: 30dvh;
-    //margin: 0;
+    display: block;
     margin-inline: auto;
-    //min-height: 300px;
-    //min-width: 300px;
-    //width: 30dvh;
+    width: min-content;
     
     //Wrapper for the svg component to allow forced scaling
     div{
-        //scale: 0.5;
+        scale: 1.2;
     }
 
 }
