@@ -354,16 +354,17 @@ $badge__name-misc__inlineSpacing: max(10px, 1dvh);
     border-width: max(3px, 0.3dvh);
     display: grid;
     grid-template-columns: repeat(2, auto);
-    height: auto;
-    overflow: hidden;
+    height: min-content;
     padding: max(10px, 1dvh);
-    width: auto;
+    text-align: center;
+    width:min-content;
 }
 
 .badge__icon{
     background-color: black;
     border-radius: max(7px, 0.7dvh);
     height: 2.4dvh;
+    margin: auto;
     min-height: 24px;
     min-width: 24px;
     overflow: hidden;
@@ -375,13 +376,11 @@ $badge__name-misc__inlineSpacing: max(10px, 1dvh);
 }
 
 .badge__name-misc__wrapper{
-    display: flex;
-    font-size: max(16px, 1.3dvh);
+    font-size: max(14px, 1.3dvh);
     gap: $badge__name-misc__inlineSpacing;
     margin: auto;
-    margin-left: 10px;
-    margin-right: 10px;
-    text-align: center;
+    margin-left: $badge__name-misc__inlineSpacing;
+    margin-right: $badge__name-misc__inlineSpacing;
 }
 
 .badge__misc{
