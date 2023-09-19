@@ -6,7 +6,7 @@ import('../components/svg/projects_svg').then();
 
 const OBSERVER_OPTIONS = {
     rootMargin: '0px', //This can be thought of the initial offset margin
-    threshold: 1.0, //This equates to 100% of the object be present on the intersection
+    threshold: 0.8, //This equates to 100% of the object be present on the intersection
 };
 
 const observer = new IntersectionObserver ((elements) => {
