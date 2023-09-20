@@ -141,18 +141,31 @@ $headingColor: #80C24A;
     width: 25em;
 
     p {
-        padding: 1em;
+        padding: 2dvh;
+    }
+
+    ul{
+        margin-inline: auto;
+        display: block;
+        width:fit-content;
+    }
+
+    li{
+        padding-bottom: 0.5em;
+        font-size: clamp(1.5dvh, 1dvh + 0.8rem, 2dvh);
+        
     }
 }
 
 .section-1__container__figure {
+    align-self: center;
     background-color: $boxBackgroundColor;
-    border-radius: 1em;
+    border-radius: $borderRadius;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding: 1em;
     margin-top: 0;
+    padding: 2dvh;
 
     img{
         display: block;
@@ -177,18 +190,20 @@ $headingColor: #80C24A;
 
 .section-2 {
     background-color: $backgroundColor;
-    padding: 1em;
+    padding: 2dvh;
     border-radius: $borderRadius;
     position: relative;
 
     h2 {
         background-color: $boxBackgroundColor;
-        padding: 1em;
+        padding: 2dvh;
+        font-size: clamp(2.5dvh, 1dvh + 1rem, 3.5dvh);
     }
 
     p {
-        width: 50%;
         font-size: clamp(2.5dvh, 1dvh + 1rem, 3.5dvh);
-        margin-left: 15dvh;
+        margin: auto;
+        margin-top: max(70px, 7dvh);
+        width: 50%;
     }
 }
