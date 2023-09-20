@@ -315,8 +315,8 @@ a {
     height: min(2em, 5em);
     margin-left: clamp(2dvh, 3dvh, 5dvh);
     margin-top: 0;
-    padding-bottom: max(0.6em, 2dvh);
-    padding: min(0.5em, 1dvh);
+    padding: max(0.6em, 2dvh);
+    padding-top: min(0.5em, 1dvh);
     translate: 0 0dvw;
     user-select: none;
     width: fit-content;

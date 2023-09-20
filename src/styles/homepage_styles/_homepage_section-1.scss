@@ -50,35 +50,6 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
     padding-left: clamp(2dvh, 3dvh, 5dvh);
 }
 
-.intro__header__title {
-    animation-duration: 800ms;
-    animation-name: intro__header__title-load-animation;
-    background-color: $boxBackgroundColor;
-    border-bottom-left-radius: $borderRadius;
-    border-bottom-right-radius: $borderRadius;
-    font-size: clamp(2.5dvw, 3em, 2.5dvw);
-    height: min(2em, 5em);
-    margin-top: 0;
-    padding: min(0.5em, 1dvh);
-    padding-bottom: max(0.6em, 2dvh);
-    border-style: solid;
-    border-width: max(0.1em, 0.5dvh);
-    border-color: $borderColor;
-    border-top-width: 0;
-    color: #80C24A;
-    translate: 0 0dvw;
-
-    @keyframes intro__header__title-load-animation {
-        from {
-            translate: 0 -13dvw;
-        }
-
-        to {
-            translate: 0 0dvw;
-        }
-    }
-}
-
 //=========================================================
 //  Github Link
 //=========================================================
