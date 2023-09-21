@@ -27,7 +27,7 @@ header{
 }
 
 .code{
-    background-color: $boxBackgroundColor;
+    background-color: rgb(42, 40, 40);
     border-radius: $borderRadius;
 
 }
@@ -76,7 +76,7 @@ header{
 .output{
     margin-left: auto;
     margin-right: 0;
-    background-color: $boxBackgroundColor;
+    background-color: rgb(42, 40, 40);
     padding: 1em;
     border-bottom-right-radius: $borderRadius;
     border-top-right-radius: $borderRadius;
