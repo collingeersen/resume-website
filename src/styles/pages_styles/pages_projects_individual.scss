@@ -143,18 +143,25 @@ footer{
     animation-name: tocHideZ__Animation;
     background-color: transparent;
     transition-delay: 100ms;
+    
 
     @keyframes tocHideZ__Animation {
         from{
             z-index: 90;
+            visibility: visible;
         }
         to{
             z-index: 0;
+            visibility: collapse;
         }
     }
     
     section {
         translate: -100%;
+    }
+    
+    div{
+        visibility: visible;
     }
 }
 
