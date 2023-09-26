@@ -38,9 +38,9 @@ h3 {
     font-size: clamp(2dvh, 1dvh + 0.6em, 2.5dvh + 1em);
 }
 
-footer{
-    
-    &::before{
+footer {
+
+    &::before {
         content: '';
         background-color: #181D1F;
         width: 12%;
@@ -66,7 +66,7 @@ footer{
     z-index: 90;
 
     //Used to create a masking layer to hide the toc when moved off main
-    &::before{
+    &::before {
         background-color: #181D1F;
         border-color: #0c1020;
         border-style: solid;
@@ -116,7 +116,7 @@ footer{
     word-spacing: 0.5dvh;
     writing-mode: vertical-lr;
 
-    &:hover{
+    &:hover {
         color: #3F6321;
         transition-property: color;
         transition-duration: 200ms;
@@ -127,11 +127,11 @@ footer{
 //  TOC Events             |
 //-------------------------
 .toc--hide,
-.toc--show{
+.toc--show {
     transition-duration: 250ms;
     transition-property: background-color;
 
-    section{
+    section {
         transition-duration: 250ms;
         transition-property: translate;
     }
@@ -143,24 +143,24 @@ footer{
     animation-name: tocHideZ__Animation;
     background-color: transparent;
     transition-delay: 100ms;
-    
 
     @keyframes tocHideZ__Animation {
-        from{
+        from {
             z-index: 90;
             visibility: visible;
         }
-        to{
+
+        to {
             z-index: 0;
             visibility: collapse;
         }
     }
-    
+
     section {
         translate: -100%;
     }
-    
-    div{
+
+    div {
         visibility: visible;
     }
 }
@@ -179,11 +179,16 @@ footer{
     border-color: $borderColor;
     border-style: solid;
     border-width: $borderWidth;
+    border-radius: $borderRadius;
     display: block;
     margin-inline: auto;
-    padding: 2em;
+    padding: 2dvh;
     text-align: center;
     width: fit-content;
+
+    p{
+        font-size: clamp(1.7dvh, 1dvh + 0.5em, 1.5dvh + 1em);
+    }
 }
 
 //=========================================================
@@ -197,38 +202,33 @@ footer{
         &::after {
             content: '';
             width: 100%;
-            height: 3px;
-            background-color: #0c1020;
+            height: $borderWidth;
+            background-color: $borderColor;
             display: inline-block;
         }
     }
 
     p {
-        //width: 50%;
-        //text-wrap:wrap;
-        //display: flex;
         font-size: clamp(2dvh, 1dvh + 0.8em, 2dvh + 1em);
 
         img {
             width: 200px;
             height: 200px;
         }
-
     }
 
     h2+p {
-        //background-color: #80C24A;
-        border-color: #80C24A;
+        border-color: #0c1020;
         border-width: 0;
         border-style: solid;
-        border-left-width: 1em;
+        border-left-width: calc($borderWidth * 4);
         width: 100%;
         padding-left: 1em;
     }
 }
 
 .section__body__headings::before {
-    $anchorOffset: 3em;
+    $anchorOffset: 10dvh;
     content: '';
     display: block;
     height: $anchorOffset;
