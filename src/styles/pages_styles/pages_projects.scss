@@ -70,6 +70,10 @@ $borderWidth: max(5px, 0.5dvh);
     margin-top: 0;
     padding: max(25px, 2.5dvh);
     font-size: clamp(1.75dvh, 1dvh + 0.4rem, 2.75dvh);
+
+    li{
+        padding: 0.5em;
+    }
 }
 
 .section-1__project-pane__frame__default{
