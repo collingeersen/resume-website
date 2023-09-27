@@ -17,6 +17,8 @@ $borderWidth: max(5px, 0.5dvh);
 
 main {
     background-color: $borderColor;
+    border-bottom-left-radius: $borderRadius;
+    border-bottom-right-radius: $borderRadius;
 
 }
 
@@ -64,6 +66,7 @@ footer {
     padding-left: 0;
     position: fixed;
     z-index: 90;
+    user-select: none;
 
     //Used to create a masking layer to hide the toc when moved off main
     &::before {
@@ -90,6 +93,7 @@ footer {
     padding: 2em;
     padding-left: 4em;
     width: fit-content;
+    font-weight: 400;
 
     ol {
         line-height: 3em;
@@ -116,6 +120,10 @@ footer {
     word-spacing: 0.5dvh;
     writing-mode: vertical-lr;
 
+    span{
+        font-size: clamp(2dvh, 1dvh + 0.8em, 2.5dvh + 1em);
+    }
+
     &:hover {
         color: #3F6321;
         transition-property: color;
@@ -126,23 +134,31 @@ footer {
 //-------------------------
 //  TOC Events             |
 //-------------------------
+$tocDuration: 250ms;
+$tocDelay: 100ms;
+
 .toc--hide,
 .toc--show {
-    transition-duration: 250ms;
+    transition-duration: $tocDuration;
     transition-property: background-color;
 
     section {
-        transition-duration: 250ms;
+        transition-duration: $tocDuration;
         transition-property: translate;
+    }
+
+    span{
+        transition-property: rotate;
+        transition-duration: $tocDuration;
     }
 }
 
 .toc--hide {
-    animation-duration: 250ms;
+    animation-duration: $tocDuration;
     animation-fill-mode: forwards;
     animation-name: tocHideZ__Animation;
     background-color: transparent;
-    transition-delay: 100ms;
+    transition-delay: $tocDelay;
 
     @keyframes tocHideZ__Animation {
         from {
@@ -163,12 +179,20 @@ footer {
     div {
         visibility: visible;
     }
+
+    span{
+        rotate: 90deg;
+    }
 }
 
 .toc--show {
     section {
-        transition-delay: 100ms;
+        transition-delay: $tocDelay;
         translate: 0;
+    }
+
+    span{
+        rotate: 270deg;
     }
 }
 
@@ -176,6 +200,7 @@ footer {
 //  Section: Intro
 //=========================================================
 .section__intro {
+    background-color: $boxBackgroundColor;
     border-color: $borderColor;
     border-style: solid;
     border-width: $borderWidth;
@@ -210,10 +235,12 @@ footer {
 
     p {
         font-size: clamp(2dvh, 1dvh + 0.8em, 2dvh + 1em);
+        align-content: center;
 
         img {
             width: 200px;
             height: 200px;
+            padding: 0.5em;
         }
     }
 
@@ -238,6 +265,23 @@ footer {
 }
 
 //=========================================================
+//  Section: Page Nav
+//=========================================================
+.section__page-nav{
+    background-color: $backgroundColor;
+    border-bottom-left-radius: $borderRadius;
+    border-bottom-right-radius: $borderRadius;
+    padding: 0;
+    padding-bottom: 1em;
+}
+
+.page-nav{
+    margin-top: 0;
+    padding: 1em;
+    width: fit-content;
+}
+
+//=========================================================
 //  Utility
 //=========================================================
 .float--right {
@@ -246,5 +290,4 @@ footer {
 
 .float--left {
     float: left;
-
 }
