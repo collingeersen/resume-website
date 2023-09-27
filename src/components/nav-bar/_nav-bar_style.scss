@@ -187,15 +187,15 @@ nav {
     }
 
     #top{
-        fill: red;
-    }
-
-    #middle{
         fill: black;
     }
 
+    #middle{
+        fill: $navBorderColor;
+    }
+
     #bottom{
-        fill: blue;
+        fill: #181D1F;
     }
 }
 
