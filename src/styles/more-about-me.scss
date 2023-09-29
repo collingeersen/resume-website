@@ -1,0 +1,276 @@
+//=========================================================
+//  Variables
+//=========================================================
+$backgroundColor: #2b3463;
+$borderRadius: clamp(1dvw, 1em, 2dvw);
+$borderColor: #0c1020;
+$boxBackgroundColor: #20274A;
+$headingColor: #80C24A;
+$borderWidth: max(5px, 0.5dvh);
+
+//=========================================================
+//  Top Level Selectors
+//=========================================================
+* {
+    scroll-behavior: smooth;
+}
+
+main {
+    background-color: $borderColor;
+    border-bottom-left-radius: $borderRadius;
+    border-bottom-right-radius: $borderRadius;
+
+}
+
+article {
+    background-color: $backgroundColor;
+
+}
+
+section {
+    padding: 2dvh;
+}
+
+h1,
+h2 {
+    font-size: clamp(2.8dvh, 1dvh + 1em, 2.9dvh + 1em);
+}
+
+h3 {
+    font-size: clamp(2dvh, 1dvh + 0.6em, 2.5dvh + 1em);
+}
+
+footer {
+
+    &::before {
+        content: '';
+        background-color: #181D1F;
+        width: 12%;
+        height: max(240px, 24dvh);
+        display: block;
+        position: absolute;
+    }
+}
+
+//=========================================================
+//  Table of Contents
+//=========================================================
+.toc {
+    background-color: $borderColor;
+    border-bottom-right-radius: $borderRadius;
+    border-top-right-radius: $borderRadius;
+    display: block;
+    margin-left: 0%;
+    bottom: 0;
+    padding: 2dvh;
+    padding-left: 0;
+    position: fixed;
+    z-index: 90;
+    user-select: none;
+
+    //Used to create a masking layer to hide the toc when moved off main
+    &::before {
+        background-color: #181D1F;
+        border-color: #0c1020;
+        border-style: solid;
+        border-width: 0;
+        border-right-width: 2vmax;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        right: 100%;
+        width: 100%;
+        z-index: 100;
+    }
+}
+
+.toc__content {
+    background-color: $backgroundColor;
+    border-bottom-right-radius: $borderRadius;
+    border-top-right-radius: $borderRadius;
+    font-size: clamp(1.8dvh, 1dvh + 0.5em, 2.2dvh + 1em);
+    padding: 2em;
+    padding-left: 4em;
+    width: fit-content;
+    font-weight: 400;
+
+    ol {
+        line-height: 3em;
+        list-style-type: lower-roman;
+    }
+}
+
+.toc__heading {
+    background-color: #0c1020;
+    border-bottom-left-radius: $borderRadius;
+    border-top-left-radius: $borderRadius;
+    color: #80C24A;
+    cursor: pointer;
+    display: block;
+    font-size: clamp(1.8dvh, 1dvh + 0.5em, 2.2dvh + 1em);
+    height: max-content;
+    padding: 1em;
+    position: absolute;
+    right: max-content;
+    rotate: 180deg;
+    text-align: center;
+    top: 0;
+    user-select: none;
+    word-spacing: 0.5dvh;
+    writing-mode: vertical-lr;
+
+    span{
+        font-size: clamp(2dvh, 1dvh + 0.8em, 2.5dvh + 1em);
+    }
+
+    &:hover {
+        color: #3F6321;
+        transition-property: color;
+        transition-duration: 200ms;
+    }
+}
+
+//-------------------------
+//  TOC Events             |
+//-------------------------
+$tocDuration: 250ms;
+$tocDelay: 100ms;
+
+.toc--hide,
+.toc--show {
+    transition-duration: $tocDuration;
+    transition-property: background-color;
+
+    section {
+        transition-duration: $tocDuration;
+        transition-property: translate;
+    }
+
+    span{
+        transition-property: rotate;
+        transition-duration: $tocDuration;
+    }
+}
+
+.toc--hide {
+    animation-duration: $tocDuration;
+    animation-fill-mode: forwards;
+    animation-name: tocHideZ__Animation;
+    background-color: transparent;
+    transition-delay: $tocDelay;
+
+    @keyframes tocHideZ__Animation {
+        from {
+            z-index: 90;
+            visibility: visible;
+        }
+
+        to {
+            z-index: 0;
+            visibility: collapse;
+        }
+    }
+
+    section {
+        translate: -100%;
+    }
+
+    div {
+        visibility: visible;
+    }
+
+    span{
+        rotate: 90deg;
+    }
+}
+
+.toc--show {
+    section {
+        transition-delay: $tocDelay;
+        translate: 0;
+    }
+
+    span{
+        rotate: 270deg;
+    }
+}
+
+//=========================================================
+//  Section: Intro
+//=========================================================
+.section__intro {
+    background-color: $boxBackgroundColor;
+    border-color: $borderColor;
+    border-style: solid;
+    border-width: $borderWidth;
+    border-radius: $borderRadius;
+    display: block;
+    margin-inline: auto;
+    padding: 2dvh;
+    text-align: center;
+    width: fit-content;
+
+    p{
+        font-size: clamp(1.7dvh, 1dvh + 0.5em, 1.5dvh + 1em);
+    }
+}
+
+//=========================================================
+//  Section: Body
+//=========================================================
+.section__body {
+    width: 80%;
+    margin-inline: auto;
+
+    h2 {
+        &::after {
+            content: '';
+            width: 100%;
+            height: $borderWidth;
+            background-color: $borderColor;
+            display: inline-block;
+        }
+    }
+
+    p {
+        font-size: clamp(2dvh, 1dvh + 0.8em, 2dvh + 1em);
+        align-content: center;
+
+        img {
+            width: 200px;
+            height: 200px;
+            padding: 0.5em;
+        }
+    }
+
+    h2+p {
+        border-color: #0c1020;
+        border-width: 0;
+        border-style: solid;
+        border-left-width: calc($borderWidth * 4);
+        width: 100%;
+        padding-left: 1em;
+    }
+}
+
+.section__body__headings::before {
+    $anchorOffset: 10dvh;
+    content: '';
+    display: block;
+    height: $anchorOffset;
+    margin-top: -$anchorOffset;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+//=========================================================
+//  Utility
+//=========================================================
+.float--right {
+    float: right;
+}
+
+.float--left {
+    float: left;
+}
