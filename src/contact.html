@@ -8,6 +8,7 @@
     <meta name="description" content="Portfolio website by Collin Geersen for professional use (Contact Page).">
     <link rel="icon" type="image/x-icon" href="../src/images/favicon.svg">
     <link rel="stylesheet" href="../src/styles/main.scss">
+    <link rel="stylesheet" href="../src/styles/contact.scss">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
     <script src="../src/scripts/index.ts" defer></script>
 </head>
@@ -259,10 +260,50 @@
         </nav>
 
         <main class="main --undarken">
-            
-            <header>
-                <h1 class="page-title">Contact</h1>
-            </header>
+            <section class="contact">
+                <header class="contact__header">
+                    <h1 class="page-title">Contact</h1>
+                </header>
+
+                <section class="contact__method">
+
+                    <section class="contact__method--email">
+                        <h3>Preferred Contact Method:</h3>
+                        <p>Email: <a href="mailto:collingeersen.git@gmail.com">collingeersen.git@gmail.com</a></p>
+                    </section>
+
+                    <section class="contact__method--form">
+                        <h3>Secondary Method of Contact:</h3>
+                        <p>Form Submission via Formspree</p>
+                        <p>Note: When submitting it will redirect to a Formspree page, <br> just press on the go back button on the page when done.</p>
+                        <form class="contact__form" name="portfolio-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xgejpvqq" method="post">
+                            <fieldset>
+                                
+                                <div class="contact__form--name">
+                                    <label class="contact__form--name__label" for="name">Name</label>
+                                    <input class="contact__form--name__input" type="text" name="name" placeholder="John Doe" required="" aria-required="true">
+                                </div>
+                                <div class="contact__form--email">
+                                    <label class="contact__form--email__label" for="email">Email</label>
+                                    <input class="contact__form--email__input" type="email" name="email" placeholder="example@email.com" required="" aria-required="true">
+                                </div>
+                                <div class="contact__form--message">
+                                    <label class="contact__form--message__label">Message</label>
+                                    <textarea class="contact__form--message__input" name="message" 
+                                    rows="6" cols="40" required="" placeholder="Enter your message here:"></textarea>
+                                </div>
+                                <input type="hidden" name="form-subject" value="Portfolio Contact Submission" >
+                                <label>*All Fields Required</label>
+                            </fieldset>
+                            <div class="contact__form__submit__wrapper" role="presentation">
+                                <input class="contact__form__submit" type="submit" value="Submit">
+                            </div>
+                            
+                        </form>
+                    </section>
+
+                </section>
+            </section>
 
         </main>
     </div>
