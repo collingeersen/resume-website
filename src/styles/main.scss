@@ -29,6 +29,7 @@
 $separatorHeight: 40px;
 $separatorNotchHeight: 70px;
 $borderRadius: clamp(1dvw, 1em, 2dvw);
+$borderWidth: max(5px, 0.5dvh);
 //
 //  Colors
 //''''''''
@@ -44,8 +45,7 @@ $fontColor2: #40DB8D;
 $insetShadow: rgba(0, 0, 0, 0.6);
 $mainColor: #2B3E4D;
 $boxBackgroundColor: #20274A;
-$borderColor: #0c1020;
-$borderRadius: clamp(1dvw, 1em, 2dvw);
+$borderColor: #0c1020;;
 //
 //  Heading Colors
 //''''''''''''''''
@@ -253,6 +253,35 @@ a {
 
     &:focus {
         outline: none;
+    }
+}
+//=========================================================
+//  Custom Buttons
+//=========================================================
+.button--outline{
+    background-color: #2b3463;
+    border-color: $borderColor;
+    border-radius: 20em;
+    border-style: solid;
+    border-width: $borderWidth;
+    height: min-content;
+    margin-inline: auto;
+    padding: 20px;
+    text-align: center;
+    text-wrap: nowrap;
+    transition-duration: 200ms;
+    transition-property: background-color;
+    width: max-content;
+
+    &:hover{
+        background-color: $borderColor;
+        transition-property: background-color;
+        transition-duration: 200ms;
+        //Remove hover border from link
+        border-color: $borderColor;
+        border-radius: 20em;
+        border-style: solid;
+        border-width: $borderWidth;
     }
 }
 

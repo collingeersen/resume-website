@@ -41,26 +41,4 @@ $borderWidth: max(5px, 0.5dvh);
             text-align: right;
         }
     }
-
-    a{
-        background-color: #2b3463;
-        border-color: $borderColor;
-        border-radius: 20em;
-        border-style: solid;
-        border-width: $borderWidth;
-        height: min-content;
-        margin-inline: auto;
-        padding: 20px;
-        text-align: center;
-        text-wrap: nowrap;
-        transition-duration: 200ms;
-        transition-property: background-color;
-        width: max-content;
-
-        &:hover{
-            background-color: $borderColor;
-            transition-property: background-color;
-            transition-duration: 200ms;
-        }
-    }
 }
