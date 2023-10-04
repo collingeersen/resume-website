@@ -272,6 +272,7 @@ a {
     transition-duration: 200ms;
     transition-property: background-color;
     width: max-content;
+    font-size: clamp(1em, 2dvh, 5dvh);
 
     &:hover{
         background-color: $borderColor;
