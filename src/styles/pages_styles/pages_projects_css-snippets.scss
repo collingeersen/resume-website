@@ -48,3 +48,35 @@ iframe{
     margin-inline: auto;
     display: block;
 }
+
+.iframe__wrapper{
+    margin-inline: auto;
+}
+
+.construction-line{
+    margin-inline: auto;
+    width: fit-content;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+
+    h4{
+        margin-top: 15%;
+    }
+}
+
+.construction-overlay{
+    filter: blur(10px);
+    user-select: none;
+    cursor: pointer;
+    pointer-events: none;
+
+    text-align: center;
+}
+
+@media screen and (width < 1060px) {
+    iframe{
+        scale: 0.9;
+        width: 100%;
+    }
+}
