@@ -11,9 +11,9 @@
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "type": "module",
   "scripts": {
-    "start": "parcel",
-    "build": "rm -rf dist/* && parcel build --no-optimize",
-    "predeploy": "rm -rf dist/* && parcel build --no-optimize --public-url https://github.com/collingeersen/collingeersen.github.io",
+    "start": "parcel ./src/index.html",
+    "build": "rm -rf dist/* && parcel build ./src/index.html --no-optimize",
+    "predeploy": "parcel build ./src/index.html --no-optimize --public-url https://collingeersen.github.io/",
     "deploy": "gh-pages -d dist",
     "check": "tsc --noEmit",
     "lint": "eslint"
