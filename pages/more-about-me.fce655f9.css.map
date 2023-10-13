@@ -1,0 +1,1 @@
+{"mappings":"AAAA;;;;AAKI","sources":["src/styles/more-about-me.scss"],"sourcesContent":["h1{\n    font-size: clamp(3dvh, 1dvh + 2em, 3dvh + 1em)\n}\n\n.section__body{\n    section{\n        padding-bottom: 4em;\n    }\n\n}\n"],"names":[],"version":3,"file":"more-about-me.fce655f9.css.map"}

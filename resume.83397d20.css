@@ -1,0 +1,22 @@
+main {
+  background-color: #0c1020;
+}
+
+header, article, .section-1 {
+  background-color: #2b3463;
+}
+
+.section-2 {
+  background-color: #20274a;
+  border: max(40px, 4dvh) solid #0c1020;
+  border-radius: clamp(1dvw, 1em, 2dvw);
+  margin-top: max(50px, 5dvh);
+  padding: max(20px, 2dvh);
+}
+
+.page-nav {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/*# sourceMappingURL=resume.83397d20.css.map */
