@@ -224,11 +224,8 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
     animation-duration: 800ms;
     animation-fill-mode: forwards;
     animation-name: intro__summary__greeting--avatar-animation;
-    background-color: $boxBackgroundColor;
-    border-radius: $borderRadius;
-    border-style: solid;
-    border-width: max(0.1em, 0.5dvh);
-    border-color: $borderColor;
+    //background-color: $boxBackgroundColor;
+
     opacity: 0;
     translate: 0 100px;
     margin-right: 5%;
@@ -243,7 +240,35 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
             translate: 0;
         }
     }
+
+    svg{
+        width: 20dvh;
+        height: 20dvh;
+        padding: 10px;
+        
+        #arm-1{
+            animation-name: collinArm_Animation;
+            animation-iteration-count:infinite;
+            animation-duration: 750ms;
+
+            @keyframes collinArm_Animation {
+                from{
+                    rotate: 0deg;
+                    translate: 0;
+                }
+                50%{
+                    rotate: 4deg;
+                    translate: 3px;
+                }
+                to{
+                    rotate: 0deg;
+                    translate: 0;
+                }
+            }
+        }
+    }
 }
+
 
 //-------------------------
 //  Summary Content        |
