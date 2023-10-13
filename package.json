@@ -11,9 +11,12 @@
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "type": "module",
   "scripts": {
-    "start": "parcel",
-    "build": "rm -rf dist/* && parcel build .*.html --public-url https://github.com/collingeersen/collingeersen.github.io",
-    "deploy": "gh-pages -d dist",
+    "start": "parcel ./src/index.html",
+    "prebuild-dev": "shx rm -rf dist/*",
+    "build-dev": "parcel build ./src/index.html --no-optimize --public-url ./",
+    "prebuild": "shx rm -rf dist/*",
+    "build": "parcel build ./src/index.html --public-url ./",
+    "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose",
     "check": "tsc --noEmit",
     "lint": "eslint"
   },
@@ -45,6 +48,7 @@
   },
   "dependencies": {
     "@types/node": "^18.15.5",
-    "gh-pages": "^6.0.0"
+    "gh-pages": "^6.0.0",
+    "shx": "^0.3.4"
   }
 }
