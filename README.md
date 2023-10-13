@@ -1,18 +1,9 @@
 # What is this?
 
-This is the git repo for a website to demonstrate my programming portfolio and professional skills.
+This is the git repo for my portfolio website.
+No pull requests, thank you.
 
 ***
 
-# What technologies will be used?
-
-Currently that website utilizes:
--   HTML
--   CSS
--   Javascript
-
-Planned technologies to utilize:
--   JQuery
--   PHP
--   JS Framework?
--   Typescript
+# Contact
+Email: collingeersen.git@gmail.com
