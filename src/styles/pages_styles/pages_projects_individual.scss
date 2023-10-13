@@ -67,6 +67,7 @@ footer {
     position: fixed;
     z-index: 90;
     user-select: none;
+    min-height: 570px;
 
     //Used to create a masking layer to hide the toc when moved off main
     &::before {
@@ -94,6 +95,7 @@ footer {
     padding-left: 4em;
     width: fit-content;
     font-weight: 400;
+    min-height: 570px;
 
     ol {
         line-height: 3em;
@@ -377,7 +379,7 @@ $tocDelay: 100ms;
         padding: 1em;
         width: 70%;
     }
-    
+
     ~div>h4{
         font-size: clamp(1dvh, 1dvh + 0.4em, 1.8dvh + 0.8em);
     }
