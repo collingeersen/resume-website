@@ -2,34 +2,40 @@
 //  Homepage- Section 1
 //=========================================================
 //-------------------------
-//  Variables              |
+//  Variable               |
 //-------------------------
+//
+//  Height/Width
+//''''''''''''''
 $borderRadius: clamp(1dvw, 1em, 2dvw);
-//Heights/Widths
 $separatorHeight: 4dvh;
 $separatorNotchHeight: 70px;
-//Colors
+//
+//  Colors
+//''''''''
 $backgroundColor: #2b3463;
 $borderColor: #0c1020;
 $boxBackgroundColor: #20274A;
-
+//  Colors: GitHub
 $githubHoverColor: #3F6321;
 $githubIconBackgroundColor: white;
 $githubUnderlineColor: #3F6321;
-
-//Delay for intro animation
+//
+//  Animation Timings
+//'''''''''''''''''''
+//  Animation Timings: Greeting
 $introGreetingDelay: 1000ms;
 $introGreetingFrameDelay: $introGreetingDelay+700ms;
 $introGreetingAccentDelay: $introGreetingFrameDelay+700ms;
-
+//  Animation Timings: Content
 $introContent_AnimDelay: $introGreetingFrameDelay+800ms;
 $introContent_AnimDuration: 1000ms;
 $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
 
 //=========================================================
-//  Intro
+//  Section-1
 //=========================================================
-.intro {
+.section-1 {
     background-color: $borderColor;
     border: solid $borderColor $separatorHeight;
     border-bottom: 0;
@@ -42,7 +48,7 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
 //=========================================================
 //  Header
 //=========================================================
-.intro__header {
+.section-1__header {
     background-color: $backgroundColor;
     border-top-left-radius: $borderRadius;
     border-top-right-radius: $borderRadius;
@@ -53,6 +59,8 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
 //=========================================================
 //  Github Link
 //=========================================================
+//
+//  GitHub Link- Mixin
 @mixin githubLink_Transition {
     background-color: $githubUnderlineColor;
     content: '';
@@ -62,7 +70,8 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
     transition-property: all;
 }
 
-.intro__header__github-link {
+//
+.section-1__header__github-link {
     background-color: $boxBackgroundColor;
     border-bottom-left-radius: $borderRadius;
     border-top-right-radius: $borderRadius;
@@ -74,6 +83,19 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
     padding-top: clamp(0.4em, 1.5em, 4em);
     transition-duration: 250ms;
     transition-property: box-shadow, translate;
+
+    &:hover {
+        box-shadow: $borderColor clamp(0.5dvh, 1.2dvh, 1.4dvh) clamp(0.5dvh, 1.2dvh, 1.4dvh);
+        cursor: pointer;
+        transition-duration: 300ms;
+        transition-property: box-shadow, translate;
+        translate: -0.5dvh -0.5dvh;
+        user-select: none;
+    }
+
+    &:focus {
+        outline: auto;
+    }
 
     h3 {
         font-size: clamp(1dvw, 0.75dvw + 1em, 1dvw);
@@ -87,6 +109,17 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
         }
     }
 
+    &:hover>h3 {
+        color: $githubHoverColor;
+
+        //End state underline for Github link
+        &::after {
+            @include githubLink_Transition;
+            width: 100%;
+        }
+    }
+
+    //Github Logo
     img {
         background-color: $githubIconBackgroundColor;
         border-radius: 10dvh;
@@ -98,85 +131,63 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
         transition-property: scale;
     }
 
-    &:focus{
-        outline: auto;
-    }
-
-    &:hover {
-        box-shadow: $borderColor clamp(0.5dvh, 1.2dvh, 1.4dvh) clamp(0.5dvh, 1.2dvh, 1.4dvh);
-        cursor: pointer;
+    &:hover>img {
+        scale: 1.2;
         transition-duration: 300ms;
-        transition-property: box-shadow, translate;
-        translate: -0.5dvh -0.5dvh;
-        user-select: none;
-
-        h3 {
-            color: $githubHoverColor;
-
-            //End state underline for Github link
-            &::after {
-                @include githubLink_Transition;
-                width: 100%;
-            }
-        }
-
-        //Github Logo
-        img {
-            scale: 1.2;
-            transition-duration: 300ms;
-            transition-property: scale;
-        }
+        transition-property: scale;
     }
 }
 
 //=========================================================
 //  Summary
 //=========================================================
-.intro__summary {
+.section-1__summary {
     background-color: $backgroundColor;
     border-bottom-left-radius: $borderRadius;
     border-bottom-right-radius: $borderRadius;
-    //background-image: linear-gradient($summaryBackgroundColor 10%, $backgroundColor);
     padding-bottom: 3em;
 }
 
-.intro__summary__greeting {
+//=========================================================
+//  Summary- Greeting
+//=========================================================
+.section-1__summary__greeting {
     display: flex;
     align-items: center;
     padding-top: 4dvh;
-    margin-right: auto;
-    margin-left: auto;
-    //background-color: rgba($color: #1B304F, $alpha: 0.4);
+    margin-inline: auto;
 
     //Container that wraps the divs
     >div {
         display: grid;
         grid-template-columns: auto auto;
         margin-inline: auto;
-        
-        div{
+
+        div {
             height: fit-content;
             overflow: hidden;
-            
+
             //Fixes width for the im heading
-            &:nth-child(2){
+            &:nth-child(2) {
                 width: fit-content;
             }
         }
     }
 }
 
-.intro__summary__greeting__heading {
+//-------------------------
+//  Greeting- Heading      |
+//-------------------------
+.section-1__summary__greeting__heading {
     animation-duration: 800ms;
     animation-fill-mode: forwards;
-    animation-name: intro__summary__greeting__heading-animation;
-    //background-color: $boxBackgroundColor;
+    animation-name: section-1__summary__greeting__heading--Animation;
     font-size: clamp(1dvh, 10dvh, 15dvh);
     margin: 0;
     padding: 0.1em;
     translate: 0 20dvh;
 
-    @keyframes intro__summary__greeting__heading-animation {
+    @keyframes section-1__summary__greeting__heading--Animation {
         from {
             translate: 0 20dvh;
         }
@@ -194,73 +205,73 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
 }
 
 //-------------------------
-//  Greeting Animation     |
+//  Greeting- Animation    |
 //-------------------------
-.intro__summary__greeting--hello {
-    //border-top-left-radius: $borderRadius;
+.section-1__summary__greeting--hello {
     h2 {
         animation-delay: $introGreetingDelay;
     }
 }
 
-.intro__summary__greeting--im {
-    //border-top-right-radius: $borderRadius;
-    //border-bottom-right-radius: $borderRadius;
+.section-1__summary__greeting--im {
     h2 {
         animation-delay: $introGreetingDelay+200ms;
     }
 }
 
-.intro__summary__greeting--collin {
-    //border-bottom-left-radius: $borderRadius;
-    //border-bottom-right-radius: $borderRadius;
+.section-1__summary__greeting--collin {
     h2 {
         animation-delay: $introGreetingDelay+400ms;
     }
 }
 
-.intro__summary__greeting--avatar{
+//-------------------------
+//  Greeting- Avatar       |
+//-------------------------
+.section-1__summary__greeting--avatar {
     animation-delay: $introGreetingDelay+1000ms;
     animation-duration: 800ms;
     animation-fill-mode: forwards;
-    animation-name: intro__summary__greeting--avatar-animation;
-    //background-color: $boxBackgroundColor;
-
+    animation-name: section-1__summary__greeting--avatar--Animation;
+    margin-right: 5%;
     opacity: 0;
     translate: 0 100px;
-    margin-right: 5%;
 
-    @keyframes intro__summary__greeting--avatar-animation {
-        from{
+    @keyframes section-1__summary__greeting--avatar--Animation {
+        from {
             opacity: 0;
             translate: 0 100px;
         }
-        to{
+
+        to {
             opacity: 1;
             translate: 0;
         }
     }
 
-    svg{
-        width: 20dvh;
+    svg {
         height: 20dvh;
         padding: 10px;
-        
-        #arm-1{
-            animation-name: collinArm_Animation;
-            animation-iteration-count:infinite;
+        width: 20dvh;
+
+        //Animates the arm to wave
+        #arm-1 {
+            animation-name: collinArm--Animation;
+            animation-iteration-count: infinite;
             animation-duration: 750ms;
 
-            @keyframes collinArm_Animation {
-                from{
+            @keyframes collinArm--Animation {
+                from {
                     rotate: 0deg;
                     translate: 0;
                 }
-                50%{
+
+                50% {
                     rotate: 4deg;
                     translate: 3px;
                 }
-                to{
+
+                to {
                     rotate: 0deg;
                     translate: 0;
                 }
@@ -269,27 +280,24 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
     }
 }
 
-
-//-------------------------
-//  Summary Content        |
-//-------------------------
-.intro__summary__content {
-    //background-color: lightblue;
+//=========================================================
+//  Summary- Content
+//=========================================================
+.section-1__summary__content {
     align-items: center;
+    animation-delay: $introContent_AnimDelay;
+    animation-duration: $introContent_AnimDuration;
+    animation-fill-mode: both;
+    animation-name: section-1__summary__content--loadAnimation;
+    animation-timing-function: linear;
     display: flex;
-    //height: fit-content;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
     margin-top: 1em;
     margin-bottom: 1em;
-    animation-delay: $introContent_AnimDelay;
-    animation-duration: $introContent_AnimDuration;
-    animation-fill-mode: both;
-    animation-name: intro__summary__content-load-animation;
-    animation-timing-function: linear;
 
-    @keyframes intro__summary__content-load-animation {
+    @keyframes section-1__summary__content--loadAnimation {
         from {
             opacity: 0;
             translate: 0px 2dvh;
@@ -302,62 +310,58 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
     }
 }
 
-.intro__summary__content__heading {
+//-------------------------
+//  Summary- Heading       |
+//-------------------------
+.section-1__summary__content__heading {
     background-color: $borderColor;
     border-bottom-right-radius: $borderRadius;
     border-top-right-radius: $borderRadius;
-    //height: 50dvh;
+    font-size: clamp(2dvh, 4dvh, 6dvh);
     margin: 0;
     margin-right: -10px;
     padding: 2dvh;
+    rotate: 180deg;
     text-align: center;
     writing-mode: vertical-lr;
-    rotate: 180deg;
-    font-size: clamp(2dvh, 4dvh, 6dvh);
 }
 
-.intro__summary__content__text {
+//-------------------------
+//  Summary- Text          |
+//-------------------------
+.section-1__summary__content__text {
     background-color: $boxBackgroundColor;
+    border-color: $borderColor;
     border-radius: $borderRadius;
+    border-style: solid;
+    border-width: 10px;
+    display: block;
     font-size: clamp(2.5dvh, 1dvh + 1rem, 3.5dvh);
-    //font-size: min(1em, 3dvh);
-    //height: clamp(30dvh, 50dvh, 60dvh);
-    //min-height: 40dvh;
-    //max-height: 66dvh;
-    //height: auto;
     margin: 0;
     padding: 3dvh;
     padding-top: 1dvh;
     width: 60%;
-    border-style: solid;
-    border-width: 10px;
-    border-color: $borderColor;
-    //overflow-y: auto;
     word-wrap: break-word;
-    //scrollbar-width:thin;
 
-    display: block;
-
-    p{
+    p {
         line-height: 1.5em;
     }
 }
 
-//-------------------------
-//  Note                   |
-//-------------------------
-.intro__summary__note {
+//=========================================================
+//  Summary- Note
+//=========================================================
+.section-1__summary__note {
     animation-delay: $introNote_AnimDelay;
     animation-duration: 1000ms;
     animation-fill-mode: forwards;
-    animation-name: intro__summary__note-fallback-animation;
+    animation-name: intro__summary__note--fallbackAnimation;
     margin-inline: auto;
     opacity: 0;
     text-align: center;
     width: 100%;
-    //word-wrap: break-word;
 
-    @keyframes intro__summary__note-fallback-animation {
+    @keyframes intro__summary__note--fallbackAnimation {
         from {
             opacity: 0;
         }
@@ -374,45 +378,47 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
         display: grid;
         grid-template-columns: auto auto;
         margin-inline: auto;
-        width: min-content;
-        padding: 2em;
         margin-top: 1em;
+        padding: 2em;
+        width: min-content;
     }
 }
 
-.intro__summary__note__text {
+//-------------------------
+//  Note- Text             |
+//-------------------------
+.section-1__summary__note__text {
     display: block;
     margin-left: 3.5dvh;
     margin-right: 4.6dvh;
     width: 80%;
-    
-    //Note Content
+
     p {
         background-color: $boxBackgroundColor;
-        border-color:#80C24A;
+        border-color: #80C24A;
         border-radius: $borderRadius;
         border-style: solid;
         border-width: 0.5rem;
-        font-size: clamp(3dvh, 1dvh + 1.2rem, 3.5dvh);   
+        font-size: clamp(3dvh, 1dvh + 1.2rem, 3.5dvh);
         line-height: clamp(3.3dvh, 2dvh + 1.3rem, 4.5dvh);
         padding: 2dvh;
         text-align: right;
 
         //Highlight of text
         span {
-            //background-color: #161B38;
             color: rgb(219, 75, 75);
         }
     }
 }
 
-.intro__summary__note__title {
+//-------------------------
+//  Note- Heading          |
+//-------------------------
+.section-1__summary__note__heading {
     display: block;
     margin-bottom: auto;
     margin-inline: auto;
     margin-top: auto;
-    //margin-right: 2em;
-    //margin-left: auto;
 
     //Note Title
     h3 {
@@ -420,7 +426,7 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
         border-radius: $borderRadius;
         border-style: solid;
         border-width: 0.5rem;
-        color:#80C24A;
+        color: #80C24A;
         font-size: clamp(4dvh, 1dvh + 1rem, 5dvh);
         padding: 2dvh;
         padding-bottom: 4dvh;
@@ -429,49 +435,53 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
     }
 }
 
-//-------------------------
-//  Media Queries          |
-//-------------------------
+//=========================================================
+//  Media Queries
+//=========================================================
 @media screen and (width < 970px) and (height > 600) {
-    .intro__summary__content__text{
+    .section-1__summary__content__text {
         font-size: min(1em, 2dvh);
     }
 }
 
 @media screen and (width < 685) {
-    .intro__header__title{
+    .section-1__header__title {
         font-size: min(1em, 5dvw);
     }
-    .intro__header__github-link>h3{
+
+    .section-1__header__github-link>h3 {
         font-size: min(0.5em, 3dvw);
     }
-    .intro__summary__greeting__heading{
+
+    .section-1__summary__greeting__heading {
         font-size: min(2em, 8dvw);
         overflow: visible;
     }
-    .intro__summary__note>div{
+
+    .section-1__summary__note>div {
         border-radius: 0;
         margin-top: 0;
         width: auto;
     }
-    .intro__summary__note__text{
+
+    .section-1__summary__note__text {
         margin-left: 0;
         margin-right: 0;
         width: auto;
-        p{
+
+        p {
             font-size: min(1em, 5dvw);
             line-height: 1.5em;
         }
-        
     }
-
 }
 
 @media screen and (width < 455) {
-    .intro__summary__content{
+    .section-1__summary__content {
         flex-wrap: wrap;
     }
-    .intro__summary__content__heading{
+
+    .section-1__summary__content__heading {
         border-radius: 0;
         border-top-left-radius: $borderRadius;
         border-top-right-radius: $borderRadius;
@@ -479,11 +489,12 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
         margin-inline: auto;
         rotate: 360deg;
         width: fit-content;
-        writing-mode:horizontal-tb;
+        writing-mode: horizontal-tb;
         padding: 0.25em;
         font-size: 1.1em;
     }
-    .intro__summary__content__text{
+
+    .section-1__summary__content__text {
         border-radius: 0;
         width: fit-content;
         margin-inline: 1em;
@@ -491,11 +502,13 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
         overflow-y: scroll;
         max-height: 50dvh;
     }
-    .intro__summary__note>div{
+
+    .section-1__summary__note>div {
         display: flex;
         flex-wrap: wrap-reverse;
     }
-    .intro__summary__note__title>h3{
-        writing-mode:horizontal-tb;
+
+    .section-1__summary__note__heading>h3 {
+        writing-mode: horizontal-tb;
     }
 }
