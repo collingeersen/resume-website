@@ -372,14 +372,13 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
     }
 
     //Select the first outer div
-    >div {
+    div {
         background-color: $borderColor;
         border-radius: $borderRadius;
         display: grid;
         grid-template-columns: auto auto;
         margin-inline: auto;
-        margin-top: 1em;
-        padding: 2em;
+        padding: 2.5dvh;
         width: min-content;
     }
 }
@@ -415,10 +414,9 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
 //  Note- Heading          |
 //-------------------------
 .section-1__summary__note__heading {
+    align-self: center;
     display: block;
-    margin-bottom: auto;
     margin-inline: auto;
-    margin-top: auto;
 
     //Note Title
     h3 {
