@@ -181,6 +181,13 @@ footer:before {
   font-size: clamp(1.7dvh, 1dvh + .5em, 1.5dvh + 1em);
 }
 
+.section__source-link {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-inline: auto;
+  padding-top: 5%;
+}
+
 .section__body {
   width: 80%;
   margin-inline: auto;
@@ -327,4 +334,4 @@ footer:before {
   font-size: clamp(1dvh, 1dvh + .4em, 1.8dvh + .8em);
 }
 
-/*# sourceMappingURL=website.bfb118c8.css.map */
+/*# sourceMappingURL=website.89cc48fd.css.map */
