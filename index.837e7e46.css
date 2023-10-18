@@ -1,4 +1,4 @@
-.intro {
+.section-1 {
   background-color: #0c1020;
   border: 4dvh solid #0c1020;
   border-bottom: 0;
@@ -8,7 +8,7 @@
   overflow: hidden;
 }
 
-.intro__header {
+.section-1__header {
   background-color: #2b3463;
   border-top-left-radius: clamp(1dvw, 1em, 2dvw);
   border-top-right-radius: clamp(1dvw, 1em, 2dvw);
@@ -16,7 +16,7 @@
   display: flex;
 }
 
-.intro__header__github-link {
+.section-1__header__github-link {
   background-color: #20274a;
   border-top-right-radius: clamp(1dvw, 1em, 2dvw);
   border-bottom-left-radius: clamp(1dvw, 1em, 2dvw);
@@ -29,13 +29,27 @@
   box-shadow: .7dvh .7dvh #0c1020;
 }
 
-.intro__header__github-link h3 {
+.section-1__header__github-link:hover {
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  transition-property: box-shadow, translate;
+  transition-duration: .3s;
+  translate: -.5dvh -.5dvh;
+  box-shadow: 1.2dvh 1.2dvh #0c1020;
+}
+
+.section-1__header__github-link:focus {
+  outline: auto;
+}
+
+.section-1__header__github-link h3 {
   margin-inline: auto;
   font-size: clamp(1dvw, .75dvw + 1em, 1dvw);
   display: block;
 }
 
-.intro__header__github-link h3:after {
+.section-1__header__github-link h3:after {
   content: "";
   background-color: #3f6321;
   width: 0;
@@ -45,7 +59,21 @@
   display: block;
 }
 
-.intro__header__github-link img {
+.section-1__header__github-link:hover > h3 {
+  color: #3f6321;
+}
+
+.section-1__header__github-link:hover > h3:after {
+  content: "";
+  background-color: #3f6321;
+  width: 100%;
+  height: .5vh;
+  transition-property: all;
+  transition-duration: .3s;
+  display: block;
+}
+
+.section-1__header__github-link img {
   background-color: #fff;
   border-radius: 10dvh;
   height: clamp(3dvw, 1dvw + 2em, 8dvw);
@@ -56,83 +84,54 @@
   display: block;
 }
 
-.intro__header__github-link:focus {
-  outline: auto;
-}
-
-.intro__header__github-link:hover {
-  cursor: pointer;
-  -webkit-user-select: none;
-  user-select: none;
-  transition-property: box-shadow, translate;
-  transition-duration: .3s;
-  translate: -.5dvh -.5dvh;
-  box-shadow: 1.2dvh 1.2dvh #0c1020;
-}
-
-.intro__header__github-link:hover h3 {
-  color: #3f6321;
-}
-
-.intro__header__github-link:hover h3:after {
-  content: "";
-  background-color: #3f6321;
-  width: 100%;
-  height: .5vh;
-  transition-property: all;
-  transition-duration: .3s;
-  display: block;
-}
-
-.intro__header__github-link:hover img {
+.section-1__header__github-link:hover > img {
   transition-property: scale;
   transition-duration: .3s;
   scale: 1.2;
 }
 
-.intro__summary {
+.section-1__summary {
   background-color: #2b3463;
   border-bottom-right-radius: clamp(1dvw, 1em, 2dvw);
   border-bottom-left-radius: clamp(1dvw, 1em, 2dvw);
   padding-bottom: 3em;
 }
 
-.intro__summary__greeting {
+.section-1__summary__greeting {
   align-items: center;
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
   padding-top: 4dvh;
   display: flex;
 }
 
-.intro__summary__greeting > div {
+.section-1__summary__greeting > div {
   grid-template-columns: auto auto;
   margin-inline: auto;
   display: grid;
 }
 
-.intro__summary__greeting > div div {
+.section-1__summary__greeting > div div {
   height: -moz-fit-content;
   height: fit-content;
   overflow: hidden;
 }
 
-.intro__summary__greeting > div div:nth-child(2) {
+.section-1__summary__greeting > div div:nth-child(2) {
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.intro__summary__greeting__heading {
+.section-1__summary__greeting__heading {
   margin: 0;
   padding: .1em;
   font-size: 10dvh;
-  animation-name: intro__summary__greeting__heading-animation;
+  animation-name: section-1__summary__greeting__heading--Animation;
   animation-duration: .8s;
   animation-fill-mode: forwards;
   translate: 0 20dvh;
 }
 
-@keyframes intro__summary__greeting__heading-animation {
+@keyframes section-1__summary__greeting__heading--Animation {
   from {
     translate: 0 20dvh;
   }
@@ -148,29 +147,29 @@
   }
 }
 
-.intro__summary__greeting--hello h2 {
+.section-1__summary__greeting--hello h2 {
   animation-delay: 1s;
 }
 
-.intro__summary__greeting--im h2 {
+.section-1__summary__greeting--im h2 {
   animation-delay: 1.2s;
 }
 
-.intro__summary__greeting--collin h2 {
+.section-1__summary__greeting--collin h2 {
   animation-delay: 1.4s;
 }
 
-.intro__summary__greeting--avatar {
+.section-1__summary__greeting--avatar {
   opacity: 0;
   margin-right: 5%;
-  animation-name: intro__summary__greeting--avatar-animation;
+  animation-name: section-1__summary__greeting--avatar--Animation;
   animation-duration: .8s;
   animation-delay: 2s;
   animation-fill-mode: forwards;
   translate: 0 100px;
 }
 
-@keyframes intro__summary__greeting--avatar-animation {
+@keyframes section-1__summary__greeting--avatar--Animation {
   from {
     opacity: 0;
     translate: 0 100px;
@@ -182,19 +181,19 @@
   }
 }
 
-.intro__summary__greeting--avatar svg {
+.section-1__summary__greeting--avatar svg {
   width: 20dvh;
   height: 20dvh;
   padding: 10px;
 }
 
-.intro__summary__greeting--avatar svg #arm-1 {
-  animation-name: collinArm_Animation;
+.section-1__summary__greeting--avatar svg #arm-1 {
+  animation-name: collinArm--Animation;
   animation-duration: .75s;
   animation-iteration-count: infinite;
 }
 
-@keyframes collinArm_Animation {
+@keyframes collinArm--Animation {
   from {
     translate: 0;
     rotate: none;
@@ -211,11 +210,11 @@
   }
 }
 
-.intro__summary__content {
+.section-1__summary__content {
   justify-content: center;
   align-items: center;
   margin: 1em auto;
-  animation-name: intro__summary__content-load-animation;
+  animation-name: section-1__summary__content--loadAnimation;
   animation-duration: 1s;
   animation-timing-function: linear;
   animation-delay: 2.5s;
@@ -223,7 +222,7 @@
   display: flex;
 }
 
-@keyframes intro__summary__content-load-animation {
+@keyframes section-1__summary__content--loadAnimation {
   from {
     opacity: 0;
     translate: 0 2dvh;
@@ -235,7 +234,7 @@
   }
 }
 
-.intro__summary__content__heading {
+.section-1__summary__content__heading {
   text-align: center;
   writing-mode: vertical-lr;
   background-color: #0c1020;
@@ -247,7 +246,7 @@
   rotate: 180deg;
 }
 
-.intro__summary__content__text {
+.section-1__summary__content__text {
   padding: 3dvh;
   word-wrap: break-word;
   background-color: #20274a;
@@ -260,22 +259,22 @@
   display: block;
 }
 
-.intro__summary__content__text p {
+.section-1__summary__content__text p {
   line-height: 1.5em;
 }
 
-.intro__summary__note {
+.section-1__summary__note {
   opacity: 0;
   text-align: center;
   width: 100%;
   margin-inline: auto;
-  animation-name: intro__summary__note-fallback-animation;
+  animation-name: intro__summary__note--fallbackAnimation;
   animation-duration: 1s;
   animation-delay: 3.7s;
   animation-fill-mode: forwards;
 }
 
-@keyframes intro__summary__note-fallback-animation {
+@keyframes intro__summary__note--fallbackAnimation {
   from {
     opacity: 0;
   }
@@ -285,25 +284,24 @@
   }
 }
 
-.intro__summary__note > div {
-  margin-inline: auto;
+.section-1__summary__note div {
   background-color: #0c1020;
   border-radius: clamp(1dvw, 1em, 2dvw);
   grid-template-columns: auto auto;
   width: min-content;
-  margin-top: 1em;
-  padding: 2em;
+  margin-inline: auto;
+  padding: 2.5dvh;
   display: grid;
 }
 
-.intro__summary__note__text {
+.section-1__summary__note__text {
   width: 80%;
   margin-left: 3.5dvh;
   margin-right: 4.6dvh;
   display: block;
 }
 
-.intro__summary__note__text p {
+.section-1__summary__note__text p {
   text-align: right;
   background-color: #20274a;
   border: .5rem solid #80c24a;
@@ -313,18 +311,17 @@
   line-height: clamp(3.3dvh, 2dvh + 1.3rem, 4.5dvh);
 }
 
-.intro__summary__note__text p span {
+.section-1__summary__note__text p span {
   color: #db4b4b;
 }
 
-.intro__summary__note__title {
-  margin-bottom: auto;
+.section-1__summary__note__heading {
+  align-self: center;
   margin-inline: auto;
-  margin-top: auto;
   display: block;
 }
 
-.intro__summary__note__title h3 {
+.section-1__summary__note__heading h3 {
   color: #80c24a;
   padding: 2dvh;
   writing-mode: vertical-lr;
@@ -338,49 +335,49 @@
 }
 
 @media screen and (max-width: 969.999px) and (min-height: 600.001px) {
-  .intro__summary__content__text {
+  .section-1__summary__content__text {
     font-size: min(1em, 2dvh);
   }
 }
 
 @media screen and (max-width: 684.999px) {
-  .intro__header__title {
+  .section-1__header__title {
     font-size: min(1em, 5dvw);
   }
 
-  .intro__header__github-link > h3 {
+  .section-1__header__github-link > h3 {
     font-size: min(.5em, 3dvw);
   }
 
-  .intro__summary__greeting__heading {
+  .section-1__summary__greeting__heading {
     font-size: min(2em, 8dvw);
     overflow: visible;
   }
 
-  .intro__summary__note > div {
+  .section-1__summary__note > div {
     border-radius: 0;
     width: auto;
     margin-top: 0;
   }
 
-  .intro__summary__note__text {
+  .section-1__summary__note__text {
     width: auto;
     margin-left: 0;
     margin-right: 0;
   }
 
-  .intro__summary__note__text p {
+  .section-1__summary__note__text p {
     font-size: min(1em, 5dvw);
     line-height: 1.5em;
   }
 }
 
 @media screen and (max-width: 454.999px) {
-  .intro__summary__content {
+  .section-1__summary__content {
     flex-wrap: wrap;
   }
 
-  .intro__summary__content__heading {
+  .section-1__summary__content__heading {
     border-radius: 0;
     writing-mode: horizontal-tb;
     border-top-left-radius: clamp(1dvw, 1em, 2dvw);
@@ -394,7 +391,7 @@
     rotate: 360deg;
   }
 
-  .intro__summary__content__text {
+  .section-1__summary__content__text {
     margin-inline: 1em;
     border-radius: 0;
     width: -moz-fit-content;
@@ -404,12 +401,12 @@
     overflow-y: scroll;
   }
 
-  .intro__summary__note > div {
+  .section-1__summary__note > div {
     flex-wrap: wrap-reverse;
     display: flex;
   }
 
-  .intro__summary__note__title > h3 {
+  .section-1__summary__note__heading > h3 {
     writing-mode: horizontal-tb;
   }
 }
@@ -1057,4 +1054,4 @@
   margin-top: 5dvh;
 }
 
-/*# sourceMappingURL=index.aa2642ff.css.map */
+/*# sourceMappingURL=index.837e7e46.css.map */
