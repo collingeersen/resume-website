@@ -739,6 +739,7 @@ img {
 }
 
 body {
+  color: #e1e0e0;
   z-index: 1;
   background-color: #181d1f;
   border-color: #0c1020;
@@ -760,6 +761,7 @@ body::-webkit-scrollbar-thumb {
 main {
   z-index: 90;
   background-color: #181d1f;
+  border-color: #0c1020;
   width: 80%;
   margin: auto;
   padding: 0 2% 2%;
@@ -777,7 +779,6 @@ h1, h2, h3, h4 {
 }
 
 p {
-  color: #e1e0e0;
   font-family: EB Garamond, Times New Roman, Times, serif;
 }
 
@@ -1074,4 +1075,4 @@ a:focus {
   }
 }
 
-/*# sourceMappingURL=index.3d7b931d.css.map */
+/*# sourceMappingURL=index.c0687a2a.css.map */
