@@ -1,8 +1,4 @@
-main {
-  border: 0;
-}
-
-.section-1 {
+.section-1__intro {
   background-color: #0c1020;
   border: 4dvh solid #0c1020;
   border-bottom: 0;
@@ -1058,4 +1054,4 @@ main {
   margin-top: 5dvh;
 }
 
-/*# sourceMappingURL=index.506f829a.css.map */
+/*# sourceMappingURL=index.a5969515.css.map */
