@@ -50,6 +50,7 @@ footer:before {
 .toc:before {
   content: "";
   z-index: 100;
+  background-color: #181d1f;
   border: 0 solid #0c1020;
   border-right-width: 2vmax;
   width: 100%;
@@ -345,4 +346,4 @@ footer:before {
   font-size: clamp(1dvh, 1dvh + .4em, 1.8dvh + .8em);
 }
 
-/*# sourceMappingURL=website.06a89356.css.map */
+/*# sourceMappingURL=website.645f04ff.css.map */
