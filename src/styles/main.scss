@@ -86,6 +86,7 @@ img {
 //  Body
 //=========================================================
 body {
+    color: $fontColor1;
     border-color: $borderColor;
     background-color: $backgroundColor1;
     font-family: $primaryFont;
@@ -111,6 +112,7 @@ body {
 //=========================================================
 main {
     background-color: $backgroundColor2;
+    border-color: $borderColor;
     margin: auto;
     padding: 2%;
     padding-top: 0;
@@ -143,7 +145,6 @@ h4 {
 //=========================================================
 p {
     font-family: $secondaryFont;
-    color: $fontColor1;
 }
 
 //=========================================================

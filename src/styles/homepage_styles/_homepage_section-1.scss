@@ -37,7 +37,9 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
 //=========================================================
 .section-1 {
     background-color: $borderColor;
-    border: solid $borderColor $separatorHeight;
+    border-color: $borderColor;
+    border-style: solid;
+    border-width: $separatorHeight;
     border-bottom: 0;
     font-size: 1.5em;
     margin: auto;
