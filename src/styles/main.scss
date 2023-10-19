@@ -325,18 +325,15 @@ a {
     border-bottom-right-radius: $borderRadius;
     border-color: $borderColor;
     border-style: solid;
-    border-width: max(0.1em, 0.5dvh);
     border-top-width: 0;
     color: #80C24A;
-    font-size: clamp(2.5dvw, 3em, 2.5dvw);
-    height: min(2em, 5em);
-    margin-left: clamp(2dvh, 2em, 5dvh);
     margin-top: 0;
-    padding: max(0.6em, 2dvh);
-    padding-top: min(0.5em, 1dvh);
     translate: 0 0dvw;
     user-select: none;
     width: fit-content;
+    padding: 10px;
+    height: fit-content;
+    font-size: 20px;
 
     @keyframes section-1__title--animation {
         from {
@@ -346,6 +343,17 @@ a {
         to {
             translate: 0 0dvw;
         }
+    }
+}
+
+@media (min-width: 900px) {
+    .page-title{
+        font-size: clamp(2.5dvw, 3em, 2.5dvw);
+        height: min(2em, 5em);
+        margin-left: clamp(2dvh, 2em, 5dvh);
+        border-width: max(0.1em, 0.5dvh);
+        padding: max(0.6em, 2dvh);
+        padding-top: min(0.5em, 1dvh);
     }
 }
 
