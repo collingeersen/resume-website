@@ -45,7 +45,8 @@ $fontColor2: #40DB8D;
 $insetShadow: rgba(0, 0, 0, 0.6);
 $mainColor: #2B3E4D;
 $boxBackgroundColor: #20274A;
-$borderColor: #0c1020;;
+$borderColor: #0c1020;
+;
 //
 //  Heading Colors
 //''''''''''''''''
@@ -137,7 +138,7 @@ h3,
 h4 {
     color: $headingColor;
     font-family: 'Raleway', sans-serif;
-    font-weight: 600; 
+    font-weight: 600;
 }
 
 //=========================================================
@@ -178,14 +179,14 @@ b {
     font-family: 'Noto Serif', serif;
 }
 
-.font--raleway{
+.font--raleway {
     font-family: 'Raleway', sans-serif;
-    font-weight: 600; 
+    font-weight: 600;
 }
 
-nav{
+nav {
     font-family: 'Raleway', sans-serif;
-    font-weight: 600; 
+    font-weight: 600;
 }
 
 //=========================================================
@@ -193,7 +194,7 @@ nav{
 //=========================================================
 a {
     border: 0;
-    border-bottom-width: 0.1dvh;
+    border-bottom-width: 0.1em;
     border-color: $linkColorDefault;
     border-style: solid;
     font-size: 1em;
@@ -211,7 +212,7 @@ a {
     }
 
     &:hover {
-        border-bottom-width: 0.4dvh;
+        border-bottom-width: 0.25em;
         border-color: $linkColorHover;
         border-style: solid;
         color: $linkColorHover;
@@ -239,10 +240,11 @@ a {
         outline: none;
     }
 }
+
 //=========================================================
 //  Custom Buttons
 //=========================================================
-.button--outline{
+.button--outline {
     background-color: #2b3463;
     border-color: $borderColor;
     border-radius: 20em;
@@ -258,10 +260,11 @@ a {
     width: max-content;
     font-size: clamp(1em, 2dvh, 5dvh);
 
-    &:hover{
+    &:hover {
         background-color: $borderColor;
         transition-property: background-color;
         transition-duration: 200ms;
+
         //Remove hover border from link
         border-color: $borderColor;
         border-radius: 20em;
@@ -273,18 +276,18 @@ a {
 //=========================================================
 //  Scroll Transitions
 //=========================================================
-@media (min-width: 900px){
+@media (min-width: 900px) {
     @mixin scroll_Transition {
         transition-property: opacity;
         transition-duration: 1000ms;
     }
-    
+
     .scroll--hide,
     .scroll--hide--once {
         @include scroll_Transition;
         opacity: 0;
     }
-    
+
     .scroll--show,
     .scroll--show--once {
         @include scroll_Transition;
@@ -292,17 +295,17 @@ a {
         animation-fill-mode: forwards;
         animation-name: scroll--transition-Anim;
         opacity: 1;
-    
+
         @keyframes scroll--transition-Anim {
             from {
                 translate: 0 100px;
                 filter: blur(0.5em);
             }
-    
+
             50% {
                 translate: 0 -15px;
             }
-    
+
             to {
                 translate: 0;
                 filter: blur(0em);
@@ -327,7 +330,7 @@ a {
     color: #80C24A;
     font-size: clamp(2.5dvw, 3em, 2.5dvw);
     height: min(2em, 5em);
-    margin-left: clamp(2dvh, 3dvh, 5dvh);
+    margin-left: clamp(2dvh, 2em, 5dvh);
     margin-top: 0;
     padding: max(0.6em, 2dvh);
     padding-top: min(0.5em, 1dvh);
@@ -351,7 +354,7 @@ a {
 //=========================================================
 $badge__name-misc__inlineSpacing: max(10px, 1dvh);
 
-.badge__wrapper{
+.badge__wrapper {
     display: flex;
     flex-wrap: wrap;
     font-family: 'Quicksand', sans-serif;
@@ -360,9 +363,9 @@ $badge__name-misc__inlineSpacing: max(10px, 1dvh);
     user-select: none;
 }
 
-.badge{
+.badge {
     background-color: #0c1020;
-    border-color:#1e821b;
+    border-color: #1e821b;
     border-radius: max(20px, 2dvh);
     border-style: solid;
     border-width: max(3px, 0.3dvh);
@@ -371,21 +374,22 @@ $badge__name-misc__inlineSpacing: max(10px, 1dvh);
     height: min-content;
     padding: max(10px, 1dvh);
     text-align: center;
-    width:min-content;
+    width: min-content;
 }
 
-.badge__icon{
+.badge__icon {
     height: 2.4dvh;
     margin: auto;
     min-height: 24px;
     min-width: 24px;
     width: 2.4dvh;
 }
-.badge__icon--white{
+
+.badge__icon--white {
     filter: invert(1);
 }
 
-.badge__name-misc__wrapper{
+.badge__name-misc__wrapper {
     font-size: max(14px, 1.3dvh);
     gap: $badge__name-misc__inlineSpacing;
     margin: auto;
@@ -393,9 +397,9 @@ $badge__name-misc__inlineSpacing: max(10px, 1dvh);
     margin-right: $badge__name-misc__inlineSpacing;
 }
 
-.badge__misc{
-    &::before{
-        background-color:#80C24A;
+.badge__misc {
+    &::before {
+        background-color: #80C24A;
         border-radius: 2em;
         content: '';
         display: inline-block;
@@ -430,7 +434,7 @@ $badge__name-misc__inlineSpacing: max(10px, 1dvh);
     a {
         background-color: $borderColor;
         border-color: $headingColor;
-        border-radius: max(100px ,10dvh);
+        border-radius: max(100px, 10dvh);
         border-style: solid;
         border-width: max(5px, 0.5dvh);
         padding: max(0.5em, 2dvh);
