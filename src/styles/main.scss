@@ -271,7 +271,7 @@ a {
 //=========================================================
 //  Scroll Transitions
 //=========================================================
-@media (pointer: fine){
+@media (min-width: 900px){
     @mixin scroll_Transition {
         transition-property: opacity;
         transition-duration: 1000ms;
