@@ -512,3 +512,7 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
         writing-mode: horizontal-tb;
     }
 }
+
+.--border-fix{
+    border-color: $borderColor;
+}
