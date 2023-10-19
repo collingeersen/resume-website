@@ -32,14 +32,10 @@ $introContent_AnimDelay: $introGreetingFrameDelay+800ms;
 $introContent_AnimDuration: 1000ms;
 $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
 
-main{
-    border: 0;
-}
-
 //=========================================================
 //  Section-1
 //=========================================================
-.section-1 {
+.section-1__intro {
     background-color: $borderColor;
     border-color: $borderColor;
     border-style: solid;
