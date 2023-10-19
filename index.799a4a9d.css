@@ -874,7 +874,7 @@ a:focus {
   transition-duration: .2s;
 }
 
-@media (pointer: fine) {
+@media (min-width: 900px) {
   .scroll--hide, .scroll--hide--once {
     opacity: 0;
     transition-property: opacity;
@@ -1073,4 +1073,4 @@ a:focus {
   }
 }
 
-/*# sourceMappingURL=index.1745caac.css.map */
+/*# sourceMappingURL=index.799a4a9d.css.map */
