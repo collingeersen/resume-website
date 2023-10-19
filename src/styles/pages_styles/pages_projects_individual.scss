@@ -82,18 +82,6 @@ footer {
         right: 100%;
         width: 100%;
         z-index: 100;
-        animation-name: test;
-        animation-duration: 10ms;
-        animation-fill-mode: forwards;
-        
-        @keyframes test {
-            from{
-                background-color: transparent;
-            }
-            to{
-                background-color: #181D1F;
-            }
-        }
     }
 }
 
