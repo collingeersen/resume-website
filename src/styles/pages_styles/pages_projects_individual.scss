@@ -271,6 +271,7 @@ $tocDelay: 100ms;
         width: 90%;
 
         img {
+            background-color: #3F6321;
             border-color: $borderColor;
             border-radius: $borderRadius;
             border-style: solid;
@@ -279,11 +280,9 @@ $tocDelay: 100ms;
             margin: 0.5em;
             padding: 0.5em;
             width: 20dvh;
+            margin-inline: auto;
         }
     }
-
-
-
 }
 
 .section__body__headings::before {
@@ -297,7 +296,6 @@ $tocDelay: 100ms;
 }
 
 .section__body__list{
-    //text-align: center;
     border-color: $borderColor;
     border-style: solid;
     border-width: 1px;
@@ -332,7 +330,7 @@ $tocDelay: 100ms;
     margin-bottom: 1.5em;
     width: 100%;
 }
-@media (any-pointer: fine) {
+@media screen and (min-width: 900px) {
     .section__body__paragraph__wrapper{
         align-items: center;
         display: grid;
@@ -370,6 +368,12 @@ $tocDelay: 100ms;
     float: left;
 }
 
+@media screen and (max-width: 900px) {
+    .float--left {
+        float: none;
+        display: block;
+    }
+}
 
 .section__body__badges{
     ~div{
