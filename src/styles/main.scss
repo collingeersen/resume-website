@@ -346,6 +346,9 @@ a {
     }
 }
 
+//-------------------------
+//  Header- Media Query    |
+//-------------------------
 @media (min-width: 900px) {
     .page-title{
         font-size: clamp(2.5dvw, 3em, 2.5dvw);
@@ -416,6 +419,46 @@ $badge__name-misc__inlineSpacing: max(10px, 1dvh);
         min-height: 10px;
         min-width: 10px;
         width: 1dvh;
+    }
+}
+
+//-------------------------
+//  Badge- Media Query     |
+//-------------------------
+@media (min-width: 900px) {
+    .badge__wrapper{
+        gap: max(30px, 3dvh);
+    }
+    .badge {
+        border-radius: max(20px, 2dvh);
+        border-width: max(3px, 0.3dvh);
+        padding: max(10px, 1dvh);
+    }
+    
+    .badge__icon {
+        height: 2.4dvh;
+        min-height: 24px;
+        min-width: 24px;
+        width: 2.4dvh;
+    }
+    
+    .badge__name-misc__wrapper {
+        font-size: max(14px, 1.3dvh);
+        gap: $badge__name-misc__inlineSpacing;
+        margin: auto;
+        margin-left: $badge__name-misc__inlineSpacing;
+        margin-right: $badge__name-misc__inlineSpacing;
+    }
+    
+    .badge__misc {
+        &::before {
+            display: inline-block;
+            height: 1dvh;
+            margin-right: $badge__name-misc__inlineSpacing;
+            min-height: 10px;
+            min-width: 10px;
+            width: 1dvh;
+        }
     }
 }
 
