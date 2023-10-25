@@ -355,6 +355,7 @@ a {
         height: min(2em, 5em);
         margin-left: clamp(2dvh, 2em, 5dvh);
         border-width: max(0.1em, 0.5dvh);
+        border-top-width: 0;
         padding: max(0.6em, 2dvh);
         padding-top: min(0.5em, 1dvh);
     }
