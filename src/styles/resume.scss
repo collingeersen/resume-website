@@ -5,6 +5,8 @@ $borderRadius: clamp(1dvw, 1em, 2dvw);
 
 main{
     background-color: $borderColor;
+    border-bottom-left-radius: $borderRadius;
+    border-bottom-right-radius: $borderRadius;
 }
 
 header{
@@ -13,11 +15,31 @@ header{
 
 article{
     background-color: $backgroundColor;
-    
+    padding-bottom: max(50px, 5dvh);
+    border-bottom-left-radius: $borderRadius;
+    border-bottom-right-radius: $borderRadius;
 }
 
 .section-1{
     background-color: $backgroundColor;
+    margin-inline: auto;
+
+    a{
+        display: block;
+    }
+}
+
+.resume{
+    border-color: $borderColor;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 10px;
+    border-top-width: 30px;
+    display: block;
+    height: max(800px, 65dvh);
+    margin-inline: auto;
+    margin-top: 1em;
+    width: 80%;
 }
 
 .section-2{
@@ -27,7 +49,8 @@ article{
     background-color: $boxBackgroundColor;
     border-radius: $borderRadius;
     padding: max(20px, 2dvh);
-    margin-top: max(50px, 5dvh);
+    margin: max(50px, 5dvh);
+    margin-bottom: 0;
 }
 .page-nav{
     margin-top: 0;
