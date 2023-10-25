@@ -1,0 +1,16 @@
+$backgroundColor: #2b3463;
+$borderColor: #0c1020;
+
+.site__list{
+    width: fit-content;
+    margin-inline: auto;
+    background-color: $backgroundColor;
+    border-radius: 1em;
+    border-style: solid;
+    border-width: 1em;
+    border-color: $borderColor;
+    
+    li{
+        padding: 0.5em;
+    }
+}
