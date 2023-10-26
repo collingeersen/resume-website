@@ -1,0 +1,14 @@
+.site__list {
+  background-color: #2b3463;
+  border: 1em solid #0c1020;
+  border-radius: 1em;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-inline: auto;
+}
+
+.site__list li {
+  padding: .5em;
+}
+
+/*# sourceMappingURL=site-map.f6023711.css.map */

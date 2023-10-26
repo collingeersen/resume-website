@@ -90,8 +90,7 @@ nav {
   user-select: none;
   white-space: nowrap;
   flex-wrap: wrap;
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
   display: flex;
   position: relative;
 }
@@ -909,21 +908,21 @@ a:focus {
 
 .page-title {
   color: #80c24a;
-  padding: max(.6em, 2dvh);
   -webkit-user-select: none;
   user-select: none;
   background-color: #20274a;
-  border: max(.1em, .5dvh) solid #0c1020;
+  border-style: solid;
+  border-color: #0c1020;
   border-top-width: 0;
   border-bottom-right-radius: clamp(1dvw, 1em, 2dvw);
   border-bottom-left-radius: clamp(1dvw, 1em, 2dvw);
   width: -moz-fit-content;
   width: fit-content;
-  height: 2em;
+  height: -moz-fit-content;
+  height: fit-content;
   margin-top: 0;
-  margin-left: clamp(2dvh, 2em, 5dvh);
-  padding-top: min(.5em, 1dvh);
-  font-size: clamp(2.5dvw, 3em, 2.5dvw);
+  padding: 10px;
+  font-size: 20px;
   animation-name: section-1__title--animation;
   animation-duration: .8s;
   translate: 0;
@@ -936,6 +935,17 @@ a:focus {
 
   to {
     translate: 0;
+  }
+}
+
+@media (min-width: 900px) {
+  .page-title {
+    padding: max(.6em, 2dvh);
+    border-width: 0 max(.1em, .5dvh) max(.1em, .5dvh);
+    height: 2em;
+    margin-left: clamp(2dvh, 2em, 5dvh);
+    padding-top: min(.5em, 1dvh);
+    font-size: clamp(2.5dvw, 3em, 2.5dvw);
   }
 }
 
@@ -991,6 +1001,42 @@ a:focus {
   min-height: 10px;
   margin-right: max(10px, 1dvh);
   display: inline-block;
+}
+
+@media (min-width: 900px) {
+  .badge__wrapper {
+    gap: max(30px, 3dvh);
+  }
+
+  .badge {
+    border-width: max(3px, .3dvh);
+    border-radius: max(20px, 2dvh);
+    padding: max(10px, 1dvh);
+  }
+
+  .badge__icon {
+    width: 2.4dvh;
+    min-width: 24px;
+    height: 2.4dvh;
+    min-height: 24px;
+  }
+
+  .badge__name-misc__wrapper {
+    margin: auto;
+    gap: max(10px, 1dvh);
+    margin-left: max(10px, 1dvh);
+    margin-right: max(10px, 1dvh);
+    font-size: max(14px, 1.3dvh);
+  }
+
+  .badge__misc:before {
+    width: 1dvh;
+    min-width: 10px;
+    height: 1dvh;
+    min-height: 10px;
+    margin-right: max(10px, 1dvh);
+    display: inline-block;
+  }
 }
 
 .page-nav {
@@ -1073,4 +1119,4 @@ a:focus {
   }
 }
 
-/*# sourceMappingURL=index.c80d33df.css.map */
+/*# sourceMappingURL=index.dadc1383.css.map */

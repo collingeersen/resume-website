@@ -1,0 +1,51 @@
+main {
+  background-color: #0c1020;
+  border-bottom-right-radius: clamp(1dvw, 1em, 2dvw);
+  border-bottom-left-radius: clamp(1dvw, 1em, 2dvw);
+}
+
+header {
+  background-color: #2b3463;
+}
+
+article {
+  background-color: #2b3463;
+  border-bottom-right-radius: clamp(1dvw, 1em, 2dvw);
+  border-bottom-left-radius: clamp(1dvw, 1em, 2dvw);
+  padding-bottom: max(50px, 5dvh);
+}
+
+.section-1 {
+  background-color: #2b3463;
+  margin-inline: auto;
+}
+
+.section-1 a {
+  display: block;
+}
+
+.resume {
+  margin-inline: auto;
+  border: 10px solid #0c1020;
+  border-top-width: 30px;
+  border-radius: 10px;
+  width: 80%;
+  height: max(800px, 65dvh);
+  margin-top: 1em;
+  display: block;
+}
+
+.section-2 {
+  background-color: #20274a;
+  border: max(40px, 4dvh) solid #0c1020;
+  border-radius: clamp(1dvw, 1em, 2dvw);
+  margin: max(50px, 5dvh) max(50px, 5dvh) 0;
+  padding: max(20px, 2dvh);
+}
+
+.page-nav {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/*# sourceMappingURL=resume.375444d8.css.map */
