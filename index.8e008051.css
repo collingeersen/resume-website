@@ -949,6 +949,21 @@ a:focus {
   }
 }
 
+.header__accent__top, .header__accent__bottom {
+  fill: #2b3463;
+  width: 100%;
+  position: relative;
+}
+
+.header__accent__top {
+  top: -10px;
+}
+
+.header__accent__bottom {
+  bottom: -10px;
+  rotate: 180deg;
+}
+
 .badge__wrapper {
   -webkit-user-select: none;
   user-select: none;
@@ -1119,4 +1134,4 @@ a:focus {
   }
 }
 
-/*# sourceMappingURL=index.dadc1383.css.map */
+/*# sourceMappingURL=index.8e008051.css.map */
