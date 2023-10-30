@@ -39,15 +39,10 @@ $headingColor: #80C24A;
 
 .section-2__container__intro {
     background-color: $boxBackgroundColor;
-    border-color: $borderColor;
-    border-radius: 10em;
-    border-style: solid;
-    border-width: 0.5em;
     display: block;
     margin-inline: auto;
-    padding: 6dvh;
     text-align: center;
-    width: 80%;
+    width: 100%;
 
     h2 {
         font-size: clamp(4dvh, 2.2dvh + 2em, 5dvh);
@@ -56,6 +51,22 @@ $headingColor: #80C24A;
     p {
         font-size: clamp(2dvh, 1dvh + 0.75em, 2.75dvh);
     }
+}
+
+.section-2__container__intro__svg--1, 
+.section-2__container__intro__svg--2{
+    bottom: -10px;
+    fill: #2b3463;
+    position: relative;
+    width: 100%;
+}
+
+.section-2__container__intro__svg--1{
+    top: -10px;
+}
+
+.section-2__container__intro__svg--2{
+    rotate: 180deg;
 }
 
 .section-2__container__box {
