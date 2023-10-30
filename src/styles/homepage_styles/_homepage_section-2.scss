@@ -64,11 +64,6 @@ $headingColor: #80C24A;
     padding: 3dvh;
     width: 80%;
 
-    a:focus {
-        outline: auto;
-        outline-offset: 3dvh;
-    }
-
     >h2 {
         align-self: center;
         background-color: $borderColor;
