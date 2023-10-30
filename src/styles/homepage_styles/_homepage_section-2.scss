@@ -142,7 +142,8 @@ $section2Card_TransitionDelay: 0ms;
         transition-delay: $section2Card_TransitionDelay;
         transition-timing-function: linear;
 
-        h3 {
+        h3,
+        h4 {
             //Gives link hover color
             color: #3F6321;
         }
