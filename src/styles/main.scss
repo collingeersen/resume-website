@@ -366,7 +366,6 @@ a {
 //=========================================================
 .header__accent__top, 
 .header__accent__bottom{
-    bottom: -10px;
     fill: #2b3463;
     position: relative;
     width: 100%;
@@ -377,6 +376,7 @@ a {
 }
 
 .header__accent__bottom{
+    bottom: -10px;
     rotate: 180deg;
 }
 

@@ -24,6 +24,11 @@ $paragraphColor:white;
     background-color: $backgroundColor;
     border-radius: 3dvh;
     padding-bottom: 4dvh;
+    padding-top: 5dvh;
+
+    .header__accent__top{
+        top: 0;
+    }
 
     h3 {
         //background-color: #0c1020;
@@ -98,11 +103,5 @@ $paragraphColor:white;
     .section-3 {
         margin-inline: auto;
         width: 90%;
-    }
-    .section-3__container__header{
-        border-radius: 1em;
-        margin-inline: auto;
-        padding: 10px;
-        width: 80%;
     }
 }
