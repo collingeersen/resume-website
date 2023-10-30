@@ -125,10 +125,8 @@ nav {
 //  Nav-Bar: Divider
 //=========================================================
 .nav-bar__divider {
-    //background-color: #0C0E0F;
     display: block;
     height: 50px;
-    //margin-right: 3%;
     width: 10px;
 }
 
@@ -136,14 +134,12 @@ nav {
 //  Nav-Bar: Links
 //=========================================================
 .nav-bar__link__menu {
-    //align-content: center;
     display: flex;
     flex-wrap: wrap;
+    margin-inline: auto;
     position: relative;
     user-select: none;
-    white-space: nowrap; //Prevents last item from wrapping
-    margin-right: auto;
-    margin-left: auto;
+    white-space: nowrap;
 
     li {
         display: inline;
@@ -151,17 +147,15 @@ nav {
         padding-bottom: 10px;
         position: relative;
 
-        &:not(:nth-child(3)){
+        &:not(:nth-child(3)) {
             padding-right: min(5em, 5dvh);
         }
 
         a {
-            //font-size: clamp(2dvh + 0.1em, 1em, 2.5dvh);
             font-size: max(2dvh, 0.75em);
-            //padding-top: max(2dvh, 1em);
 
             //Add default focus functionality back
-            &:focus{
+            &:focus {
                 outline: auto;
                 outline-offset: 10px;
             }
@@ -177,24 +171,24 @@ nav {
     }
 }
 
-.accent--line{
+.accent--line {
     margin-left: auto;
     margin-right: 15%;
 
-    svg{
+    svg {
         width: max(3em, 12dvh);
         height: max(3em, 3dvh);
     }
 
-    #top{
+    #top {
         fill: black;
     }
 
-    #middle{
+    #middle {
         fill: $navBorderColor;
     }
 
-    #bottom{
+    #bottom {
         fill: #181D1F;
     }
 }
@@ -243,7 +237,6 @@ nav {
 .nav-bar__drop-down__header__toggle {
     align-self: center;
     font-size: clamp(0.8em, 2dvh, 5dvh);
-    //margin-right: 200px;
 
     label {
         padding: 0.5dvh;
@@ -270,7 +263,6 @@ nav {
         color: $linkColorDefault;
         margin-right: 10px;
         margin-top: 10px;
-        //padding: 0;
         translate: 0;
         transition-duration: 200ms;
         transition-property: background-color, box-shadow, translate;
@@ -339,7 +331,6 @@ nav {
     //Section Title
     label {
         border: 0;
-        //border-bottom-left-radius: 0;
         border-bottom-width: 0.1dvh;
         border-color: $linkColorDefault;
         border-style: solid;
@@ -349,7 +340,6 @@ nav {
         transition-property: border, color;
 
         &:hover {
-            //border-bottom-left-radius: 0;
             border-bottom-width: 0.4dvh;
             border-color: $linkColorHover;
             border-style: solid;
@@ -396,7 +386,6 @@ nav {
 //-------------------------
 .nav-bar__drop-down__footer {
 
-    //About Section Link
     a {
         display: inline-flex;
         font-size: clamp(1dvh, 0.8em, 2dvh);
@@ -407,14 +396,12 @@ nav {
         &:last-child {
             margin-right: 0;
             margin-left: auto;
-            //flex-wrap: nowrap;
         }
 
         //Material Icon
         span {
             font-size: 1.5em;
             padding-right: 0.05em;
-            //translate: 0 -3px; //Moves down Material Icon
         }
     }
 
@@ -428,10 +415,6 @@ nav {
         //Creates the divider from subsections to footer
         background-color: $dropdownColorBG;
         box-shadow: 0px 0.2dvh 0px 0px #1C0B3D;
-        // box-shadow:
-        //     inset 0px 0.2px 2px 0px $insetShadow,
-        //     inset -0px -2px 2px 0px $insetShadow,
-        //     black 0px 0px 1px;
         display: inline-block;
         height: max(0.2em, 0.6dvh);
         margin-bottom: 1dvh;
@@ -606,18 +589,16 @@ $darkenDuration: 400ms;
     }
 
     .nav-bar__link__menu {
-        //display: grid;
-        //grid-template-columns: auto auto auto;
         column-gap: -10px;
         margin-left: -50px;
 
         li {
             padding: 0;
 
-            &:last-child{
+            &:last-child {
                 padding-bottom: 10px;
             }
-            
+
         }
     }
 
@@ -631,7 +612,7 @@ $darkenDuration: 400ms;
 }
 
 @media screen and (height > 500px) and (width < 680px) {
-    nav{
+    nav {
         overflow: hidden;
     }
 
@@ -644,33 +625,37 @@ $darkenDuration: 400ms;
         flex-wrap: nowrap;
 
         li {
-            &:nth-child(2){
+            &:nth-child(2) {
                 margin-left: -50px;
             }
-            &:nth-child(3){
+
+            &:nth-child(3) {
                 margin-left: -50px;
             }
         }
     }
-    .accent--line{
+
+    .accent--line {
         visibility: hidden;
     }
 }
 
 @media screen and (width < 1150) {
-    .nav-bar__drop-down{
+    .nav-bar__drop-down {
         width: 40%;
     }
-    .--visible{
+
+    .--visible {
         right: 60%;
     }
 }
 
 @media screen and (width < 700) {
-    .nav-bar__drop-down{
+    .nav-bar__drop-down {
         width: 80%;
     }
-    .--visible{
+
+    .--visible {
         right: 20%;
     }
 }
