@@ -306,12 +306,6 @@ $section2Card_TransitionDelay: 0ms;
 //  Media Queries          |
 //-------------------------
 @media screen and (width < 685) {
-    .section-2__container__intro {
-        scale: 0.9;
-        border-radius: 4em;
-        width: fit-content;
-        padding: 1em;
-    }
 
     .section-2__container__box {
         display: block;
