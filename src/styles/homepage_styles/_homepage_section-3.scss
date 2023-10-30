@@ -92,34 +92,13 @@ $paragraphColor:white;
 .section-3__container__box__card--content {
     display: block;
 
-    //Used to fix hover styling conflict for link
-    @mixin section-3__container__box__card--content__border{
-        border-color: $borderColor;
-        border-radius: 10dvh;
-        border-style: solid;
-        border-width: 0.2em;
-    }
     a{
-        @include section-3__container__box__card--content__border;
-        background-color:#2b3463;
-        box-shadow: 0 0 0 $borderColor;
         display: flex;
         font-size: clamp(1em, 1.75dvh, 4dvh);
         margin-inline: auto;
         padding: 0.75em;
         text-align: center;
-        transition-duration: 200ms;
-        transition-property: box-shadow, translate;
-        translate: 0;
         width: fit-content;
-    
-        &:hover{
-            @include section-3__container__box__card--content__border;
-            box-shadow: 0 0.4em 0 $borderColor;
-            transition-duration: 200ms;
-            transition-property: box-shadow, translate;
-            translate: 0 -0.4em;
-        }
     }
 }
 
