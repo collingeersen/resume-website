@@ -23,7 +23,6 @@ $paragraphColor:white;
 .section-3__container {
     background-color: $backgroundColor;
     border-radius: 3dvh;
-    padding: 3dvh;
 
     h3 {
         background-color: #0c1020;
@@ -50,10 +49,6 @@ $paragraphColor:white;
 }
 .section-3__container__header{
     background-color: $boxBackgroundColor;
-    border-color: $borderColor;
-    border-radius: 100em;
-    border-style: solid;
-    border-width: 5px;
 }
 
 .section-3__container__header__title {
@@ -69,6 +64,7 @@ $paragraphColor:white;
     justify-content: center;
     margin-top: 2dvh;
     row-gap: 1dvh;
+    padding: 3dvh;
 
     //Adds staggered delay to the scroll transition for the second and fourth content cards
     div:nth-child(2),

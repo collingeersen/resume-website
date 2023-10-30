@@ -362,6 +362,25 @@ a {
 }
 
 //=========================================================
+//  Header Accent
+//=========================================================
+.header__accent__top, 
+.header__accent__bottom{
+    bottom: -10px;
+    fill: #2b3463;
+    position: relative;
+    width: 100%;
+}
+
+.header__accent__top{
+    top: -10px;
+}
+
+.header__accent__bottom{
+    rotate: 180deg;
+}
+
+//=========================================================
 //  Badge
 //=========================================================
 $badge__name-misc__inlineSpacing: max(10px, 1dvh);
