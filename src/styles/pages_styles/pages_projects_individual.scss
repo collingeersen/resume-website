@@ -246,11 +246,7 @@ $tocDelay: 100ms;
         margin-inline: auto;
         width: 90%;
         text-align: center;
-        border-style: dashed;
-        border-width: 0.5dvh;
-        border-color: #0c1020;
-        border-radius: $borderRadius;
-        padding: 2dvh;
+        margin-top: 0;
     }
 
     //Selects the first paragraph
