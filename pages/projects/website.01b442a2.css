@@ -21,7 +21,7 @@ h1, h2 {
 }
 
 h3 {
-  font-size: clamp(2dvh, 1dvh + .6em, 2.5dvh + 1em);
+  font-size: clamp(2.2dvh, 1dvh + .6em, 2.6dvh + 1em);
 }
 
 footer:before {
@@ -205,9 +205,12 @@ footer:before {
 }
 
 .section__body h3 {
-  margin-inline: auto;
+  text-align: center;
+  border: .5dvh dashed #0c1020;
+  border-radius: clamp(1dvw, 1em, 2dvw);
   width: 90%;
-  margin-top: 0;
+  margin-inline: auto;
+  padding: 2dvh;
 }
 
 .section__body h2 + p {
@@ -231,7 +234,7 @@ footer:before {
   align-content: center;
   width: 90%;
   margin-inline: auto;
-  font-size: clamp(2dvh, 1dvh + .8em, 2dvh + 1em);
+  font-size: clamp(1.7dvh, 1dvh + .7em, 2dvh + .9em);
 }
 
 .section__body p img {
@@ -240,8 +243,8 @@ footer:before {
   border-radius: clamp(1dvw, 1em, 2dvw);
   width: 20dvh;
   height: 20dvh;
-  margin: .5em;
-  margin-inline: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
   padding: .5em;
 }
 
@@ -261,7 +264,16 @@ footer:before {
   min-width: -moz-fit-content;
   min-width: fit-content;
   margin-inline: auto;
-  padding: 1em;
+  padding: 2dvh;
+}
+
+.section__body__list img {
+  background-color: #3f6321;
+  border: max(5px, .5dvh) solid #0c1020;
+  border-radius: clamp(1dvw, 1em, 2dvw);
+  width: 20dvh;
+  height: 20dvh;
+  padding: .5em;
 }
 
 .section__body__list p {
@@ -291,12 +303,38 @@ footer:before {
 }
 
 @media screen and (min-width: 900px) {
+  .section__body h3 {
+    text-align: left;
+  }
+
+  .section__body p {
+    line-height: 2.3em;
+  }
+
+  .section__body .section__body__headings--list {
+    text-align: center;
+  }
+
+  .section__body p > img {
+    margin: 4dvh;
+  }
+
   .section__body__paragraph__wrapper {
     grid-template-columns: repeat(2, auto);
     align-items: center;
     width: 90%;
     margin-inline: auto;
     display: grid;
+  }
+
+  .section__body__paragraph--box-shadow {
+    border-width: 0;
+    border-color: #0c1020;
+    border-style: solid;
+    border-top-width: 2dvh;
+    border-radius: clamp(1dvw, 1em, 2dvw);
+    padding: 2dvh;
+    box-shadow: .5dvh .75dvh 1dvh #000;
   }
 }
 
@@ -323,8 +361,9 @@ footer:before {
 }
 
 @media screen and (max-width: 900px) {
-  .float--left {
+  .float--left, .float--right {
     float: none;
+    margin-inline: auto;
     display: block;
   }
 }
@@ -346,4 +385,4 @@ footer:before {
   font-size: clamp(1dvh, 1dvh + .4em, 1.8dvh + .8em);
 }
 
-/*# sourceMappingURL=website.645f04ff.css.map */
+/*# sourceMappingURL=website.01b442a2.css.map */
