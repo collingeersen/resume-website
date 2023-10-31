@@ -204,15 +204,11 @@ $tocDelay: 100ms;
 //=========================================================
 .section__intro {
     background-color: $boxBackgroundColor;
-    border-color: $borderColor;
-    border-radius: $borderRadius;
-    border-style: solid;
-    border-width: $borderWidth;
+
     display: block;
     margin-inline: auto;
-    padding: 2dvh;
     text-align: center;
-    width: fit-content;
+    padding: 0;
 
     p {
         font-size: clamp(1.7dvh, 1dvh + 0.5em, 1.5dvh + 1em);
