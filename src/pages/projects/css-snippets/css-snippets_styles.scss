@@ -71,12 +71,32 @@ header{
     padding: 1em;
     padding-top: 0;
     scrollbar-width:thin;
+
+    &::-webkit-scrollbar {
+        background: #16192f;
+        height: 12px;
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #5f606e;
+    }
 }
 
 .input--html{
     overflow-y: scroll;
     overflow-x: scroll;
     scrollbar-width:thin;
+
+    &::-webkit-scrollbar {
+        background: #16192f;
+        height: 12px;
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #5f606e;
+    }
 }
 
 .output{
