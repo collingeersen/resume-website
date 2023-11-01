@@ -31,7 +31,7 @@ $paragraphColor:white;
     }
 
     h3 {
-        //background-color: #0c1020;
+        background-color: #0c1020;
         border-radius: 1dvh;
         font-size: clamp(1em, 2.5dvh, 8dvh);
         padding: 1em;
@@ -41,16 +41,6 @@ $paragraphColor:white;
     p {
         font-size: clamp(1em, 2dvh, 5dvh);
         text-align: center;
-    }
-
-    span{
-        background-color: #0c1020;
-        display: block;
-        height: 0.1em;
-        margin-bottom: 1em;
-        margin-inline: auto;
-        margin-top: 1em;
-        width: 60%;
     }
 
     a{
@@ -63,15 +53,15 @@ $paragraphColor:white;
 }
 .section-3__container__header{
     background-color: $boxBackgroundColor;
+
+    h2{
+        font-size: clamp(2em, 4dvh, 10dvh);
+        margin-inline: auto;
+        text-align: center;
+    }
 }
 
-.section-3__container__header__title {
-    font-size: clamp(2em, 4dvh, 10dvh);
-    margin-inline: auto;
-    text-align: center;
-}
-
-.section-3__container__box {
+.section-3__container__card__wrapper {
     column-gap: 1dvw;
     display: flex;
     flex-wrap: wrap;
@@ -88,7 +78,7 @@ $paragraphColor:white;
     }
 }
 
-.section-3__container__box__card {
+.section-3__container__card {
     background-color: $boxBackgroundColor;
     border-color: $borderColor;
     border-radius: 2dvh;
@@ -97,6 +87,26 @@ $paragraphColor:white;
     box-shadow: inset 0 2dvh 0px $borderColor;
     padding: 1em;
     width: min(30dvh, 400px);
+}
+
+.section-3__container__card__icon{
+    margin-inline: auto;
+    display: block;
+    width: fit-content;
+
+    span{
+        font-size: 50px;
+    }
+}
+
+.section-3__container__card__separator{
+    background-color: #0c1020;
+    display: block;
+    height: 0.1em;
+    margin-bottom: 1em;
+    margin-inline: auto;
+    margin-top: 1em;
+    width: 60%;
 }
 
 @media screen and (width < 540) {
