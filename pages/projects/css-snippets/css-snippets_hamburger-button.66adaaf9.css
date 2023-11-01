@@ -64,9 +64,29 @@ header {
   overflow: scroll;
 }
 
+.input--css::-webkit-scrollbar {
+  background: #16192f;
+  width: 8px;
+  height: 12px;
+}
+
+.input--css::-webkit-scrollbar-thumb {
+  background: #5f606e;
+}
+
 .input--html {
   scrollbar-width: thin;
   overflow: scroll;
+}
+
+.input--html::-webkit-scrollbar {
+  background: #16192f;
+  width: 8px;
+  height: 12px;
+}
+
+.input--html::-webkit-scrollbar-thumb {
+  background: #5f606e;
 }
 
 .output {
@@ -112,4 +132,4 @@ header {
   color: #cc985d;
 }
 
-/*# sourceMappingURL=css-snippets_hamburger-button.5a691e28.css.map */
+/*# sourceMappingURL=css-snippets_hamburger-button.66adaaf9.css.map */
