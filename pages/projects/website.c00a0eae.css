@@ -296,7 +296,7 @@ footer:before {
   display: block;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 901px) {
   .section__body h3 {
     text-align: left;
   }
@@ -329,6 +329,16 @@ footer:before {
     border-radius: clamp(1dvw, 1em, 2dvw);
     padding: 2dvh;
     box-shadow: .5dvh .75dvh 1dvh #000;
+  }
+}
+
+@media screen and (max-width: 1600px) and (min-width: 900.001px) {
+  .section__body {
+    width: 90%;
+  }
+
+  .section__body p {
+    width: 95%;
   }
 }
 
@@ -379,4 +389,4 @@ footer:before {
   font-size: clamp(1dvh, 1dvh + .4em, 1.8dvh + .8em);
 }
 
-/*# sourceMappingURL=website.59e740e7.css.map */
+/*# sourceMappingURL=website.c00a0eae.css.map */
