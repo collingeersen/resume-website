@@ -341,7 +341,7 @@ $tocDelay: 100ms;
     width: 100%;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 901px) {
     .section__body {
         h3 {
             text-align: left;
@@ -376,6 +376,16 @@ $tocDelay: 100ms;
         border-width: 0;
         border-top-width: 2dvh;
         border-style: solid;
+    }
+}
+
+@media screen and (width < 1600px) and (width > 900px){
+    .section__body{
+        width: 90%;
+
+        p{
+            width: 95%;
+        }
     }
 }
 
