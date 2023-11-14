@@ -11,7 +11,7 @@ $footerFontColor: #828d91;
     margin-right: auto;
     padding-top: 3em;
     width: 80%;
-    font-size: clamp(1em, 1dvh + 0.3em, 5dvh);
+    font-size: 1em;
 
     //Removes the link styling
     a {
@@ -58,7 +58,7 @@ $footerFontColor: #828d91;
     background-color: $footerFontColor;
     border-radius: 10px;
     display: block;
-    height: max(1px, 0.1dvh);
+    height: 1px;
     margin-bottom: 2em;
     margin-left: auto;
     margin-right: auto;
@@ -95,3 +95,12 @@ $footerFontColor: #828d91;
         }
     }
 }
+
+@media (min-width: 900px) {
+    .footer{
+       font-size: clamp(1em, 1dvh + 0.3em, 5dvh);
+    }
+    .footer__divider--top {
+        height: max(1px, 0.1dvh);
+    }
+   }
