@@ -258,7 +258,7 @@ a {
     transition-duration: 200ms;
     transition-property: background-color;
     width: max-content;
-    font-size: clamp(1em, 2dvh, 5dvh);
+    font-size: 1em;
 
     &:hover {
         background-color: $borderColor;
@@ -270,6 +270,12 @@ a {
         border-radius: 20em;
         border-style: solid;
         border-width: $borderWidth;
+    }
+}
+
+@media (min-width: 900px) {
+    .button--outline {
+        font-size: clamp(1em, 2dvh, 5dvh);
     }
 }
 
@@ -390,20 +396,20 @@ $badge__name-misc__inlineSpacing: max(10px, 1dvh);
     flex-wrap: wrap;
     font-family: 'Quicksand', sans-serif;
     font-weight: 600;
-    gap: max(30px, 3dvh);
+    gap: 30px;
     user-select: none;
 }
 
 .badge {
     background-color: #0c1020;
     border-color: #1e821b;
-    border-radius: max(20px, 2dvh);
+    border-radius: 20px;
     border-style: solid;
-    border-width: max(3px, 0.3dvh);
+    border-width: 3px;
     display: grid;
     grid-template-columns: repeat(2, auto);
     height: min-content;
-    padding: max(10px, 1dvh);
+    padding: 10px;
     text-align: center;
     width: min-content;
 }
@@ -421,7 +427,7 @@ $badge__name-misc__inlineSpacing: max(10px, 1dvh);
 }
 
 .badge__name-misc__wrapper {
-    font-size: max(14px, 1.3dvh);
+    font-size: 14px;
     gap: $badge__name-misc__inlineSpacing;
     margin: auto;
     margin-left: $badge__name-misc__inlineSpacing;
@@ -493,11 +499,11 @@ $badge__name-misc__inlineSpacing: max(10px, 1dvh);
 
 .page-nav {
     background-color: $boxBackgroundColor;
-    border-radius: max(100px, 10dvh);
+    border-radius: 50px;
     display: flex;
-    font-size: clamp(1.75dvh, 1dvh + 0.8rem, 1.8dvh);
-    margin-bottom: max(20px, 2dvh);
-    margin-top: max(80px, 8dvh);
+    font-size: 1em;
+    margin-bottom: 20px;
+    margin-top: 80px;
     margin-inline: auto;
     text-align: center;
     width: 90%;
@@ -505,17 +511,17 @@ $badge__name-misc__inlineSpacing: max(10px, 1dvh);
     a {
         background-color: $borderColor;
         border-color: $headingColor;
-        border-radius: max(100px, 10dvh);
+        border-radius: 50px;
         border-style: solid;
-        border-width: max(5px, 0.5dvh);
-        padding: max(0.5em, 2dvh);
-        padding-left: clamp(2em, 4em, 5dvw);
-        padding-right: clamp(2em, 4em, 5dvw);
+        border-width: 5px;
+        padding: 0.5em;
+        padding-left: 1em;
+        padding-right: 1em;
         user-select: none;
 
         span {
             @include page-nav__transition;
-            font-size: max(20px, 2dvh);
+            font-size: 20px;
             translate: 0;
         }
     }
@@ -558,6 +564,27 @@ $badge__name-misc__inlineSpacing: max(10px, 1dvh);
     &:hover {
         span {
             translate: 1dvh;
+        }
+    }
+}
+
+@media (min-width: 900px) {
+    .page-nav {
+        border-radius: max(100px, 10dvh);
+        font-size: clamp(1.75dvh, 1dvh + 0.8rem, 1.8dvh);
+        margin-bottom: max(20px, 2dvh);
+        margin-top: max(80px, 8dvh);
+    
+        a {
+            border-radius: max(100px, 10dvh);
+            border-width: max(5px, 0.5dvh);
+            padding: max(0.5em, 2dvh);
+            padding-left: clamp(2em, 4em, 5dvw);
+            padding-right: clamp(2em, 4em, 5dvw);
+    
+            span {
+                font-size: max(20px, 2dvh);
+            }
         }
     }
 }
