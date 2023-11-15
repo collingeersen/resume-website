@@ -55,13 +55,17 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
     border-top-left-radius: $borderRadius;
     border-top-right-radius: $borderRadius;
     display: flex;
-    padding-left: clamp(2dvh, 3dvh, 5dvh);
+    padding-left: 20px;
 }
 
+@media (min-width: 900px) {
+    .section-1__header {
+        padding-left: clamp(2dvh, 3dvh, 5dvh);
+    }
+}
 //=========================================================
 //  Github Link
 //=========================================================
-//
 //  GitHub Link- Mixin
 @mixin githubLink_Transition {
     background-color: $githubUnderlineColor;
@@ -77,66 +81,92 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
     background-color: $boxBackgroundColor;
     border-bottom-left-radius: $borderRadius;
     border-top-right-radius: $borderRadius;
-    box-shadow: $borderColor clamp(0.2dvh, 0.7dvh, 1dvh) clamp(0.2dvh, 0.7dvh, 1dvh);
+    box-shadow: $borderColor 3px 5px;
     height: fit-content;
     margin-left: auto;
-    padding: clamp(0.2em, 0.5em, 1em);
+    padding: 10px;
     padding-bottom: 0;
-    padding-top: clamp(0.4em, 1.5em, 4em);
-    transition-duration: 250ms;
-    transition-property: box-shadow, translate;
-
-    &:hover {
-        box-shadow: $borderColor clamp(0.5dvh, 1.2dvh, 1.4dvh) clamp(0.5dvh, 1.2dvh, 1.4dvh);
-        cursor: pointer;
-        transition-duration: 300ms;
-        transition-property: box-shadow, translate;
-        translate: -0.5dvh -0.5dvh;
-        user-select: none;
-    }
-
-    &:focus {
-        outline: auto;
-    }
+    padding-top: 30px;
 
     h3 {
-        font-size: clamp(1dvw, 0.75dvw + 1em, 1dvw);
+        font-size: 13px;
         display: block;
         margin-inline: auto;
-
-        //Initial underline for Github link
-        &::after {
-            @include githubLink_Transition;
-            width: 0;
-        }
-    }
-
-    &:hover>h3 {
-        color: $githubHoverColor;
-
-        //End state underline for Github link
-        &::after {
-            @include githubLink_Transition;
-            width: 100%;
-        }
     }
 
     //Github Logo
     img {
         background-color: $githubIconBackgroundColor;
-        border-radius: 10dvh;
+        border-radius: 100px;
         display: block;
-        height: clamp(3dvw, 1dvw + 2em, 8dvw);
+        height: 40px;
         margin-inline: auto;
-        padding: 0.2dvh;
-        transition-duration: 300ms;
-        transition-property: scale;
+        padding: 3px;
     }
 
-    &:hover>img {
-        scale: 1.2;
-        transition-duration: 300ms;
-        transition-property: scale;
+}
+
+@media (min-width: 900px) {
+    .section-1__header__github-link {
+        box-shadow: $borderColor clamp(0.2dvh, 0.7dvh, 1dvh) clamp(0.2dvh, 0.7dvh, 1dvh);
+        padding: clamp(0.2em, 0.5em, 1em);
+        padding-bottom: 0;
+        padding-top: clamp(0.4em, 1.5em, 4em);
+        transition-duration: 250ms;
+        transition-property: box-shadow, translate;
+    
+        &:hover {
+            box-shadow: $borderColor clamp(0.5dvh, 1.2dvh, 1.4dvh) clamp(0.5dvh, 1.2dvh, 1.4dvh);
+            cursor: pointer;
+            transition-duration: 300ms;
+            transition-property: box-shadow, translate;
+            translate: -0.5dvh -0.5dvh;
+            user-select: none;
+        }
+    
+        &:focus {
+            outline: auto;
+        }
+    
+        h3 {
+            font-size: clamp(1dvw, 0.75dvw + 1em, 1dvw);
+            display: block;
+            margin-inline: auto;
+    
+            //Initial underline for Github link
+            &::after {
+                @include githubLink_Transition;
+                width: 0;
+            }
+        }
+    
+        &:hover>h3 {
+            color: $githubHoverColor;
+    
+            //End state underline for Github link
+            &::after {
+                @include githubLink_Transition;
+                width: 100%;
+            }
+        }
+    
+        //Github Logo
+        img {
+            background-color: $githubIconBackgroundColor;
+            border-radius: 10dvh;
+            display: block;
+            height: clamp(3dvw, 1dvw + 2em, 8dvw);
+            margin-inline: auto;
+            padding: 0.2dvh;
+            transition-duration: 300ms;
+            transition-property: scale;
+        }
+    
+        &:hover>img {
+            scale: 1.2;
+            transition-duration: 300ms;
+            transition-property: scale;
+        }
     }
 }
 
@@ -156,7 +186,7 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
 .section-1__summary__greeting {
     display: flex;
     align-items: center;
-    padding-top: 4dvh;
+    padding-top: 40px;
     margin-inline: auto;
 
     //Container that wraps the divs
@@ -177,6 +207,12 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
     }
 }
 
+@media (min-width: 900px) {
+    .section-1__summary__greeting {
+        padding-top: 4dvh;
+    }
+}
+
 //-------------------------
 //  Greeting- Heading      |
 //-------------------------
@@ -184,10 +220,10 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
     animation-duration: 800ms;
     animation-fill-mode: forwards;
     animation-name: section-1__summary__greeting__heading--Animation;
-    font-size: clamp(1dvh, 10dvh, 15dvh);
     margin: 0;
     padding: 0.1em;
     translate: 0 20dvh;
+    font-size: 1.5em;
 
     @keyframes section-1__summary__greeting__heading--Animation {
         from {
@@ -195,13 +231,41 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
         }
 
         70% {
-            translate: 0 -2dvh;
-            text-shadow: 0 1dvh 0 black;
+            translate: 0 -10px;
+            text-shadow: 0 10px 0 black;
         }
 
         to {
             translate: 0 0;
             text-shadow: 0 0 0 black;
+        }
+    }
+}
+
+@media (min-width: 900px) {
+    .section-1__summary__greeting__heading {
+        animation-duration: 800ms;
+        animation-fill-mode: forwards;
+        animation-name: section-1__summary__greeting__heading--Animation;
+        font-size: clamp(1dvh, 10dvh, 15dvh);
+        margin: 0;
+        padding: 0.1em;
+        translate: 0 20dvh;
+    
+        @keyframes section-1__summary__greeting__heading--Animation {
+            from {
+                translate: 0 20dvh;
+            }
+    
+            70% {
+                translate: 0 -2dvh;
+                text-shadow: 0 1dvh 0 black;
+            }
+    
+            to {
+                translate: 0 0;
+                text-shadow: 0 0 0 black;
+            }
         }
     }
 }
@@ -252,9 +316,9 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
     }
 
     svg {
-        height: 20dvh;
+        height: 150px;
         padding: 10px;
-        width: 20dvh;
+        width: 150px;
 
         //Animates the arm to wave
         #arm-1 {
@@ -282,6 +346,15 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
     }
 }
 
+@media (min-width: 900px) {
+    .section-1__summary__greeting--avatar {
+        svg {
+            height: 20dvh;
+            width: 20dvh;
+        }
+    }
+}
+
 //=========================================================
 //  Summary- Content
 //=========================================================
@@ -292,7 +365,7 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
     animation-fill-mode: both;
     animation-name: section-1__summary__content--loadAnimation;
     animation-timing-function: linear;
-    display: flex;
+    display: block;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
@@ -312,20 +385,39 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
     }
 }
 
+@media (min-width: 900px) {
+    .section-1__summary__content {
+        display: flex;
+    }
+}
+
 //-------------------------
 //  Summary- Heading       |
 //-------------------------
 .section-1__summary__content__heading {
     background-color: $borderColor;
-    border-bottom-right-radius: $borderRadius;
+    border-top-left-radius: $borderRadius;
     border-top-right-radius: $borderRadius;
-    font-size: clamp(2dvh, 4dvh, 6dvh);
+    font-size: 25px;
     margin: 0;
-    margin-right: -10px;
-    padding: 2dvh;
-    rotate: 180deg;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 15px;
     text-align: center;
-    writing-mode: vertical-lr;
+}
+
+@media (min-width: 900px) {
+    .section-1__summary__content__heading {
+        border-radius: 0;
+        border-bottom-right-radius: $borderRadius;
+        border-top-right-radius: $borderRadius;
+        font-size: clamp(2dvh, 4dvh, 6dvh);
+        margin: 0;
+        margin-right: -10px;
+        padding: 2dvh;
+        rotate: 180deg;
+        writing-mode: vertical-lr;
+    }
 }
 
 //-------------------------
@@ -334,19 +426,33 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
 .section-1__summary__content__text {
     background-color: $boxBackgroundColor;
     border-color: $borderColor;
-    border-radius: $borderRadius;
+    border-bottom-left-radius: $borderRadius;
+    border-bottom-right-radius: $borderRadius;
     border-style: solid;
     border-width: 10px;
+    border-top-width: 0;
     display: block;
-    font-size: clamp(2.5dvh, 1dvh + 1rem, 3.5dvh);
-    margin: 0;
-    padding: 3dvh;
-    padding-top: 1dvh;
-    width: 60%;
+    font-size: 20px;
+    margin-inline: auto;
+    padding: 30px;
+    padding-top: 10px;
+    width: 80%;
     word-wrap: break-word;
 
     p {
         line-height: 1.5em;
+    }
+}
+
+@media (min-width: 900px) {
+    .section-1__summary__content__text {
+        font-size: clamp(2.5dvh, 1dvh + 1rem, 3.5dvh);
+        border-width: 10px;
+        border-radius: $borderRadius;
+        margin: 0;
+        padding: 3dvh;
+        padding-top: 1dvh;
+        width: 60%;
     }
 }
 
@@ -361,7 +467,7 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
     margin-inline: auto;
     opacity: 0;
     text-align: center;
-    width: 100%;
+    width: 80%;
 
     @keyframes intro__summary__note--fallbackAnimation {
         from {
@@ -377,11 +483,24 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
     div {
         background-color: $borderColor;
         border-radius: $borderRadius;
-        display: grid;
-        grid-template-columns: auto auto;
+        display: flex;
+        flex-wrap: wrap-reverse;
         margin-inline: auto;
-        padding: 2.5dvh;
-        width: min-content;
+        padding: 12px;
+        width: fit-content;
+    }
+}
+
+@media (min-width: 900px) {
+    .section-1__summary__note {
+
+        //Select the first outer div
+        div {
+            padding: 2.5dvh;
+            display: grid;
+            grid-template-columns: auto auto;
+            width: min-content;
+        }
     }
 }
 
@@ -390,24 +509,36 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
 //-------------------------
 .section-1__summary__note__text {
     display: block;
-    margin-left: 3.5dvh;
-    margin-right: 4.6dvh;
     width: 80%;
 
     p {
         background-color: $boxBackgroundColor;
-        border-color: #80C24A;
+        border-color: #3F6321;
         border-radius: $borderRadius;
         border-style: solid;
         border-width: 0.5rem;
-        font-size: clamp(3dvh, 1dvh + 1.2rem, 3.5dvh);
-        line-height: clamp(3.3dvh, 2dvh + 1.3rem, 4.5dvh);
-        padding: 2dvh;
-        text-align: right;
+        font-size: 0.8em;
+        line-height: 1.3em;
+        padding: 20px;
+        text-align: center;
 
         //Highlight of text
         span {
             color: rgb(219, 75, 75);
+        }
+    }
+}
+
+@media (min-width: 900px) {
+    .section-1__summary__note__text {
+        margin-left: 3.5dvh;
+        margin-right: 4.6dvh;
+    
+        p {
+            font-size: clamp(3dvh, 1dvh + 1.2rem, 3.5dvh);
+            line-height: clamp(3.3dvh, 2dvh + 1.3rem, 4.5dvh);
+            padding: 2dvh;
+            text-align: right;
         }
     }
 }
@@ -426,89 +557,24 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
         border-radius: $borderRadius;
         border-style: solid;
         border-width: 0.5rem;
+        border-color: #3F6321;
         color: #80C24A;
-        font-size: clamp(4dvh, 1dvh + 1rem, 5dvh);
-        padding: 2dvh;
-        padding-bottom: 4dvh;
-        padding-top: 4dvh;
-        writing-mode: vertical-lr;
+        font-size: 1em;
+        padding: 15px;
+        margin-bottom: 0px;
     }
 }
 
-//=========================================================
-//  Media Queries
-//=========================================================
-@media screen and (width < 970px) and (height > 600) {
-    .section-1__summary__content__text {
-        font-size: min(1em, 2dvh);
-    }
-}
-
-@media screen and (width < 685) {
-    .section-1__header__title {
-        font-size: min(1em, 5dvw);
-    }
-
-    .section-1__header__github-link>h3 {
-        font-size: min(0.5em, 3dvw);
-    }
-
-    .section-1__summary__greeting__heading {
-        font-size: min(2em, 8dvw);
-        overflow: visible;
-    }
-
-    .section-1__summary__note>div {
-        border-radius: 0;
-        margin-top: 0;
-        width: auto;
-    }
-
-    .section-1__summary__note__text {
-        margin-left: 0;
-        margin-right: 0;
-        width: auto;
-
-        p {
-            font-size: min(1em, 5dvw);
-            line-height: 1.5em;
+@media (min-width: 900px) {
+    .section-1__summary__note__heading {
+    
+        //Note Title
+        h3 {
+            font-size: clamp(4dvh, 1dvh + 1rem, 5dvh);
+            padding: 2dvh;
+            padding-bottom: 4dvh;
+            padding-top: 4dvh;
+            writing-mode: vertical-lr;
         }
-    }
-}
-
-@media screen and (width < 455) {
-    .section-1__summary__content {
-        flex-wrap: wrap;
-    }
-
-    .section-1__summary__content__heading {
-        border-radius: 0;
-        border-top-left-radius: $borderRadius;
-        border-top-right-radius: $borderRadius;
-        height: auto;
-        margin-inline: auto;
-        rotate: 360deg;
-        width: fit-content;
-        writing-mode: horizontal-tb;
-        padding: 0.25em;
-        font-size: 1.1em;
-    }
-
-    .section-1__summary__content__text {
-        border-radius: 0;
-        width: fit-content;
-        margin-inline: 1em;
-        margin-bottom: 1em;
-        overflow-y: scroll;
-        max-height: 50dvh;
-    }
-
-    .section-1__summary__note>div {
-        display: flex;
-        flex-wrap: wrap-reverse;
-    }
-
-    .section-1__summary__note__heading>h3 {
-        writing-mode: horizontal-tb;
     }
 }
