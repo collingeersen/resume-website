@@ -15,7 +15,7 @@ $scrollBorderColor: #80C24A;
 .scroll-to-top {
     bottom: 12dvh;
     position: fixed;
-    right: 4%;
+    right: 2%;
     z-index: 110;
 
     button {
@@ -23,12 +23,14 @@ $scrollBorderColor: #80C24A;
         background-color: $scrollBackgroundColor;
         border: 0;
         border-color: $scrollBorderColor;
-        border-radius: 20dvh;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
         border-style: solid;
         border-width: min(1em, 0.5dvh);
         color: $scrollArrowColor;
-        padding: 1.5dvh;
-
+        padding: 5px;
+        padding-top: 20px;
+        padding-bottom: 20px;
 
         &:hover {
             @include scroll-to-top_Transition;
@@ -47,9 +49,24 @@ $scrollBorderColor: #80C24A;
     span {
         @include scroll-to-top_Transition;
         display: block;
-        font-size: min(5dvh, 15em);
+        font-size: 2em;
         text-shadow: $scrollArrowShadowColor 0 0.1em;
         transition-property: text-shadow, translate;
+    }
+}
+
+@media (min-width: 900px) {
+    .scroll-to-top {
+        right: 4%;
+    
+        button {
+            border-radius: 20dvh;
+            padding: 1.5dvh;
+        }
+    
+        span {
+            font-size: min(5dvh, 15em);
+        }
     }
 }
 
