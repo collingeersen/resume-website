@@ -1,26 +1,45 @@
+//=========================================================
+//  Homepage- Section 4
+//=========================================================
+//-------------------------
+//  Variable               |
+//-------------------------
 $backgroundColor: #2b3463;
 $borderRadius: clamp(1dvw, 1em, 2dvw);
 $borderColor: #0c1020;
 $boxBackgroundColor: #20274A;
 $borderWidth: max(5px, 0.5dvh);
 
+//=========================================================
+//  Section-4
+//=========================================================
 .section-4{
     background-color: $borderColor;
     border-radius: $borderRadius;
-    margin-bottom: 2dvh;
+    margin-bottom: 30px;
     margin-inline: auto;
-    margin-top: 10dvh;
+    margin-top: 80px;
     padding: 2%;
     width: 90%;
 }
 
+@media (min-width: 900px) {
+    .section-4{
+        margin-bottom: 2dvh;
+        margin-top: 10dvh;
+    }
+}
+
+//=========================================================
+//  Content
+//=========================================================
 .section-4__content{
     align-items: center;
     background-color: $backgroundColor;
     border-radius: $borderRadius;
     display: flex;
     flex-wrap: wrap;
-    font-size: clamp(1em, 2dvh, 5dvh);
+    font-size: 1em;
     margin-inline: auto;
     padding: 2%;
     width: fit-content;
@@ -40,5 +59,11 @@ $borderWidth: max(5px, 0.5dvh);
             margin-right: 2em;
             text-align: right;
         }
+    }
+}
+
+@media (min-width: 900px) {
+    .section-4__content{
+        font-size: clamp(1em, 2dvh, 5dvh);
     }
 }
