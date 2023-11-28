@@ -12,19 +12,21 @@ $borderColor: #0c1020;
 $headingColor:white;
 $paragraphColor:white;
 
+//=========================================================
+//  Section 3
+//=========================================================
 .section-3 {
     background-color: $borderColor;
-    border-radius: 3dvh;
+    border-radius: 15px;
     margin-inline: auto;
-    padding: 3dvh;
-    width: max(60dvh, 70%);
+    padding: 20px;
 }
 
 .section-3__container {
     background-color: $backgroundColor;
-    border-radius: 3dvh;
-    padding-bottom: 4dvh;
-    padding-top: 5dvh;
+    border-radius: 30px;
+    padding-bottom: 10px;
+    padding-top: 50px;
 
     .header__accent__top{
         top: 0;
@@ -33,65 +35,103 @@ $paragraphColor:white;
     h3 {
         background-color: #0c1020;
         border-radius: 1dvh;
-        font-size: clamp(1em, 2.5dvh, 8dvh);
+        font-size: 1.1em;
         padding: 1em;
         text-align: center;
     }
 
     p {
-        font-size: clamp(1em, 2dvh, 5dvh);
+        font-size: 1.1em;
         text-align: center;
     }
 
     a{
         display: flex;
-        font-size: clamp(1em, 1.75dvh, 4dvh);
+        font-size: 1em;
         padding: 0.75em;
         width: fit-content;
         background-color: #20274a;
     }
 }
+
+@media (min-width: 900px) {
+    .section-3 {
+        border-radius: 3dvh;
+        padding: 3dvh;
+        width: max(60dvh, 70%);
+    }
+    
+    .section-3__container {
+        border-radius: 3dvh;
+        padding-bottom: 4dvh;
+        padding-top: 5dvh;
+    
+        h3 {
+            border-radius: 1dvh;
+            font-size: clamp(1em, 2.5dvh, 8dvh);
+            padding: 1em;
+        }
+    
+        p {
+            font-size: clamp(1em, 2dvh, 5dvh);
+        }
+    
+        a{
+            font-size: clamp(1em, 1.75dvh, 4dvh);
+            padding: 0.75em;
+        }
+    }
+}
+
+//=========================================================
+//  Header
+//=========================================================
+
 .section-3__container__header{
     background-color: $boxBackgroundColor;
 
     h2{
-        font-size: clamp(2em, 4dvh, 10dvh);
+        font-size: 2em;
         margin-inline: auto;
         text-align: center;
     }
 }
 
+@media (min-width: 900px) {
+    .section-3__container__header{
+        h2{
+            font-size: clamp(2em, 4dvh, 10dvh);
+        }
+    }
+}
+
+//=========================================================
+//  Card
+//=========================================================
 .section-3__container__card__wrapper {
-    column-gap: 1dvw;
+    column-gap: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 2dvh;
-    row-gap: 1dvh;
-    padding: 3dvh;
-
-    //Adds staggered delay to the scroll transition for the second and fourth content cards
-    div:nth-child(2),
-    div:nth-child(4){
-        transition-delay: 500ms;
-        animation-delay: 500ms;
-    }
+    margin-top: 30px;
+    padding: 20px;
+    row-gap: 25px;
 }
 
 .section-3__container__card {
     background-color: $boxBackgroundColor;
     border-color: $borderColor;
-    border-radius: 2dvh;
+    border-radius: 20px;
     border-style: solid;
     border-width: 0.3em;
-    box-shadow: inset 0 2dvh 0px $borderColor;
+    box-shadow: inset 0 20px 0px $borderColor;
     padding: 1em;
-    width: min(30dvh, 400px);
+    width: 300px;
 }
 
 .section-3__container__card__icon{
-    margin-inline: auto;
     display: block;
+    margin-inline: auto;
     width: fit-content;
 
     span{
@@ -107,6 +147,30 @@ $paragraphColor:white;
     margin-inline: auto;
     margin-top: 1em;
     width: 60%;
+}
+
+@media (min-width: 900px) {
+    .section-3__container__card__wrapper {
+        column-gap: 1dvw;
+        margin-top: 2dvh;
+        row-gap: 1dvh;
+        padding: 3dvh;
+    
+        //Adds staggered delay to the scroll transition for the second and fourth content cards
+        div:nth-child(2),
+        div:nth-child(4){
+            transition-delay: 500ms;
+            animation-delay: 500ms;
+        }
+    }
+    
+    .section-3__container__card {
+        border-radius: 2dvh;
+        border-width: 0.3em;
+        box-shadow: inset 0 2dvh 0px $borderColor;
+        padding: 1em;
+        width: min(30dvh, 400px);
+    }
 }
 
 @media screen and (width < 540) {
