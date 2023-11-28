@@ -65,10 +65,8 @@
 }
 
 .section-1__container {
-  border-width: 0;
   background-color: #0c1020;
-  border-style: solid;
-  border-color: #20274a;
+  border: 0 solid #20274a;
   border-bottom-width: max(50px, 5dvh);
   border-bottom-right-radius: clamp(1dvw, 1em, 2dvw);
   border-bottom-left-radius: clamp(1dvw, 1em, 2dvw);
@@ -182,4 +180,4 @@
   font-size: clamp(2.5dvh, 1dvh + 1rem, 3.5dvh);
 }
 
-/*# sourceMappingURL=education.95046332.css.map */
+/*# sourceMappingURL=education.f2d18ffb.css.map */

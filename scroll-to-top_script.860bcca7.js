@@ -1,16 +1,18 @@
 (function () {
-var $parcel$global =
-typeof globalThis !== 'undefined'
-  ? globalThis
-  : typeof self !== 'undefined'
-  ? self
-  : typeof window !== 'undefined'
-  ? window
-  : typeof global !== 'undefined'
-  ? global
-  : {};
-var parcelRequire = $parcel$global["parcelRequirec8c2"];
-parcelRequire.register("1a4Ip", function(module, exports) {
+
+      var $parcel$global =
+        typeof globalThis !== 'undefined'
+          ? globalThis
+          : typeof self !== 'undefined'
+          ? self
+          : typeof window !== 'undefined'
+          ? window
+          : typeof global !== 'undefined'
+          ? global
+          : {};
+  var parcelRequire = $parcel$global["parcelRequirec8c2"];
+var parcelRegister = parcelRequire.register;
+parcelRegister("1a4Ip", function(module, exports) {
 const $884c9cc1a1f78f35$var$toTopScroll = document.getElementsByClassName("scroll-to-top--hidden")[0];
 const $884c9cc1a1f78f35$var$btnTop = document.getElementsByClassName("scroll-to-top__btn")[0];
 //Scroll Events
@@ -32,4 +34,4 @@ $884c9cc1a1f78f35$var$btnTop.addEventListener("click", (event)=>{
 });
 
 })();
-//# sourceMappingURL=scroll-to-top_script.93e0bb8b.js.map
+//# sourceMappingURL=scroll-to-top_script.860bcca7.js.map

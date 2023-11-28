@@ -1,16 +1,18 @@
 (function () {
-var $parcel$global =
-typeof globalThis !== 'undefined'
-  ? globalThis
-  : typeof self !== 'undefined'
-  ? self
-  : typeof window !== 'undefined'
-  ? window
-  : typeof global !== 'undefined'
-  ? global
-  : {};
-var parcelRequire = $parcel$global["parcelRequirec8c2"];
-parcelRequire.register("eg317", function(module, exports) {
+
+      var $parcel$global =
+        typeof globalThis !== 'undefined'
+          ? globalThis
+          : typeof self !== 'undefined'
+          ? self
+          : typeof window !== 'undefined'
+          ? window
+          : typeof global !== 'undefined'
+          ? global
+          : {};
+  var parcelRequire = $parcel$global["parcelRequirec8c2"];
+var parcelRegister = parcelRequire.register;
+parcelRegister("eg317", function(module, exports) {
 //Almost always extends from HTMLElements for general components
 class $153d73be08e6eb0b$var$projectsComp extends HTMLElement {
     constructor(){
@@ -217,4 +219,4 @@ customElements.define("projects-comp", $153d73be08e6eb0b$var$projectsComp);
 });
 
 })();
-//# sourceMappingURL=projects_svg.402e4b66.js.map
+//# sourceMappingURL=projects_svg.a53e3307.js.map

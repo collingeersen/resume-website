@@ -1,16 +1,18 @@
 (function () {
-var $parcel$global =
-typeof globalThis !== 'undefined'
-  ? globalThis
-  : typeof self !== 'undefined'
-  ? self
-  : typeof window !== 'undefined'
-  ? window
-  : typeof global !== 'undefined'
-  ? global
-  : {};
-var parcelRequire = $parcel$global["parcelRequirec8c2"];
-parcelRequire.register("gSKVC", function(module, exports) {
+
+      var $parcel$global =
+        typeof globalThis !== 'undefined'
+          ? globalThis
+          : typeof self !== 'undefined'
+          ? self
+          : typeof window !== 'undefined'
+          ? window
+          : typeof global !== 'undefined'
+          ? global
+          : {};
+  var parcelRequire = $parcel$global["parcelRequirec8c2"];
+var parcelRegister = parcelRequire.register;
+parcelRegister("gSKVC", function(module, exports) {
 //Almost always extends from HTMLElements for general components
 class $a320846f4938fba2$var$puzzleComp extends HTMLElement {
     constructor(){
@@ -176,4 +178,4 @@ customElements.define("puzzle-comp", $a320846f4938fba2$var$puzzleComp);
 });
 
 })();
-//# sourceMappingURL=puzzle_svg.4a0e4fed.js.map
+//# sourceMappingURL=puzzle_svg.846b1822.js.map

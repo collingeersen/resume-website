@@ -1,16 +1,18 @@
 (function () {
-var $parcel$global =
-typeof globalThis !== 'undefined'
-  ? globalThis
-  : typeof self !== 'undefined'
-  ? self
-  : typeof window !== 'undefined'
-  ? window
-  : typeof global !== 'undefined'
-  ? global
-  : {};
-var parcelRequire = $parcel$global["parcelRequirec8c2"];
-parcelRequire.register("c0O6E", function(module, exports) {
+
+      var $parcel$global =
+        typeof globalThis !== 'undefined'
+          ? globalThis
+          : typeof self !== 'undefined'
+          ? self
+          : typeof window !== 'undefined'
+          ? window
+          : typeof global !== 'undefined'
+          ? global
+          : {};
+  var parcelRequire = $parcel$global["parcelRequirec8c2"];
+var parcelRegister = parcelRequire.register;
+parcelRegister("c0O6E", function(module, exports) {
 //Almost always extends from HTMLElements for general components
 class $297957e2fc8307e6$var$computerComponent extends HTMLElement {
     constructor(){
@@ -166,4 +168,4 @@ customElements.define("computer-comp", $297957e2fc8307e6$var$computerComponent);
 });
 
 })();
-//# sourceMappingURL=computer_svg.5be9f4b0.js.map
+//# sourceMappingURL=computer_svg.29445b97.js.map

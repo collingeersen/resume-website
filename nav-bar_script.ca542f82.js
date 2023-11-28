@@ -1,16 +1,18 @@
 (function () {
-var $parcel$global =
-typeof globalThis !== 'undefined'
-  ? globalThis
-  : typeof self !== 'undefined'
-  ? self
-  : typeof window !== 'undefined'
-  ? window
-  : typeof global !== 'undefined'
-  ? global
-  : {};
-var parcelRequire = $parcel$global["parcelRequirec8c2"];
-parcelRequire.register("1KDeX", function(module, exports) {
+
+      var $parcel$global =
+        typeof globalThis !== 'undefined'
+          ? globalThis
+          : typeof self !== 'undefined'
+          ? self
+          : typeof window !== 'undefined'
+          ? window
+          : typeof global !== 'undefined'
+          ? global
+          : {};
+  var parcelRequire = $parcel$global["parcelRequirec8c2"];
+var parcelRegister = parcelRequire.register;
+parcelRegister("1KDeX", function(module, exports) {
 const $32ff426ebaf668fc$var$toggleDisplay = document.querySelectorAll(".--toggle-display");
 const $32ff426ebaf668fc$var$toggleExpandAll = document.getElementsByClassName("nav-bar__drop-down__header__toggle--expand")[0];
 const $32ff426ebaf668fc$var$toggleCollapseAll = document.getElementsByClassName("nav-bar__drop-down__header__toggle--collapse")[0];
@@ -82,4 +84,4 @@ adds a click event specific to each sub content for toggle
 });
 
 })();
-//# sourceMappingURL=nav-bar_script.59453b0f.js.map
+//# sourceMappingURL=nav-bar_script.ca542f82.js.map

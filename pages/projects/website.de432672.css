@@ -208,10 +208,8 @@ footer:before {
 }
 
 .section__body h2 + p {
-  border-width: 0;
-  border-color: #0c1020;
   background-color: #20274a;
-  border-style: solid;
+  border: 0 solid #0c1020;
   border-left-width: calc(4 * max(5px, .5dvh));
   border-top-left-radius: clamp(1dvw, 1em, 2dvw);
   border-bottom-left-radius: clamp(1dvw, 1em, 2dvw);
@@ -322,9 +320,7 @@ footer:before {
   }
 
   .section__body__paragraph--box-shadow {
-    border-width: 0;
-    border-color: #0c1020;
-    border-style: solid;
+    border: 0 solid #0c1020;
     border-top-width: 2dvh;
     border-radius: clamp(1dvw, 1em, 2dvw);
     padding: 2dvh;
@@ -389,4 +385,4 @@ footer:before {
   font-size: clamp(1dvh, 1dvh + .4em, 1.8dvh + .8em);
 }
 
-/*# sourceMappingURL=website.c00a0eae.css.map */
+/*# sourceMappingURL=website.de432672.css.map */
