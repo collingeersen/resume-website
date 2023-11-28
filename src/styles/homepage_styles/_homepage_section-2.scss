@@ -17,7 +17,7 @@ $fontColor1: #e1e0e0;
 $headingColor: #80C24A;
 
 //=========================================================
-//  Section 2 Classes
+//  Section 2
 //=========================================================
 .section-2 {
     background-color: $borderColor;
@@ -32,11 +32,21 @@ $headingColor: #80C24A;
     background-color: $backgroundColor;
     border-radius: $borderRadius;
     height: auto;
-    padding-bottom: 10dvh;
-    padding-top: 9dvh;
+    padding-bottom: 50px;
+    padding-top: 50px;
     width: auto;
 }
 
+@media (min-width: 900px) {
+    .section-2__container {
+        padding-bottom: 10dvh;
+        padding-top: 9dvh;
+    }
+}
+
+//=========================================================
+//  Intro/Main Heading
+//=========================================================
 .section-2__container__intro {
     background-color: $boxBackgroundColor;
     display: block;
@@ -45,380 +55,363 @@ $headingColor: #80C24A;
     width: 100%;
 
     h2 {
-        font-size: clamp(4dvh, 2.2dvh + 2em, 5dvh);
-    }
-
-    p {
-        font-size: clamp(2dvh, 1dvh + 0.75em, 2.75dvh);
+        font-size: 2.5em;
     }
 }
 
+@media (min-width: 900px) {
+    .section-2__container__intro {
+        width: 100%;
+    
+        h2 {
+            font-size: clamp(4dvh, 2.2dvh + 2em, 5dvh);
+        }
+    }
+}
+
+//=========================================================
+//  Content Box
+//=========================================================
 .section-2__container__box {
     align-items: center;
-    display: flex;
     height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 6dvh;
-    padding-bottom: 3dvh;
-    padding: 3dvh;
+    margin-inline: auto;
+    margin-top: 60px;
+    padding-bottom: 30px;
     width: 80%;
 
     >h2 {
         align-self: center;
         background-color: $borderColor;
-        border-bottom-right-radius: $borderRadius;
+        border-top-left-radius: $borderRadius;
         border-top-right-radius: $borderRadius;
-        font-size: clamp(2dvh, 2dvh + 0.75em, 3.75dvh);
-        height: 32dvh;
-        margin-right: 0;
-        margin-left: auto;
-        padding: 2dvh;
+        font-size: 1.5em;
+        padding: 20px;
         text-align: center;
         user-select: none;
-        writing-mode: vertical-lr;
-        rotate: 180deg;
     }
 }
 
+@media (min-width: 900px) {
+    .section-2__container__box {
+        display: flex;
+        margin-top: 6dvh;
+        padding-bottom: 3dvh;
+        padding: 3dvh;
+        width: 80%;
+    
+        >h2 {
+            border-top-left-radius: 0;
+            border-bottom-right-radius: $borderRadius;
+            font-size: clamp(2dvh, 2dvh + 0.75em, 3.75dvh);
+            height: 32dvh;
+            margin-right: 0;
+            margin-left: auto;
+            padding: 2dvh;
+            writing-mode: vertical-lr;
+            rotate: 180deg;
+        }
+    }
+}
+
+//-------------------------
+//  Content Box: Paragraph |
+//-------------------------
 .section-2__container__box__paragraph {
     background-color: $boxBackgroundColor;
-    border-bottom-left-radius: $borderRadius;
+    border-top-left-radius: $borderRadius;
     border-color: $borderColor;
     border-style: solid;
-    border-top-left-radius: $borderRadius;
+    border-top-right-radius: $borderRadius;
     border-width: 0.5em;
     display: block;
-    margin-bottom: auto;
-    margin-top: auto;
-    max-height: 60dvh;
-    max-width: 40dvw;
-    min-height: 40dvh;
-    min-width: 35dvw;
+    margin-top: -30px;
 
     p {
-        border-bottom-left-radius: $borderRadius;
-        border-top-left-radius: $borderRadius;
-        font-size: clamp(2dvh, 1dvh + 0.75em, 2.75dvh);
-        line-height: 5dvh;
+        font-size: 20px;
+        line-height: 1.5em;
         margin-bottom: auto;
         margin-top: auto;
-        padding: 5dvh;
-        text-indent: 1.2em;
+        padding: 30px;
     }
 }
 
-//-------------------------
-//  Section 2: Card        |
-//-------------------------
+@media (min-width: 900px) {
+    .section-2__container__box__paragraph {
+        border-bottom-left-radius: $borderRadius;
+        border-top-left-radius: $borderRadius;
+        margin-bottom: auto;
+        margin-top: auto;
+        max-height: 60dvh;
+        max-width: 40dvw;
+        min-height: 40dvh;
+        min-width: 35dvw;
+    
+        p {
+            border-bottom-left-radius: $borderRadius;
+            border-top-left-radius: $borderRadius;
+            font-size: clamp(2dvh, 1dvh + 0.75em, 2.75dvh);
+            line-height: 5dvh;
+            padding: 5dvh;
+            text-indent: 1.2em;
+        }
+    }
+}
+
+//=========================================================
+//  Content Card
+//=========================================================
 $section2Card_TransitionDelay: 0ms;
 
 .section-2__container__box__card {
     align-self: center;
     background-color: $boxBackgroundColor;
+    border-bottom-left-radius: $borderRadius;
+    border-bottom-right-radius: $borderRadius;
     border-color: $borderColor;
-    border-radius: $borderRadius;
     border-style: solid;
-    border-width: 0.75dvh;
-    box-shadow: $flexCardDefaultColor 0px 0px 0px 0px;
+    border-width: 0.5em;
+    border-top-width: 0;
     height: fit-content;
-    transition-duration: 300ms;
-    translate: -3dvh;
-    transition-property: translate,
-        box-shadow;
+}
 
-    &:hover {
-        box-shadow: $flexCardHoverColor 1dvh 1dvh 0px 0;
-        cursor: pointer;
-        transition-duration: 250ms;
+@media (min-width: 900px) {
+    .section-2__container__box__card {
+        border-radius: $borderRadius;
+        border-width: 0.75dvh;
+        box-shadow: $flexCardDefaultColor 0px 0px 0px 0px;
+        transition-duration: 300ms;
+        translate: -3dvh;
         transition-property: translate,
             box-shadow;
-        translate: -4dvh -1dvh;
-        transition-delay: $section2Card_TransitionDelay;
-        transition-timing-function: linear;
-
-        h3,
-        h4 {
-            //Gives link hover color
-            color: #3F6321;
-        }
-
-        //Creates the hover state for the pseudo underline effect
-        h3::after {
-            background-color: #3F6321;
-            content: '';
-            display: block;
-            height: 0.5dvh;
-            transition-duration: 200ms;
-            transition-property: width;
-            transition-timing-function: ease-in-out;
+    
+        &:hover {
+            box-shadow: $flexCardHoverColor 1dvh 1dvh 0px 0;
+            cursor: pointer;
+            transition-duration: 250ms;
+            transition-property: translate,
+                box-shadow;
+            translate: -4dvh -1dvh;
             transition-delay: $section2Card_TransitionDelay;
-            width: 100%;
-        }
-
-        span {
-            div {
-                animation-duration: 500ms;
-                animation-fill-mode: both;
-                animation-name: box__card__corner-out-anim;
-                animation-delay: $section2Card_TransitionDelay;
-
-                @keyframes box__card__corner-out-anim {
-                    from {
-                        box-shadow: inset $flexCardHoverColor 0px 0px 0px -1px;
-                    }
-
-                    to {
-                        box-shadow: inset $flexCardHoverColor 0px 15dvh 0px -1px;
+            transition-timing-function: linear;
+    
+            h3,
+            h4 {
+                //Gives link hover color
+                color: #3F6321;
+            }
+    
+            //Creates the hover state for the pseudo underline effect
+            h3::after {
+                background-color: #3F6321;
+                content: '';
+                display: block;
+                height: 0.5dvh;
+                transition-duration: 200ms;
+                transition-property: width;
+                transition-timing-function: ease-in-out;
+                transition-delay: $section2Card_TransitionDelay;
+                width: 100%;
+            }
+    
+            span {
+                div {
+                    animation-duration: 500ms;
+                    animation-fill-mode: both;
+                    animation-name: box__card__corner-out-anim;
+                    animation-delay: $section2Card_TransitionDelay;
+    
+                    @keyframes box__card__corner-out-anim {
+                        from {
+                            box-shadow: inset $flexCardHoverColor 0px 0px 0px -1px;
+                        }
+    
+                        to {
+                            box-shadow: inset $flexCardHoverColor 0px 15dvh 0px -1px;
+                        }
                     }
                 }
             }
-        }
-
-        //Hover effect to darken img and show arrow icon
-        .material-symbols-rounded {
-            opacity: 1;
-            transition-duration: 200ms;
-            transition-property: all;
-            transition-delay: $section2Card_TransitionDelay;
-        }
-
-        puzzle-comp,
-        computer-comp,
-        projects-comp {
-            filter: grayscale(1);
-            transition-duration: 200ms;
-            transition-property: all;
-            transition-delay: $section2Card_TransitionDelay;
+    
+            //Hover effect to darken img and show arrow icon
+            .material-symbols-rounded {
+                opacity: 1;
+                transition-duration: 200ms;
+                transition-property: all;
+                transition-delay: $section2Card_TransitionDelay;
+            }
+    
+            puzzle-comp,
+            computer-comp,
+            projects-comp {
+                filter: grayscale(1) blur(2);
+                transition-duration: 200ms;
+                transition-property: all;
+                transition-delay: $section2Card_TransitionDelay;
+            }
         }
     }
 }
 
+//-------------------------
+//  Content Card: Header   |
+//-------------------------
 .section-2__container__box__card--header {
     display: flex;
     flex-wrap: nowrap;
 
-    span {
-        display: inline-block;
-        height: 8dvh;
-        margin-left: auto;
-        margin-right: 0;
-        overflow: hidden;
-        width: 11dvh;
+    h3 {
+        color: $headingColor;
+        font-size: 1.1em;
+        margin-inline: auto;
+        padding-top: 10px;
+        text-decoration: underline;
+        width: fit-content;
+    }
+}
 
-        div {
-            animation-duration: 500ms;
-            animation-name: flex-box--1x3__col__corner-in-anim;
-            background-color: $flexCardDefaultColor;
-            height: 13dvh;
-            rotate: -45deg;
-            translate: -2dvh -4dvh;
-            width: 2.5dvh;
+@media (min-width: 900px) {
+    .section-2__container__box__card--header {
+    
+        h3 {
+            font-size: clamp(2.5dvh, 1dvh + 0.75em, 3dvh);
+            margin-left: 0;
+            padding-left: 3dvh;
+            padding-top: 1dvh;
+            text-align: left;
+            text-decoration: none;
+    
+            &::after {
+                background-color: $headingColor;
+                content: '';
+                display: block;
+                height: 0.5dvh;
+                transition-duration: 200ms;
+                transition-property: width;
+                transition-timing-function: ease-in-out;
+                transition-delay: $section2Card_TransitionDelay;
+                width: 0%;
+            }
+        }
+
+        span {
+            display: inline-block;
+            height: 8dvh;
             margin-left: auto;
-
-            @keyframes flex-box--1x3__col__corner-in-anim {
-                from {
-                    box-shadow: inset $flexCardHoverColor 0px -20dvh;
-                }
-
-                to {
-                    box-shadow: inset $flexCardHoverColor 0px 0px -0.1dvh;
+            margin-right: 0;
+            overflow: hidden;
+            width: 11dvh;
+    
+            div {
+                animation-duration: 500ms;
+                animation-name: flex-box--1x3__col__corner-in-anim;
+                background-color: $flexCardDefaultColor;
+                height: 13dvh;
+                margin-left: auto;
+                rotate: -45deg;
+                translate: -2dvh -4dvh;
+                width: 2.5dvh;
+    
+                @keyframes flex-box--1x3__col__corner-in-anim {
+                    from {
+                        box-shadow: inset $flexCardHoverColor 0px -20dvh;
+                    }
+    
+                    to {
+                        box-shadow: inset $flexCardHoverColor 0px 0px -0.1dvh;
+                    }
                 }
             }
         }
     }
-
-    h3 {
-        color: $headingColor;
-        width: fit-content;
-        padding-left: 3dvh;
-        padding-top: 1dvh;
-        font-size: clamp(2.5dvh, 1dvh + 0.75em, 3dvh);
-
-        &::after {
-            background-color: $headingColor;
-            content: '';
-            display: block;
-            height: 0.5dvh;
-            transition-duration: 200ms;
-            transition-property: width;
-            transition-timing-function: ease-in-out;
-            transition-delay: $section2Card_TransitionDelay;
-            width: 0%;
-        }
-    }
 }
 
+//-------------------------
+//  Content Card: Content  |
+//-------------------------
 .section-2__container__box__card--content {
-    padding-bottom: 3dvh;
-    padding-left: 3dvh;
-    padding-right: 3dvh;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
 
     h4 {
-        margin-top: -2dvh;
-        font-size: 1.8dvh;
+        font-size: 1em;
+        margin-top: -10px;
+        text-align: center;
+        text-decoration: underline;
     }
 
     p {
-        font-size: 1.75dvh;
+        font-size: 0.8em;
         text-align: center;
 
         span {
-            font-size: 1.5dvh;
-            translate: 0 0dvh;
+            font-size: 0.8em;
         }
     }
 
     //Container for svg
     div {
-        background-color: #212436;
-        height: 20dvh;
-        margin-left: auto;
-        margin-right: auto;
-        width: 20dvh;
-        margin-bottom: 1dvh;
-        margin-top: 3dvh;
-
-        puzzle-comp,
-        computer-comp,
-        projects-comp {
-            filter: grayscale(0);
-        }
+        height: 150px;
+        margin-bottom: 30px;
+        margin-inline: auto;
+        margin-top: 30px;
+        width: min-content;
 
         //Material Icon span
         span {
-            color: $fontColor1;
-            display: block;
-            font-size: 4dvh;
-            height: 100%;
             opacity: 0;
-            padding-top: 8dvh;
-            text-align: center;
-            translate: 0 -20.3dvh;
-            transition-duration: 200ms;
-            transition-property: all;
-            transition-delay: $section2Card_TransitionDelay;
         }
     }
 }
 
-//-------------------------
-//  Media Queries          |
-//-------------------------
-@media screen and (width < 685) {
-
-    .section-2__container__box {
-        display: block;
-        margin-inline: auto;
-        margin-top: -60px;
-        padding: 0;
-        scale: 0.8;
-        width: min-content;
-
-        >h2 {
-            border-bottom-right-radius: 0;
-            border-top-left-radius: $borderRadius;
-            height: auto;
-            margin: 0;
-            rotate: 0deg;
-            width: min-content;
-            writing-mode: horizontal-tb;
-            //margin-inline: auto;
-        }
-    }
-
-    .section-2__container__box__paragraph {
-        border-radius: $borderRadius;
-        border-top-left-radius: 0;
-        margin-inline: auto;
-        max-height: 400px;
-        width: 80dvw;
-        min-width: 20em;
-
-        p {
-            padding: 10px;
-            font-size: clamp(1dvh, 1dvh + 0.5em, 2dvh);
-        }
-    }
-
-    .section-2__container__box__card {
-        margin-inline: auto;
-        translate: 0;
-        width: min-content;
-
-        &:hover {
-            box-shadow: $flexCardHoverColor 0dvh 0dvh 0px 0;
-            translate: 0;
-        }
-    }
-}
-
-@media screen and (width < 800) and (height > 930) {
-    .section-2__container__box {
-        scale: 0.8;
-    }
-}
-
-@media screen and (width < 1175) and (height > 1000) {
-    .section-2__container__box__paragraph {
-        min-height: 300px;
-        width: 80dvw;
-        min-width: 30em;
-    }
-}
-
-@media screen and (685 < width < 1700) and (height > 1000) {
-    .section-2__container__box {
-        margin-bottom: 0;
-        padding: 0;
-        scale: 0.75;
-        width: fit-content;
-
-        >h2 {
-            font-size: 1.6em;
-            height: 10em;
-            padding: 10px;
-        }
-    }
-
-    .section-2__container__box__paragraph {
-        border-radius: $borderRadius;
-    }
-
-    .section-2__container__box__card {
-        width: 240px;
-    }
-
-    .section-2__container__box__card--header {
-        h3 {
-            font-size: 1.75dvh;
-            padding-left: 1dvh;
-        }
-    }
-
+@media (min-width: 900px) {
     .section-2__container__box__card--content {
-        padding: 0;
-
+        padding-bottom: 3dvh;
+        padding-left: 3dvh;
+        padding-right: 3dvh;
+    
         h4 {
-            font-size: 1.3dvh;
-            padding-left: 1dvh;
+            margin-top: -2dvh;
+            font-size: 1.8dvh;
+            text-decoration: none;
+            text-align: left;
         }
-
+    
         p {
-            font-size: 1.5dvh;
-            margin-top: -3dvh;
-            text-align: center;
-
+            font-size: 1.75dvh;
+    
             span {
                 font-size: 1.5dvh;
-                translate: 0 0dvh;
             }
         }
-
+    
+        //Container for svg
         div {
-            margin-top: -3dvh;
-            scale: 0.6;
-            translate: -15px;
+            height: 20dvh;
+            margin-bottom: 1dvh;
+            margin-top: 3dvh;
+            width: 20dvh;
+    
+            puzzle-comp,
+            computer-comp,
+            projects-comp {
+                filter: grayscale(0) blur(0);
+            }
+    
+            //Material Icon span
+            span {
+                color: $fontColor1;
+                display: block;
+                font-size: 4dvh;
+                height: 100%;
+                padding-top: 8dvh;
+                text-align: center;
+                translate: 0 -20.3dvh;
+                transition-duration: 200ms;
+                transition-property: all;
+                transition-delay: $section2Card_TransitionDelay;
+            }
         }
     }
 }
