@@ -21,8 +21,8 @@ puzzleComp.template = document.createElement("template");
 puzzleComp.template.innerHTML = `
     <style>
     svg {
-        width: 20dvh;
-        height: 20dvh;
+        width: 150px;
+        height: 150px;
         filter: grayscale(0);
       }
     #piece-1,
@@ -62,7 +62,12 @@ puzzleComp.template.innerHTML = `
             translate: 0 -150px;
         }
     }
-
+    @media (min-width: 900px) {
+      svg {
+        width: 20dvh;
+        height: 20dvh;
+      }
+    }    
     </style>
     <svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g id="puzzle" clip-path="url(#clip0_33_5)">
