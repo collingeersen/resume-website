@@ -39,12 +39,18 @@ $introNote_AnimDelay: $introContent_AnimDelay+1200ms;
     background-color: $borderColor;
     border-color: $borderColor;
     border-style: solid;
-    border-width: $separatorHeight;
+    border-width: 1.5em;
     border-bottom: 0;
     font-size: 1.5em;
     margin: auto;
     overflow: hidden;
     position: relative;
+}
+
+@media (min-width: 900px) {
+    .section-1 {
+        border-width: $separatorHeight;
+    }
 }
 
 //=========================================================
