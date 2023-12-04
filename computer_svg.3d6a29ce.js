@@ -32,8 +32,8 @@ $297957e2fc8307e6$var$computerComponent.template = document.createElement("templ
 $297957e2fc8307e6$var$computerComponent.template.innerHTML = `
   <style>
   svg {
-    width: 20dvh;
-    height: 20dvh;
+    width: 150px;
+    height: 150px;
   }
   #screenglow{
     //scale: 1;
@@ -75,6 +75,13 @@ $297957e2fc8307e6$var$computerComponent.template.innerHTML = `
       opacity: 1;
     }
 }
+@media (min-width: 900px) {
+  svg {
+    width: 20dvh;
+    height: 20dvh;
+  }
+}
+
   </style>
   
   <svg width="110" height="110" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -168,4 +175,4 @@ customElements.define("computer-comp", $297957e2fc8307e6$var$computerComponent);
 });
 
 })();
-//# sourceMappingURL=computer_svg.29445b97.js.map
+//# sourceMappingURL=computer_svg.3d6a29ce.js.map

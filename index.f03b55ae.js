@@ -49,7 +49,7 @@ var parcelRegister = parcelRequire.register;
 parcelRegister("6LUSR", function(module, exports) {
 
 
-(parcelRequire("9xqYB")).register((parcelRequire("cHmwT")).getBundleURL("3WOOB"), JSON.parse('["3WOOB","index.968a1a3f.js","8rs0F","nav-bar_script.ca542f82.js","3r7Kb","scroll-to-top_script.860bcca7.js","jEeSe","puzzle_svg.846b1822.js","dVhTq","computer_svg.29445b97.js","ccXVW","projects_svg.a53e3307.js"]'));
+(parcelRequire("9xqYB")).register((parcelRequire("cHmwT")).getBundleURL("3WOOB"), JSON.parse('["3WOOB","index.f03b55ae.js","8rs0F","nav-bar_script.ca542f82.js","3r7Kb","scroll-to-top_script.860bcca7.js","jEeSe","puzzle_svg.c7fea249.js","dVhTq","computer_svg.3d6a29ce.js","ccXVW","projects_svg.e104629f.js"]'));
 
 });
 parcelRegister("9xqYB", function(module, exports) {
@@ -250,4 +250,4 @@ const observerOnce = new IntersectionObserver((elements)=>{
 const hideElementsOnce = document.querySelectorAll(".scroll--hide--once");
 hideElementsOnce.forEach((e)=>observerOnce.observe(e));
 
-//# sourceMappingURL=index.968a1a3f.js.map
+//# sourceMappingURL=index.f03b55ae.js.map

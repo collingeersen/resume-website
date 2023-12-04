@@ -1,11 +1,17 @@
 .section-1 {
   background-color: #0c1020;
-  border: 4dvh solid #0c1020;
+  border: 100px solid #0c1020;
   border-bottom: 0;
   margin: auto;
   font-size: 1.5em;
   position: relative;
   overflow: hidden;
+}
+
+@media (min-width: 900px) {
+  .section-1 {
+    border-width: 4dvh;
+  }
 }
 
 .section-1__header {
@@ -1112,4 +1118,4 @@
   margin-top: 5dvh;
 }
 
-/*# sourceMappingURL=index.48588d8d.css.map */
+/*# sourceMappingURL=index.d8786e42.css.map */

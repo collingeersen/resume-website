@@ -32,8 +32,8 @@ $153d73be08e6eb0b$var$projectsComp.template = document.createElement("template")
 $153d73be08e6eb0b$var$projectsComp.template.innerHTML = `
     <style>
     svg {
-      width: 20dvh;
-      height: 20dvh;
+      width: 150px;
+      height: 150px;
       filter: grayscale(0);
     }
     #webpage,
@@ -71,6 +71,13 @@ $153d73be08e6eb0b$var$projectsComp.template.innerHTML = `
         animation-duration: 5s;
         animation-delay: 4s;
     }
+    @media (min-width: 900px) {
+      svg {
+        width: 20dvh;
+        height: 20dvh;
+      }
+    }
+    
     </style>
     <svg width="60" height="90" viewBox="0 0 60 90" fill="none" xmlns="http://www.w3.org/2000/svg">
   <g id="projects" clip-path="url(#clip0_44_828)">
@@ -219,4 +226,4 @@ customElements.define("projects-comp", $153d73be08e6eb0b$var$projectsComp);
 });
 
 })();
-//# sourceMappingURL=projects_svg.a53e3307.js.map
+//# sourceMappingURL=projects_svg.e104629f.js.map
