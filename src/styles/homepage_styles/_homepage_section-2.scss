@@ -25,7 +25,7 @@ $headingColor: #80C24A;
     border-bottom-right-radius: $borderRadius;
     padding: 4dvh;
     padding-top: 0;
-    margin-top: -6dvh;
+    margin-top: -15px;
 }
 
 .section-2__container {
@@ -38,6 +38,12 @@ $headingColor: #80C24A;
 }
 
 @media (min-width: 900px) {
+    .section-2 {
+        padding: 4dvh;
+        padding-top: 0;
+        margin-top: -6dvh;
+    }
+
     .section-2__container {
         padding-bottom: 10dvh;
         padding-top: 9dvh;
@@ -62,7 +68,7 @@ $headingColor: #80C24A;
 @media (min-width: 900px) {
     .section-2__container__intro {
         width: 100%;
-    
+
         h2 {
             font-size: clamp(4dvh, 2.2dvh + 2em, 5dvh);
         }
@@ -99,7 +105,7 @@ $headingColor: #80C24A;
         padding-bottom: 3dvh;
         padding: 3dvh;
         width: 80%;
-    
+
         >h2 {
             border-top-left-radius: 0;
             border-bottom-right-radius: $borderRadius;
@@ -146,7 +152,7 @@ $headingColor: #80C24A;
         max-width: 40dvw;
         min-height: 40dvh;
         min-width: 35dvw;
-    
+
         p {
             border-bottom-left-radius: $borderRadius;
             border-top-left-radius: $borderRadius;
@@ -184,7 +190,7 @@ $section2Card_TransitionDelay: 0ms;
         translate: -3dvh;
         transition-property: translate,
             box-shadow;
-    
+
         &:hover {
             box-shadow: $flexCardHoverColor 1dvh 1dvh 0px 0;
             cursor: pointer;
@@ -194,13 +200,13 @@ $section2Card_TransitionDelay: 0ms;
             translate: -4dvh -1dvh;
             transition-delay: $section2Card_TransitionDelay;
             transition-timing-function: linear;
-    
+
             h3,
             h4 {
                 //Gives link hover color
                 color: #3F6321;
             }
-    
+
             //Creates the hover state for the pseudo underline effect
             h3::after {
                 background-color: #3F6321;
@@ -213,26 +219,26 @@ $section2Card_TransitionDelay: 0ms;
                 transition-delay: $section2Card_TransitionDelay;
                 width: 100%;
             }
-    
+
             span {
                 div {
                     animation-duration: 500ms;
                     animation-fill-mode: both;
                     animation-name: box__card__corner-out-anim;
                     animation-delay: $section2Card_TransitionDelay;
-    
+
                     @keyframes box__card__corner-out-anim {
                         from {
                             box-shadow: inset $flexCardHoverColor 0px 0px 0px -1px;
                         }
-    
+
                         to {
                             box-shadow: inset $flexCardHoverColor 0px 15dvh 0px -1px;
                         }
                     }
                 }
             }
-    
+
             //Hover effect to darken img and show arrow icon
             .material-symbols-rounded {
                 opacity: 1;
@@ -240,7 +246,7 @@ $section2Card_TransitionDelay: 0ms;
                 transition-property: all;
                 transition-delay: $section2Card_TransitionDelay;
             }
-    
+
             puzzle-comp,
             computer-comp,
             projects-comp {
@@ -272,7 +278,7 @@ $section2Card_TransitionDelay: 0ms;
 
 @media (min-width: 900px) {
     .section-2__container__box__card--header {
-    
+
         h3 {
             font-size: clamp(2.5dvh, 1dvh + 0.75em, 3dvh);
             margin-left: 0;
@@ -280,7 +286,7 @@ $section2Card_TransitionDelay: 0ms;
             padding-top: 1dvh;
             text-align: left;
             text-decoration: none;
-    
+
             &::after {
                 background-color: $headingColor;
                 content: '';
@@ -301,7 +307,7 @@ $section2Card_TransitionDelay: 0ms;
             margin-right: 0;
             overflow: hidden;
             width: 11dvh;
-    
+
             div {
                 animation-duration: 500ms;
                 animation-name: flex-box--1x3__col__corner-in-anim;
@@ -311,12 +317,12 @@ $section2Card_TransitionDelay: 0ms;
                 rotate: -45deg;
                 translate: -2dvh -4dvh;
                 width: 2.5dvh;
-    
+
                 @keyframes flex-box--1x3__col__corner-in-anim {
                     from {
                         box-shadow: inset $flexCardHoverColor 0px -20dvh;
                     }
-    
+
                     to {
                         box-shadow: inset $flexCardHoverColor 0px 0px -0.1dvh;
                     }
@@ -370,35 +376,35 @@ $section2Card_TransitionDelay: 0ms;
         padding-bottom: 3dvh;
         padding-left: 3dvh;
         padding-right: 3dvh;
-    
+
         h4 {
             margin-top: -2dvh;
             font-size: 1.8dvh;
             text-decoration: none;
             text-align: left;
         }
-    
+
         p {
             font-size: 1.75dvh;
-    
+
             span {
                 font-size: 1.5dvh;
             }
         }
-    
+
         //Container for svg
         div {
             height: 20dvh;
             margin-bottom: 1dvh;
             margin-top: 3dvh;
             width: 20dvh;
-    
+
             puzzle-comp,
             computer-comp,
             projects-comp {
                 filter: grayscale(0) blur(0);
             }
-    
+
             //Material Icon span
             span {
                 color: $fontColor1;
