@@ -29,6 +29,8 @@ $borderColor: #0c1020;
 @media (min-width: 900px) {
     .separator__container {
         border-radius: 3dvh;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
         grid-template: "a b c" 3.5dvh "d . e" 10dvh / 1fr 0fr 1fr;
         height: 4dvh;
     }
