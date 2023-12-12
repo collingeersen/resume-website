@@ -49,7 +49,7 @@ nav {
     .nav-bar {
         background-color: $navminiBGColor;
         box-shadow: inset 0px -0.5dvh 0px $navBorderColor;
-        height: $navMiniHeight;
+        height: 100px;
         position: fixed;
         width: 100%;
     }
@@ -67,7 +67,17 @@ nav {
     }
 
     .nav-bar__drop-down {
-        top: $navMiniHeight;
+        top: 100px;
+    }
+    
+    @media (min-width: 900px) {
+        .nav-bar {
+            height: $navMiniHeight;
+        }
+    
+        .nav-bar__drop-down {
+            top: $navMiniHeight;
+        }
     }
 }
 
