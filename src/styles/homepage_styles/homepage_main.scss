@@ -30,9 +30,18 @@ $dividerBackgroundColor: #0C0E0F;
 
 .divider--thin {
     background-color: $dividerBackgroundColor;
-    height: 0.3dvh;
-    margin-bottom: 5dvh;
+    height: 3px;
+    margin-bottom: 50px;
     margin-inline: auto;
-    margin-top: 5dvh;
+    margin-top: 50px;
     width: 80%;
+}
+
+@media (min-width: 900px) {
+    .divider--thin {
+        height: 0.3dvh;
+        margin-bottom: 5dvh;
+        margin-top: 5dvh;
+        width: 80%;
+    }
 }
