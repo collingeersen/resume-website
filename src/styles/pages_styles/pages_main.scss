@@ -8,11 +8,11 @@ $boxBackgroundColor: #20274A;
 $headingColor: #80C24A;
 
 //=========================================================
-//  First Section
+//  Section 1
 //=========================================================
 .section-1__wrapper {
     background-color: $borderColor;
-    border: solid $borderColor 4dvh;
+    border: solid $borderColor 35px;
     overflow: hidden;
 }
 
@@ -23,13 +23,20 @@ $headingColor: #80C24A;
     padding-top: 0;
     position: relative;
 }
-.section-1__intro{
-    margin-top: max(50px, 5dvh);
+
+@media (min-width: 900px) {
+    .section-1__wrapper {
+        border: solid $borderColor 4dvh;
+    }
 }
 
-//-------------------------
-//  Section-1 Intro        |
-//-------------------------
+//=========================================================
+//  Section 1- Intro
+//=========================================================
+.section-1__intro{
+    margin-top: 50px;
+}
+
 .section-1__intro__graphic {
     display: block;
     margin-inline: auto;
@@ -39,14 +46,32 @@ $headingColor: #80C24A;
     div{
         scale: 1.2;
     }
-
 }
 
+@media (min-width: 900px) {
+    .section-1__intro{
+        margin-top: max(50px, 5dvh);
+    }
+}
+
+//-------------------------
+//  Intro Heading          |
+//-------------------------
 .section-1__intro__heading {
     text-align: center;
-    font-size: clamp(2.5dvh, 2em, 2dvh + 0.8em);
+    font-size: 1.75em;
 }
 
+@media (min-width: 900px) {
+    .section-1__intro__heading {
+        text-align: center;
+        font-size: clamp(2.5dvh, 2em, 2dvh + 0.8em);
+    }
+}
+
+//-------------------------
+//  Intro Accent           |
+//-------------------------
 .section-1__intro__accent {
     display: flex;
     margin-inline: auto;
@@ -55,10 +80,10 @@ $headingColor: #80C24A;
 .section-1__intro__accent--line {
     align-self: center;
     background-color: #0c1020;
-    height: 0.5dvh;
+    height: 5px;
     margin-bottom: 10px;
     min-height: 5px;
-    width: 40dvh;
+    width: 120px;
 
     &:nth-child(1) {
         margin-left: auto;
@@ -74,30 +99,56 @@ $headingColor: #80C24A;
 .section-1__intro__accent--circle {
     background-color: #0c1020;
     border-radius: 20em;
-    height: 1.5dvh;
+    height: 10px;
     margin-bottom: 10px;
     min-height: 15px;
     min-width: 15px;
-    width: 1.5dvh;
+    width: 15px;
 }
 
-//-------------------------
-//  Section-1 Container    |
-//-------------------------
+@media (min-width: 900px) {
+    .section-1__intro__accent--line {
+        height: 0.5dvh;
+        min-height: 5px;
+        width: 40dvh;
+    }
+    
+    .section-1__intro__accent--circle {
+        height: 1.5dvh;
+        min-height: 15px;
+        min-width: 15px;
+        width: 1.5dvh;
+    }
+}
+
+//=========================================================
+//  Section 1- Container
+//=========================================================
 .section-1__container {
     background-color: #0c1020;
     border-bottom-left-radius: $borderRadius;
     border-bottom-right-radius: $borderRadius;
     border-width: 0;
-    border-bottom-width: max(50px, 5dvh);
+    border-bottom-width: 50px;
     border-color: $boxBackgroundColor;
     border-style: solid;
     display: flex;
     flex-wrap: wrap-reverse;
-    margin-bottom: max(50px, 5dvh);
-    padding: max(30px, 3dvh);
+    margin-bottom: 50px;
+    padding: 30px;
 }
 
+@media (min-width: 900px) {
+    .section-1__container {
+        border-bottom-width: max(50px, 5dvh);
+        margin-bottom: max(50px, 5dvh);
+        padding: max(30px, 3dvh);
+    }
+}
+
+//-------------------------
+//  Container- Heading     |
+//-------------------------
 .section-1__container__heading {
     align-items: center;
     background-color: $boxBackgroundColor;
@@ -105,11 +156,11 @@ $headingColor: #80C24A;
     border-style: solid;
     border-top-left-radius: $borderRadius;
     border-top-right-radius: $borderRadius;
-    border-width: max(5px, 0.5dvh);
+    border-width: 5px;
     display: flex;
-    font-size: clamp(2dvh, 1dvh + 0.5em, 2dvh + 1em);
-    margin-top: max(80px, 8dvh);
-    padding: max(15px, 1.5dvh);
+    font-size: 1em;
+    margin-top: 80px;
+    padding: 15px;
 
     h2 {
         margin-right: 20px;
@@ -125,23 +176,43 @@ $headingColor: #80C24A;
 .section-1__container__heading__accent {
     background-color: #0c1020;
     border-radius: 20em;
-    height: 1.5dvh;
-    margin-bottom: max(10px, 1dvh);
+    height: 15px;
+    margin-bottom: 10px;
     min-height: 15px;
     min-width: 15px;
-    width: 1.5dvh;
+    width: 15px;
 }
 
+@media (min-width: 900px) {
+    .section-1__container__heading {
+        border-width: max(5px, 0.5dvh);
+        font-size: clamp(2dvh, 1dvh + 0.5em, 2dvh + 1em);
+        margin-top: max(80px, 8dvh);
+        padding: max(15px, 1.5dvh);
+    }
+    
+    .section-1__container__heading__accent {
+        height: 1.5dvh;
+        margin-bottom: max(10px, 1dvh);
+        min-height: 15px;
+        min-width: 15px;
+        width: 1.5dvh;
+    }
+}
+
+//-------------------------
+//  Container- Paragraph   |
+//-------------------------
 .section-1__container__paragraph {
     background-color: $boxBackgroundColor;
     border-radius: $borderRadius;
-    font-size: clamp(2.5dvh, 1dvh + 1rem, 3.5dvh - 3em);
+    font-size: 1.3em;
     margin-left: auto;
     margin-right: auto;
     width: 25em;
 
     p {
-        padding: 2dvh;
+        padding: 20px;
     }
 
     ul{
@@ -151,12 +222,31 @@ $headingColor: #80C24A;
     }
 
     li{
+        padding: 20px;
         padding-bottom: 0.5em;
-        font-size: clamp(1.5dvh, 1dvh + 0.8rem, 2dvh);
-        
+        font-size: 0.9em;
     }
 }
 
+@media (min-width: 900px) {
+    .section-1__container__paragraph {
+        font-size: clamp(2.5dvh, 1dvh + 1rem, 3.5dvh - 3em);
+    
+        p {
+            padding: 2dvh;
+        }
+    
+        li{
+            font-size: clamp(1.5dvh, 1dvh + 0.8rem, 2dvh);
+            padding: 2dvh;
+            padding-bottom: 0.5em;   
+        }
+    }
+}
+
+//-------------------------
+//  Container- Figure      |
+//-------------------------
 .section-1__container__figure {
     align-self: center;
     background-color: $boxBackgroundColor;
@@ -165,18 +255,32 @@ $headingColor: #80C24A;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0;
-    padding: 2dvh;
+    padding: 20px;
 
     img{
         display: block;
         margin-inline: auto;
-        width: max(150px, 15dvh);
+        width: 100px;
     }
 
     figcaption {
-        font-size: clamp(1dvh, 0.5em, 2dvh);
-        padding-top: 0.5em;
+        font-size: 0.5em;
+        padding-top: 10px;
         text-align: center;
+    }
+}
+
+@media (min-width: 900px) {
+    .section-1__container__figure {
+        padding: 2dvh;
+    
+        img{
+            width: max(150px, 15dvh);
+        }
+    
+        figcaption {
+            font-size: clamp(1dvh, 0.5em, 2dvh);
+        }
     }
 }
 
@@ -185,25 +289,47 @@ $headingColor: #80C24A;
 //=========================================================
 .section-2__wrapper {
     background-color: $borderColor;
-    border: solid $borderColor 4dvh;
+    border: solid $borderColor 35px;
 }
 
 .section-2 {
     background-color: $backgroundColor;
-    padding: 2dvh;
+    padding: 20px;
     border-radius: $borderRadius;
     position: relative;
 
     h2 {
         background-color: $boxBackgroundColor;
-        padding: 2dvh;
-        font-size: clamp(2.5dvh, 1dvh + 1rem, 3.5dvh);
+        padding: 20px;
+        font-size: 1.5em;
+        border-radius: $borderRadius;
     }
 
     p {
-        font-size: clamp(2.5dvh, 1dvh + 1rem, 3.5dvh);
+        font-size: 1.3em;
         margin: auto;
-        margin-top: max(70px, 7dvh);
-        width: 50%;
+        margin-top: 70px;
+        width: 80%;
+    }
+}
+
+@media (min-width: 900px) {
+    .section-2__wrapper {
+        border: solid $borderColor 4dvh;
+    }
+    
+    .section-2 {
+        padding: 2dvh;
+    
+        h2 {
+            padding: 2dvh;
+            font-size: clamp(2.5dvh, 1dvh + 1rem, 3.5dvh);
+        }
+    
+        p {
+            font-size: clamp(2.5dvh, 1dvh + 1rem, 3.5dvh);
+            margin-top: max(70px, 7dvh);
+            width: 50%;
+        }
     }
 }
