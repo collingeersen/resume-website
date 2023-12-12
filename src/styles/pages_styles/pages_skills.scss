@@ -1,13 +1,28 @@
+//=========================================================
+//  Section 1
+//=========================================================
 .section-1__container{
     flex-wrap: wrap;
+    padding: 5px;
 }
 .section-1__container__paragraph{
-    padding: max(30px, 3dvh);
-    margin-bottom: max(15px, 1.5dvh);
-    margin-top: max(15px, 1.5dvh);
+    padding: 20px;
+    margin-bottom: 15px;
+    margin-top: 15px;
     align-self: center;
 }
 
+@media (min-width: 900px) {
+    .section-1__container__paragraph{
+        padding: max(30px, 3dvh);
+        margin-bottom: max(15px, 1.5dvh);
+        margin-top: max(15px, 1.5dvh);
+    }
+}
+
+//=========================================================
+//  Section 2
+//=========================================================
 .section-2{
 
     h2 + div{
