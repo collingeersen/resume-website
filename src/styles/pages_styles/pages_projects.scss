@@ -8,44 +8,86 @@ $boxBackgroundColor: #20274A;
 $headingColor: #80C24A;
 $borderWidth: max(5px, 0.5dvh);
 
+//=========================================================
+//  Section 1
+//=========================================================
+section{
+    overflow-x: hidden;
+}
+
 .section-1__project-pane{
     background-color: $borderColor;
     border-radius: $borderRadius;
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: repeat(2, auto);
-    width: fit-content;
 }
 
 .section-1__project-pane__title{
     grid-column-start: 1;
     grid-column-end: 4;
-    font-size: clamp(2.5dvh, 1dvh + 1rem, 3.5dvh);
+    font-size: 1.2em;
     margin-inline: auto;
+    text-align: center;
+    visibility: collapse;
 }
 
+@media (min-width: 900px) {
+    .section-1__project-pane{
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(2, auto);
+        width: fit-content;
+    }
+    
+    .section-1__project-pane__title{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        font-size: clamp(2.5dvh, 1dvh + 1rem, 3.5dvh);
+        visibility: visible;
+    }
+}
+
+//=========================================================
+//  Section 1- Side
+//=========================================================
 .section-1__project-pane__side{
     background-color: $backgroundColor;
     border-radius: $borderRadius;
-    margin: max(40px, 4dvh);
-    margin-top: 0;
-    padding: max(25px, 2.5dvh);
-    font-size: clamp(1.75dvh, 1dvh + 0.4rem, 2.75dvh);
+    margin: 5px;
+    margin-top: -40px;
+    padding: 10px;
+    font-size: 0.7em;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 20px;
+    row-gap: 20px;
 }
 
+@media (min-width: 900px) {
+    .section-1__project-pane__side{
+        display: block;
+        margin: max(40px, 4dvh);
+        margin-top: 0;
+        padding: max(25px, 2.5dvh);
+        font-size: clamp(1.75dvh, 1dvh + 0.4rem, 2.75dvh);
+    }
+}
+
+//-------------------------
+//  Side- Card             |
+//-------------------------
 .section-1__project-pane__side__card{
     background-color: $boxBackgroundColor;
     border-color: $borderColor;
     border-radius: $borderRadius;
     border-style: solid;
-    border-width: $borderWidth;
+    border-width: 5px;
     box-shadow: 0px 0px 0px black;
-    margin-top: max(20px, 2dvh);
-    padding: max(25px, 2.5dvh);
+    margin-top: 0px;
+    padding: 5px;
     transform: translateY(0px);
     transition-duration: 200ms;
     transition-property: transform, box-shadow;
     user-select: none;
+    overflow-x: visible;
 
     h3{
         text-align: center;
@@ -61,27 +103,56 @@ $borderWidth: max(5px, 0.5dvh);
     }
 }
 
+@media (min-width: 900px) {
+    .section-1__project-pane__side__card{
+        border-width: $borderWidth;
+        margin-top: max(20px, 2dvh);
+        padding: max(25px, 2.5dvh);
+    }
+}
+
+//=========================================================
+//  Section 1- Frame
+//=========================================================
 .section-1__project-pane__frame{
     background-color: $boxBackgroundColor;
     border-radius: $borderRadius;
     display: block;
-    margin: max(40px, 4dvh);
-    margin-left: 0;
-    margin-top: 0;
-    padding: max(25px, 2.5dvh);
-    font-size: clamp(1.75dvh, 1dvh + 0.4rem, 2.75dvh);
+    margin: 5px;
+    padding: 10px;
+    font-size: 1em;
+    line-height: 30px;
 
     li{
         padding: 0.5em;
     }
 }
 
+@media (min-width: 900px) {
+    .section-1__project-pane__frame{
+        margin: max(40px, 4dvh);
+        margin-left: 0;
+        margin-top: 0;
+        padding: max(25px, 2.5dvh);
+        font-size: clamp(1.75dvh, 1dvh + 0.4rem, 2.75dvh);
+        line-height: normal;
+    
+        li{
+            padding: 0.5em;
+        }
+    }
+}
+
+//-------------------------
+//  Frame- Default         |
+//-------------------------
 .section-1__project-pane__frame__default{
     background-color: $boxBackgroundColor;
     border-radius: $borderRadius;
     display: block;
-    padding: max(25px, 2.5dvh);
-    width: fit-content;
+    padding: 25px;
+    width: max-content;
+    margin-inline: auto;
 
     span{
         animation-name: section-1__project-pane__frame__default__Animation;
@@ -89,7 +160,8 @@ $borderWidth: max(5px, 0.5dvh);
         animation-iteration-count: infinite;
         animation-delay: 500ms;
         animation-direction: alternate;
-        font-size: clamp(2dvh, 1dvh + 0.8rem, 2dvh);
+        font-size: 0.9em;
+        visibility: hidden;
 
         @keyframes section-1__project-pane__frame__default__Animation {
             from{
@@ -102,16 +174,32 @@ $borderWidth: max(5px, 0.5dvh);
     }
 }
 
+@media (min-width: 900px) {
+    .section-1__project-pane__frame__default{
+        padding: max(25px, 2.5dvh);
+        width: fit-content;
+    
+        span{
+            font-size: clamp(2dvh, 1dvh + 0.8rem, 2dvh);
+            visibility: visible;
+        }
+    }
+}
+
+//-------------------------
+//  Frame- Link            |
+//-------------------------
 .section-1__project-pane__frame__content__link{
     border-color: $borderColor;
     border-radius: $borderRadius;
     border-style: solid;
-    border-width: max(5px, 0.5dvh);
+    border-width: 3px;
     display: block;
-    font-size: clamp(1.75dvh, 1dvh + 0.4rem, 2.75dvh);
+    font-size: 0.9em;
     margin-bottom: 50px;
     margin-top: 50px;
-    padding: max(10px, 1dvh);
+    margin-inline: auto;
+    padding: 10px;
     width: fit-content;
 
     >span{
@@ -119,7 +207,7 @@ $borderWidth: max(5px, 0.5dvh);
         animation-name: link__spin__Animation;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
-        font-size: clamp(1.75dvh, 1dvh + 0.4rem, 2dvh);
+        font-size: 0.9em;
         color: #80C24A;
 
         @keyframes link__spin__Animation {
@@ -142,19 +230,38 @@ $borderWidth: max(5px, 0.5dvh);
         }
     
         &:hover{
-    
             span{
                 transition-property: rotate;
                 transition-duration: 300ms;
                 rotate: 360deg;
                 transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
             }
-    
         }
     }
-
 }
 
+@media (min-width: 900px) {
+    .section-1__project-pane__frame__content__link{
+        border-width: max(5px, 0.5dvh);
+        font-size: clamp(1.75dvh, 1dvh + 0.4rem, 2.75dvh);
+        padding: max(10px, 1dvh);
+        margin-inline: 0;
+    
+        >span{
+            font-size: clamp(1.75dvh, 1dvh + 0.4rem, 2dvh);
+        }
+    
+        a{
+            span{
+                font-size: clamp(1.75dvh, 1dvh + 0.4rem, 2dvh);
+            }
+        }
+    }
+}
+
+//=========================================================
+//  Section 1- States
+//=========================================================
 .content-hide{
     visibility:collapse;
     height: 0;
@@ -165,41 +272,29 @@ $borderWidth: max(5px, 0.5dvh);
     visibility: visible;
 }
 
+//=========================================================
+//  Section 2
+//=========================================================
 .section-2{
-    border-width: max(40px, 4dvh);
+    border-width: 5px;
     border-color: $borderColor;
     border-style: solid;
     background-color: $boxBackgroundColor;
     border-radius: $borderRadius;
-    padding: max(20px, 2dvh);
-    margin-top: max(50px, 5dvh);
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 30px;
 }
 .page-nav{
     margin-top: 0;
     margin-bottom: 0;
 }
 
-//=========================================================
-//  Media Queries
-//=========================================================
-@media screen and (width < 615){
-    .section-1__project-pane__side{
-        font-size: clamp(1dvh, 1dvh + 0.1rem, 2dvh);  
-        margin: max(20px, 2dvh);
-        margin-top: 0;
-        padding: max(10px, 1dvh);
-    }
-
-    .section-1__project-pane__side__card{
-        padding: max(10px, 1dvh);
-    }
-
-    .section-1__project-pane__frame{
-        height: 50dvh;
-        margin-bottom: max(20px, 2dvh);
-        margin-right: max(20px, 2dvh);
-        min-height: 500px;
-        min-width: 200px;
-        overflow-y: scroll;
+@media (min-width: 900px) {
+    .section-2{
+        border-width: max(40px, 4dvh);
+        padding: max(20px, 2dvh);
+        margin-top: max(50px, 5dvh);
     }
 }
