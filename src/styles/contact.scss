@@ -39,9 +39,10 @@ main {
 //=========================================================
 .contact__method {
     display: block;
-    font-size: clamp(1.7dvh, 1dvh + 0.5em, 1.5dvh + 1em);
+    font-size: 1em;
     margin-inline: auto;
     width: fit-content;
+    padding: 1em;
 }
 
 .contact__method--email {
@@ -63,6 +64,12 @@ main {
     }
 }
 
+@media (min-width: 900px) {
+    .contact__method {
+        font-size: clamp(1.7dvh, 1dvh + 0.5em, 1.5dvh + 1em);
+    }
+}
+
 //=========================================================
 //  Contact Form
 //=========================================================
@@ -74,7 +81,7 @@ main {
     fieldset {
         border: 0;
         display: grid;
-        font-size: clamp(1.3dvh, 1dvh + 0.2em, 1.3dvh + 1em);
+        font-size: 0.8em;
         grid-template-columns: repeat(1, min-content);
         padding: 2em;
 
@@ -86,7 +93,7 @@ main {
             border-style: solid;
             border-width: calc($borderWidth /2);
             color: $fontColor1;
-            font-size: clamp(1.3dvh, 1dvh + 0.2em, 1.3dvh + 1em);
+            font-size: 0.85em;
             margin-bottom: 1em;
             padding: 0.5em;
         }
@@ -107,7 +114,7 @@ main {
                 @include valid-invalid_Style;
                 background-color: #356c09;
                 content: '\2713';
-                font-size: clamp(1.7dvh, 1dvh + 0.5em, 1.5dvh + 1em);
+                font-size: 1.2em;
             }
         }
 
@@ -117,7 +124,7 @@ main {
                 @include valid-invalid_Style;
                 background-color: #530606;
                 content: '\78';
-                font-size: clamp(1.8dvh, 1dvh + 0.6em, 1.6dvh + 1em);
+                font-size: 1.2em;
             }
         }
     }
@@ -137,13 +144,46 @@ main {
         @include borderDefault;
         background-color: $boxBackgroundColor;
         color: $fontColor1;
-        font-size: clamp(1.7dvh, 1dvh + 0.5em, 1.5dvh + 1em);
+        font-size: 1em;
         padding: 0.5em;
 
         &:hover {
             color: #0c1020;
             cursor: pointer;
             user-select: none;
+        }
+    }
+}
+
+@media (min-width: 900px) {
+    .contact__form {
+    
+        fieldset {
+            font-size: clamp(1.3dvh, 1dvh + 0.2em, 1.3dvh + 1em);
+    
+            input,
+            textarea {
+                font-size: clamp(1.3dvh, 1dvh + 0.2em, 1.3dvh + 1em);
+            }
+
+            &:valid {
+                &::after {
+                    font-size: clamp(1.7dvh, 1dvh + 0.5em, 1.5dvh + 1em);
+                }
+            }
+    
+            &:invalid {
+                &::after {
+                    font-size: clamp(1.8dvh, 1dvh + 0.6em, 1.6dvh + 1em);
+                }
+            }
+        }
+    }
+    
+    .contact__form__submit__wrapper {
+    
+        input {
+            font-size: clamp(1.7dvh, 1dvh + 0.5em, 1.5dvh + 1em);
         }
     }
 }
