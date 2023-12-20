@@ -19,14 +19,31 @@ $headingColor: #80C24A;
 .section-1 {
     background-color: $backgroundColor;
     border-radius: $borderRadius;
-    padding: 1em;
-    padding-top: 0;
     position: relative;
+
+    >section{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    section:last-child{
+        padding-bottom: 10px;
+    }
 }
 
 @media (min-width: 900px) {
     .section-1__wrapper {
         border: solid $borderColor 4dvh;
+    }
+
+    .section-1 {
+        >section{
+            padding-left: 3em;
+            padding-right: 3em;
+        }
+
+        section:last-child{
+            padding-bottom: 3em;
+        }
     }
 }
 
@@ -35,6 +52,7 @@ $headingColor: #80C24A;
 //=========================================================
 .section-1__intro{
     margin-top: 50px;
+    padding: 10px;
 }
 
 .section-1__intro__graphic {
