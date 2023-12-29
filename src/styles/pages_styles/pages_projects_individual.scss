@@ -389,11 +389,14 @@ $tocDelay: 100ms;
 //=========================================================
 //  Section: Body- Content
 //=========================================================
+//Used to create the headings offset to accommodate the nav-bar for toc links
 .section__body__headings::before {
     content: '';
     display: block;
     pointer-events: none;
     visibility: hidden;
+    height: 120px;
+    margin-top: -120px;
 }
 
 .section__body__list {
