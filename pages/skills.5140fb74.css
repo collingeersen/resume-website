@@ -1,12 +1,21 @@
 .section-1__container {
   flex-wrap: wrap;
+  padding: 5px;
 }
 
 .section-1__container__paragraph {
   align-self: center;
-  margin-top: max(15px, 1.5dvh);
-  margin-bottom: max(15px, 1.5dvh);
-  padding: max(30px, 3dvh);
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 20px;
+}
+
+@media (min-width: 900px) {
+  .section-1__container__paragraph {
+    margin-top: max(15px, 1.5dvh);
+    margin-bottom: max(15px, 1.5dvh);
+    padding: max(30px, 3dvh);
+  }
 }
 
 .section-2 h2 + div {
@@ -121,4 +130,4 @@
   }
 }
 
-/*# sourceMappingURL=skills.b7ee66a5.css.map */
+/*# sourceMappingURL=skills.5140fb74.css.map */

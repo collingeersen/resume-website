@@ -15,7 +15,8 @@ main {
   width: -moz-fit-content;
   width: fit-content;
   margin-inline: auto;
-  font-size: clamp(1.7dvh, 1dvh + .5em, 1.5dvh + 1em);
+  padding: 1em;
+  font-size: 1em;
   display: block;
 }
 
@@ -36,6 +37,12 @@ main {
   text-align: center;
 }
 
+@media (min-width: 900px) {
+  .contact__method {
+    font-size: clamp(1.7dvh, 1dvh + .5em, 1.5dvh + 1em);
+  }
+}
+
 .contact__form {
   color: #e1e0e0;
   width: -moz-fit-content;
@@ -47,7 +54,7 @@ main {
   border: 0;
   grid-template-columns: repeat(1, min-content);
   padding: 2em;
-  font-size: clamp(1.3dvh, 1dvh + .2em, 1.3dvh + 1em);
+  font-size: .8em;
   display: grid;
 }
 
@@ -57,7 +64,7 @@ main {
   border: calc(max(5px, .5dvh) / 2) solid #0c1020;
   margin-bottom: 1em;
   padding: .5em;
-  font-size: clamp(1.3dvh, 1dvh + .2em, 1.3dvh + 1em);
+  font-size: .85em;
 }
 
 .contact__form fieldset:valid:after {
@@ -68,7 +75,7 @@ main {
   border-radius: clamp(1dvw, 1em, 2dvw);
   margin-top: 1em;
   padding: .5em;
-  font-size: clamp(1.7dvh, 1dvh + .5em, 1.5dvh + 1em);
+  font-size: 1.2em;
   display: block;
 }
 
@@ -80,7 +87,7 @@ main {
   border-radius: clamp(1dvw, 1em, 2dvw);
   margin-top: 1em;
   padding: .5em;
-  font-size: clamp(1.8dvh, 1dvh + .6em, 1.6dvh + 1em);
+  font-size: 1.2em;
   display: block;
 }
 
@@ -100,7 +107,7 @@ main {
   border: max(5px, .5dvh) solid #0c1020;
   border-radius: clamp(1dvw, 1em, 2dvw);
   padding: .5em;
-  font-size: clamp(1.7dvh, 1dvh + .5em, 1.5dvh + 1em);
+  font-size: 1em;
 }
 
 .contact__form__submit__wrapper input:hover {
@@ -110,4 +117,22 @@ main {
   user-select: none;
 }
 
-/*# sourceMappingURL=contact.f2bb6aac.css.map */
+@media (min-width: 900px) {
+  .contact__form fieldset, .contact__form fieldset input, .contact__form fieldset textarea {
+    font-size: clamp(1.3dvh, 1dvh + .2em, 1.3dvh + 1em);
+  }
+
+  .contact__form fieldset:valid:after {
+    font-size: clamp(1.7dvh, 1dvh + .5em, 1.5dvh + 1em);
+  }
+
+  .contact__form fieldset:invalid:after {
+    font-size: clamp(1.8dvh, 1dvh + .6em, 1.6dvh + 1em);
+  }
+
+  .contact__form__submit__wrapper input {
+    font-size: clamp(1.7dvh, 1dvh + .5em, 1.5dvh + 1em);
+  }
+}
+
+/*# sourceMappingURL=contact.a5a11fd0.css.map */
