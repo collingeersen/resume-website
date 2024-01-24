@@ -13,14 +13,14 @@
   "scripts": {
     "start": "parcel ./src/index.html",
     "build": "rm -rf dist/* && parcel build ./src/index.html --no-optimize",
-    "predeploy": "rm -rf dist/* && parcel build ./src/index.html --no-optimize --public-url https://collingeersen.github.io/",
+    "predeploy": "rm -rf dist/* && parcel build ./src/index.html --no-optimize --public-url https://collingeersen.github.io/resume-website",
     "deploy": "gh-pages -d dist",
     "check": "tsc --noEmit",
     "lint": "eslint"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/collingeersen/collingeersen.github.io.git"
+    "url": "git+https://github.com/collingeersen/resume-website.git"
   },
   "keywords": [
     "node",
@@ -32,9 +32,9 @@
   "author": "Collin Geersen",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/collingeersen/collingeersen.github.io/issues"
+    "url": "https://github.com/collingeersen/resume-website/issues"
   },
-  "homepage": "https://github.com/collingeersen/collingeersen.github.io/blob/main/README.md",
+  "homepage": "https://github.com/collingeersen/resume-website/blob/main/README.md",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.8.3",
     "@typescript-eslint/eslint-plugin": "^5.56.0",
