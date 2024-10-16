@@ -10,7 +10,7 @@
   padding: 20px;
 }
 
-@media (min-width: 900px) {
+@media (width >= 900px) {
   .section-1__container__paragraph {
     margin-top: max(15px, 1.5dvh);
     margin-bottom: max(15px, 1.5dvh);
@@ -27,7 +27,7 @@
   width: 80%;
 }
 
-@media (min-width: 900px) {
+@media (width >= 900px) {
   .scroll--show--once .badge {
     opacity: 0;
     animation-name: skill-badge-Animation;
@@ -129,5 +129,4 @@
     animation-delay: 2.5s;
   }
 }
-
-/*# sourceMappingURL=skills.5140fb74.css.map */
+/*# sourceMappingURL=skills.77325c3d.css.map */

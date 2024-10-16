@@ -15,7 +15,7 @@ article {
   padding-bottom: 35px;
 }
 
-@media (min-width: 900px) {
+@media (width >= 900px) {
   article {
     padding-bottom: max(50px, 5dvh);
   }
@@ -58,7 +58,7 @@ article {
   margin-bottom: 0;
 }
 
-@media (min-width: 900px) {
+@media (width >= 900px) {
   .page-title {
     margin-left: 3dvh;
   }
@@ -82,5 +82,4 @@ article {
     margin-bottom: 0;
   }
 }
-
-/*# sourceMappingURL=resume.fc289440.css.map */
+/*# sourceMappingURL=resume.26089262.css.map */

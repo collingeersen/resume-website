@@ -12,7 +12,6 @@ main {
 }
 
 .contact__method {
-  width: -moz-fit-content;
   width: fit-content;
   margin-inline: auto;
   padding: 1em;
@@ -37,7 +36,7 @@ main {
   text-align: center;
 }
 
-@media (min-width: 900px) {
+@media (width >= 900px) {
   .contact__method {
     font-size: clamp(1.7dvh, 1dvh + .5em, 1.5dvh + 1em);
   }
@@ -45,7 +44,6 @@ main {
 
 .contact__form {
   color: #e1e0e0;
-  width: -moz-fit-content;
   width: fit-content;
   margin-inline: auto;
 }
@@ -69,8 +67,8 @@ main {
 
 .contact__form fieldset:valid:after {
   margin-bottom: -1em;
-  margin-inline: auto;
   content: "✓";
+  margin-inline: auto;
   background-color: #356c09;
   border-radius: clamp(1dvw, 1em, 2dvw);
   margin-top: 1em;
@@ -81,8 +79,8 @@ main {
 
 .contact__form fieldset:invalid:after {
   margin-bottom: -1em;
-  margin-inline: auto;
   content: "x";
+  margin-inline: auto;
   background-color: #530606;
   border-radius: clamp(1dvw, 1em, 2dvw);
   margin-top: 1em;
@@ -117,7 +115,7 @@ main {
   user-select: none;
 }
 
-@media (min-width: 900px) {
+@media (width >= 900px) {
   .contact__form fieldset, .contact__form fieldset input, .contact__form fieldset textarea {
     font-size: clamp(1.3dvh, 1dvh + .2em, 1.3dvh + 1em);
   }
@@ -134,5 +132,4 @@ main {
     font-size: clamp(1.7dvh, 1dvh + .5em, 1.5dvh + 1em);
   }
 }
-
-/*# sourceMappingURL=contact.a5a11fd0.css.map */
+/*# sourceMappingURL=contact.b9fee55e.css.map */

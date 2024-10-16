@@ -13,7 +13,6 @@ h3 {
 }
 
 header {
-  width: -moz-fit-content;
   width: fit-content;
   margin-inline: auto;
 }
@@ -50,7 +49,6 @@ header {
   background-color: #24252a;
   border-top-left-radius: clamp(1dvw, 1em, 2dvw);
   border-bottom-left-radius: clamp(1dvw, 1em, 2dvw);
-  width: -moz-fit-content;
   width: fit-content;
   margin-left: 0;
   margin-right: auto;
@@ -131,5 +129,4 @@ header {
 .css__style__value {
   color: #cc985d;
 }
-
-/*# sourceMappingURL=css-snippets_hamburger-button.66adaaf9.css.map */
+/*# sourceMappingURL=css-snippets_hamburger-button.6d0ab963.css.map */

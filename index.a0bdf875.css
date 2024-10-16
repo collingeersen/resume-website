@@ -16,7 +16,6 @@
 .noscript div {
   border: 2dvh solid #000;
   border-radius: 5dvh;
-  width: -moz-fit-content;
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
@@ -30,5 +29,4 @@
 .noscript p {
   font-size: 3dvh;
 }
-
-/*# sourceMappingURL=index.5789c66e.css.map */
+/*# sourceMappingURL=index.a0bdf875.css.map */

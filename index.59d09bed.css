@@ -38,7 +38,7 @@ nav {
   top: 100px;
 }
 
-@media (min-width: 900px) {
+@media (width >= 900px) {
   [class$="nav-bar--mini"] .nav-bar {
     height: max(60px, 6dvh);
   }
@@ -438,49 +438,49 @@ nav {
   rotate: 180deg;
 }
 
-@media screen and (min-height: 1000px) {
+@media screen and (height >= 1000px) {
   .nav-bar__btn--hamburger {
     scale: 1.2;
   }
 }
 
-@media screen and (min-height: 1200px) {
+@media screen and (height >= 1200px) {
   .nav-bar__btn--hamburger {
     scale: 1.4;
   }
 }
 
-@media screen and (min-height: 1400px) {
+@media screen and (height >= 1400px) {
   .nav-bar__btn--hamburger {
     scale: 1.6;
   }
 }
 
-@media screen and (min-height: 1500px) {
+@media screen and (height >= 1500px) {
   .nav-bar__btn--hamburger {
     scale: 1.8;
   }
 }
 
-@media screen and (min-height: 1600px) {
+@media screen and (height >= 1600px) {
   .nav-bar__btn--hamburger {
     scale: 2;
   }
 }
 
-@media screen and (min-height: 1800px) {
+@media screen and (height >= 1800px) {
   .nav-bar__btn--hamburger {
     scale: 2.2;
   }
 }
 
-@media screen and (min-height: 2000px) {
+@media screen and (height >= 2000px) {
   .nav-bar__btn--hamburger {
     scale: 2.4;
   }
 }
 
-@media screen and (max-height: 549.999px), (max-width: 999.999px) {
+@media screen and (height <= 549.999px), (width <= 999.999px) {
   main {
     overflow: hidden;
   }
@@ -511,7 +511,7 @@ nav {
   }
 }
 
-@media screen and (min-height: 500.001px) and (max-width: 679.999px) {
+@media screen and (height >= 500.001px) and (width <= 679.999px) {
   nav {
     overflow: hidden;
   }
@@ -534,7 +534,7 @@ nav {
   }
 }
 
-@media screen and (max-width: 1150px) {
+@media screen and (width <= 1150px) {
   .nav-bar__drop-down {
     width: 40%;
   }
@@ -544,7 +544,7 @@ nav {
   }
 }
 
-@media screen and (max-width: 699.999px) {
+@media screen and (width <= 699.999px) {
   .nav-bar__drop-down {
     width: 80%;
   }
@@ -596,7 +596,7 @@ nav {
   display: block;
 }
 
-@media (min-width: 900px) {
+@media (width >= 900px) {
   .scroll-to-top {
     right: 4%;
   }
@@ -722,14 +722,13 @@ nav {
   display: block;
 }
 
-@media screen and (max-width: 719.999px) {
+@media screen and (width <= 719.999px) {
   .footer__flex {
     flex-wrap: wrap;
   }
 
   .footer__col {
     text-align: center;
-    width: -moz-fit-content;
     width: fit-content;
   }
 
@@ -743,7 +742,7 @@ nav {
   }
 }
 
-@media (min-width: 900px) {
+@media (width >= 900px) {
   .footer {
     font-size: clamp(1em, 1dvh + .3em, 5dvh);
   }
@@ -903,7 +902,7 @@ a:focus {
   transition-duration: .2s;
 }
 
-@media (min-width: 900px) {
+@media (width >= 900px) {
   .button--outline {
     font-size: max(1em, 2dvh);
   }
@@ -934,7 +933,7 @@ a:focus {
     }
 
     to {
-      filter: blur(0);
+      filter: blur();
       translate: 0;
     }
   }
@@ -950,9 +949,7 @@ a:focus {
   border-top-width: 0;
   border-bottom-right-radius: clamp(1dvw, 1em, 2dvw);
   border-bottom-left-radius: clamp(1dvw, 1em, 2dvw);
-  width: -moz-fit-content;
   width: fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   margin-top: 0;
   margin-left: 20px;
@@ -973,7 +970,7 @@ a:focus {
   }
 }
 
-@media (min-width: 900px) {
+@media (width >= 900px) {
   .page-title {
     border-width: 0 max(.1em, .5dvh) max(.1em, .5dvh);
     height: 2em;
@@ -1050,7 +1047,7 @@ a:focus {
   display: inline-block;
 }
 
-@media (min-width: 900px) {
+@media (width >= 900px) {
   .badge__wrapper {
     gap: max(30px, 3dvh);
   }
@@ -1085,9 +1082,9 @@ a:focus {
 }
 
 .page-nav {
+  text-align: center;
   margin-top: 80px;
   margin-bottom: 20px;
-  text-align: center;
   background-color: #20274a;
   border-radius: 25px;
   width: 100%;
@@ -1156,7 +1153,7 @@ a:focus {
   translate: 1dvh;
 }
 
-@media (min-width: 900px) {
+@media (width >= 900px) {
   .page-nav {
     border-radius: max(100px, 10dvh);
     width: 90%;
@@ -1176,10 +1173,9 @@ a:focus {
   }
 }
 
-@media screen and (max-width: 969.999px) {
+@media screen and (width <= 969.999px) {
   main {
     width: 100%;
   }
 }
-
-/*# sourceMappingURL=index.06fb493a.css.map */
+/*# sourceMappingURL=index.59d09bed.css.map */

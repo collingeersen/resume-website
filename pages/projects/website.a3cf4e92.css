@@ -33,7 +33,7 @@ footer:before {
   position: absolute;
 }
 
-@media (min-width: 900px) {
+@media (width >= 900px) {
   section {
     padding: 2dvh;
   }
@@ -78,7 +78,6 @@ footer:before {
   background-color: #2b3463;
   border-top-right-radius: clamp(1dvw, 1em, 2dvw);
   border-bottom-right-radius: clamp(1dvw, 1em, 2dvw);
-  width: -moz-fit-content;
   width: fit-content;
   min-height: 300px;
   padding: 2em 2em 2em 4em;
@@ -122,7 +121,7 @@ footer:before {
   transition-duration: .2s;
 }
 
-@media (min-width: 900px) {
+@media (width >= 900px) {
   .toc {
     min-height: 57dvh;
     padding: 2dvh 2dvh 2dvh 0;
@@ -217,13 +216,12 @@ footer:before {
 }
 
 .section__source-link {
-  width: -moz-fit-content;
   width: fit-content;
   margin-inline: auto;
   padding-top: 60px;
 }
 
-@media (min-width: 900px) {
+@media (width >= 900px) {
   .section__intro p {
     font-size: clamp(1.7dvh, 1dvh + .5em, 1.5dvh + 1em);
   }
@@ -260,7 +258,6 @@ footer:before {
   border-top-left-radius: clamp(1dvw, 1em, 2dvw);
   border-bottom-left-radius: clamp(1dvw, 1em, 2dvw);
   align-content: baseline;
-  height: -moz-fit-content;
   height: fit-content;
   margin-inline: auto;
   padding: 1em;
@@ -284,7 +281,7 @@ footer:before {
   padding: .5em;
 }
 
-@media (min-width: 900px) {
+@media (width >= 900px) {
   .section__body {
     width: 80%;
   }
@@ -349,7 +346,6 @@ footer:before {
   border: 1px solid #0c1020;
   border-radius: clamp(1dvw, 1em, 2dvw);
   width: 70%;
-  min-width: -moz-fit-content;
   min-width: fit-content;
   margin-inline: auto;
   padding: 15px;
@@ -370,7 +366,6 @@ footer:before {
 
 .section__body__list ul {
   text-shadow: .1em 0 #0c1020;
-  width: -moz-fit-content;
   width: fit-content;
   margin-inline: auto;
   font-family: EB Garamond, serif;
@@ -390,7 +385,7 @@ footer:before {
   display: block;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (width >= 900px) {
   .section__body__headings:before {
     height: 10dvh;
     margin-top: -10dvh;
@@ -419,7 +414,7 @@ footer:before {
   }
 }
 
-@media screen and (max-width: 1600px) and (min-width: 901.001px) {
+@media screen and (width <= 1600px) and (width >= 901.001px) {
   .section__body {
     width: 90%;
   }
@@ -437,7 +432,6 @@ footer:before {
 }
 
 .page-nav {
-  width: -moz-fit-content;
   width: fit-content;
   margin-top: 0;
   padding: 1em;
@@ -448,7 +442,6 @@ footer:before {
   border-radius: clamp(1dvw, 1em, 2dvw);
   align-items: center;
   width: 70%;
-  min-width: -moz-fit-content;
   min-width: fit-content;
   margin-bottom: 2em;
   margin-left: 5%;
@@ -460,7 +453,7 @@ footer:before {
   font-size: .9em;
 }
 
-@media (min-width: 900px) {
+@media (width >= 900px) {
   .section__body__badges ~ div > h4 {
     font-size: clamp(1dvh, 1dvh + .4em, 1.8dvh + .8em);
   }
@@ -474,12 +467,11 @@ footer:before {
   float: left;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (width <= 900px) {
   .float--left, .float--right {
     float: none;
     margin-inline: auto;
     display: block;
   }
 }
-
-/*# sourceMappingURL=website.2eb1f786.css.map */
+/*# sourceMappingURL=website.a3cf4e92.css.map */

@@ -5,14 +5,13 @@
 .section__intro h1 {
   background-color: #0c1020;
   border-radius: 100px;
-  width: -moz-fit-content;
   width: fit-content;
   margin-inline: auto;
   padding: 20px;
   font-size: 2.2em;
 }
 
-@media (min-width: 900px) {
+@media (width >= 900px) {
   .section__intro h1 {
     font-size: clamp(3dvh, 1dvh + 3em, 3dvh + 2em);
   }
@@ -22,7 +21,7 @@
   padding-bottom: 1em;
 }
 
-@media (max-width: 901px) {
+@media (width <= 901px) {
   .icon__top {
     flex-flow: column-reverse;
     display: flex;
@@ -33,5 +32,4 @@
     display: flex;
   }
 }
-
-/*# sourceMappingURL=more-about-me.6d56ea18.css.map */
+/*# sourceMappingURL=more-about-me.47566825.css.map */

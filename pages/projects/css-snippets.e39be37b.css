@@ -8,7 +8,6 @@ section {
 
 section > section {
   background-color: #20274a;
-  width: -moz-fit-content;
   width: fit-content;
   margin: auto;
   padding: 3em;
@@ -17,9 +16,7 @@ section > section {
 .code-block {
   background-color: #000;
   border: 5px solid #000;
-  width: -moz-fit-content;
   width: fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   padding: 0;
 }
@@ -27,9 +24,7 @@ section > section {
 code {
   white-space-collapse: preserve;
   background-color: #181d1f;
-  width: -moz-fit-content;
   width: fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   padding: 0;
 }
@@ -47,7 +42,6 @@ iframe {
 .construction-line {
   text-align: center;
   margin-inline: auto;
-  width: -moz-fit-content;
   width: fit-content;
   margin-top: 5%;
   margin-bottom: 5%;
@@ -66,11 +60,10 @@ iframe {
   text-align: center;
 }
 
-@media screen and (max-width: 1060px) {
+@media screen and (width <= 1060px) {
   iframe {
     width: 100%;
     scale: .9;
   }
 }
-
-/*# sourceMappingURL=css-snippets.85a2914d.css.map */
+/*# sourceMappingURL=css-snippets.e39be37b.css.map */
